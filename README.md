@@ -12,6 +12,7 @@
 - построение  мнемосхем (схема отображающая технологический процесс).
 - возможность ввода команд которые будут записываться в БД.
 
-Trello: https://trello.com/main_omega
-Telegram: https://t.me/joinchat/E5Fl3xmGL2JvpxwFtqbM0A
-Google Meet: https://meet.google.com/ewa-ibxe-rnv
+Контактные данные:
+- Trello: https://trello.com/main_omega
+- Telegram: https://t.me/joinchat/E5Fl3xmGL2JvpxwFtqbM0A
+- Google Meet: https://meet.google.com/ewa-ibxe-rnv
