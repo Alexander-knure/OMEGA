@@ -11,7 +11,7 @@ namespace NURESCADA
     {
         public static MySqlConnection GetDBConnection()
         {
-            string host = "127.0.0.1";
+            string host = "localhost";
             int port = 3306;
             string database = "pylab1";
             string username = "root";
