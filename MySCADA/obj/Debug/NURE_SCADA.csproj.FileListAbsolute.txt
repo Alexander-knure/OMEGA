@@ -63,3 +63,5 @@ C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\bin\Debug\EntityFramework.SqlServe
 C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\bin\Debug\NLog.xml
 C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\obj\Debug\NURESCADA.Forms.DynamicForm.resources
 C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\obj\Debug\NURESCADA.StaticForm.resources
+C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\obj\Debug\NURESCADA.Forms.MnemonicForm.resources
+C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\obj\Debug\NURESCADA.Forms.CommandForm.resources

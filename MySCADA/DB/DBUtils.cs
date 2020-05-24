@@ -13,7 +13,7 @@ namespace NURESCADA
         {
             string host = "localhost";
             int port = 3306;
-            string database = "pylab1";
+            string database = "simplescada";
             string username = "root";
             string password = "root";
             MySqlConnection m = new MySqlConnection();
@@ -21,6 +21,5 @@ namespace NURESCADA
 
             return DBMySQLUtils.GetDBConnection(host, port, database, username, password);
         }
-
     }
 }
