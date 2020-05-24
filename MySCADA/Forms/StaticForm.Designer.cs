@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series36 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series37 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series38 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series39 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series40 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaticForm));
             this.lbHeader = new MetroFramework.Controls.MetroLabel();
             this.MainChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnBack = new MetroFramework.Controls.MetroButton();
+            this.cbVariables = new MetroFramework.Controls.MetroComboBox();
+            this.dtFrom = new MetroFramework.Controls.MetroDateTime();
+            this.dtTo = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.MainChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,59 +69,59 @@
             this.MainChart.BorderSkin.BackSecondaryColor = System.Drawing.Color.Transparent;
             this.MainChart.BorderSkin.BorderColor = System.Drawing.Color.Transparent;
             this.MainChart.BorderSkin.PageColor = System.Drawing.Color.Transparent;
-            chartArea8.Area3DStyle.Inclination = 10;
-            chartArea8.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
-            chartArea8.Area3DStyle.PointDepth = 40;
-            chartArea8.Area3DStyle.Rotation = 10;
-            chartArea8.Area3DStyle.WallWidth = 5;
-            chartArea8.AxisX.IsLabelAutoFit = false;
-            chartArea8.AxisX.LabelStyle.Angle = 1;
-            chartArea8.AxisX.LabelStyle.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea8.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea8.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea8.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea8.AxisX.MajorGrid.LineWidth = 0;
-            chartArea8.AxisX.TitleFont = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea8.AxisX.TitleForeColor = System.Drawing.Color.White;
-            chartArea8.AxisX2.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea8.AxisX2.LineColor = System.Drawing.Color.White;
-            chartArea8.AxisX2.TitleForeColor = System.Drawing.Color.White;
-            chartArea8.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea8.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea8.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea8.AxisY.Maximum = 100D;
-            chartArea8.AxisY.TitleForeColor = System.Drawing.Color.White;
-            chartArea8.AxisY2.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea8.AxisY2.LineColor = System.Drawing.Color.White;
-            chartArea8.AxisY2.TitleForeColor = System.Drawing.Color.White;
-            chartArea8.BackColor = System.Drawing.Color.Transparent;
-            chartArea8.BackImageTransparentColor = System.Drawing.Color.Transparent;
-            chartArea8.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea8.BorderWidth = 0;
-            chartArea8.InnerPlotPosition.Auto = false;
-            chartArea8.InnerPlotPosition.Height = 90F;
-            chartArea8.InnerPlotPosition.Width = 90F;
-            chartArea8.InnerPlotPosition.X = 10F;
-            chartArea8.InnerPlotPosition.Y = 4.49097F;
-            chartArea8.Name = "ChartArea1";
-            chartArea8.ShadowColor = System.Drawing.Color.DarkGray;
-            this.MainChart.ChartAreas.Add(chartArea8);
-            legend8.Alignment = System.Drawing.StringAlignment.Center;
-            legend8.BackColor = System.Drawing.Color.Transparent;
-            legend8.BorderWidth = 5;
-            legend8.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend8.Font = new System.Drawing.Font("Consolas", 12F);
-            legend8.ForeColor = System.Drawing.Color.White;
-            legend8.HeaderSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
-            legend8.HeaderSeparatorColor = System.Drawing.Color.White;
-            legend8.IsTextAutoFit = false;
-            legend8.ItemColumnSeparatorColor = System.Drawing.Color.White;
-            legend8.MaximumAutoSize = 10F;
-            legend8.Name = "Legend1";
-            legend8.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            legend8.TitleForeColor = System.Drawing.Color.White;
-            legend8.TitleSeparatorColor = System.Drawing.Color.White;
-            this.MainChart.Legends.Add(legend8);
+            chartArea1.Area3DStyle.Inclination = 10;
+            chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea1.Area3DStyle.PointDepth = 40;
+            chartArea1.Area3DStyle.Rotation = 10;
+            chartArea1.Area3DStyle.WallWidth = 5;
+            chartArea1.AxisX.IsLabelAutoFit = false;
+            chartArea1.AxisX.LabelStyle.Angle = 1;
+            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MajorGrid.LineWidth = 0;
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX2.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX2.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX2.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.ScaleBreakStyle.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY2.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY2.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY2.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            chartArea1.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea1.BorderColor = System.Drawing.Color.White;
+            chartArea1.InnerPlotPosition.Auto = false;
+            chartArea1.InnerPlotPosition.Height = 90F;
+            chartArea1.InnerPlotPosition.Width = 90F;
+            chartArea1.InnerPlotPosition.X = 10F;
+            chartArea1.InnerPlotPosition.Y = 4.49097F;
+            chartArea1.Name = "ChartArea1";
+            chartArea1.ShadowColor = System.Drawing.Color.DarkGray;
+            this.MainChart.ChartAreas.Add(chartArea1);
+            legend1.Alignment = System.Drawing.StringAlignment.Center;
+            legend1.BackColor = System.Drawing.Color.Transparent;
+            legend1.BorderWidth = 5;
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend1.Font = new System.Drawing.Font("Consolas", 12F);
+            legend1.ForeColor = System.Drawing.Color.White;
+            legend1.HeaderSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
+            legend1.HeaderSeparatorColor = System.Drawing.Color.White;
+            legend1.IsTextAutoFit = false;
+            legend1.ItemColumnSeparatorColor = System.Drawing.Color.White;
+            legend1.MaximumAutoSize = 10F;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            legend1.TitleForeColor = System.Drawing.Color.White;
+            legend1.TitleSeparatorColor = System.Drawing.Color.White;
+            this.MainChart.Legends.Add(legend1);
             this.MainChart.Location = new System.Drawing.Point(0, 75);
             this.MainChart.Margin = new System.Windows.Forms.Padding(0);
             this.MainChart.Name = "MainChart";
@@ -132,53 +131,17 @@
         System.Drawing.Color.Lime,
         System.Drawing.Color.Red,
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0))))),
-        System.Drawing.Color.Yellow};
-            series36.BorderWidth = 2;
-            series36.ChartArea = "ChartArea1";
-            series36.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series36.Font = new System.Drawing.Font("Consolas", 20F);
-            series36.LabelBackColor = System.Drawing.Color.Transparent;
-            series36.LabelBorderColor = System.Drawing.Color.Transparent;
-            series36.LabelForeColor = System.Drawing.Color.White;
-            series36.Legend = "Legend1";
-            series36.Name = "CPU";
-            series37.BorderWidth = 2;
-            series37.ChartArea = "ChartArea1";
-            series37.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series37.Font = new System.Drawing.Font("Consolas", 8F);
-            series37.LabelBorderWidth = 2;
-            series37.LabelForeColor = System.Drawing.Color.White;
-            series37.Legend = "Legend1";
-            series37.Name = "RAM";
-            series38.BorderWidth = 2;
-            series38.ChartArea = "ChartArea1";
-            series38.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series38.Font = new System.Drawing.Font("Consolas", 8F);
-            series38.LabelBorderWidth = 2;
-            series38.LabelForeColor = System.Drawing.Color.White;
-            series38.Legend = "Legend1";
-            series38.Name = "t CPU";
-            series39.BorderWidth = 2;
-            series39.ChartArea = "ChartArea1";
-            series39.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series39.Font = new System.Drawing.Font("Consolas", 8F);
-            series39.LabelBorderWidth = 2;
-            series39.LabelForeColor = System.Drawing.Color.White;
-            series39.Legend = "Legend1";
-            series39.Name = "t motherboard";
-            series40.BorderWidth = 2;
-            series40.ChartArea = "ChartArea1";
-            series40.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series40.Font = new System.Drawing.Font("Consolas", 8F);
-            series40.LabelBorderWidth = 2;
-            series40.LabelForeColor = System.Drawing.Color.White;
-            series40.Legend = "Legend1";
-            series40.Name = "Voltage";
-            this.MainChart.Series.Add(series36);
-            this.MainChart.Series.Add(series37);
-            this.MainChart.Series.Add(series38);
-            this.MainChart.Series.Add(series39);
-            this.MainChart.Series.Add(series40);
+        System.Drawing.Color.Yellow,
+        System.Drawing.Color.DarkViolet,
+        System.Drawing.Color.White,
+        System.Drawing.Color.Silver,
+        System.Drawing.Color.IndianRed,
+        System.Drawing.Color.Green};
+            series1.ChartArea = "ChartArea1";
+            series1.EmptyPointStyle.Color = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.Name = "v";
+            this.MainChart.Series.Add(series1);
             this.MainChart.Size = new System.Drawing.Size(940, 520);
             this.MainChart.TabIndex = 24;
             this.MainChart.Text = "MainChart";
@@ -200,11 +163,66 @@
             this.btnBack.UseSelectable = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // cbVariables
+            // 
+            this.cbVariables.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbVariables.FontWeight = MetroFramework.MetroComboBoxWeight.Bold;
+            this.cbVariables.ForeColor = System.Drawing.Color.White;
+            this.cbVariables.FormattingEnabled = true;
+            this.cbVariables.ItemHeight = 23;
+            this.cbVariables.Location = new System.Drawing.Point(625, 16);
+            this.cbVariables.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.cbVariables.Name = "cbVariables";
+            this.cbVariables.PromptText = "Choose variable";
+            this.cbVariables.Size = new System.Drawing.Size(186, 29);
+            this.cbVariables.Style = MetroFramework.MetroColorStyle.Black;
+            this.cbVariables.TabIndex = 26;
+            this.cbVariables.Tag = "";
+            this.cbVariables.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cbVariables.UseSelectable = true;
+            this.cbVariables.SelectedIndexChanged += new System.EventHandler(this.cbVariables_SelectedIndexChanged);
+            this.cbVariables.Click += new System.EventHandler(this.cbVariables_Click);
+            // 
+            // dtFrom
+            // 
+            this.dtFrom.AllowDrop = true;
+            this.dtFrom.CalendarFont = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dtFrom.CustomFormat = "dd.MM.yyyy hh:mm:ss";
+            this.dtFrom.FontWeight = MetroFramework.MetroDateTimeWeight.Bold;
+            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFrom.Location = new System.Drawing.Point(538, 51);
+            this.dtFrom.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtFrom.Name = "dtFrom";
+            this.dtFrom.Size = new System.Drawing.Size(186, 29);
+            this.dtFrom.Style = MetroFramework.MetroColorStyle.Black;
+            this.dtFrom.TabIndex = 29;
+            this.dtFrom.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.dtFrom.Value = new System.DateTime(2020, 5, 25, 2, 27, 20, 0);
+            // 
+            // dtTo
+            // 
+            this.dtTo.AllowDrop = true;
+            this.dtTo.CalendarFont = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dtTo.CustomFormat = "dd.MM.yyyy hh:mm:ss";
+            this.dtTo.FontWeight = MetroFramework.MetroDateTimeWeight.Bold;
+            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtTo.Location = new System.Drawing.Point(730, 51);
+            this.dtTo.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtTo.Name = "dtTo";
+            this.dtTo.Size = new System.Drawing.Size(186, 29);
+            this.dtTo.Style = MetroFramework.MetroColorStyle.Black;
+            this.dtTo.TabIndex = 30;
+            this.dtTo.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.dtTo.Value = new System.DateTime(2020, 5, 25, 2, 27, 20, 0);
+            // 
             // StaticForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.dtTo);
+            this.Controls.Add(this.dtFrom);
+            this.Controls.Add(this.cbVariables);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.MainChart);
             this.Controls.Add(this.lbHeader);
@@ -223,5 +241,8 @@
         private MetroFramework.Controls.MetroLabel lbHeader;
         private System.Windows.Forms.DataVisualization.Charting.Chart MainChart;
         private MetroFramework.Controls.MetroButton btnBack;
+        private MetroFramework.Controls.MetroComboBox cbVariables;
+        private MetroFramework.Controls.MetroDateTime dtFrom;
+        private MetroFramework.Controls.MetroDateTime dtTo;
     }
 }

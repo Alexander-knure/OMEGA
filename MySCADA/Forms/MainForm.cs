@@ -11,6 +11,7 @@ using System.Threading;
 using MySql.Data.MySqlClient;
 using NLog;
 using NURESCADA.Forms;
+using MetroFramework;
 
 namespace NURESCADA
 {
@@ -40,7 +41,6 @@ namespace NURESCADA
                 lb1.ForeColor = Color.Yellow;
                 lb1.Text += "Status: openning connection";
                 conn.Open();
-                DataGrid();
 
                 lb1.ForeColor = Color.GreenYellow;
                 lb1.Text = String.Empty;
@@ -80,12 +80,6 @@ namespace NURESCADA
             }
         }
 
-        private void DataGrid()
-        {
-            //Use defined table in db
-            //mainGrid.DataSource = authuserBindingSource;
-        }
-
         private void btnTimer_Click(object sender, EventArgs e)
         {
             if(mainTimer.Enabled)
@@ -106,7 +100,21 @@ namespace NURESCADA
 
         private void cbDataSets_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedState = cbDataSets.SelectedItem.ToString();
+            string query = "SELECT * FROM " + cbDataSets.SelectedItem.ToString();
+
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
+                {
+                    try
+                    {
+                        DataSet ds = new DataSet();
+                        adapter.Fill(ds);
+                        mainGrid.DataSource = ds.Tables[0];
+                    }
+                    catch
+                    {
+
+                    }
+                }
         }
 
         private void btnStatic_Click(object sender, EventArgs e)
@@ -139,10 +147,31 @@ namespace NURESCADA
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "simplescadaDataSet.trends_minute". При необходимости она может быть перемещена или удалена.
-            this.trends_minuteTableAdapter.Fill(this.simplescadaDataSet.trends_minute);
+
             // TODO: данная строка кода позволяет загрузить данные в таблицу "sCADADataSet.trends_minute". При необходимости она может быть перемещена или удалена.
 
+        }
+
+        private void cbDataSets_Click(object sender, EventArgs e)
+        {
+            MySqlDataReader reader;
+            string showQuery = "show tables";
+            MySqlCommand msc = new MySqlCommand(showQuery, conn);
+            try
+            {
+                cbDataSets.Items.Clear();
+                TableNames.Clear();
+                reader = msc.ExecuteReader();
+                while (reader.Read())
+                {
+                    cbDataSets.Items.Add(reader.GetString(0));
+                    TableNames.Add(reader.GetString(0));
+                }
+            }
+            catch
+            {
+                MetroMessageBox.Show(this, "Please enable server connection", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning, 100);
+            }
         }
     }
 }

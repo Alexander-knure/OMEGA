@@ -3,18 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace NURESCADA.DB
 {
     public class Variable
     {
-        public uint id;
-        public String name;
-        public String description;
+        private uint id;
+        private string name;
+        private string description;
 
-        public Variable()
+        public uint ID { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+
+        public Variable(uint id, string name, string description)
         {
-
+            this.id = id;
+            this.name = name;
+            this.description = description;
         }
     }
 
@@ -28,15 +35,24 @@ namespace NURESCADA.DB
         }
         public List<uint> GetID()
         {
-            return list.Select(i => i.id).ToList();
+            return list.Select(i => i.ID).ToList();
         }
-        public List<String> GetName()
+        public List<string> GetName()
         {
-            return list.Select(i => i.name).ToList();
+            return list.Select(i => i.Name).ToList();
         }
-        public List<String> GetDescrition()
+        public List<string> GetDescrition()
         {
-            return list.Select(i => i.description).ToList();
+            return list.Select(i => i.Description).ToList();
+        }
+        public void Add(uint _id, string _name, string _description)
+        {
+            list.Add(new Variable(_id, _name, _description));
+        }
+
+        public void Clear()
+        {
+            list.Clear();
         }
     }
 }
