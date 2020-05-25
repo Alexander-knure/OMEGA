@@ -38,6 +38,7 @@
             this.cbVariables = new MetroFramework.Controls.MetroComboBox();
             this.dtFrom = new MetroFramework.Controls.MetroDateTime();
             this.dtTo = new MetroFramework.Controls.MetroDateTime();
+            this.cbTimeInterval = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.MainChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,6 +82,7 @@
             chartArea1.AxisX.LineColor = System.Drawing.Color.White;
             chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
             chartArea1.AxisX.MajorGrid.LineWidth = 0;
+            chartArea1.AxisX.Title = "X";
             chartArea1.AxisX.TitleFont = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             chartArea1.AxisX.TitleForeColor = System.Drawing.Color.White;
             chartArea1.AxisX2.LabelStyle.ForeColor = System.Drawing.Color.White;
@@ -170,7 +172,7 @@
             this.cbVariables.ForeColor = System.Drawing.Color.White;
             this.cbVariables.FormattingEnabled = true;
             this.cbVariables.ItemHeight = 23;
-            this.cbVariables.Location = new System.Drawing.Point(625, 16);
+            this.cbVariables.Location = new System.Drawing.Point(474, 16);
             this.cbVariables.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cbVariables.Name = "cbVariables";
             this.cbVariables.PromptText = "Choose variable";
@@ -190,7 +192,7 @@
             this.dtFrom.CustomFormat = "dd.MM.yyyy hh:mm:ss";
             this.dtFrom.FontWeight = MetroFramework.MetroDateTimeWeight.Bold;
             this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFrom.Location = new System.Drawing.Point(538, 51);
+            this.dtFrom.Location = new System.Drawing.Point(474, 51);
             this.dtFrom.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtFrom.Name = "dtFrom";
             this.dtFrom.Size = new System.Drawing.Size(186, 29);
@@ -198,6 +200,7 @@
             this.dtFrom.TabIndex = 29;
             this.dtFrom.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.dtFrom.Value = new System.DateTime(2020, 5, 25, 2, 27, 20, 0);
+            this.dtFrom.ValueChanged += new System.EventHandler(this.dtFrom_ValueChanged);
             // 
             // dtTo
             // 
@@ -206,7 +209,7 @@
             this.dtTo.CustomFormat = "dd.MM.yyyy hh:mm:ss";
             this.dtTo.FontWeight = MetroFramework.MetroDateTimeWeight.Bold;
             this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTo.Location = new System.Drawing.Point(730, 51);
+            this.dtTo.Location = new System.Drawing.Point(707, 51);
             this.dtTo.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtTo.Name = "dtTo";
             this.dtTo.Size = new System.Drawing.Size(186, 29);
@@ -214,12 +217,34 @@
             this.dtTo.TabIndex = 30;
             this.dtTo.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.dtTo.Value = new System.DateTime(2020, 5, 25, 2, 27, 20, 0);
+            this.dtTo.ValueChanged += new System.EventHandler(this.dtTo_ValueChanged);
+            // 
+            // cbTimeInterval
+            // 
+            this.cbTimeInterval.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbTimeInterval.FontWeight = MetroFramework.MetroComboBoxWeight.Bold;
+            this.cbTimeInterval.ForeColor = System.Drawing.Color.White;
+            this.cbTimeInterval.FormattingEnabled = true;
+            this.cbTimeInterval.ItemHeight = 23;
+            this.cbTimeInterval.Location = new System.Drawing.Point(707, 16);
+            this.cbTimeInterval.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.cbTimeInterval.Name = "cbTimeInterval";
+            this.cbTimeInterval.PromptText = "Choose time";
+            this.cbTimeInterval.Size = new System.Drawing.Size(186, 29);
+            this.cbTimeInterval.Style = MetroFramework.MetroColorStyle.Black;
+            this.cbTimeInterval.TabIndex = 31;
+            this.cbTimeInterval.Tag = "";
+            this.cbTimeInterval.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cbTimeInterval.UseSelectable = true;
+            this.cbTimeInterval.SelectedIndexChanged += new System.EventHandler(this.cbTime_SelectedIndexChanged);
+            this.cbTimeInterval.Click += new System.EventHandler(this.cbTimeInterval_Click);
             // 
             // StaticForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.cbTimeInterval);
             this.Controls.Add(this.dtTo);
             this.Controls.Add(this.dtFrom);
             this.Controls.Add(this.cbVariables);
@@ -244,5 +269,6 @@
         private MetroFramework.Controls.MetroComboBox cbVariables;
         private MetroFramework.Controls.MetroDateTime dtFrom;
         private MetroFramework.Controls.MetroDateTime dtTo;
+        private MetroFramework.Controls.MetroComboBox cbTimeInterval;
     }
 }

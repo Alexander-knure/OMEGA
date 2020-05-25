@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace NURESCADA
 {
@@ -23,6 +24,15 @@ namespace NURESCADA
             variables = new Variables();
             InitializeComponent();
             mf.OpenConnection();
+
+            List<String> list = new List<string>();
+            list.Add("day");
+            list.Add("hour");
+            list.Add("minute");
+            list.Add("second");
+
+            foreach (var i in list)
+                cbTimeInterval.Items.Add(i);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -73,7 +83,8 @@ namespace NURESCADA
         private void cbVariables_Click(object sender, EventArgs e)
         {
             MySqlDataReader reader;
-            string showQuery = "Select * From variables_data";
+            //string showQuery = "Select * From variables_data";
+            string showQuery = "SELECT DISTINCT variables_data.ID, variables_data.name, variables_data.Description FROM variables_data INNER JOIN trends_data ON variables_data.ID = trends_data.ID WHERE trends_data.Value = ANY(SELECT VALUE From variables_data)";
             uint id;
             string name;
             string desc;
@@ -96,9 +107,10 @@ namespace NURESCADA
                     }
                 }
             }
-            catch
+            catch(Exception exc)
             {
-                MetroMessageBox.Show(this, "Please enable server connection", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning, 100);
+                //MetroMessageBox.Show(this, "Please enable server connection", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning, 100);
+                MetroMessageBox.Show(this, exc.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
             }
         }
 
@@ -118,7 +130,7 @@ namespace NURESCADA
                     reader = msc.ExecuteReader();
                     while (reader.Read())
                     {
-
+                        
                         //dtFrom.Items.Add(reader.GetString(0));
                     }
                 }
@@ -132,6 +144,44 @@ namespace NURESCADA
         private void cbTimeTo_Click(object sender, EventArgs e)
         {
             //SELECT `Timestamp` FROM `trends_data` WHERE 1
+        }
+
+        private void dtFrom_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime d = dtFrom.Value;
+            //MainChart.ChartAreas[0].AxisX.Interval = d.;
+        }
+
+        private void dtTo_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void cbTime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+                var tInterval = cbTimeInterval.SelectedItem.ToString();
+                MainChart.ChartAreas[0].AxisX.Title = tInterval;
+                switch (tInterval)
+                {
+                 case "day":
+                        MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Days;
+                        break;
+                 case "hour":
+                        MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Hours;
+                        break;
+                 case "minute":
+                        MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Minutes;
+                        break;
+                 case "second":
+                        MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
+                        break;
+                }
+        }
+
+        private void cbTimeInterval_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }
