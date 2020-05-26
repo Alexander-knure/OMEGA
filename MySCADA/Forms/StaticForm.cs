@@ -73,7 +73,7 @@ namespace NURESCADA
                 //
                 //Add where -/- and timefrom = timestamp_min to max in other method!
                 //
-                string query = "SELECT VALUE FROM `variables_data` INNER JOIN `trends_data` ON variables_data.ID = trends_data.ID WHERE variables_data.Name = \"" + selected + "\";";
+                string query = "SELECT VALUE, TimeStamp FROM `variables_data` INNER JOIN `trends_data` ON variables_data.ID = trends_data.ID WHERE variables_data.Name = \"" + selected + "\";";
                 MySqlCommand msc = new MySqlCommand(query, DBUtils.conn);
                 try
                 {
@@ -91,7 +91,12 @@ namespace NURESCADA
                         while (reader.Read())
                         {
                             if (reader.GetDouble(0) != null)
-                                MainChart.Series[selected].Points.AddY(reader.GetDouble(0));
+                            {
+                                //bed code
+
+                                MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1).ToOADate(), reader.GetDouble(0));
+                            }
+
                         }
                     }
                 }
@@ -262,11 +267,12 @@ namespace NURESCADA
             switch (e.KeyCode)
             {
                 case Keys.Up:
-                    yAxis.ScaleView.Position++;
+                    yAxis.ScaleView.Position+=100;
                     break;
                 case Keys.Down:
                     break;
                 case Keys.Left:
+                    MetroMessageBox.Show(this, "Do you want clear all?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information, 100);
                     break;
                 case Keys.Right:
                     break;
