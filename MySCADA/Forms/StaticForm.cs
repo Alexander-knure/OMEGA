@@ -20,6 +20,9 @@ namespace NURESCADA
         private MainForm mf;
         private Variables variables;
         private static Logger logger = LogManager.GetCurrentClassLogger();
+        private double start = 0.0d;
+        private double end = 0.0d;
+        
 
         public StaticForm()
         {
@@ -27,6 +30,8 @@ namespace NURESCADA
             variables = new Variables();
             InitializeComponent();
             mf.OpenConnection();
+            MainChart.MouseWheel += MainChart_MouseWheel;
+            MainChart.KeyDown += MainChart_KeyPress;
 
             List<String> list = new List<string>();
             list.Add("day");
@@ -189,6 +194,88 @@ namespace NURESCADA
             DBUtils.OpenConnection(lbStatus, MainForm.logger);
         }
 
+            int numberOfZoom = 0;
+        private void MainChart_MouseWheel(object sender, MouseEventArgs e)
+        {
+            var chart = (Chart)sender;
+            var xAxis = chart.ChartAreas[0].AxisX;
+            var yAxis = chart.ChartAreas[0].AxisY;
+            double xMin = xAxis.ScaleView.ViewMinimum;
+            double xMax = xAxis.ScaleView.ViewMaximum;
+            double yMin = yAxis.ScaleView.ViewMinimum;
+            double yMax = yAxis.ScaleView.ViewMaximum;
+            double IntervalX = chart.ChartAreas[0].AxisX.Maximum;
+            double IntervalY = chart.ChartAreas[0].AxisY.Maximum;
+            try
+            {
+                if (e.Delta < 0 && numberOfZoom > 0) // Scrolled down.
+                {
+                    double posXStart = (xAxis.PixelPositionToValue(e.Location.X) - IntervalX * 2 / Math.Pow(2, numberOfZoom));
+                    double posXFinish = (xAxis.PixelPositionToValue(e.Location.X) + IntervalX * 2 / Math.Pow(2, numberOfZoom));
+                    double posYStart = (yAxis.PixelPositionToValue(e.Location.Y) - IntervalY * 2 / Math.Pow(2, numberOfZoom));
+                    double posYFinish = (yAxis.PixelPositionToValue(e.Location.Y) + IntervalY * 2 / Math.Pow(2, numberOfZoom));
+
+                    if (posXStart < 0) posXStart = 0;
+                    if (posYStart < 0) posYStart = 0;
+                    if (posYFinish > yAxis.Maximum) posYFinish = yAxis.Maximum;
+                    if (posXFinish > xAxis.Maximum) posYFinish = xAxis.Maximum;
+                    xAxis.ScaleView.Zoom(posXStart, posXFinish);
+                    yAxis.ScaleView.Zoom(posYStart, posYFinish);
+                    numberOfZoom--;
+                }
+                else if (e.Delta < 0 && numberOfZoom == 0) //Last scrolled dowm
+                {
+                    yAxis.ScaleView.ZoomReset();
+                    xAxis.ScaleView.ZoomReset();
+                }
+                else if (e.Delta > 0 || numberOfZoom == 10) // Scrolled up.
+                {
+
+                    double posXStart = (xAxis.PixelPositionToValue(e.Location.X) - IntervalX / Math.Pow(2, numberOfZoom));
+                    double posXFinish = (xAxis.PixelPositionToValue(e.Location.X) + IntervalX / Math.Pow(2, numberOfZoom));
+                    double posYStart = (yAxis.PixelPositionToValue(e.Location.Y) - IntervalY / Math.Pow(2, numberOfZoom));
+                    double posYFinish = (yAxis.PixelPositionToValue(e.Location.Y) + IntervalY / Math.Pow(2, numberOfZoom));
+
+                    xAxis.ScaleView.Zoom(posXStart, posXFinish);
+                    yAxis.ScaleView.Zoom(posYStart, posYFinish);
+                    numberOfZoom++;
+                }
+                else
+                {
+                    yAxis.ScaleView.ZoomReset();
+                    xAxis.ScaleView.ZoomReset();
+                    numberOfZoom = 0;
+                    return;
+                }
+            }
+            catch {
+                MetroMessageBox.Show(this, "Error in zoom", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
+            }
+        }
+
+        public void MainChart_KeyPress(object sender, KeyEventArgs e)
+        {
+            var chart = (Chart)sender;
+            var xAxis = chart.ChartAreas[0].AxisX;
+            var yAxis = chart.ChartAreas[0].AxisY;
+
+            switch (e.KeyCode)
+            {
+                case Keys.Up:
+                    yAxis.ScaleView.Position++;
+                    break;
+                case Keys.Down:
+                    break;
+                case Keys.Left:
+                    break;
+                case Keys.Right:
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
         private void btnClear_Click(object sender, EventArgs e)
         {
             DialogResult dr = MetroMessageBox.Show(this, "Do you want clear all?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information, 100);
@@ -200,6 +287,19 @@ namespace NURESCADA
             {
                 return;
             }
+        }
+
+        private void dtFromTime_ValueChanged(object sender, EventArgs e)
+        {
+            start = dtFromTime.Value.ToOADate();
+            MainChart.ChartAreas[0].AxisX.Minimum = start;
+            
+        }
+
+        private void dtToTime_ValueChanged(object sender, EventArgs e)
+        {
+            end = dtToTime.Value.ToOADate();
+            MainChart.ChartAreas[0].AxisX.Maximum = end;
         }
     }
 }

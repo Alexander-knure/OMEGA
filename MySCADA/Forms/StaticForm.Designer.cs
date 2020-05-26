@@ -111,6 +111,7 @@
             chartArea1.Name = "ChartArea1";
             chartArea1.ShadowColor = System.Drawing.Color.DarkGray;
             this.MainChart.ChartAreas.Add(chartArea1);
+            this.MainChart.Cursor = System.Windows.Forms.Cursors.Cross;
             legend1.Alignment = System.Drawing.StringAlignment.Center;
             legend1.BackColor = System.Drawing.Color.Transparent;
             legend1.BorderWidth = 5;
@@ -283,10 +284,11 @@
             this.dtFromTime.CalendarTitleBackColor = System.Drawing.Color.Blue;
             this.dtFromTime.CalendarTitleForeColor = System.Drawing.Color.White;
             this.dtFromTime.CalendarTrailingForeColor = System.Drawing.Color.Black;
-            this.dtFromTime.CustomFormat = "hh:mm:ss   dd:MM:yyyy";
+            this.dtFromTime.CustomFormat = "hh:mm:ss   dd/MM/yyyy";
             this.dtFromTime.FontWeight = MetroFramework.MetroDateTimeWeight.Bold;
             this.dtFromTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtFromTime.Location = new System.Drawing.Point(482, 48);
+            this.dtFromTime.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.dtFromTime.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtFromTime.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtFromTime.Name = "dtFromTime";
@@ -294,7 +296,8 @@
             this.dtFromTime.Style = MetroFramework.MetroColorStyle.Red;
             this.dtFromTime.TabIndex = 36;
             this.dtFromTime.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.dtFromTime.Value = new System.DateTime(2020, 5, 25, 0, 0, 0, 0);
+            this.dtFromTime.Value = new System.DateTime(2020, 5, 18, 0, 0, 0, 0);
+            this.dtFromTime.ValueChanged += new System.EventHandler(this.dtFromTime_ValueChanged);
             // 
             // dtToTime
             // 
@@ -305,10 +308,11 @@
             this.dtToTime.CalendarTitleBackColor = System.Drawing.Color.Blue;
             this.dtToTime.CalendarTitleForeColor = System.Drawing.Color.White;
             this.dtToTime.CalendarTrailingForeColor = System.Drawing.Color.Black;
-            this.dtToTime.CustomFormat = "hh:mm:ss   dd:MM:yyyy";
+            this.dtToTime.CustomFormat = "hh:mm:ss   dd/MM/yyyy";
             this.dtToTime.FontWeight = MetroFramework.MetroDateTimeWeight.Bold;
             this.dtToTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtToTime.Location = new System.Drawing.Point(707, 48);
+            this.dtToTime.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.dtToTime.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtToTime.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtToTime.Name = "dtToTime";
@@ -316,7 +320,8 @@
             this.dtToTime.Style = MetroFramework.MetroColorStyle.Red;
             this.dtToTime.TabIndex = 37;
             this.dtToTime.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.dtToTime.Value = new System.DateTime(2020, 5, 25, 0, 0, 0, 0);
+            this.dtToTime.Value = new System.DateTime(2020, 5, 26, 0, 0, 0, 0);
+            this.dtToTime.ValueChanged += new System.EventHandler(this.dtToTime_ValueChanged);
             // 
             // StaticForm
             // 
