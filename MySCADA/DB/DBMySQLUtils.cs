@@ -19,5 +19,7 @@ namespace NURESCADA
                  MySqlConnection conn = new MySqlConnection(connString);
                 return conn;
         }
+
+
     }
 }

@@ -34,6 +34,7 @@
             this.tbQuery = new MetroFramework.Controls.MetroTextBox();
             this.btnQuery = new MetroFramework.Controls.MetroButton();
             this.btnGrid = new MetroFramework.Controls.MetroButton();
+            this.lbStatus = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // lbHeader
@@ -77,9 +78,9 @@
             // 
             // 
             this.tbQuery.CustomButton.Image = null;
-            this.tbQuery.CustomButton.Location = new System.Drawing.Point(412, 2);
+            this.tbQuery.CustomButton.Location = new System.Drawing.Point(442, 2);
             this.tbQuery.CustomButton.Name = "";
-            this.tbQuery.CustomButton.Size = new System.Drawing.Size(515, 515);
+            this.tbQuery.CustomButton.Size = new System.Drawing.Size(485, 485);
             this.tbQuery.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbQuery.CustomButton.TabIndex = 1;
             this.tbQuery.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -89,7 +90,7 @@
             this.tbQuery.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
             this.tbQuery.ForeColor = System.Drawing.Color.White;
             this.tbQuery.Lines = new string[0];
-            this.tbQuery.Location = new System.Drawing.Point(16, 64);
+            this.tbQuery.Location = new System.Drawing.Point(16, 90);
             this.tbQuery.MaxLength = 32767;
             this.tbQuery.Multiline = true;
             this.tbQuery.Name = "tbQuery";
@@ -99,7 +100,7 @@
             this.tbQuery.SelectionLength = 0;
             this.tbQuery.SelectionStart = 0;
             this.tbQuery.ShortcutsEnabled = true;
-            this.tbQuery.Size = new System.Drawing.Size(930, 520);
+            this.tbQuery.Size = new System.Drawing.Size(930, 490);
             this.tbQuery.TabIndex = 27;
             this.tbQuery.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tbQuery.UseSelectable = true;
@@ -139,11 +140,30 @@
             this.btnGrid.UseCustomForeColor = true;
             this.btnGrid.UseSelectable = true;
             // 
+            // lbStatus
+            // 
+            this.lbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbStatus.AutoSize = true;
+            this.lbStatus.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbStatus.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbStatus.ForeColor = System.Drawing.Color.White;
+            this.lbStatus.Location = new System.Drawing.Point(16, 48);
+            this.lbStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbStatus.Name = "lbStatus";
+            this.lbStatus.Size = new System.Drawing.Size(132, 25);
+            this.lbStatus.TabIndex = 30;
+            this.lbStatus.Text = "Status: unknow";
+            this.lbStatus.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbStatus.UseCustomForeColor = true;
+            // 
             // CommandForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.lbStatus);
             this.Controls.Add(this.btnGrid);
             this.Controls.Add(this.btnQuery);
             this.Controls.Add(this.tbQuery);
@@ -154,6 +174,7 @@
             this.Name = "CommandForm";
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Load += new System.EventHandler(this.CommandForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +187,6 @@
         public MetroFramework.Controls.MetroTextBox tbQuery;
         private MetroFramework.Controls.MetroButton btnQuery;
         private MetroFramework.Controls.MetroButton btnGrid;
+        private MetroFramework.Controls.MetroLabel lbStatus;
     }
 }

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MnemonicForm));
             this.btnBack = new MetroFramework.Controls.MetroButton();
             this.lbHeader = new MetroFramework.Controls.MetroLabel();
+            this.lbStatus = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // btnBack
@@ -70,16 +71,37 @@
             this.lbHeader.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.lbHeader.UseCustomForeColor = true;
             // 
+            // lbStatus
+            // 
+            this.lbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbStatus.AutoSize = true;
+            this.lbStatus.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbStatus.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbStatus.ForeColor = System.Drawing.Color.White;
+            this.lbStatus.Location = new System.Drawing.Point(16, 48);
+            this.lbStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbStatus.Name = "lbStatus";
+            this.lbStatus.Size = new System.Drawing.Size(132, 25);
+            this.lbStatus.TabIndex = 28;
+            this.lbStatus.Text = "Status: unknow";
+            this.lbStatus.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbStatus.UseCustomForeColor = true;
+            // 
             // MnemonicForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.lbStatus);
             this.Controls.Add(this.lbHeader);
             this.Controls.Add(this.btnBack);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "MnemonicForm";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Load += new System.EventHandler(this.MnemonicForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,5 +111,6 @@
 
         private MetroFramework.Controls.MetroButton btnBack;
         private MetroFramework.Controls.MetroLabel lbHeader;
+        private MetroFramework.Controls.MetroLabel lbStatus;
     }
 }

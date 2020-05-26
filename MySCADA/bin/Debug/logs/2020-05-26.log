@@ -1,0 +1,1228 @@
+2020-05-26 16:38:08.0216 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.MainForm.OpenConnection() в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 43
+2020-05-26 16:38:11.9247 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.MainForm.OpenConnection() в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 43
+2020-05-26 16:38:15.4198 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.MainForm.OpenConnection() в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 43
+2020-05-26 16:38:23.2880 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.MainForm.OpenConnection() в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 43
+2020-05-26 16:38:26.5593 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.MainForm.OpenConnection() в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 43
+2020-05-26 16:40:06.2646 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.MainForm.OpenConnection() в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 43
+2020-05-26 16:43:05.9415 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.MainForm.OpenConnection() в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 43
+2020-05-26 16:43:51.7228 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.MainForm.OpenConnection() в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 43
+2020-05-26 16:43:59.1765 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.MainForm.OpenConnection() в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 43
+2020-05-26 16:47:33.1067 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.MainForm.OpenConnection() в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 43
+2020-05-26 16:56:47.3883 INFO connection successful
+2020-05-26 16:56:47.9450 INFO connection successful
+2020-05-26 16:56:48.9521 INFO connection successful
+2020-05-26 16:56:49.4464 INFO connection successful
+2020-05-26 16:56:49.9359 INFO connection successful
+2020-05-26 16:56:50.9397 INFO connection successful
+2020-05-26 16:59:55.1690 INFO connection successful
+2020-05-26 16:59:55.9390 INFO connection successful
+2020-05-26 16:59:56.4078 INFO connection successful
+2020-05-26 16:59:56.9285 INFO connection successful
+2020-05-26 16:59:57.9247 INFO connection successful
+2020-05-26 16:59:58.9345 INFO connection successful
+2020-05-26 16:59:59.4032 INFO connection successful
+2020-05-26 16:59:59.9345 INFO connection successful
+2020-05-26 17:00:00.9433 INFO connection successful
+2020-05-26 17:00:01.9361 INFO connection successful
+2020-05-26 17:00:02.9351 INFO connection successful
+2020-05-26 17:00:03.9347 INFO connection successful
+2020-05-26 17:00:04.5464 INFO connection successful
+2020-05-26 17:00:04.9394 INFO connection successful
+2020-05-26 17:00:05.9348 INFO connection successful
+2020-05-26 17:00:06.8885 INFO connection successful
+2020-05-26 17:00:06.9552 INFO connection successful
+2020-05-26 17:00:07.9236 INFO connection successful
+2020-05-26 17:00:08.9252 INFO connection successful
+2020-05-26 17:00:09.9241 INFO connection successful
+2020-05-26 17:00:10.9288 INFO connection successful
+2020-05-26 17:00:11.9241 INFO connection successful
+2020-05-26 17:00:12.9188 INFO connection successful
+2020-05-26 17:00:13.9196 INFO connection successful
+2020-05-26 17:00:14.9231 INFO connection successful
+2020-05-26 17:00:15.9267 INFO connection successful
+2020-05-26 17:00:16.9246 INFO connection successful
+2020-05-26 17:00:17.9192 INFO connection successful
+2020-05-26 17:00:18.9270 INFO connection successful
+2020-05-26 17:00:19.9300 INFO connection successful
+2020-05-26 17:00:20.9296 INFO connection successful
+2020-05-26 17:00:21.9331 INFO connection successful
+2020-05-26 17:00:22.9361 INFO connection successful
+2020-05-26 17:00:23.9342 INFO connection successful
+2020-05-26 17:02:27.3155 INFO connection successful
+2020-05-26 17:02:28.1057 INFO connection successful
+2020-05-26 17:02:29.1048 INFO connection successful
+2020-05-26 17:02:30.1127 INFO connection successful
+2020-05-26 17:02:31.2572 INFO connection successful
+2020-05-26 17:02:32.0909 INFO connection successful
+2020-05-26 17:02:33.1828 INFO connection successful
+2020-05-26 17:02:34.1006 INFO connection successful
+2020-05-26 17:02:35.1082 INFO connection successful
+2020-05-26 17:02:36.1023 INFO connection successful
+2020-05-26 17:08:15.4744 INFO connection successful
+2020-05-26 17:08:16.5047 INFO connection successful
+2020-05-26 17:08:17.2325 INFO connection successful
+2020-05-26 17:08:18.2298 INFO connection successful
+2020-05-26 17:08:19.2223 INFO connection successful
+2020-05-26 17:08:20.2213 INFO connection successful
+2020-05-26 17:08:21.2250 INFO connection successful
+2020-05-26 17:08:22.2283 INFO connection successful
+2020-05-26 17:08:23.2031 INFO connection successful
+2020-05-26 17:08:23.4191 INFO connection successful
+2020-05-26 17:08:24.2307 INFO connection successful
+2020-05-26 17:08:24.9064 INFO connection successful
+2020-05-26 17:08:25.2154 INFO connection successful
+2020-05-26 17:08:25.9743 INFO connection successful
+2020-05-26 17:08:26.2168 INFO connection successful
+2020-05-26 17:08:27.3762 INFO connection successful
+2020-05-26 17:08:27.4971 INFO connection successful
+2020-05-26 17:08:28.0401 INFO connection successful
+2020-05-26 17:08:28.2293 INFO connection successful
+2020-05-26 17:08:29.3398 INFO connection successful
+2020-05-26 17:08:29.4542 INFO connection successful
+2020-05-26 17:08:30.0774 INFO connection successful
+2020-05-26 17:08:30.2214 INFO connection successful
+2020-05-26 17:08:30.9076 INFO connection successful
+2020-05-26 17:08:31.2257 INFO connection successful
+2020-05-26 17:08:31.6469 INFO connection successful
+2020-05-26 17:08:32.2256 INFO connection successful
+2020-05-26 17:08:33.0575 INFO connection successful
+2020-05-26 17:08:33.2311 INFO connection successful
+2020-05-26 17:08:33.6982 INFO connection successful
+2020-05-26 17:08:34.2186 INFO connection successful
+2020-05-26 17:08:34.9078 INFO connection successful
+2020-05-26 17:08:35.2267 INFO connection successful
+2020-05-26 17:08:35.8212 INFO connection successful
+2020-05-26 17:08:36.2317 INFO connection successful
+2020-05-26 17:08:37.2178 INFO connection successful
+2020-05-26 17:08:37.6978 INFO connection successful
+2020-05-26 17:08:38.2311 INFO connection successful
+2020-05-26 17:08:38.4687 INFO connection successful
+2020-05-26 17:08:39.2304 INFO connection successful
+2020-05-26 17:08:40.2347 INFO connection successful
+2020-05-26 17:08:40.4364 INFO connection successful
+2020-05-26 17:08:41.2228 INFO connection successful
+2020-05-26 17:08:41.9076 INFO connection successful
+2020-05-26 17:08:42.2265 INFO connection successful
+2020-05-26 17:08:42.3869 INFO connection successful
+2020-05-26 17:08:43.2302 INFO connection successful
+2020-05-26 17:08:43.6982 INFO connection successful
+2020-05-26 17:08:44.2286 INFO connection successful
+2020-05-26 17:08:45.0132 INFO connection successful
+2020-05-26 17:08:45.2269 INFO connection successful
+2020-05-26 17:08:45.3911 INFO connection successful
+2020-05-26 17:08:46.2226 INFO connection successful
+2020-05-26 17:08:47.2191 INFO connection successful
+2020-05-26 17:08:48.2157 INFO connection successful
+2020-05-26 17:08:49.2305 INFO connection successful
+2020-05-26 17:08:50.2333 INFO connection successful
+2020-05-26 17:08:51.1591 INFO connection successful
+2020-05-26 17:08:51.3486 INFO connection successful
+2020-05-26 17:08:52.2222 INFO connection successful
+2020-05-26 17:08:53.2198 INFO connection successful
+2020-05-26 17:08:53.9902 INFO connection successful
+2020-05-26 17:08:54.2234 INFO connection successful
+2020-05-26 17:08:55.2611 INFO connection successful
+2020-05-26 17:08:56.2302 INFO connection successful
+2020-05-26 17:08:57.2296 INFO connection successful
+2020-05-26 17:08:58.2261 INFO connection successful
+2020-05-26 17:08:59.2274 INFO connection successful
+2020-05-26 17:08:59.4318 INFO connection successful
+2020-05-26 17:09:00.2350 INFO connection successful
+2020-05-26 17:09:01.2160 INFO connection successful
+2020-05-26 17:09:02.2162 INFO connection successful
+2020-05-26 17:09:03.2152 INFO connection successful
+2020-05-26 17:09:04.2166 INFO connection successful
+2020-05-26 17:09:05.2177 INFO connection successful
+2020-05-26 17:09:06.2159 INFO connection successful
+2020-05-26 17:09:07.0064 INFO connection successful
+2020-05-26 17:09:07.2177 INFO connection successful
+2020-05-26 17:09:08.2193 INFO connection successful
+2020-05-26 17:09:09.2302 INFO connection successful
+2020-05-26 17:09:10.2282 INFO connection successful
+2020-05-26 17:09:11.2263 INFO connection successful
+2020-05-26 17:09:12.2281 INFO connection successful
+2020-05-26 17:09:13.2261 INFO connection successful
+2020-05-26 17:09:13.3531 ERROR MySql.Data.MySqlClient.MySqlException (0x80004005): PROCEDURE simplescada.a does not exist
+   в MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   в MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   в MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   в MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   в MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.Forms.CommandForm.runQuery() в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\CommandForm.cs:строка 49
+2020-05-26 17:09:14.2288 INFO connection successful
+2020-05-26 17:09:15.2348 INFO connection successful
+2020-05-26 17:09:16.2154 INFO connection successful
+2020-05-26 17:09:16.7322 WARN SQL query: empty
+2020-05-26 17:09:17.2211 INFO connection successful
+2020-05-26 17:09:18.2168 INFO connection successful
+2020-05-26 17:09:19.2219 INFO connection successful
+2020-05-26 17:09:20.2180 INFO connection successful
+2020-05-26 17:09:21.2157 INFO connection successful
+2020-05-26 17:09:22.2186 INFO connection successful
+2020-05-26 17:09:23.2185 INFO connection successful
+2020-05-26 17:09:24.2205 INFO connection successful
+2020-05-26 17:09:25.2178 INFO connection successful
+2020-05-26 17:09:26.2191 INFO connection successful
+2020-05-26 17:09:27.2190 INFO connection successful
+2020-05-26 17:09:28.2154 INFO connection successful
+2020-05-26 17:09:29.2176 INFO connection successful
+2020-05-26 17:09:30.2269 INFO connection successful
+2020-05-26 17:09:31.2327 INFO connection successful
+2020-05-26 17:09:32.2277 INFO connection successful
+2020-05-26 17:09:33.2286 INFO connection successful
+2020-05-26 17:09:33.4423 INFO connection successful
+2020-05-26 17:09:34.2325 INFO connection successful
+2020-05-26 17:09:35.2305 INFO connection successful
+2020-05-26 17:09:36.2350 INFO connection successful
+2020-05-26 17:09:37.2196 INFO connection successful
+2020-05-26 17:09:38.2169 INFO connection successful
+2020-05-26 17:09:39.2207 INFO connection successful
+2020-05-26 17:09:40.2187 INFO connection successful
+2020-05-26 17:09:41.2172 INFO connection successful
+2020-05-26 17:09:42.2161 INFO connection successful
+2020-05-26 17:09:43.2168 INFO connection successful
+2020-05-26 17:09:44.2182 INFO connection successful
+2020-05-26 17:09:44.5461 INFO connection successful
+2020-05-26 17:09:45.2168 INFO connection successful
+2020-05-26 17:09:46.0699 INFO connection successful
+2020-05-26 17:09:46.2168 INFO connection successful
+2020-05-26 17:09:47.2194 INFO connection successful
+2020-05-26 17:09:48.2179 INFO connection successful
+2020-05-26 17:09:49.2169 INFO connection successful
+2020-05-26 17:09:50.2174 INFO connection successful
+2020-05-26 17:09:51.2248 INFO connection successful
+2020-05-26 17:09:52.2177 INFO connection successful
+2020-05-26 17:09:53.2172 INFO connection successful
+2020-05-26 17:09:54.2243 INFO connection successful
+2020-05-26 17:09:54.4733 INFO connection successful
+2020-05-26 17:09:55.2167 INFO connection successful
+2020-05-26 17:09:55.4680 INFO connection successful
+2020-05-26 17:09:56.2170 INFO connection successful
+2020-05-26 17:09:56.4673 INFO connection successful
+2020-05-26 17:09:57.2182 INFO connection successful
+2020-05-26 17:09:57.4725 INFO connection successful
+2020-05-26 17:09:58.2201 INFO connection successful
+2020-05-26 17:09:58.4736 INFO connection successful
+2020-05-26 17:09:59.2261 INFO connection successful
+2020-05-26 17:09:59.4735 INFO connection successful
+2020-05-26 17:10:00.2274 INFO connection successful
+2020-05-26 17:10:00.4749 INFO connection successful
+2020-05-26 17:10:01.2230 INFO connection successful
+2020-05-26 17:10:01.4756 INFO connection successful
+2020-05-26 17:10:02.2247 INFO connection successful
+2020-05-26 17:10:02.4665 INFO connection successful
+2020-05-26 17:10:03.2239 INFO connection successful
+2020-05-26 17:10:03.4720 INFO connection successful
+2020-05-26 17:10:04.2207 INFO connection successful
+2020-05-26 17:10:04.4731 INFO connection successful
+2020-05-26 17:10:05.2156 INFO connection successful
+2020-05-26 17:10:05.4709 INFO connection successful
+2020-05-26 17:10:06.2187 INFO connection successful
+2020-05-26 17:10:06.4666 INFO connection successful
+2020-05-26 17:10:07.2231 INFO connection successful
+2020-05-26 17:10:07.4681 INFO connection successful
+2020-05-26 17:10:08.2170 INFO connection successful
+2020-05-26 17:10:08.4761 INFO connection successful
+2020-05-26 17:10:09.2183 INFO connection successful
+2020-05-26 17:10:10.2167 INFO connection successful
+2020-05-26 17:10:11.2161 INFO connection successful
+2020-05-26 17:10:12.2270 INFO connection successful
+2020-05-26 17:10:13.2214 INFO connection successful
+2020-05-26 17:10:14.2192 INFO connection successful
+2020-05-26 17:10:15.2230 INFO connection successful
+2020-05-26 17:10:16.2178 INFO connection successful
+2020-05-26 17:10:17.2204 INFO connection successful
+2020-05-26 17:10:18.2182 INFO connection successful
+2020-05-26 17:10:19.2224 INFO connection successful
+2020-05-26 17:10:20.2235 INFO connection successful
+2020-05-26 17:10:21.2179 INFO connection successful
+2020-05-26 17:10:22.2163 INFO connection successful
+2020-05-26 17:10:23.2226 INFO connection successful
+2020-05-26 17:10:24.2252 INFO connection successful
+2020-05-26 17:10:25.2216 INFO connection successful
+2020-05-26 17:10:26.2233 INFO connection successful
+2020-05-26 17:10:27.2269 INFO connection successful
+2020-05-26 17:10:28.2184 INFO connection successful
+2020-05-26 17:10:29.2204 INFO connection successful
+2020-05-26 17:10:30.2221 INFO connection successful
+2020-05-26 17:10:31.2162 INFO connection successful
+2020-05-26 17:10:32.2204 INFO connection successful
+2020-05-26 17:10:33.2274 INFO connection successful
+2020-05-26 17:10:34.2365 INFO connection successful
+2020-05-26 17:10:35.2403 INFO connection successful
+2020-05-26 17:10:36.2306 INFO connection successful
+2020-05-26 17:10:37.2354 INFO connection successful
+2020-05-26 17:10:38.2257 INFO connection successful
+2020-05-26 17:10:39.2757 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Too many connections
+   в MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.DBUtils.OpenConnection(MetroLabel lbStatus, Logger logger) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\DB\DBUtils.cs:строка 37
+2020-05-26 17:11:58.2149 INFO connection successful
+2020-05-26 17:12:00.2932 INFO connection successful
+2020-05-26 17:12:01.5517 INFO connection successful
+2020-05-26 17:12:04.6448 INFO connection successful
+2020-05-26 17:12:05.6497 INFO connection successful
+2020-05-26 17:12:23.1251 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.DBUtils.OpenConnection(MetroLabel lbStatus, Logger logger) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\DB\DBUtils.cs:строка 37
+2020-05-26 17:12:27.2477 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.DBUtils.OpenConnection(MetroLabel lbStatus, Logger logger) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\DB\DBUtils.cs:строка 37
+2020-05-26 17:12:32.3316 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.DBUtils.OpenConnection(MetroLabel lbStatus, Logger logger) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\DB\DBUtils.cs:строка 37
+2020-05-26 17:12:35.5899 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.DBUtils.OpenConnection(MetroLabel lbStatus, Logger logger) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\DB\DBUtils.cs:строка 37
+2020-05-26 17:12:47.0898 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.DBUtils.OpenConnection(MetroLabel lbStatus, Logger logger) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\DB\DBUtils.cs:строка 37
+2020-05-26 17:12:49.4354 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.DBUtils.OpenConnection(MetroLabel lbStatus, Logger logger) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\DB\DBUtils.cs:строка 37
+2020-05-26 17:13:06.5876 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.DBUtils.OpenConnection(MetroLabel lbStatus, Logger logger) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\DB\DBUtils.cs:строка 37
+2020-05-26 17:13:11.8542 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.DBUtils.OpenConnection(MetroLabel lbStatus, Logger logger) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\DB\DBUtils.cs:строка 37
+2020-05-26 17:13:15.7207 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.DBUtils.OpenConnection(MetroLabel lbStatus, Logger logger) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\DB\DBUtils.cs:строка 37
+2020-05-26 17:13:19.0628 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.DBUtils.OpenConnection(MetroLabel lbStatus, Logger logger) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\DB\DBUtils.cs:строка 37
+2020-05-26 17:18:34.4819 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.DBUtils.OpenConnection(MetroLabel lbStatus, Logger logger) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\DB\DBUtils.cs:строка 37
+2020-05-26 17:18:38.4153 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.DBUtils.OpenConnection(MetroLabel lbStatus, Logger logger) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\DB\DBUtils.cs:строка 37
+2020-05-26 17:18:40.5735 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.DBUtils.OpenConnection(MetroLabel lbStatus, Logger logger) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\DB\DBUtils.cs:строка 37
+2020-05-26 17:18:46.8652 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.DBUtils.OpenConnection(MetroLabel lbStatus, Logger logger) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\DB\DBUtils.cs:строка 37
+2020-05-26 17:18:52.0429 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.DBUtils.OpenConnection(MetroLabel lbStatus, Logger logger) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\DB\DBUtils.cs:строка 37
+2020-05-26 17:19:05.4225 INFO connection successful
+2020-05-26 17:19:06.2775 INFO connection successful
+2020-05-26 17:19:06.4808 INFO connection successful
+2020-05-26 17:19:06.5217 INFO connection successful
+2020-05-26 17:19:07.2838 INFO connection successful
+2020-05-26 17:19:08.2727 INFO connection successful
+2020-05-26 17:19:08.9463 INFO connection successful
+2020-05-26 17:19:09.2799 INFO connection successful
+2020-05-26 17:19:10.2821 INFO connection successful
+2020-05-26 17:19:10.5485 INFO connection successful
+2020-05-26 17:19:11.2669 INFO connection successful
+2020-05-26 17:19:11.5310 INFO connection successful
+2020-05-26 17:19:12.2651 INFO connection successful
+2020-05-26 17:19:12.4337 INFO connection successful
+2020-05-26 17:19:13.2678 INFO connection successful
+2020-05-26 17:19:13.5614 INFO connection successful
+2020-05-26 17:19:14.2749 INFO connection successful
+2020-05-26 17:19:15.2754 INFO connection successful
+2020-05-26 17:19:16.2829 INFO connection successful
+2020-05-26 17:19:17.2731 INFO connection successful
+2020-05-26 17:19:18.2251 INFO connection successful
+2020-05-26 17:19:18.2669 INFO connection successful
+2020-05-26 17:19:18.4365 INFO connection successful
+2020-05-26 17:19:19.2749 INFO connection successful
+2020-05-26 17:19:20.2668 INFO connection successful
+2020-05-26 17:19:20.8814 INFO connection successful
+2020-05-26 17:19:21.2681 INFO connection successful
+2020-05-26 17:19:21.7634 INFO connection successful
+2020-05-26 17:19:21.7954 INFO connection successful
+2020-05-26 17:19:22.2628 INFO connection successful
+2020-05-26 17:19:23.2700 INFO connection successful
+2020-05-26 17:19:24.2694 INFO connection successful
+2020-05-26 17:19:25.2678 INFO connection successful
+2020-05-26 17:19:26.2683 INFO connection successful
+2020-05-26 17:19:27.2652 INFO connection successful
+2020-05-26 17:19:28.2763 INFO connection successful
+2020-05-26 17:19:29.2790 INFO connection successful
+2020-05-26 17:19:30.2828 INFO connection successful
+2020-05-26 17:19:31.2778 INFO connection successful
+2020-05-26 17:19:32.2796 INFO connection successful
+2020-05-26 17:19:33.2768 INFO connection successful
+2020-05-26 17:20:19.5408 INFO connection successful
+2020-05-26 17:20:21.7599 INFO connection successful
+2020-05-26 17:20:21.8128 INFO connection successful
+2020-05-26 17:20:23.2005 INFO connection successful
+2020-05-26 17:20:24.9862 INFO connection successful
+2020-05-26 17:20:25.9503 INFO connection successful
+2020-05-26 17:20:27.0529 INFO connection successful
+2020-05-26 17:20:27.0957 INFO connection successful
+2020-05-26 17:20:30.7225 INFO connection successful
+2020-05-26 17:20:32.1044 INFO connection successful
+2020-05-26 17:20:32.1582 INFO connection successful
+2020-05-26 17:20:33.4695 INFO connection successful
+2020-05-26 17:20:34.4765 INFO connection successful
+2020-05-26 17:20:36.1276 INFO connection successful
+2020-05-26 17:20:38.2831 INFO connection successful
+2020-05-26 17:20:38.8814 INFO connection successful
+2020-05-26 17:20:40.0767 INFO connection successful
+2020-05-26 17:20:40.7421 INFO connection successful
+2020-05-26 17:26:10.5287 INFO connection successful
+2020-05-26 17:26:11.8986 INFO connection successful
+2020-05-26 17:26:11.9699 INFO connection successful
+2020-05-26 17:26:13.4606 INFO connection successful
+2020-05-26 17:26:14.2445 INFO connection successful
+2020-05-26 17:26:15.6240 INFO connection successful
+2020-05-26 17:26:16.3445 INFO connection successful
+2020-05-26 17:26:17.6676 INFO connection successful
+2020-05-26 17:26:18.7219 INFO connection successful
+2020-05-26 17:26:19.8827 INFO connection successful
+2020-05-26 17:26:20.7624 INFO connection successful
+2020-05-26 17:26:21.6674 INFO connection successful
+2020-05-26 17:26:22.9072 INFO connection successful
+2020-05-26 17:26:23.9363 INFO connection successful
+2020-05-26 17:26:24.8520 INFO connection successful
+2020-05-26 17:26:26.0424 INFO connection successful
+2020-05-26 17:26:27.1075 INFO connection successful
+2020-05-26 17:26:28.5261 INFO connection successful
+2020-05-26 17:26:30.3088 INFO connection successful
+2020-05-26 17:26:30.9233 INFO connection successful
+2020-05-26 17:26:31.8427 INFO connection successful
+2020-05-26 17:26:33.5567 INFO connection successful
+2020-05-26 17:26:34.2322 INFO connection successful
+2020-05-26 17:26:35.0899 INFO connection successful
+2020-05-26 17:26:36.6222 INFO connection successful
+2020-05-26 17:26:37.9804 INFO connection successful
+2020-05-26 17:26:38.5424 INFO connection successful
+2020-05-26 17:26:39.2915 INFO connection successful
+2020-05-26 17:26:39.9053 INFO connection successful
+2020-05-26 17:33:05.8308 INFO connection successful
+2020-05-26 17:33:07.6089 INFO connection successful
+2020-05-26 17:33:07.7355 INFO connection successful
+2020-05-26 17:33:08.8601 INFO connection successful
+2020-05-26 17:33:09.4366 INFO connection successful
+2020-05-26 17:33:10.1838 INFO connection successful
+2020-05-26 17:33:10.8001 INFO connection successful
+2020-05-26 17:33:11.4484 INFO connection successful
+2020-05-26 17:33:12.2740 INFO connection successful
+2020-05-26 17:33:13.2288 INFO connection successful
+2020-05-26 17:33:14.2257 INFO connection successful
+2020-05-26 17:33:15.2959 INFO connection successful
+2020-05-26 17:33:16.4192 INFO connection successful
+2020-05-26 17:33:17.2501 INFO connection successful
+2020-05-26 17:33:17.8260 INFO connection successful
+2020-05-26 17:33:18.7309 INFO connection successful
+2020-05-26 17:33:20.0909 INFO connection successful
+2020-05-26 17:33:20.5586 INFO connection successful
+2020-05-26 17:33:21.5434 INFO connection successful
+2020-05-26 17:33:31.4572 INFO connection successful
+2020-05-26 17:33:33.2596 INFO connection successful
+2020-05-26 17:33:35.8549 INFO connection successful
+2020-05-26 17:33:56.2992 INFO connection successful
+2020-05-26 17:33:58.8262 INFO connection successful
+2020-05-26 17:33:58.8831 INFO connection successful
+2020-05-26 17:34:00.1537 INFO connection successful
+2020-05-26 17:34:00.6215 INFO connection successful
+2020-05-26 17:34:01.4221 INFO connection successful
+2020-05-26 17:34:01.7918 INFO connection successful
+2020-05-26 17:34:02.5596 INFO connection successful
+2020-05-26 17:34:02.9374 INFO connection successful
+2020-05-26 17:34:03.9235 INFO connection successful
+2020-05-26 17:34:05.5285 INFO connection successful
+2020-05-26 17:34:06.1630 INFO connection successful
+2020-05-26 17:34:07.3879 INFO connection successful
+2020-05-26 17:34:08.0041 INFO connection successful
+2020-05-26 17:34:09.1076 INFO connection successful
+2020-05-26 17:34:09.6876 INFO connection successful
+2020-05-26 17:34:10.6716 INFO connection successful
+2020-05-26 17:34:12.1557 INFO connection successful
+2020-05-26 17:34:13.0240 INFO connection successful
+2020-05-26 17:34:14.3844 INFO connection successful
+2020-05-26 17:34:16.5907 INFO connection successful
+2020-05-26 17:34:17.8473 INFO connection successful
+2020-05-26 17:34:21.5344 INFO connection successful
+2020-05-26 17:34:22.6261 INFO connection successful
+2020-05-26 17:34:23.9167 INFO connection successful
+2020-05-26 17:34:25.5276 INFO connection successful
+2020-05-26 17:34:25.9255 INFO connection successful
+2020-05-26 17:35:06.5907 INFO connection successful
+2020-05-26 17:35:08.6903 INFO connection successful
+2020-05-26 17:35:08.7551 INFO connection successful
+2020-05-26 17:35:10.2887 INFO connection successful
+2020-05-26 17:35:10.9828 INFO connection successful
+2020-05-26 17:35:11.6389 INFO connection successful
+2020-05-26 17:35:12.3800 INFO connection successful
+2020-05-26 17:35:13.1564 INFO connection successful
+2020-05-26 17:35:13.9540 INFO connection successful
+2020-05-26 17:35:14.7633 INFO connection successful
+2020-05-26 17:35:15.6937 INFO connection successful
+2020-05-26 17:35:16.7064 INFO connection successful
+2020-05-26 17:35:18.0585 INFO connection successful
+2020-05-26 17:35:19.0983 INFO connection successful
+2020-05-26 17:35:21.6311 INFO connection successful
+2020-05-26 17:35:22.8063 INFO connection successful
+2020-05-26 17:35:24.6132 INFO connection successful
+2020-05-26 17:35:26.1522 INFO connection successful
+2020-05-26 17:35:31.8734 INFO connection successful
+2020-05-26 17:35:34.5798 INFO connection successful
+2020-05-26 17:35:42.6938 INFO connection successful
+2020-05-26 17:35:46.1536 INFO connection successful
+2020-05-26 17:35:46.8739 INFO connection successful
+2020-05-26 17:35:59.4329 INFO connection successful
+2020-05-26 17:36:01.2187 INFO connection successful
+2020-05-26 17:36:01.2746 INFO connection successful
+2020-05-26 17:36:02.2395 INFO connection successful
+2020-05-26 17:36:02.8695 INFO connection successful
+2020-05-26 17:36:03.7637 INFO connection successful
+2020-05-26 17:36:04.1367 INFO connection successful
+2020-05-26 17:36:05.5451 INFO connection successful
+2020-05-26 17:36:06.9735 INFO connection successful
+2020-05-26 17:36:08.3411 INFO connection successful
+2020-05-26 17:36:09.2551 INFO connection successful
+2020-05-26 17:36:10.3391 INFO connection successful
+2020-05-26 17:36:11.1164 INFO connection successful
+2020-05-26 17:36:12.3076 INFO connection successful
+2020-05-26 17:36:46.0063 INFO connection successful
+2020-05-26 17:36:48.6190 INFO connection successful
+2020-05-26 17:36:48.6778 INFO connection successful
+2020-05-26 17:36:50.1158 INFO connection successful
+2020-05-26 17:36:50.6866 INFO connection successful
+2020-05-26 17:36:51.9650 INFO connection successful
+2020-05-26 17:36:52.9262 INFO connection successful
+2020-05-26 17:36:54.2278 INFO connection successful
+2020-05-26 17:36:54.8169 INFO connection successful
+2020-05-26 17:36:56.1508 INFO connection successful
+2020-05-26 17:36:57.0903 INFO connection successful
+2020-05-26 17:36:58.4496 INFO connection successful
+2020-05-26 17:36:59.2367 INFO connection successful
+2020-05-26 17:37:00.6513 INFO connection successful
+2020-05-26 17:37:04.6409 INFO connection successful
+2020-05-26 17:39:36.5241 INFO connection successful
+2020-05-26 17:39:37.8281 INFO connection successful
+2020-05-26 17:39:37.8790 INFO connection successful
+2020-05-26 17:39:44.6275 INFO connection successful
+2020-05-26 17:39:45.2417 INFO connection successful
+2020-05-26 17:41:00.0275 INFO connection successful
+2020-05-26 17:41:01.5914 INFO connection successful
+2020-05-26 17:41:01.6452 INFO connection successful
+2020-05-26 17:41:10.3335 INFO connection successful
+2020-05-26 17:41:11.0205 INFO connection successful
+2020-05-26 17:41:14.0751 INFO connection successful
+2020-05-26 17:41:14.6412 INFO connection successful
+2020-05-26 17:41:17.6545 INFO connection successful
+2020-05-26 17:41:18.4674 INFO connection successful
+2020-05-26 17:41:38.4197 INFO connection successful
+2020-05-26 17:41:39.0673 INFO connection successful
+2020-05-26 17:45:56.0675 INFO connection successful
+2020-05-26 17:45:57.9117 INFO connection successful
+2020-05-26 17:45:57.9696 INFO connection successful
+2020-05-26 17:49:14.3081 INFO connection successful
+2020-05-26 17:49:16.1195 INFO connection successful
+2020-05-26 17:49:16.1804 INFO connection successful
+2020-05-26 17:49:31.3008 INFO connection successful
+2020-05-26 17:52:48.4539 INFO connection successful
+2020-05-26 17:52:49.6083 INFO connection successful
+2020-05-26 17:52:49.6701 INFO connection successful
+2020-05-26 17:56:51.1482 INFO connection successful
+2020-05-26 17:56:52.2344 INFO connection successful
+2020-05-26 17:56:52.2872 INFO connection successful
+2020-05-26 17:59:04.1991 INFO connection successful
+2020-05-26 17:59:08.4475 INFO connection successful
+2020-05-26 17:59:25.0965 INFO connection successful
+2020-05-26 17:59:49.7399 INFO connection successful
+2020-05-26 17:59:51.8947 INFO connection successful
+2020-05-26 17:59:52.8900 INFO connection successful
+2020-05-26 17:59:53.8870 INFO connection successful
+2020-05-26 17:59:58.7079 INFO connection successful
+2020-05-26 17:59:59.7066 INFO connection successful
+2020-05-26 18:00:00.7029 INFO connection successful
+2020-05-26 18:00:01.7162 INFO connection successful
+2020-05-26 18:00:26.9359 INFO connection successful
+2020-05-26 18:00:29.5234 INFO connection successful
+2020-05-26 18:00:30.4639 INFO connection successful
+2020-05-26 18:00:31.4714 INFO connection successful
+2020-05-26 18:00:32.4709 INFO connection successful
+2020-05-26 18:00:35.9684 INFO connection successful
+2020-05-26 18:00:36.9684 INFO connection successful
+2020-05-26 18:00:37.9680 INFO connection successful
+2020-05-26 18:00:38.9709 INFO connection successful
+2020-05-26 18:00:39.9784 INFO connection successful
+2020-05-26 18:00:41.1163 INFO connection successful
+2020-05-26 18:00:41.9785 INFO connection successful
+2020-05-26 18:00:42.9811 INFO connection successful
+2020-05-26 18:00:43.9781 INFO connection successful
+2020-05-26 18:00:45.0184 INFO connection successful
+2020-05-26 18:00:45.9681 INFO connection successful
+2020-05-26 18:00:46.9669 INFO connection successful
+2020-05-26 18:00:47.9663 INFO connection successful
+2020-05-26 18:00:48.9680 INFO connection successful
+2020-05-26 18:00:49.9711 INFO connection successful
+2020-05-26 18:00:50.9679 INFO connection successful
+2020-05-26 18:00:51.9760 INFO connection successful
+2020-05-26 18:00:52.9751 INFO connection successful
+2020-05-26 18:00:53.9779 INFO connection successful
+2020-05-26 18:00:54.9703 INFO connection successful
+2020-05-26 18:00:55.9726 INFO connection successful
+2020-05-26 18:00:56.9846 INFO connection successful
+2020-05-26 18:00:57.9667 INFO connection successful
+2020-05-26 18:00:58.9808 INFO connection successful
+2020-05-26 18:01:00.0267 INFO connection successful
+2020-05-26 18:01:01.0703 INFO connection successful
+2020-05-26 18:01:01.9897 INFO connection successful
+2020-05-26 18:01:02.9790 INFO connection successful
+2020-05-26 18:01:03.9777 INFO connection successful
+2020-05-26 18:01:04.9833 INFO connection successful
+2020-05-26 18:01:05.9826 INFO connection successful
+2020-05-26 18:01:06.9678 INFO connection successful
+2020-05-26 18:01:07.9762 INFO connection successful
+2020-05-26 18:01:08.9202 INFO connection successful
+2020-05-26 18:01:08.9693 INFO connection successful
+2020-05-26 18:01:09.1390 INFO connection successful
+2020-05-26 18:01:09.9836 INFO connection successful
+2020-05-26 18:01:10.8090 INFO connection successful
+2020-05-26 18:01:10.9831 INFO connection successful
+2020-05-26 18:01:11.3945 INFO connection successful
+2020-05-26 18:01:11.9662 INFO connection successful
+2020-05-26 18:01:12.9737 INFO connection successful
+2020-05-26 18:01:13.9727 INFO connection successful
+2020-05-26 18:01:14.9732 INFO connection successful
+2020-05-26 18:01:15.9840 INFO connection successful
+2020-05-26 18:01:16.9815 INFO connection successful
+2020-05-26 18:01:17.9796 INFO connection successful
+2020-05-26 18:01:18.9762 INFO connection successful
+2020-05-26 18:01:19.9752 INFO connection successful
+2020-05-26 18:01:20.9748 INFO connection successful
+2020-05-26 18:01:21.9824 INFO connection successful
+2020-05-26 18:01:22.9761 INFO connection successful
+2020-05-26 18:01:23.9866 INFO connection successful
+2020-05-26 18:01:24.9708 INFO connection successful
+2020-05-26 18:01:25.9682 INFO connection successful
+2020-05-26 18:01:26.9705 INFO connection successful
+2020-05-26 18:01:27.9726 INFO connection successful
+2020-05-26 18:01:28.9652 INFO connection successful
+2020-05-26 18:01:29.9759 INFO connection successful
+2020-05-26 18:01:30.7684 INFO connection successful
+2020-05-26 18:01:30.9716 INFO connection successful
+2020-05-26 18:01:31.9660 INFO connection successful
+2020-05-26 18:01:32.9661 INFO connection successful
+2020-05-26 18:01:33.9769 INFO connection successful
+2020-05-26 18:01:34.9664 INFO connection successful
+2020-05-26 18:01:35.9809 INFO connection successful
+2020-05-26 18:01:38.0520 INFO connection successful
+2020-05-26 18:01:38.9729 INFO connection successful
+2020-05-26 18:01:39.9702 INFO connection successful
+2020-05-26 18:01:40.9707 INFO connection successful
+2020-05-26 18:01:41.9664 INFO connection successful
+2020-05-26 18:01:42.9738 INFO connection successful
+2020-05-26 18:01:43.9651 INFO connection successful
+2020-05-26 18:01:44.9715 INFO connection successful
+2020-05-26 18:01:45.9662 INFO connection successful
+2020-05-26 18:01:46.9666 INFO connection successful
+2020-05-26 18:01:47.9696 INFO connection successful
+2020-05-26 18:01:48.9674 INFO connection successful
+2020-05-26 18:02:34.4800 INFO connection successful
+2020-05-26 18:02:35.5233 INFO connection successful
+2020-05-26 18:02:35.5721 INFO connection successful

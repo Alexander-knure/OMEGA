@@ -17,9 +17,9 @@ namespace NURESCADA
 {
     public partial class MainForm : MetroFramework.Forms.MetroForm
     {
-        private static Logger logger = LogManager.GetCurrentClassLogger();
+        public static Logger logger = LogManager.GetCurrentClassLogger();
         private List<string> TableNames = new List<string>();
-        public MySqlConnection conn;
+        public static MySqlConnection conn;
 
         static object locker = new object();
         public MainForm()
@@ -32,35 +32,14 @@ namespace NURESCADA
             OpenConnection();
         }
 
-        public bool OpenConnection()
+        public void OpenConnection()
         {
-            try
+            conn = DBUtils.conn;
+            if(!DBUtils.OpenConnection(lbStatus, logger))
             {
-                conn = DBUtils.GetDBConnection();
-                lb1.Text = String.Empty;
-                lb1.ForeColor = Color.Yellow;
-                lb1.Text += "Status: openning connection";
-                conn.Open();
-
-                lb1.ForeColor = Color.GreenYellow;
-                lb1.Text = String.Empty;
-                lb1.Text += "Status: connection successful!";
-
-                logger.Info("connection successful");
-                return true;
-            }
-            catch(MySqlException exc)
-            {
-                lb1.ForeColor = Color.Red;
-
-                lb1.Text = "Status: error (check server)";
-
                 mainTimer.Enabled = false;
                 btnTimer.Text = String.Empty;
                 btnTimer.Text = "Play";
-
-                logger.Error("open connection:" + exc);
-                return false;
             }
         }
 
@@ -68,14 +47,14 @@ namespace NURESCADA
         {
             try
             {
-                lb1.Text = "Status: connection closed";
-                lb1.ForeColor = Color.Yellow;
+                lbStatus.Text = "Status: connection closed";
+                lbStatus.ForeColor = Color.Yellow;
                 conn.Close();
             }
             catch (MySqlException ex)
             {
-                lb1.Text = "Status: error";
-                lb1.ForeColor = Color.Red;
+                lbStatus.Text = "Status: error";
+                lbStatus.ForeColor = Color.Red;
                 logger.Error("close connection: " + ex.Message);
             }
         }
@@ -147,7 +126,7 @@ namespace NURESCADA
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            OpenConnection();
             // TODO: данная строка кода позволяет загрузить данные в таблицу "sCADADataSet.trends_minute". При необходимости она может быть перемещена или удалена.
 
         }

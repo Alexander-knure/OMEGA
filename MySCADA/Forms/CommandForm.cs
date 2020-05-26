@@ -39,12 +39,12 @@ namespace NURESCADA.Forms
             }
             // mf.conn;
 
-            MySqlCommand cmddb = new MySqlCommand(query, mf.conn);
+            MySqlCommand cmddb = new MySqlCommand(query, DBUtils.conn);
             cmddb.CommandTimeout = 60;
 
             try
             {
-                if(mf.OpenConnection())
+                if(DBUtils.OpenConnection(lbStatus, logger))
                 {
                     MySqlDataReader reader = cmddb.ExecuteReader();
                     MetroMessageBox.Show(this, "SQL query successfully executed!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information, 100);
@@ -57,6 +57,11 @@ namespace NURESCADA.Forms
                 MetroMessageBox.Show(this, exc.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
                 logger.Error(exc.ToString());
             }
+        }
+
+        private void CommandForm_Load(object sender, EventArgs e)
+        {
+            DBUtils.OpenConnection(lbStatus, MainForm.logger);
         }
     }
 }

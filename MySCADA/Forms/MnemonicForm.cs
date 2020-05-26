@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,11 @@ namespace NURESCADA.Forms
             MainForm mf = new MainForm();
             mf.Show();
             Hide();
+        }
+
+        private void MnemonicForm_Load(object sender, EventArgs e)
+        {
+            DBUtils.OpenConnection(lbStatus, MainForm.logger);
         }
     }
 }

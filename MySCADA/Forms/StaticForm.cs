@@ -1,5 +1,6 @@
 ﻿using MetroFramework;
 using MySql.Data.MySqlClient;
+using NLog;
 using NURESCADA.DB;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -15,8 +17,9 @@ using System.Windows.Forms.DataVisualization.Charting;
 namespace NURESCADA
 {
     public partial class StaticForm : MetroFramework.Forms.MetroForm {
-        MainForm mf;
-        Variables variables;
+        private MainForm mf;
+        private Variables variables;
+        private static Logger logger = LogManager.GetCurrentClassLogger();
 
         public StaticForm()
         {
@@ -42,26 +45,40 @@ namespace NURESCADA
             Hide();
         }
 
+        ushort countSelect = 0;
         private void cbVariables_SelectedIndexChanged(object sender, EventArgs e)
         {
             MySqlDataReader reader;
             var selected = cbVariables.SelectedItem.ToString();
             if (MainChart.Series.IndexOf(selected) == -1)
             {
-                // MainChart.Series[selected].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-
+                if(countSelect >= 5)
+                {
+                    DialogResult dr =  MetroMessageBox.Show(this, "So mush sensors, do you want clear all?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information, 100);
+                    if(dr == DialogResult.Yes)
+                    {
+                        countSelect = 0;
+                        MainChart.Series.Clear();
+                    }
+                    else if (dr == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
                 //
                 //Add where -/- and timefrom = timestamp_min to max in other method!
                 //
                 string query = "SELECT VALUE FROM `variables_data` INNER JOIN `trends_data` ON variables_data.ID = trends_data.ID WHERE variables_data.Name = \"" + selected + "\";";
-                MySqlCommand msc = new MySqlCommand(query, mf.conn);
+                MySqlCommand msc = new MySqlCommand(query, DBUtils.conn);
                 try
                 {
-                    if (mf.OpenConnection())
+                    if (DBUtils.OpenConnection(lbStatus, logger))
                     {
+                        countSelect++;
                         MainChart.Series.Add(selected);
                         MainChart.Series[selected].BorderWidth = 3;
                         MainChart.Series[selected].LegendText = selected;
+                        MainChart.Series[selected].ChartType = SeriesChartType.FastLine;
 
                         cbVariables.Items.Clear();
                         variables.Clear();
@@ -88,10 +105,10 @@ namespace NURESCADA
             uint id;
             string name;
             string desc;
-            MySqlCommand msc = new MySqlCommand(showQuery, mf.conn);
+            MySqlCommand msc = new MySqlCommand(showQuery, DBUtils.conn);
             try
             {
-                if(mf.OpenConnection())
+                if(DBUtils.OpenConnection(lbStatus, logger))
                 {
                     cbVariables.Items.Clear();
                     variables.Clear();
@@ -120,10 +137,10 @@ namespace NURESCADA
             MySqlDataReader reader;
             string showQuery = "Timestamp` FROM `trends_data` WHERE 1";
 
-            MySqlCommand msc = new MySqlCommand(showQuery, mf.conn);
+            MySqlCommand msc = new MySqlCommand(showQuery, DBUtils.conn);
             try
             {
-                if (mf.OpenConnection())
+                if (DBUtils.OpenConnection(lbStatus, logger))
                 {
                     cbVariables.Items.Clear();
                     variables.Clear();
@@ -140,23 +157,6 @@ namespace NURESCADA
                 MetroMessageBox.Show(this, "Please enable server connection", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning, 100);
             }
         }
-
-        private void cbTimeTo_Click(object sender, EventArgs e)
-        {
-            //SELECT `Timestamp` FROM `trends_data` WHERE 1
-        }
-
-        private void dtFrom_ValueChanged(object sender, EventArgs e)
-        {
-            DateTime d = dtFrom.Value;
-            //MainChart.ChartAreas[0].AxisX.Interval = d.;
-        }
-
-        private void dtTo_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void cbTime_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -182,6 +182,24 @@ namespace NURESCADA
         private void cbTimeInterval_Click(object sender, EventArgs e)
         {
           
+        }
+
+        private void StaticForm_Load(object sender, EventArgs e)
+        {
+            DBUtils.OpenConnection(lbStatus, MainForm.logger);
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MetroMessageBox.Show(this, "Do you want clear all?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information, 100);
+            if (dr == DialogResult.Yes)
+            {
+                MainChart.Series.Clear();
+            }
+            else if (dr == DialogResult.No)
+            {
+                return;
+            }
         }
     }
 }

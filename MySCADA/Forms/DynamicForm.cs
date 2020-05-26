@@ -23,5 +23,10 @@ namespace NURESCADA.Forms
             mf.Show();
             Hide();
         }
+
+        private void DynamicForm_Load(object sender, EventArgs e)
+        {
+            DBUtils.OpenConnection(lbStatus, MainForm.logger);
+        }
     }
 }

@@ -30,15 +30,18 @@
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaticForm));
             this.lbHeader = new MetroFramework.Controls.MetroLabel();
             this.MainChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnBack = new MetroFramework.Controls.MetroButton();
             this.cbVariables = new MetroFramework.Controls.MetroComboBox();
-            this.dtFrom = new MetroFramework.Controls.MetroDateTime();
-            this.dtTo = new MetroFramework.Controls.MetroDateTime();
             this.cbTimeInterval = new MetroFramework.Controls.MetroComboBox();
+            this.lbStatus = new MetroFramework.Controls.MetroLabel();
+            this.btnClear = new MetroFramework.Controls.MetroButton();
+            this.lbFrom = new MetroFramework.Controls.MetroLabel();
+            this.lbTo = new MetroFramework.Controls.MetroLabel();
+            this.dtFromTime = new MetroFramework.Controls.MetroDateTime();
+            this.dtToTime = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.MainChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,7 +127,7 @@
             legend1.TitleForeColor = System.Drawing.Color.White;
             legend1.TitleSeparatorColor = System.Drawing.Color.White;
             this.MainChart.Legends.Add(legend1);
-            this.MainChart.Location = new System.Drawing.Point(0, 75);
+            this.MainChart.Location = new System.Drawing.Point(0, 122);
             this.MainChart.Margin = new System.Windows.Forms.Padding(0);
             this.MainChart.Name = "MainChart";
             this.MainChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -139,12 +142,7 @@
         System.Drawing.Color.Silver,
         System.Drawing.Color.IndianRed,
         System.Drawing.Color.Green};
-            series1.ChartArea = "ChartArea1";
-            series1.EmptyPointStyle.Color = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.Name = "v";
-            this.MainChart.Series.Add(series1);
-            this.MainChart.Size = new System.Drawing.Size(940, 520);
+            this.MainChart.Size = new System.Drawing.Size(940, 473);
             this.MainChart.TabIndex = 24;
             this.MainChart.Text = "MainChart";
             // 
@@ -172,7 +170,7 @@
             this.cbVariables.ForeColor = System.Drawing.Color.White;
             this.cbVariables.FormattingEnabled = true;
             this.cbVariables.ItemHeight = 23;
-            this.cbVariables.Location = new System.Drawing.Point(474, 16);
+            this.cbVariables.Location = new System.Drawing.Point(482, 16);
             this.cbVariables.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cbVariables.Name = "cbVariables";
             this.cbVariables.PromptText = "Choose variable";
@@ -184,40 +182,6 @@
             this.cbVariables.UseSelectable = true;
             this.cbVariables.SelectedIndexChanged += new System.EventHandler(this.cbVariables_SelectedIndexChanged);
             this.cbVariables.Click += new System.EventHandler(this.cbVariables_Click);
-            // 
-            // dtFrom
-            // 
-            this.dtFrom.AllowDrop = true;
-            this.dtFrom.CalendarFont = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dtFrom.CustomFormat = "dd.MM.yyyy hh:mm:ss";
-            this.dtFrom.FontWeight = MetroFramework.MetroDateTimeWeight.Bold;
-            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFrom.Location = new System.Drawing.Point(474, 51);
-            this.dtFrom.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dtFrom.Name = "dtFrom";
-            this.dtFrom.Size = new System.Drawing.Size(186, 29);
-            this.dtFrom.Style = MetroFramework.MetroColorStyle.Black;
-            this.dtFrom.TabIndex = 29;
-            this.dtFrom.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.dtFrom.Value = new System.DateTime(2020, 5, 25, 2, 27, 20, 0);
-            this.dtFrom.ValueChanged += new System.EventHandler(this.dtFrom_ValueChanged);
-            // 
-            // dtTo
-            // 
-            this.dtTo.AllowDrop = true;
-            this.dtTo.CalendarFont = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dtTo.CustomFormat = "dd.MM.yyyy hh:mm:ss";
-            this.dtTo.FontWeight = MetroFramework.MetroDateTimeWeight.Bold;
-            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTo.Location = new System.Drawing.Point(707, 51);
-            this.dtTo.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dtTo.Name = "dtTo";
-            this.dtTo.Size = new System.Drawing.Size(186, 29);
-            this.dtTo.Style = MetroFramework.MetroColorStyle.Black;
-            this.dtTo.TabIndex = 30;
-            this.dtTo.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.dtTo.Value = new System.DateTime(2020, 5, 25, 2, 27, 20, 0);
-            this.dtTo.ValueChanged += new System.EventHandler(this.dtTo_ValueChanged);
             // 
             // cbTimeInterval
             // 
@@ -239,22 +203,143 @@
             this.cbTimeInterval.SelectedIndexChanged += new System.EventHandler(this.cbTime_SelectedIndexChanged);
             this.cbTimeInterval.Click += new System.EventHandler(this.cbTimeInterval_Click);
             // 
+            // lbStatus
+            // 
+            this.lbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbStatus.AutoSize = true;
+            this.lbStatus.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbStatus.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbStatus.ForeColor = System.Drawing.Color.White;
+            this.lbStatus.Location = new System.Drawing.Point(16, 48);
+            this.lbStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbStatus.Name = "lbStatus";
+            this.lbStatus.Size = new System.Drawing.Size(132, 25);
+            this.lbStatus.TabIndex = 32;
+            this.lbStatus.Text = "Status: unknow";
+            this.lbStatus.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbStatus.UseCustomForeColor = true;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.Transparent;
+            this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClear.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(230, 48);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(186, 29);
+            this.btnClear.TabIndex = 33;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseCustomBackColor = true;
+            this.btnClear.UseCustomForeColor = true;
+            this.btnClear.UseSelectable = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // lbFrom
+            // 
+            this.lbFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbFrom.AutoSize = true;
+            this.lbFrom.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbFrom.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbFrom.ForeColor = System.Drawing.Color.White;
+            this.lbFrom.Location = new System.Drawing.Point(426, 48);
+            this.lbFrom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbFrom.Name = "lbFrom";
+            this.lbFrom.Size = new System.Drawing.Size(51, 25);
+            this.lbFrom.TabIndex = 34;
+            this.lbFrom.Text = "from";
+            this.lbFrom.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbFrom.UseCustomForeColor = true;
+            // 
+            // lbTo
+            // 
+            this.lbTo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbTo.AutoSize = true;
+            this.lbTo.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbTo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbTo.ForeColor = System.Drawing.Color.White;
+            this.lbTo.Location = new System.Drawing.Point(673, 48);
+            this.lbTo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTo.Name = "lbTo";
+            this.lbTo.Size = new System.Drawing.Size(29, 25);
+            this.lbTo.TabIndex = 35;
+            this.lbTo.Text = "to";
+            this.lbTo.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbTo.UseCustomForeColor = true;
+            // 
+            // dtFromTime
+            // 
+            this.dtFromTime.AllowDrop = true;
+            this.dtFromTime.CalendarFont = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dtFromTime.CalendarForeColor = System.Drawing.Color.White;
+            this.dtFromTime.CalendarMonthBackground = System.Drawing.Color.Black;
+            this.dtFromTime.CalendarTitleBackColor = System.Drawing.Color.Blue;
+            this.dtFromTime.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.dtFromTime.CalendarTrailingForeColor = System.Drawing.Color.Black;
+            this.dtFromTime.CustomFormat = "hh:mm:ss   dd:MM:yyyy";
+            this.dtFromTime.FontWeight = MetroFramework.MetroDateTimeWeight.Bold;
+            this.dtFromTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFromTime.Location = new System.Drawing.Point(482, 48);
+            this.dtFromTime.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dtFromTime.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtFromTime.Name = "dtFromTime";
+            this.dtFromTime.Size = new System.Drawing.Size(186, 29);
+            this.dtFromTime.Style = MetroFramework.MetroColorStyle.Red;
+            this.dtFromTime.TabIndex = 36;
+            this.dtFromTime.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.dtFromTime.Value = new System.DateTime(2020, 5, 25, 0, 0, 0, 0);
+            // 
+            // dtToTime
+            // 
+            this.dtToTime.AllowDrop = true;
+            this.dtToTime.CalendarFont = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dtToTime.CalendarForeColor = System.Drawing.Color.White;
+            this.dtToTime.CalendarMonthBackground = System.Drawing.Color.Black;
+            this.dtToTime.CalendarTitleBackColor = System.Drawing.Color.Blue;
+            this.dtToTime.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.dtToTime.CalendarTrailingForeColor = System.Drawing.Color.Black;
+            this.dtToTime.CustomFormat = "hh:mm:ss   dd:MM:yyyy";
+            this.dtToTime.FontWeight = MetroFramework.MetroDateTimeWeight.Bold;
+            this.dtToTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtToTime.Location = new System.Drawing.Point(707, 48);
+            this.dtToTime.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dtToTime.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtToTime.Name = "dtToTime";
+            this.dtToTime.Size = new System.Drawing.Size(186, 29);
+            this.dtToTime.Style = MetroFramework.MetroColorStyle.Red;
+            this.dtToTime.TabIndex = 37;
+            this.dtToTime.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.dtToTime.Value = new System.DateTime(2020, 5, 25, 0, 0, 0, 0);
+            // 
             // StaticForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.dtToTime);
+            this.Controls.Add(this.dtFromTime);
+            this.Controls.Add(this.lbTo);
+            this.Controls.Add(this.lbFrom);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.lbStatus);
             this.Controls.Add(this.cbTimeInterval);
-            this.Controls.Add(this.dtTo);
-            this.Controls.Add(this.dtFrom);
             this.Controls.Add(this.cbVariables);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.MainChart);
             this.Controls.Add(this.lbHeader);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "StaticForm";
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Load += new System.EventHandler(this.StaticForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MainChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -267,8 +352,12 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart MainChart;
         private MetroFramework.Controls.MetroButton btnBack;
         private MetroFramework.Controls.MetroComboBox cbVariables;
-        private MetroFramework.Controls.MetroDateTime dtFrom;
-        private MetroFramework.Controls.MetroDateTime dtTo;
         private MetroFramework.Controls.MetroComboBox cbTimeInterval;
+        private MetroFramework.Controls.MetroLabel lbStatus;
+        private MetroFramework.Controls.MetroButton btnClear;
+        private MetroFramework.Controls.MetroLabel lbFrom;
+        private MetroFramework.Controls.MetroLabel lbTo;
+        private MetroFramework.Controls.MetroDateTime dtFromTime;
+        private MetroFramework.Controls.MetroDateTime dtToTime;
     }
 }
