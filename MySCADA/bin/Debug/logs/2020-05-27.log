@@ -1,0 +1,1944 @@
+2020-05-27 12:38:33.1321 ERROR open connection:MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: Произошла одна или несколько ошибок. ---> System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Внутреннее исключение #0) System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:3306
+   в System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   в System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   в MySql.Data.MySqlClient.NativeDriver.Open()
+   в MySql.Data.MySqlClient.Driver.Open()
+   в MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   в MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   в MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   в MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   в MySql.Data.MySqlClient.MySqlConnection.Open()
+   в NURESCADA.DBUtils.OpenConnection(MetroLabel lbStatus, Logger logger) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\DB\DBUtils.cs:строка 37
+2020-05-27 12:38:52.2797 INFO connection successful
+2020-05-27 12:38:52.3445 INFO connection successful
+2020-05-27 12:38:54.0923 INFO connection successful
+2020-05-27 12:38:55.0617 INFO connection successful
+2020-05-27 12:38:56.5246 INFO connection successful
+2020-05-27 12:38:57.0336 INFO connection successful
+2020-05-27 12:38:58.3863 INFO connection successful
+2020-05-27 12:39:00.5255 INFO connection successful
+2020-05-27 12:39:01.3216 INFO connection successful
+2020-05-27 14:16:09.4622 INFO connection successful
+2020-05-27 14:16:11.5587 INFO connection successful
+2020-05-27 14:16:11.6471 INFO connection successful
+2020-05-27 14:16:12.8202 INFO connection successful
+2020-05-27 14:16:13.8486 INFO connection successful
+2020-05-27 14:16:16.7071 INFO connection successful
+2020-05-27 14:16:17.1848 INFO connection successful
+2020-05-27 14:16:45.7025 INFO connection successful
+2020-05-27 14:16:47.8149 INFO connection successful
+2020-05-27 14:16:47.8741 INFO connection successful
+2020-05-27 14:16:49.8358 INFO connection successful
+2020-05-27 14:16:50.5357 INFO connection successful
+2020-05-27 14:19:02.5023 INFO connection successful
+2020-05-27 14:19:03.7680 INFO connection successful
+2020-05-27 14:19:03.8228 INFO connection successful
+2020-05-27 14:19:05.3853 INFO connection successful
+2020-05-27 14:19:05.9059 INFO connection successful
+2020-05-27 14:21:46.7164 INFO connection successful
+2020-05-27 14:21:48.2878 INFO connection successful
+2020-05-27 14:21:48.3725 INFO connection successful
+2020-05-27 14:21:49.9175 INFO connection successful
+2020-05-27 14:21:50.3228 INFO connection successful
+2020-05-27 14:23:20.4239 INFO connection successful
+2020-05-27 14:23:21.9050 INFO connection successful
+2020-05-27 14:23:21.9638 INFO connection successful
+2020-05-27 14:23:23.7120 INFO connection successful
+2020-05-27 14:23:24.3264 INFO connection successful
+2020-05-27 14:24:21.0362 INFO connection successful
+2020-05-27 14:24:22.4065 INFO connection successful
+2020-05-27 14:24:22.4783 INFO connection successful
+2020-05-27 14:24:23.8773 INFO connection successful
+2020-05-27 14:24:24.3673 INFO connection successful
+2020-05-27 14:25:44.4840 INFO connection successful
+2020-05-27 14:25:46.7246 INFO connection successful
+2020-05-27 14:25:46.7855 INFO connection successful
+2020-05-27 14:25:47.9648 INFO connection successful
+2020-05-27 14:25:48.5071 INFO connection successful
+2020-05-27 14:27:20.8770 INFO connection successful
+2020-05-27 14:27:22.3240 INFO connection successful
+2020-05-27 14:27:23.9116 INFO connection successful
+2020-05-27 14:27:24.8150 INFO connection successful
+2020-05-27 14:27:24.8788 INFO connection successful
+2020-05-27 14:27:26.3436 INFO connection successful
+2020-05-27 14:27:26.7649 INFO connection successful
+2020-05-27 14:27:43.5692 INFO connection successful
+2020-05-27 14:27:44.9236 INFO connection successful
+2020-05-27 14:27:44.9894 INFO connection successful
+2020-05-27 14:27:46.4738 INFO connection successful
+2020-05-27 14:27:46.9858 INFO connection successful
+2020-05-27 14:39:13.0760 INFO connection successful
+2020-05-27 14:39:20.0932 INFO connection successful
+2020-05-27 14:39:21.6957 INFO connection successful
+2020-05-27 14:39:23.2543 INFO connection successful
+2020-05-27 14:39:23.3360 INFO connection successful
+2020-05-27 14:39:24.7893 INFO connection successful
+2020-05-27 14:39:25.2317 INFO connection successful
+2020-05-27 14:40:27.5099 INFO connection successful
+2020-05-27 14:40:30.4602 INFO connection successful
+2020-05-27 14:40:30.5529 INFO connection successful
+2020-05-27 14:40:32.0277 INFO connection successful
+2020-05-27 14:40:32.8875 INFO connection successful
+2020-05-27 14:40:41.8198 INFO connection successful
+2020-05-27 14:40:44.3204 INFO connection successful
+2020-05-27 14:40:44.4082 INFO connection successful
+2020-05-27 14:40:46.0283 INFO connection successful
+2020-05-27 14:40:46.8582 INFO connection successful
+2020-05-27 14:41:05.4696 INFO connection successful
+2020-05-27 14:41:07.1633 INFO connection successful
+2020-05-27 14:41:07.3481 INFO connection successful
+2020-05-27 14:41:08.9291 INFO connection successful
+2020-05-27 14:41:09.3829 INFO connection successful
+2020-05-27 14:45:16.8353 INFO connection successful
+2020-05-27 14:45:18.3642 INFO connection successful
+2020-05-27 14:45:18.4719 INFO connection successful
+2020-05-27 14:45:20.1361 INFO connection successful
+2020-05-27 14:45:20.5899 INFO connection successful
+2020-05-27 14:46:01.4688 INFO connection successful
+2020-05-27 14:46:03.3124 INFO connection successful
+2020-05-27 14:46:03.4450 INFO connection successful
+2020-05-27 14:46:04.7808 INFO connection successful
+2020-05-27 14:46:05.3340 INFO connection successful
+2020-05-27 14:46:08.3585 INFO connection successful
+2020-05-27 14:46:08.9373 INFO connection successful
+2020-05-27 14:47:31.6793 INFO connection successful
+2020-05-27 14:47:33.4833 INFO connection successful
+2020-05-27 14:47:33.5641 INFO connection successful
+2020-05-27 14:47:34.7133 INFO connection successful
+2020-05-27 14:47:35.3107 INFO connection successful
+2020-05-27 14:47:42.3789 INFO connection successful
+2020-05-27 14:47:42.9219 INFO connection successful
+2020-05-27 14:47:44.2593 INFO connection successful
+2020-05-27 14:47:45.0462 INFO connection successful
+2020-05-27 14:47:46.7551 INFO connection successful
+2020-05-27 14:47:48.6257 INFO connection successful
+2020-05-27 14:47:50.4200 INFO connection successful
+2020-05-27 14:47:51.6902 INFO connection successful
+2020-05-27 14:47:53.3706 INFO connection successful
+2020-05-27 14:47:55.7396 INFO connection successful
+2020-05-27 14:47:57.0263 INFO connection successful
+2020-05-27 14:47:57.9440 INFO connection successful
+2020-05-27 14:47:59.3472 INFO connection successful
+2020-05-27 14:47:59.9147 INFO connection successful
+2020-05-27 14:48:01.0479 INFO connection successful
+2020-05-27 14:48:01.8651 INFO connection successful
+2020-05-27 14:48:02.8243 INFO connection successful
+2020-05-27 14:48:03.3968 INFO connection successful
+2020-05-27 14:48:04.5490 INFO connection successful
+2020-05-27 14:49:01.3969 INFO connection successful
+2020-05-27 14:49:02.9049 INFO connection successful
+2020-05-27 14:49:03.0731 INFO connection successful
+2020-05-27 14:49:04.0785 INFO connection successful
+2020-05-27 14:49:04.5823 INFO connection successful
+2020-05-27 14:50:44.9207 INFO connection successful
+2020-05-27 14:50:47.1718 INFO connection successful
+2020-05-27 14:50:47.2715 INFO connection successful
+2020-05-27 14:50:48.9887 INFO connection successful
+2020-05-27 14:50:49.9039 INFO connection successful
+2020-05-27 14:51:54.3871 INFO connection successful
+2020-05-27 14:51:56.1495 INFO connection successful
+2020-05-27 14:51:56.2312 INFO connection successful
+2020-05-27 14:51:57.2009 INFO connection successful
+2020-05-27 14:51:57.6240 INFO connection successful
+2020-05-27 14:52:39.2459 INFO connection successful
+2020-05-27 14:52:40.9027 INFO connection successful
+2020-05-27 14:52:41.0104 INFO connection successful
+2020-05-27 14:52:42.3789 INFO connection successful
+2020-05-27 14:52:43.4421 INFO connection successful
+2020-05-27 14:53:15.1088 INFO connection successful
+2020-05-27 14:53:16.7268 INFO connection successful
+2020-05-27 14:53:16.8555 INFO connection successful
+2020-05-27 14:53:18.4232 INFO connection successful
+2020-05-27 14:53:19.0755 INFO connection successful
+2020-05-27 14:56:35.6777 INFO connection successful
+2020-05-27 14:56:37.0029 INFO connection successful
+2020-05-27 14:56:37.1166 INFO connection successful
+2020-05-27 14:56:38.2223 INFO connection successful
+2020-05-27 14:56:38.8205 INFO connection successful
+2020-05-27 14:56:39.7037 INFO connection successful
+2020-05-27 14:56:40.0755 INFO connection successful
+2020-05-27 14:56:40.8013 INFO connection successful
+2020-05-27 14:56:42.2297 INFO connection successful
+2020-05-27 14:56:42.7087 INFO connection successful
+2020-05-27 14:56:43.3907 INFO connection successful
+2020-05-27 14:56:43.9034 INFO connection successful
+2020-05-27 14:57:23.2294 INFO connection successful
+2020-05-27 14:57:25.2896 INFO connection successful
+2020-05-27 14:57:25.4139 INFO connection successful
+2020-05-27 14:57:26.9699 INFO connection successful
+2020-05-27 14:57:27.4253 INFO connection successful
+2020-05-27 14:57:56.4509 INFO connection successful
+2020-05-27 14:57:58.5360 INFO connection successful
+2020-05-27 14:57:58.6327 INFO connection successful
+2020-05-27 14:57:59.8025 INFO connection successful
+2020-05-27 14:58:00.3732 INFO connection successful
+2020-05-27 14:58:51.9966 INFO connection successful
+2020-05-27 14:58:53.5004 INFO connection successful
+2020-05-27 14:58:53.6335 INFO connection successful
+2020-05-27 14:58:54.9283 INFO connection successful
+2020-05-27 14:58:56.0241 INFO connection successful
+2020-05-27 14:59:49.9363 INFO connection successful
+2020-05-27 14:59:51.4924 INFO connection successful
+2020-05-27 14:59:51.5987 INFO connection successful
+2020-05-27 14:59:52.9615 INFO connection successful
+2020-05-27 14:59:53.5244 INFO connection successful
+2020-05-27 15:00:11.9067 INFO connection successful
+2020-05-27 15:00:13.0955 INFO connection successful
+2020-05-27 15:00:13.2305 INFO connection successful
+2020-05-27 15:00:14.2819 INFO connection successful
+2020-05-27 15:00:14.6301 INFO connection successful
+2020-05-27 15:03:15.8315 INFO connection successful
+2020-05-27 15:03:17.5881 INFO connection successful
+2020-05-27 15:03:17.7477 INFO connection successful
+2020-05-27 15:03:19.1043 INFO connection successful
+2020-05-27 15:03:19.7976 INFO connection successful
+2020-05-27 15:03:49.5711 INFO connection successful
+2020-05-27 15:03:51.6572 INFO connection successful
+2020-05-27 15:03:51.7709 INFO connection successful
+2020-05-27 15:03:52.8496 INFO connection successful
+2020-05-27 15:03:53.1857 INFO connection successful
+2020-05-27 15:04:32.7692 INFO connection successful
+2020-05-27 15:04:35.2390 INFO connection successful
+2020-05-27 15:04:35.3734 INFO connection successful
+2020-05-27 15:04:36.6825 INFO connection successful
+2020-05-27 15:04:37.1769 INFO connection successful
+2020-05-27 15:05:06.3606 INFO connection successful
+2020-05-27 15:05:07.7373 INFO connection successful
+2020-05-27 15:05:08.0848 INFO connection successful
+2020-05-27 15:05:08.7669 INFO connection successful
+2020-05-27 15:05:09.5165 INFO connection successful
+2020-05-27 15:05:10.1705 INFO connection successful
+2020-05-27 15:05:10.6142 INFO connection successful
+2020-05-27 15:06:17.4149 INFO connection successful
+2020-05-27 15:06:26.7308 INFO connection successful
+2020-05-27 15:06:26.8235 INFO connection successful
+2020-05-27 15:06:28.3924 INFO connection successful
+2020-05-27 15:06:29.8815 INFO connection successful
+2020-05-27 15:10:10.8284 INFO connection successful
+2020-05-27 15:10:12.4473 INFO connection successful
+2020-05-27 15:10:12.5779 INFO connection successful
+2020-05-27 15:10:16.0451 INFO connection successful
+2020-05-27 15:10:16.6015 INFO connection successful
+2020-05-27 15:11:18.0650 INFO connection successful
+2020-05-27 15:11:19.5426 INFO connection successful
+2020-05-27 15:11:19.6602 INFO connection successful
+2020-05-27 15:11:21.0444 INFO connection successful
+2020-05-27 15:11:21.7379 INFO connection successful
+2020-05-27 15:11:49.3214 INFO connection successful
+2020-05-27 15:11:50.6889 INFO connection successful
+2020-05-27 15:11:50.8395 INFO connection successful
+2020-05-27 15:11:51.8326 INFO connection successful
+2020-05-27 15:11:52.7009 INFO connection successful
+2020-05-27 15:12:18.7690 INFO connection successful
+2020-05-27 15:13:08.7327 INFO connection successful
+2020-05-27 15:13:16.5523 INFO connection successful
+2020-05-27 15:13:17.5658 INFO connection successful
+2020-05-27 15:13:18.5879 INFO connection successful
+2020-05-27 15:13:19.5319 INFO connection successful
+2020-05-27 15:13:20.7393 INFO connection successful
+2020-05-27 15:13:21.5636 INFO connection successful
+2020-05-27 15:13:22.5625 INFO connection successful
+2020-05-27 15:13:23.5663 INFO connection successful
+2020-05-27 15:14:10.1257 INFO connection successful
+2020-05-27 15:14:15.2809 INFO connection successful
+2020-05-27 15:14:16.2780 INFO connection successful
+2020-05-27 15:14:17.2899 INFO connection successful
+2020-05-27 15:14:18.5688 INFO connection successful
+2020-05-27 15:14:19.2548 INFO connection successful
+2020-05-27 15:15:07.5263 INFO connection successful
+2020-05-27 15:15:16.0359 INFO connection successful
+2020-05-27 15:15:16.1487 INFO connection successful
+2020-05-27 15:15:17.0537 INFO connection successful
+2020-05-27 15:15:18.4894 INFO connection successful
+2020-05-27 15:15:24.4364 INFO connection successful
+2020-05-27 15:15:25.2971 INFO connection successful
+2020-05-27 15:15:26.3006 INFO connection successful
+2020-05-27 15:16:40.6868 INFO connection successful
+2020-05-27 15:16:51.7945 INFO connection successful
+2020-05-27 15:16:51.8803 INFO connection successful
+2020-05-27 15:16:52.7888 INFO connection successful
+2020-05-27 15:16:54.6244 INFO connection successful
+2020-05-27 15:16:58.6315 INFO connection successful
+2020-05-27 15:16:59.6399 INFO connection successful
+2020-05-27 15:17:00.6264 INFO connection successful
+2020-05-27 15:17:17.6181 INFO connection successful
+2020-05-27 15:17:20.7344 INFO connection successful
+2020-05-27 15:17:21.7238 INFO connection successful
+2020-05-27 15:23:29.6554 INFO connection successful
+2020-05-27 15:23:29.7431 INFO connection successful
+2020-05-27 15:23:36.8179 INFO connection successful
+2020-05-27 15:23:37.8245 INFO connection successful
+2020-05-27 15:23:38.7995 INFO connection successful
+2020-05-27 15:23:39.8162 INFO connection successful
+2020-05-27 15:23:40.8160 INFO connection successful
+2020-05-27 15:23:41.8163 INFO connection successful
+2020-05-27 15:23:51.3129 INFO connection successful
+2020-05-27 15:23:51.3787 INFO connection successful
+2020-05-27 15:25:04.2623 INFO connection successful
+2020-05-27 15:25:04.3450 INFO connection successful
+2020-05-27 15:25:23.4251 INFO connection successful
+2020-05-27 15:25:23.4939 INFO connection successful
+2020-05-27 15:25:47.6372 INFO connection successful
+2020-05-27 15:25:47.7200 INFO connection successful
+2020-05-27 15:27:09.2482 INFO connection successful
+2020-05-27 15:27:09.3210 INFO connection successful
+2020-05-27 15:29:45.1619 INFO connection successful
+2020-05-27 15:29:45.2527 INFO connection successful
+2020-05-27 15:31:04.1663 INFO connection successful
+2020-05-27 15:33:41.3674 INFO connection successful
+2020-05-27 15:44:19.9649 INFO connection successful
+2020-05-27 17:14:12.8468 INFO connection successful
+2020-05-27 17:14:52.4312 INFO connection successful
+2020-05-27 17:14:56.6549 INFO connection successful
+2020-05-27 17:14:57.6404 INFO connection successful
+2020-05-27 17:14:58.6570 INFO connection successful
+2020-05-27 17:14:59.6426 INFO connection successful
+2020-05-27 17:15:00.8858 INFO connection successful
+2020-05-27 17:15:01.6505 INFO connection successful
+2020-05-27 17:15:02.6525 INFO connection successful
+2020-05-27 17:15:03.6409 INFO connection successful
+2020-05-27 17:15:04.6537 INFO connection successful
+2020-05-27 17:15:05.6527 INFO connection successful
+2020-05-27 17:15:06.6515 INFO connection successful
+2020-05-27 17:15:07.6393 INFO connection successful
+2020-05-27 17:15:08.6515 INFO connection successful
+2020-05-27 17:15:09.6677 INFO connection successful
+2020-05-27 17:15:53.1922 INFO connection successful
+2020-05-27 17:15:54.6230 INFO connection successful
+2020-05-27 17:15:54.6838 INFO connection successful
+2020-05-27 17:15:55.9427 INFO connection successful
+2020-05-27 17:16:07.8464 INFO connection successful
+2020-05-27 17:16:08.8602 INFO connection successful
+2020-05-27 17:16:09.9144 INFO connection successful
+2020-05-27 17:16:10.8486 INFO connection successful
+2020-05-27 17:16:11.8458 INFO connection successful
+2020-05-27 17:26:04.1657 INFO connection successful
+2020-05-27 17:26:14.8229 INFO connection successful
+2020-05-27 17:26:15.8206 INFO connection successful
+2020-05-27 17:26:16.7562 INFO connection successful
+2020-05-27 17:26:17.7941 INFO connection successful
+2020-05-27 17:26:18.7912 INFO connection successful
+2020-05-27 17:26:19.7692 INFO connection successful
+2020-05-27 17:26:21.6664 INFO connection successful
+2020-05-27 17:26:21.8377 INFO connection successful
+2020-05-27 17:26:22.7715 INFO connection successful
+2020-05-27 17:26:23.7902 INFO connection successful
+2020-05-27 17:26:24.7754 INFO connection successful
+2020-05-27 17:26:25.7996 INFO connection successful
+2020-05-27 17:26:26.7501 INFO connection successful
+2020-05-27 17:26:27.7635 INFO connection successful
+2020-05-27 17:26:28.7546 INFO connection successful
+2020-05-27 17:26:29.7677 INFO connection successful
+2020-05-27 17:26:30.7689 INFO connection successful
+2020-05-27 17:26:31.7547 INFO connection successful
+2020-05-27 17:26:32.7547 INFO connection successful
+2020-05-27 17:26:33.7493 INFO connection successful
+2020-05-27 17:26:34.7636 INFO connection successful
+2020-05-27 17:26:35.7887 INFO connection successful
+2020-05-27 17:26:36.7788 INFO connection successful
+2020-05-27 17:26:37.7887 INFO connection successful
+2020-05-27 17:26:38.8467 INFO connection successful
+2020-05-27 17:26:39.7936 INFO connection successful
+2020-05-27 17:26:40.7620 INFO connection successful
+2020-05-27 17:26:41.7874 INFO connection successful
+2020-05-27 17:26:42.7816 INFO connection successful
+2020-05-27 17:26:43.7787 INFO connection successful
+2020-05-27 17:26:44.7802 INFO connection successful
+2020-05-27 17:26:45.7668 INFO connection successful
+2020-05-27 17:26:46.7711 INFO connection successful
+2020-05-27 17:26:47.7666 INFO connection successful
+2020-05-27 17:26:48.7577 INFO connection successful
+2020-05-27 17:26:49.7680 INFO connection successful
+2020-05-27 17:26:50.7893 INFO connection successful
+2020-05-27 17:26:51.7739 INFO connection successful
+2020-05-27 17:26:52.7537 INFO connection successful
+2020-05-27 17:26:53.7518 INFO connection successful
+2020-05-27 17:26:54.7576 INFO connection successful
+2020-05-27 17:26:55.7655 INFO connection successful
+2020-05-27 17:26:56.7713 INFO connection successful
+2020-05-27 17:26:57.7651 INFO connection successful
+2020-05-27 17:26:58.7530 INFO connection successful
+2020-05-27 17:26:59.7512 INFO connection successful
+2020-05-27 17:27:01.1975 INFO connection successful
+2020-05-27 17:27:01.7505 INFO connection successful
+2020-05-27 17:27:02.7545 INFO connection successful
+2020-05-27 17:27:03.7551 INFO connection successful
+2020-05-27 17:27:04.7735 INFO connection successful
+2020-05-27 17:27:05.7641 INFO connection successful
+2020-05-27 17:27:06.7692 INFO connection successful
+2020-05-27 17:27:07.7727 INFO connection successful
+2020-05-27 17:27:08.7680 INFO connection successful
+2020-05-27 17:27:09.7798 INFO connection successful
+2020-05-27 17:27:10.7857 INFO connection successful
+2020-05-27 17:27:11.7848 INFO connection successful
+2020-05-27 17:27:12.7701 INFO connection successful
+2020-05-27 17:27:13.7505 INFO connection successful
+2020-05-27 17:27:14.7681 INFO connection successful
+2020-05-27 17:27:15.7744 INFO connection successful
+2020-05-27 17:27:16.7576 INFO connection successful
+2020-05-27 17:27:17.7705 INFO connection successful
+2020-05-27 17:27:18.7605 INFO connection successful
+2020-05-27 17:27:19.7790 INFO connection successful
+2020-05-27 17:27:20.7599 INFO connection successful
+2020-05-27 17:27:21.7560 INFO connection successful
+2020-05-27 17:27:22.7562 INFO connection successful
+2020-05-27 17:27:23.7735 INFO connection successful
+2020-05-27 17:27:24.7536 INFO connection successful
+2020-05-27 17:27:25.7621 INFO connection successful
+2020-05-27 17:27:26.7601 INFO connection successful
+2020-05-27 17:27:27.7531 INFO connection successful
+2020-05-27 17:27:28.7673 INFO connection successful
+2020-05-27 17:27:29.7613 INFO connection successful
+2020-05-27 17:27:30.7613 INFO connection successful
+2020-05-27 17:27:31.7579 INFO connection successful
+2020-05-27 17:27:32.7602 INFO connection successful
+2020-05-27 17:27:33.7671 INFO connection successful
+2020-05-27 17:27:34.7563 INFO connection successful
+2020-05-27 17:27:35.7588 INFO connection successful
+2020-05-27 17:27:36.7799 INFO connection successful
+2020-05-27 17:27:37.7668 INFO connection successful
+2020-05-27 17:27:38.8003 INFO connection successful
+2020-05-27 17:27:39.7782 INFO connection successful
+2020-05-27 17:27:40.8056 INFO connection successful
+2020-05-27 17:27:41.7836 INFO connection successful
+2020-05-27 17:27:42.7683 INFO connection successful
+2020-05-27 17:27:43.8043 INFO connection successful
+2020-05-27 17:27:44.7844 INFO connection successful
+2020-05-27 17:27:45.7596 INFO connection successful
+2020-05-27 17:27:46.7655 INFO connection successful
+2020-05-27 17:27:47.7600 INFO connection successful
+2020-05-27 17:27:48.7553 INFO connection successful
+2020-05-27 17:27:49.7527 INFO connection successful
+2020-05-27 17:27:50.7534 INFO connection successful
+2020-05-27 17:27:51.7521 INFO connection successful
+2020-05-27 17:27:52.7602 INFO connection successful
+2020-05-27 17:27:53.7610 INFO connection successful
+2020-05-27 17:27:54.7539 INFO connection successful
+2020-05-27 17:27:55.7591 INFO connection successful
+2020-05-27 17:27:56.7609 INFO connection successful
+2020-05-27 17:27:57.7555 INFO connection successful
+2020-05-27 17:27:58.7508 INFO connection successful
+2020-05-27 17:27:59.7561 INFO connection successful
+2020-05-27 17:28:00.7542 INFO connection successful
+2020-05-27 17:28:01.7561 INFO connection successful
+2020-05-27 17:28:02.7573 INFO connection successful
+2020-05-27 17:28:03.7515 INFO connection successful
+2020-05-27 17:28:04.7542 INFO connection successful
+2020-05-27 17:28:05.7633 INFO connection successful
+2020-05-27 17:28:06.7553 INFO connection successful
+2020-05-27 17:28:07.7537 INFO connection successful
+2020-05-27 17:28:08.7490 INFO connection successful
+2020-05-27 17:28:09.7532 INFO connection successful
+2020-05-27 17:28:10.7504 INFO connection successful
+2020-05-27 17:28:11.7515 INFO connection successful
+2020-05-27 17:28:12.7503 INFO connection successful
+2020-05-27 17:28:13.7576 INFO connection successful
+2020-05-27 17:28:14.7502 INFO connection successful
+2020-05-27 17:28:15.7573 INFO connection successful
+2020-05-27 17:28:16.7681 INFO connection successful
+2020-05-27 17:28:17.7655 INFO connection successful
+2020-05-27 17:28:18.7693 INFO connection successful
+2020-05-27 17:28:19.7650 INFO connection successful
+2020-05-27 17:28:20.7641 INFO connection successful
+2020-05-27 17:28:21.7631 INFO connection successful
+2020-05-27 17:28:22.7798 INFO connection successful
+2020-05-27 17:28:23.7594 INFO connection successful
+2020-05-27 17:28:24.7703 INFO connection successful
+2020-05-27 17:28:25.7550 INFO connection successful
+2020-05-27 17:28:26.7512 INFO connection successful
+2020-05-27 17:28:27.7621 INFO connection successful
+2020-05-27 17:28:28.7513 INFO connection successful
+2020-05-27 17:28:29.7614 INFO connection successful
+2020-05-27 17:28:30.7503 INFO connection successful
+2020-05-27 17:28:31.7531 INFO connection successful
+2020-05-27 17:28:32.7539 INFO connection successful
+2020-05-27 17:28:33.7523 INFO connection successful
+2020-05-27 17:28:34.7991 INFO connection successful
+2020-05-27 17:28:35.7543 INFO connection successful
+2020-05-27 17:28:36.7530 INFO connection successful
+2020-05-27 17:28:37.7485 INFO connection successful
+2020-05-27 17:28:38.7563 INFO connection successful
+2020-05-27 17:28:39.7498 INFO connection successful
+2020-05-27 17:28:40.7528 INFO connection successful
+2020-05-27 17:28:41.7503 INFO connection successful
+2020-05-27 17:28:42.7541 INFO connection successful
+2020-05-27 17:28:43.7481 INFO connection successful
+2020-05-27 17:28:44.7570 INFO connection successful
+2020-05-27 17:28:45.7531 INFO connection successful
+2020-05-27 17:28:46.7524 INFO connection successful
+2020-05-27 17:28:47.7540 INFO connection successful
+2020-05-27 17:28:48.7499 INFO connection successful
+2020-05-27 17:28:49.7520 INFO connection successful
+2020-05-27 17:28:50.7548 INFO connection successful
+2020-05-27 17:28:51.7510 INFO connection successful
+2020-05-27 17:28:52.7578 INFO connection successful
+2020-05-27 17:28:53.7517 INFO connection successful
+2020-05-27 17:28:54.7554 INFO connection successful
+2020-05-27 17:28:55.7531 INFO connection successful
+2020-05-27 17:28:56.7581 INFO connection successful
+2020-05-27 17:28:57.7540 INFO connection successful
+2020-05-27 17:28:58.7540 INFO connection successful
+2020-05-27 17:28:59.7569 INFO connection successful
+2020-05-27 17:29:00.7527 INFO connection successful
+2020-05-27 17:29:01.7545 INFO connection successful
+2020-05-27 17:29:02.7502 INFO connection successful
+2020-05-27 17:29:03.7517 INFO connection successful
+2020-05-27 17:29:04.7475 INFO connection successful
+2020-05-27 17:29:05.7529 INFO connection successful
+2020-05-27 17:29:06.7543 INFO connection successful
+2020-05-27 17:29:07.7531 INFO connection successful
+2020-05-27 17:29:08.7559 INFO connection successful
+2020-05-27 17:29:09.7536 INFO connection successful
+2020-05-27 17:29:10.7482 INFO connection successful
+2020-05-27 17:29:11.7529 INFO connection successful
+2020-05-27 17:29:12.7532 INFO connection successful
+2020-05-27 17:29:13.7503 INFO connection successful
+2020-05-27 17:29:14.7525 INFO connection successful
+2020-05-27 17:29:15.7534 INFO connection successful
+2020-05-27 17:29:16.7485 INFO connection successful
+2020-05-27 17:29:17.7543 INFO connection successful
+2020-05-27 17:29:18.7497 INFO connection successful
+2020-05-27 17:29:19.7535 INFO connection successful
+2020-05-27 17:29:20.7564 INFO connection successful
+2020-05-27 17:29:21.7522 INFO connection successful
+2020-05-27 17:29:22.7539 INFO connection successful
+2020-05-27 17:29:23.7527 INFO connection successful
+2020-05-27 17:29:24.7533 INFO connection successful
+2020-05-27 17:29:25.7490 INFO connection successful
+2020-05-27 17:29:26.7487 INFO connection successful
+2020-05-27 17:29:27.7638 INFO connection successful
+2020-05-27 17:29:28.7626 INFO connection successful
+2020-05-27 17:29:29.7611 INFO connection successful
+2020-05-27 17:29:30.7614 INFO connection successful
+2020-05-27 17:29:31.7638 INFO connection successful
+2020-05-27 17:29:32.7630 INFO connection successful
+2020-05-27 17:29:33.7702 INFO connection successful
+2020-05-27 17:29:34.7617 INFO connection successful
+2020-05-27 17:29:35.7525 INFO connection successful
+2020-05-27 17:29:36.7519 INFO connection successful
+2020-05-27 17:29:37.7532 INFO connection successful
+2020-05-27 17:29:38.7527 INFO connection successful
+2020-05-27 17:29:39.7525 INFO connection successful
+2020-05-27 17:29:40.7550 INFO connection successful
+2020-05-27 17:29:41.7484 INFO connection successful
+2020-05-27 17:29:42.7531 INFO connection successful
+2020-05-27 17:29:43.7543 INFO connection successful
+2020-05-27 17:29:44.7525 INFO connection successful
+2020-05-27 17:29:45.7544 INFO connection successful
+2020-05-27 17:29:46.7506 INFO connection successful
+2020-05-27 17:29:47.7526 INFO connection successful
+2020-05-27 17:29:48.7573 INFO connection successful
+2020-05-27 17:29:49.7481 INFO connection successful
+2020-05-27 17:29:50.7536 INFO connection successful
+2020-05-27 17:29:51.7504 INFO connection successful
+2020-05-27 17:29:52.7500 INFO connection successful
+2020-05-27 17:29:53.7540 INFO connection successful
+2020-05-27 17:29:54.7518 INFO connection successful
+2020-05-27 17:29:55.7552 INFO connection successful
+2020-05-27 17:29:56.7517 INFO connection successful
+2020-05-27 17:29:57.7540 INFO connection successful
+2020-05-27 17:29:58.7500 INFO connection successful
+2020-05-27 17:29:59.7530 INFO connection successful
+2020-05-27 17:30:00.7550 INFO connection successful
+2020-05-27 17:30:01.7526 INFO connection successful
+2020-05-27 17:30:02.7531 INFO connection successful
+2020-05-27 17:30:03.7505 INFO connection successful
+2020-05-27 17:30:04.7511 INFO connection successful
+2020-05-27 17:30:05.7567 INFO connection successful
+2020-05-27 17:30:06.7495 INFO connection successful
+2020-05-27 17:30:07.7526 INFO connection successful
+2020-05-27 17:30:08.7534 INFO connection successful
+2020-05-27 17:30:09.7507 INFO connection successful
+2020-05-27 17:30:10.7548 INFO connection successful
+2020-05-27 17:30:11.7537 INFO connection successful
+2020-05-27 17:30:12.7544 INFO connection successful
+2020-05-27 17:30:13.7531 INFO connection successful
+2020-05-27 17:30:14.7502 INFO connection successful
+2020-05-27 17:30:15.7696 INFO connection successful
+2020-05-27 17:30:16.7719 INFO connection successful
+2020-05-27 17:30:17.7611 INFO connection successful
+2020-05-27 17:30:18.7603 INFO connection successful
+2020-05-27 17:30:19.7614 INFO connection successful
+2020-05-27 17:30:20.7612 INFO connection successful
+2020-05-27 17:30:21.7627 INFO connection successful
+2020-05-27 17:30:22.7548 INFO connection successful
+2020-05-27 17:30:23.7508 INFO connection successful
+2020-05-27 17:30:24.7554 INFO connection successful
+2020-05-27 17:30:25.7504 INFO connection successful
+2020-05-27 17:30:26.7504 INFO connection successful
+2020-05-27 17:30:27.7503 INFO connection successful
+2020-05-27 17:30:28.7531 INFO connection successful
+2020-05-27 17:30:29.7550 INFO connection successful
+2020-05-27 17:30:30.7922 INFO connection successful
+2020-05-27 17:30:31.7566 INFO connection successful
+2020-05-27 17:30:32.7508 INFO connection successful
+2020-05-27 17:30:33.8729 INFO connection successful
+2020-05-27 17:30:34.7538 INFO connection successful
+2020-05-27 17:30:35.7698 INFO connection successful
+2020-05-27 17:30:36.7523 INFO connection successful
+2020-05-27 17:30:37.7541 INFO connection successful
+2020-05-27 17:30:38.7574 INFO connection successful
+2020-05-27 17:30:39.7565 INFO connection successful
+2020-05-27 17:30:40.7580 INFO connection successful
+2020-05-27 17:30:41.7493 INFO connection successful
+2020-05-27 17:30:42.7523 INFO connection successful
+2020-05-27 17:30:43.7519 INFO connection successful
+2020-05-27 17:30:44.7486 INFO connection successful
+2020-05-27 17:30:45.7519 INFO connection successful
+2020-05-27 17:30:46.7526 INFO connection successful
+2020-05-27 17:30:47.7486 INFO connection successful
+2020-05-27 17:30:48.7548 INFO connection successful
+2020-05-27 17:30:49.7514 INFO connection successful
+2020-05-27 17:30:50.7527 INFO connection successful
+2020-05-27 17:30:51.7486 INFO connection successful
+2020-05-27 17:30:52.7528 INFO connection successful
+2020-05-27 17:30:53.7493 INFO connection successful
+2020-05-27 17:30:54.7520 INFO connection successful
+2020-05-27 17:30:55.7477 INFO connection successful
+2020-05-27 17:30:56.7533 INFO connection successful
+2020-05-27 17:30:57.7528 INFO connection successful
+2020-05-27 17:30:58.7532 INFO connection successful
+2020-05-27 17:30:59.7480 INFO connection successful
+2020-05-27 17:31:00.7523 INFO connection successful
+2020-05-27 17:31:01.7536 INFO connection successful
+2020-05-27 17:31:02.7526 INFO connection successful
+2020-05-27 17:31:03.7521 INFO connection successful
+2020-05-27 17:31:04.7490 INFO connection successful
+2020-05-27 17:31:05.7551 INFO connection successful
+2020-05-27 17:31:06.7551 INFO connection successful
+2020-05-27 17:31:07.7517 INFO connection successful
+2020-05-27 17:31:08.7507 INFO connection successful
+2020-05-27 17:31:09.7565 INFO connection successful
+2020-05-27 17:31:10.7499 INFO connection successful
+2020-05-27 17:31:11.7474 INFO connection successful
+2020-05-27 17:31:12.7520 INFO connection successful
+2020-05-27 17:31:13.7525 INFO connection successful
+2020-05-27 17:31:14.7576 INFO connection successful
+2020-05-27 17:31:15.7553 INFO connection successful
+2020-05-27 17:31:16.7544 INFO connection successful
+2020-05-27 17:31:28.1267 INFO connection successful
+2020-05-27 17:31:34.3781 INFO connection successful
+2020-05-27 17:31:35.1491 INFO connection successful
+2020-05-27 17:31:36.1622 INFO connection successful
+2020-05-27 17:31:37.1506 INFO connection successful
+2020-05-27 17:31:38.1453 INFO connection successful
+2020-05-27 17:31:39.1607 INFO connection successful
+2020-05-27 17:31:40.1580 INFO connection successful
+2020-05-27 17:31:41.1498 INFO connection successful
+2020-05-27 17:31:42.1586 INFO connection successful
+2020-05-27 17:31:43.1589 INFO connection successful
+2020-05-27 17:31:44.1516 INFO connection successful
+2020-05-27 17:31:45.1580 INFO connection successful
+2020-05-27 17:31:46.1550 INFO connection successful
+2020-05-27 17:31:47.1604 INFO connection successful
+2020-05-27 17:31:48.1548 INFO connection successful
+2020-05-27 17:31:49.1611 INFO connection successful
+2020-05-27 17:31:50.1579 INFO connection successful
+2020-05-27 17:31:51.1426 INFO connection successful
+2020-05-27 17:31:52.1495 INFO connection successful
+2020-05-27 17:31:53.1413 INFO connection successful
+2020-05-27 17:31:54.1416 INFO connection successful
+2020-05-27 17:31:55.1464 INFO connection successful
+2020-05-27 17:31:56.1407 INFO connection successful
+2020-05-27 17:31:57.1466 INFO connection successful
+2020-05-27 17:31:58.1479 INFO connection successful
+2020-05-27 17:31:59.1474 INFO connection successful
+2020-05-27 17:32:00.1475 INFO connection successful
+2020-05-27 17:32:01.1463 INFO connection successful
+2020-05-27 17:32:02.1424 INFO connection successful
+2020-05-27 17:32:03.1432 INFO connection successful
+2020-05-27 17:32:04.1472 INFO connection successful
+2020-05-27 17:32:05.1479 INFO connection successful
+2020-05-27 17:32:06.1531 INFO connection successful
+2020-05-27 17:32:07.1532 INFO connection successful
+2020-05-27 17:32:08.1608 INFO connection successful
+2020-05-27 17:32:09.1586 INFO connection successful
+2020-05-27 17:32:10.1598 INFO connection successful
+2020-05-27 17:32:11.1529 INFO connection successful
+2020-05-27 17:32:12.1596 INFO connection successful
+2020-05-27 17:32:13.1505 INFO connection successful
+2020-05-27 17:32:14.1564 INFO connection successful
+2020-05-27 17:32:15.1532 INFO connection successful
+2020-05-27 17:32:16.1461 INFO connection successful
+2020-05-27 17:32:17.1459 INFO connection successful
+2020-05-27 17:32:18.1413 INFO connection successful
+2020-05-27 17:32:19.1418 INFO connection successful
+2020-05-27 17:32:20.1457 INFO connection successful
+2020-05-27 17:32:21.1481 INFO connection successful
+2020-05-27 17:32:22.1458 INFO connection successful
+2020-05-27 17:32:23.1441 INFO connection successful
+2020-05-27 17:32:24.1388 INFO connection successful
+2020-05-27 17:32:25.1399 INFO connection successful
+2020-05-27 17:32:26.1486 INFO connection successful
+2020-05-27 17:32:27.1412 INFO connection successful
+2020-05-27 17:32:28.1452 INFO connection successful
+2020-05-27 17:32:29.1456 INFO connection successful
+2020-05-27 17:32:30.1479 INFO connection successful
+2020-05-27 17:32:31.1466 INFO connection successful
+2020-05-27 17:32:32.1483 INFO connection successful
+2020-05-27 17:32:33.1464 INFO connection successful
+2020-05-27 17:32:34.1419 INFO connection successful
+2020-05-27 17:32:35.1488 INFO connection successful
+2020-05-27 17:32:36.1466 INFO connection successful
+2020-05-27 17:32:37.1466 INFO connection successful
+2020-05-27 17:32:38.1454 INFO connection successful
+2020-05-27 17:32:39.1562 INFO connection successful
+2020-05-27 17:32:40.1576 INFO connection successful
+2020-05-27 17:32:41.1620 INFO connection successful
+2020-05-27 17:32:42.1501 INFO connection successful
+2020-05-27 17:32:43.1568 INFO connection successful
+2020-05-27 17:32:44.1554 INFO connection successful
+2020-05-27 17:32:45.1560 INFO connection successful
+2020-05-27 17:32:46.1528 INFO connection successful
+2020-05-27 17:32:47.1558 INFO connection successful
+2020-05-27 17:32:48.1530 INFO connection successful
+2020-05-27 17:32:49.1439 INFO connection successful
+2020-05-27 17:32:50.1476 INFO connection successful
+2020-05-27 17:32:51.1465 INFO connection successful
+2020-05-27 17:32:52.1463 INFO connection successful
+2020-05-27 17:32:53.1422 INFO connection successful
+2020-05-27 17:32:54.1469 INFO connection successful
+2020-05-27 17:32:55.1478 INFO connection successful
+2020-05-27 17:32:56.1451 INFO connection successful
+2020-05-27 17:32:57.1416 INFO connection successful
+2020-05-27 17:32:58.1449 INFO connection successful
+2020-05-27 17:32:59.1447 INFO connection successful
+2020-05-27 17:33:00.1410 INFO connection successful
+2020-05-27 17:33:01.1404 INFO connection successful
+2020-05-27 17:33:02.1414 INFO connection successful
+2020-05-27 17:33:03.1465 INFO connection successful
+2020-05-27 17:33:04.1483 INFO connection successful
+2020-05-27 17:33:05.1476 INFO connection successful
+2020-05-27 17:33:06.1484 INFO connection successful
+2020-05-27 17:33:07.1471 INFO connection successful
+2020-05-27 17:33:08.1493 INFO connection successful
+2020-05-27 17:33:09.1409 INFO connection successful
+2020-05-27 17:33:10.1445 INFO connection successful
+2020-05-27 17:33:11.1490 INFO connection successful
+2020-05-27 17:33:12.1451 INFO connection successful
+2020-05-27 17:33:13.1423 INFO connection successful
+2020-05-27 17:33:14.1478 INFO connection successful
+2020-05-27 17:33:15.1405 INFO connection successful
+2020-05-27 17:33:16.1382 INFO connection successful
+2020-05-27 17:33:17.1420 INFO connection successful
+2020-05-27 17:33:18.1473 INFO connection successful
+2020-05-27 17:33:19.1488 INFO connection successful
+2020-05-27 17:33:20.1622 INFO connection successful
+2020-05-27 17:33:21.1511 INFO connection successful
+2020-05-27 17:33:22.1581 INFO connection successful
+2020-05-27 17:33:23.1504 INFO connection successful
+2020-05-27 17:33:24.1526 INFO connection successful
+2020-05-27 17:33:25.1538 INFO connection successful
+2020-05-27 17:33:26.1516 INFO connection successful
+2020-05-27 17:33:27.1614 INFO connection successful
+2020-05-27 17:33:28.1405 INFO connection successful
+2020-05-27 17:33:29.1466 INFO connection successful
+2020-05-27 17:33:30.1422 INFO connection successful
+2020-05-27 17:33:31.1492 INFO connection successful
+2020-05-27 17:33:32.1459 INFO connection successful
+2020-05-27 17:33:33.1488 INFO connection successful
+2020-05-27 17:33:34.1471 INFO connection successful
+2020-05-27 17:33:35.1403 INFO connection successful
+2020-05-27 17:33:36.1405 INFO connection successful
+2020-05-27 17:33:37.1484 INFO connection successful
+2020-05-27 17:33:38.1474 INFO connection successful
+2020-05-27 17:33:39.1473 INFO connection successful
+2020-05-27 17:33:40.1476 INFO connection successful
+2020-05-27 17:33:41.1468 INFO connection successful
+2020-05-27 17:33:42.1410 INFO connection successful
+2020-05-27 17:33:43.1416 INFO connection successful
+2020-05-27 17:33:44.1453 INFO connection successful
+2020-05-27 17:33:45.1460 INFO connection successful
+2020-05-27 17:33:46.1458 INFO connection successful
+2020-05-27 17:33:47.1435 INFO connection successful
+2020-05-27 17:33:48.1457 INFO connection successful
+2020-05-27 17:33:49.1411 INFO connection successful
+2020-05-27 17:33:50.1476 INFO connection successful
+2020-05-27 17:33:51.1460 INFO connection successful
+2020-05-27 17:33:52.1444 INFO connection successful
+2020-05-27 17:33:53.1457 INFO connection successful
+2020-05-27 17:33:54.1477 INFO connection successful
+2020-05-27 17:33:55.1452 INFO connection successful
+2020-05-27 17:33:56.1435 INFO connection successful
+2020-05-27 17:33:57.1413 INFO connection successful
+2020-05-27 17:33:58.1462 INFO connection successful
+2020-05-27 17:33:59.1468 INFO connection successful
+2020-05-27 17:34:00.1457 INFO connection successful
+2020-05-27 17:34:01.1488 INFO connection successful
+2020-05-27 17:34:02.1461 INFO connection successful
+2020-05-27 17:34:03.1429 INFO connection successful
+2020-05-27 17:34:04.1479 INFO connection successful
+2020-05-27 17:34:05.1620 INFO connection successful
+2020-05-27 17:34:06.1523 INFO connection successful
+2020-05-27 17:34:07.1553 INFO connection successful
+2020-05-27 17:34:08.1567 INFO connection successful
+2020-05-27 17:34:09.1565 INFO connection successful
+2020-05-27 17:34:10.1544 INFO connection successful
+2020-05-27 17:34:11.1599 INFO connection successful
+2020-05-27 17:34:12.1615 INFO connection successful
+2020-05-27 17:34:13.1523 INFO connection successful
+2020-05-27 17:34:14.1475 INFO connection successful
+2020-05-27 17:34:15.1436 INFO connection successful
+2020-05-27 17:34:16.1390 INFO connection successful
+2020-05-27 17:34:17.1429 INFO connection successful
+2020-05-27 17:34:18.1492 INFO connection successful
+2020-05-27 17:34:19.1494 INFO connection successful
+2020-05-27 17:34:20.1511 INFO connection successful
+2020-05-27 17:34:21.1526 INFO connection successful
+2020-05-27 17:34:22.1442 INFO connection successful
+2020-05-27 17:34:23.1394 INFO connection successful
+2020-05-27 17:34:24.1423 INFO connection successful
+2020-05-27 17:34:25.1487 INFO connection successful
+2020-05-27 17:34:26.1465 INFO connection successful
+2020-05-27 17:34:27.1451 INFO connection successful
+2020-05-27 17:34:28.1404 INFO connection successful
+2020-05-27 17:34:29.1490 INFO connection successful
+2020-05-27 17:34:30.1439 INFO connection successful
+2020-05-27 17:34:31.1434 INFO connection successful
+2020-05-27 17:34:32.1444 INFO connection successful
+2020-05-27 17:34:33.1507 INFO connection successful
+2020-05-27 17:34:34.1462 INFO connection successful
+2020-05-27 17:34:35.1460 INFO connection successful
+2020-05-27 17:34:36.1449 INFO connection successful
+2020-05-27 17:34:37.1461 INFO connection successful
+2020-05-27 17:34:38.1424 INFO connection successful
+2020-05-27 17:34:39.1493 INFO connection successful
+2020-05-27 17:34:40.1477 INFO connection successful
+2020-05-27 17:34:41.1452 INFO connection successful
+2020-05-27 17:34:42.1482 INFO connection successful
+2020-05-27 17:34:43.1469 INFO connection successful
+2020-05-27 17:34:44.1471 INFO connection successful
+2020-05-27 17:34:45.1434 INFO connection successful
+2020-05-27 17:34:46.1476 INFO connection successful
+2020-05-27 17:34:47.1480 INFO connection successful
+2020-05-27 17:34:48.1456 INFO connection successful
+2020-05-27 17:34:49.1447 INFO connection successful
+2020-05-27 17:34:50.1481 INFO connection successful
+2020-05-27 17:34:51.1446 INFO connection successful
+2020-05-27 17:34:52.1468 INFO connection successful
+2020-05-27 17:34:53.1463 INFO connection successful
+2020-05-27 17:34:54.1443 INFO connection successful
+2020-05-27 17:34:55.1401 INFO connection successful
+2020-05-27 17:34:56.1563 INFO connection successful
+2020-05-27 17:34:57.1604 INFO connection successful
+2020-05-27 17:34:58.1562 INFO connection successful
+2020-05-27 17:34:59.1587 INFO connection successful
+2020-05-27 17:35:00.1564 INFO connection successful
+2020-05-27 17:35:01.1515 INFO connection successful
+2020-05-27 17:35:02.1452 INFO connection successful
+2020-05-27 17:35:03.1452 INFO connection successful
+2020-05-27 17:35:04.1470 INFO connection successful
+2020-05-27 17:35:05.1448 INFO connection successful
+2020-05-27 17:35:06.1413 INFO connection successful
+2020-05-27 17:35:07.1436 INFO connection successful
+2020-05-27 17:35:08.1473 INFO connection successful
+2020-05-27 17:35:09.1457 INFO connection successful
+2020-05-27 17:35:10.1448 INFO connection successful
+2020-05-27 17:35:11.1467 INFO connection successful
+2020-05-27 17:35:12.1465 INFO connection successful
+2020-05-27 17:35:13.1383 INFO connection successful
+2020-05-27 17:35:14.1473 INFO connection successful
+2020-05-27 17:35:15.1478 INFO connection successful
+2020-05-27 17:35:16.1460 INFO connection successful
+2020-05-27 17:35:17.1442 INFO connection successful
+2020-05-27 17:35:18.1416 INFO connection successful
+2020-05-27 17:35:19.1471 INFO connection successful
+2020-05-27 17:35:20.1477 INFO connection successful
+2020-05-27 17:35:21.1467 INFO connection successful
+2020-05-27 17:35:22.1388 INFO connection successful
+2020-05-27 17:35:23.1477 INFO connection successful
+2020-05-27 17:35:24.1477 INFO connection successful
+2020-05-27 17:35:25.1481 INFO connection successful
+2020-05-27 17:35:26.1464 INFO connection successful
+2020-05-27 17:35:27.1405 INFO connection successful
+2020-05-27 17:35:28.1486 INFO connection successful
+2020-05-27 17:35:29.1390 INFO connection successful
+2020-05-27 17:35:30.1465 INFO connection successful
+2020-05-27 17:35:31.1478 INFO connection successful
+2020-05-27 17:35:32.1478 INFO connection successful
+2020-05-27 17:35:33.1466 INFO connection successful
+2020-05-27 17:35:34.1485 INFO connection successful
+2020-05-27 17:35:35.1453 INFO connection successful
+2020-05-27 17:35:36.1486 INFO connection successful
+2020-05-27 17:35:37.1457 INFO connection successful
+2020-05-27 17:35:38.1417 INFO connection successful
+2020-05-27 17:35:39.1479 INFO connection successful
+2020-05-27 17:35:40.1448 INFO connection successful
+2020-05-27 17:35:41.1414 INFO connection successful
+2020-05-27 17:35:42.1487 INFO connection successful
+2020-05-27 17:35:43.1464 INFO connection successful
+2020-05-27 17:35:44.1460 INFO connection successful
+2020-05-27 17:54:19.0519 INFO connection successful
+2020-05-27 17:54:19.0965 WARN Please enable server connection
+2020-05-27 17:54:50.3141 INFO connection successful
+2020-05-27 18:01:19.1541 INFO connection successful
+2020-05-27 18:01:20.4453 INFO connection successful
+2020-05-27 18:01:20.5051 INFO connection successful
+2020-05-27 18:01:21.6894 INFO connection successful
+2020-05-27 18:01:22.2545 INFO connection successful
+2020-05-27 18:02:39.9716 INFO connection successful
+2020-05-27 18:02:40.6012 INFO connection successful
+2020-05-27 18:03:14.4515 INFO connection successful
+2020-05-27 18:16:31.3056 INFO connection successful
+2020-05-27 18:16:31.3622 INFO connection successful
+2020-05-27 18:16:32.7007 INFO connection successful
+2020-05-27 18:16:33.1185 INFO connection successful
+2020-05-27 18:16:51.5870 INFO connection successful
+2020-05-27 18:16:55.8868 WARN Please enable server connection
+2020-05-27 18:16:57.9377 INFO connection successful
+2020-05-27 18:17:00.2834 INFO connection successful
+2020-05-27 18:17:01.7562 ERROR MySql.Data.MySqlClient.MySqlException (0x80004005): PROCEDURE simplescada.a does not exist
+   в MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   в MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   в MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   в MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   в MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.Forms.CommandForm.runQuery() в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\CommandForm.cs:строка 49
+2020-05-27 18:17:02.6977 INFO connection successful
+2020-05-27 18:17:04.0507 ERROR MySql.Data.MySqlClient.MySqlException (0x80004005): PROCEDURE simplescada.a does not exist
+   в MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   в MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   в MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   в MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   в MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.Forms.CommandForm.runQuery() в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\CommandForm.cs:строка 49
+2020-05-27 18:17:09.7870 INFO connection successful
+2020-05-27 18:17:53.8756 INFO connection successful
+2020-05-27 18:17:56.0921 WARN Please enable server connection
+2020-05-27 18:18:19.3204 INFO connection successful
+2020-05-27 18:18:21.7814 WARN Please enable server connection
+2020-05-27 18:18:21.9532 INFO connection successful
+2020-05-27 18:18:22.8058 INFO connection successful
+2020-05-27 18:18:23.8788 INFO connection successful
+2020-05-27 18:18:24.7644 INFO connection successful
+2020-05-27 18:18:26.4506 INFO connection successful
+2020-05-27 18:18:26.7833 INFO connection successful
+2020-05-27 18:18:27.8020 INFO connection successful
+2020-05-27 18:18:28.8154 INFO connection successful
+2020-05-27 18:18:29.7920 INFO connection successful
+2020-05-27 18:18:30.8064 INFO connection successful
+2020-05-27 18:18:31.8243 INFO connection successful
+2020-05-27 18:18:32.7762 INFO connection successful
+2020-05-27 18:19:05.6135 WARN Please enable server connection
+2020-05-27 18:19:08.8220 INFO connection successful
+2020-05-27 18:19:09.0725 WARN Please enable server connection
+2020-05-27 18:19:09.4873 INFO connection successful
+2020-05-27 18:19:10.5053 INFO connection successful
+2020-05-27 18:19:11.5219 INFO connection successful
+2020-05-27 18:19:12.4784 INFO connection successful
+2020-05-27 18:19:13.4922 INFO connection successful
+2020-05-27 18:19:14.5089 INFO connection successful
+2020-05-27 18:19:15.4897 INFO connection successful
+2020-05-27 18:19:15.9338 INFO connection successful
+2020-05-27 18:19:16.0466 INFO connection successful
+2020-05-27 18:19:16.4837 INFO connection successful
+2020-05-27 18:19:17.3295 INFO connection successful
+2020-05-27 18:19:17.5622 INFO connection successful
+2020-05-27 18:19:17.9773 INFO connection successful
+2020-05-27 18:19:18.4669 INFO connection successful
+2020-05-27 18:19:19.4730 INFO connection successful
+2020-05-27 18:19:20.4995 INFO connection successful
+2020-05-27 18:19:21.5017 INFO connection successful
+2020-05-27 18:19:22.4665 INFO connection successful
+2020-05-27 18:19:31.5196 INFO connection successful
+2020-05-27 18:19:31.6642 INFO connection successful
+2020-05-27 18:19:32.9515 INFO connection successful
+2020-05-27 18:19:33.5419 INFO connection successful
+2020-05-27 18:19:41.2732 INFO connection successful
+2020-05-27 18:20:44.3795 INFO connection successful
+2020-05-27 18:20:46.2213 WARN Please enable server connection
+2020-05-27 18:21:13.6052 WARN Please enable server connection
+2020-05-27 18:21:16.6373 WARN Please enable server connection
+2020-05-27 18:21:19.0696 WARN Please enable server connection
+2020-05-27 18:21:49.5552 INFO connection successful
+2020-05-27 18:23:17.3868 INFO connection successful
+2020-05-27 18:23:22.1099 WARN Please enable server connection
+2020-05-27 18:23:24.6291 WARN Please enable server connection
+2020-05-27 18:23:27.4954 WARN Please enable server connection
+2020-05-27 18:23:29.6034 WARN Please enable server connection
+2020-05-27 18:23:33.2394 WARN Please enable server connection
+2020-05-27 18:23:33.3541 INFO connection successful
+2020-05-27 18:23:34.2398 INFO connection successful
+2020-05-27 18:23:35.2142 INFO connection successful
+2020-05-27 18:23:36.2080 INFO connection successful
+2020-05-27 18:23:37.2196 INFO connection successful
+2020-05-27 18:23:40.0801 WARN Please enable server connection
+2020-05-27 18:23:45.2156 WARN Please enable server connection
+2020-05-27 18:23:53.9197 INFO connection successful
+2020-05-27 18:23:59.0400 WARN Please enable server connection
+2020-05-27 18:43:14.5968 INFO connection successful
+2020-05-27 18:43:19.2708 WARN Please enable server connection
+2020-05-27 18:43:21.9529 WARN Please enable server connection
+2020-05-27 18:43:22.2225 INFO connection successful
+2020-05-27 18:43:23.2355 INFO connection successful
+2020-05-27 18:43:24.4249 INFO connection successful
+2020-05-27 18:43:25.2953 INFO connection successful
+2020-05-27 18:43:26.2284 INFO connection successful
+2020-05-27 18:43:27.3665 INFO connection successful
+2020-05-27 18:43:28.2253 INFO connection successful
+2020-05-27 18:43:29.2198 INFO connection successful
+2020-05-27 18:43:30.2184 INFO connection successful
+2020-05-27 18:45:04.5813 INFO connection successful
+2020-05-27 18:45:08.4513 ERROR MySql.Data.MySqlClient.MySqlException (0x80004005): There is already an open DataReader associated with this Connection which must be closed first.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   в System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в NURESCADA.MainForm.cbDataSets_SelectedIndexChanged(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 88
+2020-05-27 18:45:10.8119 WARN Please enable server connection
+2020-05-27 18:45:12.7514 WARN Please enable server connection
+2020-05-27 18:45:22.1116 INFO connection successful
+2020-05-27 18:45:25.9375 ERROR MySql.Data.MySqlClient.MySqlException (0x80004005): There is already an open DataReader associated with this Connection which must be closed first.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   в System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в NURESCADA.MainForm.cbDataSets_SelectedIndexChanged(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 88
+2020-05-27 18:45:57.9689 WARN Please enable server connection
+2020-05-27 18:46:02.7159 INFO connection successful
+2020-05-27 18:46:03.3955 INFO connection successful
+2020-05-27 18:46:04.4100 INFO connection successful
+2020-05-27 18:46:05.3785 INFO connection successful
+2020-05-27 18:46:06.3939 INFO connection successful
+2020-05-27 18:46:07.4110 INFO connection successful
+2020-05-27 18:46:08.4047 INFO connection successful
+2020-05-27 18:46:09.3916 INFO connection successful
+2020-05-27 18:46:10.3815 INFO connection successful
+2020-05-27 18:46:11.4081 INFO connection successful
+2020-05-27 18:51:56.5225 WARN Please enable server connection
+2020-05-27 18:51:59.7375 INFO connection successful
+2020-05-27 18:52:00.4652 INFO connection successful
+2020-05-27 18:52:01.3722 ERROR MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'simplescada.trends_daywhere' doesn't exist
+   в MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   в MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   в MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   в MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   в MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   в System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в NURESCADA.MainForm.cbDataSets_SelectedIndexChanged(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 88
+2020-05-27 18:52:01.5173 INFO connection successful
+2020-05-27 18:52:02.3580 INFO connection successful
+2020-05-27 18:52:03.3640 INFO connection successful
+2020-05-27 18:52:04.3755 INFO connection successful
+2020-05-27 18:52:05.3813 INFO connection successful
+2020-05-27 18:52:06.3751 INFO connection successful
+2020-05-27 18:52:07.3624 INFO connection successful
+2020-05-27 18:52:08.3616 INFO connection successful
+2020-05-27 18:52:09.3587 INFO connection successful
+2020-05-27 18:52:40.7914 WARN Please enable server connection
+2020-05-27 18:52:44.3213 INFO connection successful
+2020-05-27 18:52:44.9016 INFO connection successful
+2020-05-27 18:52:45.7563 ERROR MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIMIT 0, 100' at line 1
+   в MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   в MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   в MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   в MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   в MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   в System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в NURESCADA.MainForm.cbDataSets_SelectedIndexChanged(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 88
+2020-05-27 18:52:45.9136 INFO connection successful
+2020-05-27 18:52:46.9174 INFO connection successful
+2020-05-27 18:52:47.9166 INFO connection successful
+2020-05-27 18:52:48.9231 INFO connection successful
+2020-05-27 18:52:49.9056 INFO connection successful
+2020-05-27 18:52:50.9157 INFO connection successful
+2020-05-27 18:52:51.9151 INFO connection successful
+2020-05-27 18:52:52.9245 INFO connection successful
+2020-05-27 18:52:53.9148 INFO connection successful
+2020-05-27 18:52:54.9125 INFO connection successful
+2020-05-27 18:52:55.9017 INFO connection successful
+2020-05-27 18:52:56.9015 INFO connection successful
+2020-05-27 18:52:57.9142 INFO connection successful
+2020-05-27 18:52:58.9313 INFO connection successful
+2020-05-27 18:52:59.9054 INFO connection successful
+2020-05-27 18:53:00.8917 INFO connection successful
+2020-05-27 18:53:29.6898 WARN Please enable server connection
+2020-05-27 18:53:33.0148 WARN Please enable server connection
+2020-05-27 18:53:33.6077 INFO connection successful
+2020-05-27 18:53:34.1513 INFO connection successful
+2020-05-27 18:53:35.1825 INFO connection successful
+2020-05-27 18:53:36.3835 INFO connection successful
+2020-05-27 18:53:37.1751 INFO connection successful
+2020-05-27 18:53:38.1661 INFO connection successful
+2020-05-27 18:53:39.2960 INFO connection successful
+2020-05-27 18:53:40.1450 INFO connection successful
+2020-05-27 18:53:41.1409 INFO connection successful
+2020-05-27 18:53:42.2551 INFO connection successful
+2020-05-27 18:53:43.1706 INFO connection successful
+2020-05-27 18:53:44.1682 INFO connection successful
+2020-05-27 18:53:45.1686 INFO connection successful
+2020-05-27 18:53:46.1455 INFO connection successful
+2020-05-27 18:53:47.1428 INFO connection successful
+2020-05-27 18:53:48.0751 ERROR MySql.Data.MySqlClient.MySqlException (0x80004005): There is already an open DataReader associated with this Connection which must be closed first.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   в System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в NURESCADA.MainForm.cbDataSets_SelectedIndexChanged(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 88
+2020-05-27 18:53:48.1452 INFO connection successful
+2020-05-27 18:53:49.1461 INFO connection successful
+2020-05-27 18:53:50.1734 INFO connection successful
+2020-05-27 18:53:51.1697 INFO connection successful
+2020-05-27 18:53:52.3165 INFO connection successful
+2020-05-27 18:53:53.1628 INFO connection successful
+2020-05-27 18:53:54.1716 INFO connection successful
+2020-05-27 18:53:55.1695 INFO connection successful
+2020-05-27 18:53:56.0748 ERROR MySql.Data.MySqlClient.MySqlException (0x80004005): There is already an open DataReader associated with this Connection which must be closed first.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   в System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в NURESCADA.MainForm.cbDataSets_SelectedIndexChanged(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 88
+2020-05-27 18:53:56.1807 INFO connection successful
+2020-05-27 18:53:57.1404 INFO connection successful
+2020-05-27 18:53:58.1425 INFO connection successful
+2020-05-27 18:53:59.1391 INFO connection successful
+2020-05-27 18:54:00.1413 INFO connection successful
+2020-05-27 18:54:01.1479 INFO connection successful
+2020-05-27 18:54:02.1415 INFO connection successful
+2020-05-27 18:54:03.1679 INFO connection successful
+2020-05-27 18:54:03.9438 ERROR MySql.Data.MySqlClient.MySqlException (0x80004005): There is already an open DataReader associated with this Connection which must be closed first.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   в System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в NURESCADA.MainForm.cbDataSets_SelectedIndexChanged(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 88
+2020-05-27 18:54:04.1768 INFO connection successful
+2020-05-27 18:54:05.1656 INFO connection successful
+2020-05-27 18:54:06.1728 INFO connection successful
+2020-05-27 18:54:07.1800 INFO connection successful
+2020-05-27 18:54:08.1395 INFO connection successful
+2020-05-27 18:54:09.1407 INFO connection successful
+2020-05-27 18:54:10.1492 INFO connection successful
+2020-05-27 18:54:11.1406 INFO connection successful
+2020-05-27 18:54:28.7298 WARN Please enable server connection
+2020-05-27 18:54:32.9712 INFO connection successful
+2020-05-27 18:54:33.5890 INFO connection successful
+2020-05-27 18:54:34.5736 INFO connection successful
+2020-05-27 18:54:35.5706 INFO connection successful
+2020-05-27 18:54:36.6416 INFO connection successful
+2020-05-27 18:54:37.7626 INFO connection successful
+2020-05-27 18:54:38.5594 INFO connection successful
+2020-05-27 18:54:39.5816 INFO connection successful
+2020-05-27 18:54:40.8094 INFO connection successful
+2020-05-27 18:54:41.5579 INFO connection successful
+2020-05-27 18:54:43.0558 INFO connection successful
+2020-05-27 18:54:43.5618 INFO connection successful
+2020-05-27 18:54:44.5614 INFO connection successful
+2020-05-27 18:54:45.5503 INFO connection successful
+2020-05-27 18:54:46.5737 INFO connection successful
+2020-05-27 18:54:47.5735 INFO connection successful
+2020-05-27 18:54:48.5916 INFO connection successful
+2020-05-27 18:54:50.9096 INFO connection successful
+2020-05-27 18:54:51.5694 INFO connection successful
+2020-05-27 18:54:52.5852 INFO connection successful
+2020-05-27 18:54:53.8074 INFO connection successful
+2020-05-27 18:54:54.5487 INFO connection successful
+2020-05-27 18:55:18.9365 WARN Please enable server connection
+2020-05-27 18:55:19.5206 INFO connection successful
+2020-05-27 18:55:19.6313 INFO connection successful
+2020-05-27 18:55:20.6435 INFO connection successful
+2020-05-27 18:55:21.6531 INFO connection successful
+2020-05-27 18:55:22.6145 INFO connection successful
+2020-05-27 18:55:23.6336 INFO connection successful
+2020-05-27 18:55:24.6279 INFO connection successful
+2020-05-27 18:55:25.6240 INFO connection successful
+2020-05-27 18:55:26.6322 INFO connection successful
+2020-05-27 18:55:27.6367 INFO connection successful
+2020-05-27 18:55:28.6261 INFO connection successful
+2020-05-27 18:55:30.4338 INFO connection successful
+2020-05-27 18:55:30.6156 INFO connection successful
+2020-05-27 18:55:31.6160 INFO connection successful
+2020-05-27 18:55:33.0357 INFO connection successful
+2020-05-27 18:55:33.6310 INFO connection successful
+2020-05-27 18:55:34.6306 INFO connection successful
+2020-05-27 18:55:35.7517 INFO connection successful
+2020-05-27 18:55:36.6283 INFO connection successful
+2020-05-27 18:55:37.6220 INFO connection successful
+2020-05-27 18:55:38.6296 INFO connection successful
+2020-05-27 18:55:39.6152 INFO connection successful
+2020-05-27 18:55:40.6152 INFO connection successful
+2020-05-27 18:55:41.6229 INFO connection successful
+2020-05-27 18:55:42.6388 INFO connection successful
+2020-05-27 18:55:43.6683 INFO connection successful
+2020-05-27 18:55:44.6420 INFO connection successful
+2020-05-27 18:55:45.6298 INFO connection successful
+2020-05-27 18:55:46.6377 INFO connection successful
+2020-05-27 18:55:47.6449 INFO connection successful
+2020-05-27 18:55:48.6299 INFO connection successful
+2020-05-27 18:55:49.6252 INFO connection successful
+2020-05-27 18:55:50.6426 INFO connection successful
+2020-05-27 18:55:51.6175 INFO connection successful
+2020-05-27 18:55:52.6166 INFO connection successful
+2020-05-27 18:55:53.6223 INFO connection successful
+2020-05-27 18:55:54.6159 INFO connection successful
+2020-05-27 18:55:55.6166 INFO connection successful
+2020-05-27 18:55:56.6191 INFO connection successful
+2020-05-27 18:55:57.6215 INFO connection successful
+2020-05-27 18:55:58.6139 INFO connection successful
+2020-05-27 18:55:59.6181 INFO connection successful
+2020-05-27 18:56:00.6126 INFO connection successful
+2020-05-27 18:56:01.6181 INFO connection successful
+2020-05-27 18:56:02.6269 INFO connection successful
+2020-05-27 18:56:03.6122 INFO connection successful
+2020-05-27 18:56:04.6228 INFO connection successful
+2020-05-27 18:56:05.6250 INFO connection successful
+2020-05-27 18:56:06.6461 INFO connection successful
+2020-05-27 18:56:07.6260 INFO connection successful
+2020-05-27 18:56:08.6824 INFO connection successful
+2020-05-27 18:56:09.6490 INFO connection successful
+2020-05-27 18:56:10.6499 INFO connection successful
+2020-05-27 18:56:11.6518 INFO connection successful
+2020-05-27 18:56:12.6284 INFO connection successful
+2020-05-27 18:56:13.6400 INFO connection successful
+2020-05-27 18:56:14.6591 INFO connection successful
+2020-05-27 18:56:15.6502 INFO connection successful
+2020-05-27 19:04:08.2398 INFO connection successful
+2020-05-27 19:04:08.4353 INFO connection successful
+2020-05-27 19:04:11.1902 INFO connection successful
+2020-05-27 19:04:11.8816 INFO connection successful
+2020-05-27 19:04:32.4051 INFO connection successful
+2020-05-27 19:05:10.0533 INFO connection successful
+2020-05-27 19:05:12.0749 INFO connection successful
+2020-05-27 19:11:45.5886 INFO connection successful
+2020-05-27 19:11:45.7419 INFO connection successful
+2020-05-27 19:11:47.1459 INFO connection successful
+2020-05-27 19:11:47.8255 INFO connection successful
+2020-05-27 19:13:26.1403 INFO connection successful
+2020-05-27 19:13:26.3280 INFO connection successful
+2020-05-27 19:13:28.2431 INFO connection successful
+2020-05-27 19:13:28.9089 INFO connection successful
+2020-05-27 19:15:41.5016 INFO connection successful
+2020-05-27 19:15:41.6951 INFO connection successful
+2020-05-27 19:15:42.9963 INFO connection successful
+2020-05-27 19:15:43.7112 INFO connection successful
+2020-05-27 19:17:21.3462 INFO connection successful
+2020-05-27 19:17:21.5029 INFO connection successful
+2020-05-27 19:17:34.3295 INFO connection successful
+2020-05-27 19:17:34.4691 INFO connection successful
+2020-05-27 19:17:35.8635 INFO connection successful
+2020-05-27 19:17:36.9143 INFO connection successful
+2020-05-27 19:28:38.8564 INFO connection successful
+2020-05-27 19:28:39.0384 INFO connection successful
+2020-05-27 19:29:38.2317 INFO connection successful
+2020-05-27 19:29:38.8416 INFO connection successful
+2020-05-27 19:29:39.8088 INFO connection successful
+2020-05-27 19:29:50.2375 INFO connection successful
+2020-05-27 19:29:50.4110 INFO connection successful
+2020-05-27 19:29:55.8379 INFO connection successful
+2020-05-27 19:29:56.6044 INFO connection successful
+2020-05-27 19:31:51.4088 INFO connection successful
+2020-05-27 19:31:51.5818 INFO connection successful
+2020-05-27 19:31:53.5448 INFO connection successful
+2020-05-27 19:31:54.9919 INFO connection successful
+2020-05-27 19:32:00.8356 INFO connection successful
+2020-05-27 19:32:01.6190 INFO connection successful
+2020-05-27 19:32:05.5626 INFO connection successful
+2020-05-27 19:32:06.3220 INFO connection successful
+2020-05-27 19:34:54.1486 INFO connection successful
+2020-05-27 19:34:54.3187 INFO connection successful
+2020-05-27 19:34:55.5220 INFO connection successful
+2020-05-27 19:34:56.2343 INFO connection successful
+2020-05-27 19:37:11.8668 INFO connection successful
+2020-05-27 19:37:12.4598 INFO connection successful
+2020-05-27 19:37:13.3612 INFO connection successful
+2020-05-27 19:37:14.5684 INFO connection successful
+2020-05-27 19:37:15.0096 INFO connection successful
+2020-05-27 19:37:15.6443 INFO connection successful
+2020-05-27 19:37:16.1355 INFO connection successful
+2020-05-27 19:37:17.4675 INFO connection successful
+2020-05-27 19:37:18.4989 INFO connection successful
+2020-05-27 19:39:00.4481 INFO connection successful
+2020-05-27 19:39:00.6210 INFO connection successful
+2020-05-27 19:39:02.6540 INFO connection successful
+2020-05-27 19:39:03.3086 INFO connection successful
+2020-05-27 19:40:30.8388 WARN System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 143
+2020-05-27 19:40:34.4242 INFO connection successful
+2020-05-27 19:40:35.0661 INFO connection successful
+2020-05-27 19:40:36.0608 INFO connection successful
+2020-05-27 19:40:37.0762 INFO connection successful
+2020-05-27 19:40:38.0324 INFO connection successful
+2020-05-27 19:40:39.1064 INFO connection successful
+2020-05-27 19:40:40.0479 INFO connection successful
+2020-05-27 19:40:42.2551 INFO connection successful
+2020-05-27 19:40:43.0401 INFO connection successful
+2020-05-27 19:40:44.5030 INFO connection successful
+2020-05-27 19:40:45.0444 INFO connection successful
+2020-05-27 19:40:46.0320 INFO connection successful
+2020-05-27 19:40:47.0511 INFO connection successful
+2020-05-27 19:40:48.0475 INFO connection successful
+2020-05-27 19:40:49.0558 INFO connection successful
+2020-05-27 19:40:50.0578 INFO connection successful
+2020-05-27 19:40:51.0608 INFO connection successful
+2020-05-27 19:40:52.0514 INFO connection successful
+2020-05-27 19:40:53.0582 INFO connection successful
+2020-05-27 19:40:54.9028 INFO connection successful
+2020-05-27 19:40:55.0441 INFO connection successful
+2020-05-27 19:40:56.0630 INFO connection successful
+2020-05-27 19:40:57.0314 INFO connection successful
+2020-05-27 19:40:58.0349 INFO connection successful
+2020-05-27 19:40:59.0315 INFO connection successful
+2020-05-27 19:41:00.0405 INFO connection successful
+2020-05-27 19:41:01.0405 INFO connection successful
+2020-05-27 19:41:02.0350 INFO connection successful
+2020-05-27 19:41:03.0291 INFO connection successful
+2020-05-27 19:41:04.0310 INFO connection successful
+2020-05-27 19:41:05.0463 INFO connection successful
+2020-05-27 19:41:06.0431 INFO connection successful
+2020-05-27 19:41:07.8324 INFO connection successful
+2020-05-27 19:41:08.0367 INFO connection successful
+2020-05-27 19:41:09.0719 INFO connection successful
+2020-05-27 19:41:10.0521 INFO connection successful
+2020-05-27 19:41:11.5155 INFO connection successful
+2020-05-27 19:41:12.0452 INFO connection successful
+2020-05-27 19:41:13.1728 INFO connection successful
+2020-05-27 19:41:14.0401 INFO connection successful
+2020-05-27 19:41:15.0852 INFO connection successful
+2020-05-27 19:41:16.0443 INFO connection successful
+2020-05-27 19:41:17.0423 INFO connection successful
+2020-05-27 19:41:18.0360 INFO connection successful
+2020-05-27 19:41:19.0325 INFO connection successful
+2020-05-27 19:41:20.0421 INFO connection successful
+2020-05-27 19:41:21.0404 INFO connection successful
+2020-05-27 19:41:22.0348 INFO connection successful
+2020-05-27 19:41:23.0347 INFO connection successful
+2020-05-27 19:41:24.0385 INFO connection successful
+2020-05-27 19:41:25.0297 INFO connection successful
+2020-05-27 19:41:26.0399 INFO connection successful
+2020-05-27 19:41:27.0313 INFO connection successful
+2020-05-27 19:41:28.0388 INFO connection successful
+2020-05-27 19:41:29.0415 INFO connection successful
+2020-05-27 19:41:30.0374 INFO connection successful
+2020-05-27 19:41:31.0402 INFO connection successful
+2020-05-27 19:43:47.0402 WARN System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 143
+2020-05-27 19:43:50.4962 INFO connection successful
+2020-05-27 19:43:51.4332 INFO connection successful
+2020-05-27 19:43:52.1597 INFO connection successful
+2020-05-27 19:43:53.1884 INFO connection successful
+2020-05-27 19:43:54.1320 INFO connection successful
+2020-05-27 19:43:56.2802 INFO connection successful
+2020-05-27 19:43:57.1785 INFO connection successful
+2020-05-27 19:43:58.1653 INFO connection successful
+2020-05-27 19:43:59.4260 INFO connection successful
+2020-05-27 19:44:00.1480 INFO connection successful
+2020-05-27 19:44:01.1661 INFO connection successful
+2020-05-27 19:44:02.1528 INFO connection successful
+2020-05-27 19:44:03.1418 INFO connection successful
+2020-05-27 19:44:04.9606 INFO connection successful
+2020-05-27 19:44:05.1417 INFO connection successful
+2020-05-27 19:44:06.1747 INFO connection successful
+2020-05-27 19:44:07.6230 INFO connection successful
+2020-05-27 19:44:08.1289 INFO connection successful
+2020-05-27 19:44:09.1339 INFO connection successful
+2020-05-27 19:44:10.0834 ERROR MySql.Data.MySqlClient.MySqlException (0x80004005): There is already an open DataReader associated with this Connection which must be closed first.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   в System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в NURESCADA.MainForm.cbDataSets_SelectedIndexChanged(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 89
+2020-05-27 19:44:10.1692 INFO connection successful
+2020-05-27 19:44:11.1316 INFO connection successful
+2020-05-27 19:44:12.1368 INFO connection successful
+2020-05-27 19:44:13.1297 INFO connection successful
+2020-05-27 19:44:14.5172 INFO connection successful
+2020-05-27 19:44:15.1325 INFO connection successful
+2020-05-27 19:44:16.7075 INFO connection successful
+2020-05-27 19:44:17.1298 INFO connection successful
+2020-05-27 19:44:18.1549 INFO connection successful
+2020-05-27 19:44:19.1560 INFO connection successful
+2020-05-27 19:44:20.1439 INFO connection successful
+2020-05-27 19:44:21.1533 INFO connection successful
+2020-05-27 19:44:22.1249 INFO connection successful
+2020-05-27 19:44:23.1338 INFO connection successful
+2020-05-27 19:44:24.1346 INFO connection successful
+2020-05-27 19:44:25.1345 INFO connection successful
+2020-05-27 19:44:26.1276 INFO connection successful
+2020-05-27 19:44:27.3063 INFO connection successful
+2020-05-27 19:44:28.1281 INFO connection successful
+2020-05-27 19:44:29.1402 INFO connection successful
+2020-05-27 19:44:30.1305 INFO connection successful
+2020-05-27 19:44:31.1445 INFO connection successful
+2020-05-27 19:44:32.3729 INFO connection successful
+2020-05-27 19:44:33.3712 INFO connection successful
+2020-05-27 19:44:34.1388 INFO connection successful
+2020-05-27 19:44:35.1262 INFO connection successful
+2020-05-27 19:44:36.1343 INFO connection successful
+2020-05-27 19:44:37.1268 INFO connection successful
+2020-05-27 19:44:38.1312 INFO connection successful
+2020-05-27 19:44:39.1322 INFO connection successful
+2020-05-27 19:44:40.1477 INFO connection successful
+2020-05-27 19:44:41.1369 INFO connection successful
+2020-05-27 19:44:42.1317 INFO connection successful
+2020-05-27 19:44:43.1476 INFO connection successful
+2020-05-27 19:44:44.1537 INFO connection successful
+2020-05-27 19:44:45.1712 INFO connection successful
+2020-05-27 19:44:46.1427 INFO connection successful
+2020-05-27 19:44:47.1487 INFO connection successful
+2020-05-27 19:44:48.1554 INFO connection successful
+2020-05-27 19:44:49.1631 INFO connection successful
+2020-05-27 19:44:50.1721 INFO connection successful
+2020-05-27 19:44:51.1463 INFO connection successful
+2020-05-27 19:44:52.1745 INFO connection successful
+2020-05-27 19:44:53.1379 INFO connection successful
+2020-05-27 19:44:54.1340 INFO connection successful
+2020-05-27 19:44:55.1347 INFO connection successful
+2020-05-27 19:44:56.1340 INFO connection successful
+2020-05-27 19:45:33.7330 WARN System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 143
+2020-05-27 19:45:38.1034 WARN System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 143
+2020-05-27 19:45:38.6067 INFO connection successful
+2020-05-27 19:45:39.2397 INFO connection successful
+2020-05-27 19:45:40.2746 INFO connection successful
+2020-05-27 19:45:41.2698 INFO connection successful
+2020-05-27 19:45:42.2338 INFO connection successful
+2020-05-27 19:45:43.2363 INFO connection successful
+2020-05-27 19:45:44.2218 INFO connection successful
+2020-05-27 19:45:45.2628 INFO connection successful
+2020-05-27 19:45:46.2410 INFO connection successful
+2020-05-27 19:45:47.9780 INFO connection successful
+2020-05-27 19:45:48.2602 INFO connection successful
+2020-05-27 19:45:49.2441 INFO connection successful
+2020-05-27 19:45:50.2833 INFO connection successful
+2020-05-27 19:45:51.2387 INFO connection successful
+2020-05-27 19:45:52.2510 INFO connection successful
+2020-05-27 19:45:53.2594 INFO connection successful
+2020-05-27 19:45:54.2492 INFO connection successful
+2020-05-27 19:45:55.2273 INFO connection successful
+2020-05-27 19:45:56.2247 INFO connection successful
+2020-05-27 19:45:57.2203 INFO connection successful
+2020-05-27 19:45:58.2425 INFO connection successful
+2020-05-27 19:45:59.2259 INFO connection successful
+2020-05-27 19:46:00.2202 INFO connection successful
+2020-05-27 19:46:01.2331 INFO connection successful
+2020-05-27 19:46:02.2212 INFO connection successful
+2020-05-27 19:46:03.2383 INFO connection successful
+2020-05-27 19:46:04.2254 INFO connection successful
+2020-05-27 19:46:05.2324 INFO connection successful
+2020-05-27 19:46:06.2507 INFO connection successful
+2020-05-27 19:46:07.2360 INFO connection successful
+2020-05-27 19:46:08.2370 INFO connection successful
+2020-05-27 19:46:09.2460 INFO connection successful
+2020-05-27 19:46:10.2439 INFO connection successful
+2020-05-27 19:46:11.2283 INFO connection successful
+2020-05-27 19:46:12.2365 INFO connection successful
+2020-05-27 19:46:13.2654 INFO connection successful
+2020-05-27 19:46:14.2296 INFO connection successful
+2020-05-27 19:46:15.2290 INFO connection successful
+2020-05-27 19:46:16.2288 INFO connection successful
+2020-05-27 19:46:17.2209 INFO connection successful
+2020-05-27 19:46:18.2361 INFO connection successful
+2020-05-27 19:46:19.8522 INFO connection successful
+2020-05-27 19:46:20.2394 INFO connection successful
+2020-05-27 19:46:21.2200 INFO connection successful
+2020-05-27 19:46:22.2193 INFO connection successful
+2020-05-27 19:46:23.2363 INFO connection successful
+2020-05-27 19:46:24.4886 INFO connection successful
+2020-05-27 19:46:25.2304 INFO connection successful
+2020-05-27 19:46:26.2293 INFO connection successful
+2020-05-27 19:46:27.2319 INFO connection successful
+2020-05-27 19:46:28.2277 INFO connection successful
+2020-05-27 19:46:29.2264 INFO connection successful
+2020-05-27 19:46:30.2325 INFO connection successful
+2020-05-27 19:46:31.2264 INFO connection successful
+2020-05-27 19:46:32.2342 INFO connection successful
+2020-05-27 19:46:33.2551 INFO connection successful
+2020-05-27 19:46:34.2502 INFO connection successful
+2020-05-27 19:46:35.2531 INFO connection successful
+2020-05-27 19:46:36.2261 INFO connection successful
+2020-05-27 19:46:37.2385 INFO connection successful
+2020-05-27 19:46:38.2255 INFO connection successful
+2020-05-27 19:46:39.2242 INFO connection successful
+2020-05-27 19:46:40.2235 INFO connection successful
+2020-05-27 19:46:41.2371 INFO connection successful
+2020-05-27 19:46:42.2175 INFO connection successful
+2020-05-27 19:46:43.2264 INFO connection successful
+2020-05-27 19:46:44.2351 INFO connection successful
+2020-05-27 19:46:45.2280 INFO connection successful
+2020-05-27 19:46:46.2242 INFO connection successful
+2020-05-27 19:46:47.2297 INFO connection successful
+2020-05-27 19:46:48.2274 INFO connection successful
+2020-05-27 19:46:49.2178 INFO connection successful
+2020-05-27 19:46:50.2191 INFO connection successful
+2020-05-27 19:46:51.2383 INFO connection successful
+2020-05-27 19:46:52.2310 INFO connection successful
+2020-05-27 19:46:53.2398 INFO connection successful
+2020-05-27 19:46:54.2218 INFO connection successful
+2020-05-27 19:46:55.2364 INFO connection successful
+2020-05-27 19:46:56.2599 INFO connection successful
+2020-05-27 19:46:57.2426 INFO connection successful
+2020-05-27 19:46:58.3153 INFO connection successful
+2020-05-27 19:46:59.2430 INFO connection successful
+2020-05-27 19:47:00.2894 INFO connection successful
+2020-05-27 19:47:01.2405 INFO connection successful
+2020-05-27 19:47:02.2680 INFO connection successful
+2020-05-27 19:47:03.2207 INFO connection successful
+2020-05-27 19:47:04.2311 INFO connection successful
+2020-05-27 19:47:05.3649 INFO connection successful
+2020-05-27 19:47:06.2229 INFO connection successful
+2020-05-27 19:47:07.2241 INFO connection successful
+2020-05-27 19:47:08.2317 INFO connection successful
+2020-05-27 19:47:09.2248 INFO connection successful
+2020-05-27 19:47:10.2283 INFO connection successful
+2020-05-27 19:47:11.2319 INFO connection successful
+2020-05-27 19:47:12.2268 INFO connection successful
+2020-05-27 19:47:13.2362 INFO connection successful
+2020-05-27 19:47:14.2241 INFO connection successful
+2020-05-27 19:47:15.2281 INFO connection successful
+2020-05-27 19:47:16.2178 INFO connection successful
+2020-05-27 19:47:17.2180 INFO connection successful
+2020-05-27 19:47:18.2309 INFO connection successful
+2020-05-27 19:47:19.2270 INFO connection successful
+2020-05-27 19:47:20.2268 INFO connection successful
+2020-05-27 19:47:21.2280 INFO connection successful
+2020-05-27 19:47:22.7044 INFO connection successful
+2020-05-27 19:47:23.2270 INFO connection successful
+2020-05-27 19:47:24.2437 INFO connection successful
+2020-05-27 19:47:25.2200 INFO connection successful
+2020-05-27 19:47:26.2357 INFO connection successful
+2020-05-27 19:47:27.6151 INFO connection successful
+2020-05-27 19:47:28.2477 INFO connection successful
+2020-05-27 19:47:29.2498 INFO connection successful
+2020-05-27 19:47:30.2214 INFO connection successful
+2020-05-27 19:47:31.2285 INFO connection successful
+2020-05-27 19:47:32.2372 INFO connection successful
+2020-05-27 19:47:33.2332 INFO connection successful
+2020-05-27 19:48:02.3637 WARN System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 143
+2020-05-27 19:48:05.2970 WARN System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 143
+2020-05-27 19:48:05.7777 INFO connection successful
+2020-05-27 19:48:06.3123 INFO connection successful
+2020-05-27 19:48:07.3599 INFO connection successful
+2020-05-27 19:48:08.2692 INFO connection successful
+2020-05-27 19:48:09.3069 INFO connection successful
+2020-05-27 19:48:10.3033 INFO connection successful
+2020-05-27 19:48:12.1024 INFO connection successful
+2020-05-27 19:48:12.2911 INFO connection successful
+2020-05-27 19:48:13.2925 INFO connection successful
+2020-05-27 19:50:59.0014 WARN System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 143
+2020-05-27 19:51:02.4058 INFO connection successful
+2020-05-27 19:51:03.1337 INFO connection successful
+2020-05-27 19:51:04.0932 INFO connection successful
+2020-05-27 19:51:05.0832 INFO connection successful
+2020-05-27 19:51:07.1059 INFO connection successful
+2020-05-27 19:51:07.1717 INFO connection successful
+2020-05-27 19:51:08.0848 INFO connection successful
+2020-05-27 19:51:09.0633 INFO connection successful
+2020-05-27 19:51:10.4974 INFO connection successful
+2020-05-27 19:51:11.0773 INFO connection successful
+2020-05-27 19:51:12.0644 INFO connection successful
+2020-05-27 19:51:13.0639 INFO connection successful
+2020-05-27 19:51:14.1060 INFO connection successful
+2020-05-27 19:51:15.0887 INFO connection successful
+2020-05-27 19:51:16.0889 INFO connection successful
+2020-05-27 19:51:17.1057 INFO connection successful
+2020-05-27 19:51:18.1155 INFO connection successful
+2020-05-27 19:51:19.1166 INFO connection successful
+2020-05-27 19:51:20.0850 INFO connection successful
+2020-05-27 19:51:21.0938 INFO connection successful
+2020-05-27 19:51:22.0942 INFO connection successful
+2020-05-27 19:51:23.0933 INFO connection successful
+2020-05-27 19:51:24.1033 INFO connection successful
+2020-05-27 19:51:25.0674 INFO connection successful
+2020-05-27 19:51:26.0785 INFO connection successful
+2020-05-27 19:51:27.0636 INFO connection successful
+2020-05-27 19:51:28.0696 INFO connection successful
+2020-05-27 19:51:29.0647 INFO connection successful
+2020-05-27 19:51:30.0674 INFO connection successful
+2020-05-27 19:51:31.0631 INFO connection successful
+2020-05-27 19:51:32.0613 INFO connection successful
+2020-05-27 19:51:33.0706 INFO connection successful
+2020-05-27 19:51:34.0644 INFO connection successful
+2020-05-27 19:51:35.0659 INFO connection successful
+2020-05-27 19:51:36.0630 INFO connection successful
+2020-05-27 19:51:37.0769 INFO connection successful
+2020-05-27 19:51:38.0678 INFO connection successful
+2020-05-27 19:51:39.0608 INFO connection successful
+2020-05-27 19:51:40.1026 INFO connection successful
+2020-05-27 19:51:41.0975 INFO connection successful
+2020-05-27 19:51:42.0796 INFO connection successful
+2020-05-27 19:51:43.0998 INFO connection successful
+2020-05-27 19:51:44.1087 INFO connection successful
+2020-05-27 19:51:45.0843 INFO connection successful
+2020-05-27 19:51:46.0812 INFO connection successful
+2020-05-27 19:51:47.0883 INFO connection successful
+2020-05-27 19:51:48.0912 INFO connection successful
+2020-05-27 19:51:49.0894 INFO connection successful
+2020-05-27 19:51:50.0653 INFO connection successful
+2020-05-27 19:51:51.0757 INFO connection successful
+2020-05-27 19:51:52.0673 INFO connection successful
+2020-05-27 19:51:53.0650 INFO connection successful
+2020-05-27 19:51:54.0618 INFO connection successful
+2020-05-27 19:51:55.0833 INFO connection successful
+2020-05-27 19:51:56.0809 INFO connection successful
+2020-05-27 19:51:57.0605 INFO connection successful
+2020-05-27 19:51:58.0693 INFO connection successful
+2020-05-27 19:51:59.0619 INFO connection successful
+2020-05-27 19:52:00.0621 INFO connection successful
+2020-05-27 19:52:01.0752 INFO connection successful
+2020-05-27 19:52:02.0691 INFO connection successful
+2020-05-27 19:52:03.0719 INFO connection successful
+2020-05-27 19:52:04.0724 INFO connection successful
+2020-05-27 19:52:05.0616 INFO connection successful
+2020-05-27 19:52:06.0772 INFO connection successful
+2020-05-27 19:52:07.0672 INFO connection successful
+2020-05-27 19:52:08.0764 INFO connection successful
+2020-05-27 19:52:09.0746 INFO connection successful
+2020-05-27 19:52:10.0741 INFO connection successful
+2020-05-27 19:52:11.0704 INFO connection successful
+2020-05-27 19:52:12.0662 INFO connection successful
+2020-05-27 19:52:13.0715 INFO connection successful
+2020-05-27 19:52:14.0666 INFO connection successful
+2020-05-27 19:52:15.0983 INFO connection successful
+2020-05-27 19:52:16.1009 INFO connection successful
+2020-05-27 19:52:17.0833 INFO connection successful
+2020-05-27 19:52:18.0969 INFO connection successful
+2020-05-27 19:52:19.0768 INFO connection successful
+2020-05-27 19:52:20.1034 INFO connection successful
+2020-05-27 19:52:21.0755 INFO connection successful
+2020-05-27 19:52:22.0945 INFO connection successful
+2020-05-27 20:55:34.7670 WARN System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 180
+2020-05-27 20:55:40.6623 INFO connection successful
+2020-05-27 20:55:40.9519 INFO connection successful
+2020-05-27 20:55:41.8760 INFO connection successful
+2020-05-27 20:55:42.6810 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_SelectedIndexChanged(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 108
+2020-05-27 20:55:42.8655 INFO connection successful
+2020-05-27 20:55:43.8740 INFO connection successful
+2020-05-27 20:55:44.8698 INFO connection successful
+2020-05-27 20:55:45.8680 INFO connection successful
+2020-05-27 20:55:46.8784 INFO connection successful
+2020-05-27 20:55:48.0369 INFO connection successful
+2020-05-27 20:55:48.8739 INFO connection successful
+2020-05-27 20:55:49.8741 INFO connection successful
+2020-05-27 20:55:50.2273 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_SelectedIndexChanged(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 108
+2020-05-27 20:55:50.8822 INFO connection successful
+2020-05-27 20:55:51.8631 INFO connection successful
+2020-05-27 20:55:52.8596 INFO connection successful
+2020-05-27 20:55:53.8570 INFO connection successful
+2020-05-27 20:55:54.8641 INFO connection successful
+2020-05-27 20:55:55.8653 INFO connection successful
+2020-05-27 20:55:56.8623 INFO connection successful
+2020-05-27 20:55:57.8620 INFO connection successful
+2020-05-27 20:55:58.8752 INFO connection successful
+2020-05-27 20:55:59.8733 INFO connection successful
+2020-05-27 20:56:00.8770 INFO connection successful
+2020-05-27 20:56:01.1245 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_SelectedIndexChanged(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 108
+2020-05-27 20:56:01.8742 INFO connection successful
+2020-05-27 20:56:02.8701 INFO connection successful
+2020-05-27 20:56:03.8737 INFO connection successful
+2020-05-27 20:56:04.8707 INFO connection successful
+2020-05-27 20:56:05.8706 INFO connection successful
+2020-05-27 20:56:06.8695 INFO connection successful
+2020-05-27 20:56:07.8769 INFO connection successful
+2020-05-27 20:56:08.8614 INFO connection successful
+2020-05-27 20:56:09.8649 INFO connection successful
+2020-05-27 20:56:10.8596 INFO connection successful
+2020-05-27 20:56:11.8597 INFO connection successful
+2020-05-27 20:56:12.8631 INFO connection successful
+2020-05-27 20:56:13.8660 INFO connection successful
+2020-05-27 20:56:14.8622 INFO connection successful
+2020-05-27 20:56:15.8608 INFO connection successful
+2020-05-27 20:56:16.8619 INFO connection successful
+2020-05-27 20:56:17.8595 INFO connection successful
+2020-05-27 20:56:18.8599 INFO connection successful
+2020-05-27 20:56:19.8579 INFO connection successful
+2020-05-27 20:56:20.8604 INFO connection successful
+2020-05-27 20:56:21.8616 INFO connection successful
+2020-05-27 20:56:22.8822 INFO connection successful
+2020-05-27 20:56:23.8774 INFO connection successful
+2020-05-27 20:56:24.8808 INFO connection successful
+2020-05-27 20:56:25.8681 INFO connection successful
+2020-05-27 20:56:26.8701 INFO connection successful
+2020-05-27 20:58:25.6920 WARN System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 180
+2020-05-27 20:58:28.9377 INFO connection successful
+2020-05-27 20:58:29.7155 INFO connection successful
+2020-05-27 20:58:52.9975 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_SelectedIndexChanged(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 108
+2020-05-27 20:58:53.0922 INFO connection successful
+2020-05-27 20:58:53.7069 INFO connection successful
+2020-05-27 20:58:54.7192 INFO connection successful
+2020-05-27 20:58:55.7210 INFO connection successful
+2020-05-27 20:58:56.7187 INFO connection successful
+2020-05-27 20:58:57.7154 INFO connection successful
+2020-05-27 20:59:45.5420 WARN System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 180
+2020-05-27 20:59:49.5003 INFO connection successful
+2020-05-27 20:59:50.4819 INFO connection successful
+2020-05-27 20:59:51.2925 INFO connection successful
+2020-05-27 20:59:55.9728 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_SelectedIndexChanged(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 108
+2020-05-27 20:59:56.0447 INFO connection successful
+2020-05-27 20:59:56.2972 INFO connection successful
+2020-05-27 20:59:57.2979 INFO connection successful
+2020-05-27 20:59:58.2938 INFO connection successful
+2020-05-27 20:59:59.2932 INFO connection successful
+2020-05-27 21:01:05.4671 INFO connection successful
+2020-05-27 21:01:06.1832 INFO connection successful
+2020-05-27 21:01:07.1804 INFO connection successful
+2020-05-27 21:01:08.1873 INFO connection successful
+2020-05-27 21:01:09.1931 INFO connection successful
+2020-05-27 21:01:10.1934 INFO connection successful
+2020-05-27 21:01:11.1805 INFO connection successful
+2020-05-27 21:01:12.1885 INFO connection successful
+2020-05-27 21:01:13.1876 INFO connection successful
+2020-05-27 21:25:16.8844 WARN System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 189
+2020-05-27 21:25:19.9652 INFO connection successful
+2020-05-27 21:25:20.7315 INFO connection successful
+2020-05-27 21:25:21.7309 INFO connection successful
+2020-05-27 21:25:22.7201 INFO connection successful
+2020-05-27 21:25:23.7317 INFO connection successful
+2020-05-27 21:25:24.4997 WARN MySql.Data.MySqlClient.MySqlException (0x80004005): There is already an open DataReader associated with this Connection which must be closed first.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 189
+2020-05-27 21:25:24.7313 INFO connection successful
+2020-05-27 21:25:25.7284 INFO connection successful
+2020-05-27 21:25:26.7345 INFO connection successful
+2020-05-27 21:25:27.7307 INFO connection successful
+2020-05-27 21:25:28.7284 INFO connection successful
+2020-05-27 21:25:29.7222 INFO connection successful
+2020-05-27 21:25:30.7217 INFO connection successful
+2020-05-27 21:25:31.7289 INFO connection successful
+2020-05-27 21:25:32.7301 INFO connection successful
+2020-05-27 21:25:33.7188 INFO connection successful
+2020-05-27 21:25:34.7319 INFO connection successful
+2020-05-27 21:25:35.7598 INFO connection successful
+2020-05-27 21:25:36.7742 INFO connection successful
+2020-05-27 21:25:37.9340 INFO connection successful
+2020-05-27 21:25:38.7354 INFO connection successful
+2020-05-27 21:25:39.8779 WARN MySql.Data.MySqlClient.MySqlException (0x80004005): There is already an open DataReader associated with this Connection which must be closed first.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 189
+2020-05-27 21:25:39.9448 INFO connection successful
+2020-05-27 21:25:40.7440 INFO connection successful
+2020-05-27 21:25:41.7325 INFO connection successful
+2020-05-27 21:25:42.7385 INFO connection successful
+2020-05-27 21:25:43.7172 INFO connection successful
+2020-05-27 21:47:09.3154 INFO connection successful
+2020-05-27 21:47:10.2031 INFO connection successful
+2020-05-27 21:47:10.9552 INFO connection successful
+2020-05-27 21:47:11.9518 INFO connection successful
+2020-05-27 21:47:12.9443 INFO connection successful
+2020-05-27 21:48:31.6664 INFO connection successful
+2020-05-27 21:48:31.9490 INFO connection successful
+2020-05-27 21:48:32.9543 INFO connection successful
+2020-05-27 21:48:33.9508 INFO connection successful
+2020-05-27 22:07:41.4110 WARN System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 189
+2020-05-27 22:07:51.6589 WARN System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 189
+2020-05-27 22:07:54.8606 INFO connection successful
+2020-05-27 22:07:55.5758 INFO connection successful
+2020-05-27 22:07:56.5773 INFO connection successful
+2020-05-27 22:07:57.5786 INFO connection successful
+2020-05-27 22:07:58.6276 INFO connection successful
+2020-05-27 22:07:59.5614 INFO connection successful
+2020-05-27 22:08:00.5727 INFO connection successful
+2020-05-27 22:08:01.5732 INFO connection successful
+2020-05-27 22:08:48.8589 WARN System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 189
+2020-05-27 22:08:49.2332 INFO connection successful
+2020-05-27 22:08:49.5944 INFO connection successful
+2020-05-27 22:08:50.5909 INFO connection successful
+2020-05-27 22:08:51.4360 ERROR MySql.Data.MySqlClient.MySqlException (0x80004005): There is already an open DataReader associated with this Connection which must be closed first.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   в System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в NURESCADA.MainForm.cbDataSets_SelectedIndexChanged(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 99
+2020-05-27 22:08:51.5816 INFO connection successful
+2020-05-27 22:08:52.5768 INFO connection successful
+2020-05-27 22:08:53.7249 INFO connection successful
+2020-05-27 22:08:54.5917 INFO connection successful
+2020-05-27 22:08:55.9138 INFO connection successful
+2020-05-27 22:08:56.6145 INFO connection successful
+2020-05-27 22:08:57.5957 INFO connection successful
+2020-05-27 22:08:58.5871 INFO connection successful
+2020-05-27 22:08:59.5934 INFO connection successful
+2020-05-27 22:09:00.5877 INFO connection successful
+2020-05-27 22:09:01.5965 INFO connection successful
+2020-05-27 22:09:02.5950 INFO connection successful
+2020-05-27 22:09:03.6036 INFO connection successful
+2020-05-27 22:09:04.5786 INFO connection successful
+2020-05-27 22:09:05.5792 INFO connection successful
+2020-05-27 22:09:06.5853 INFO connection successful
+2020-05-27 22:09:07.5770 INFO connection successful
+2020-05-27 22:12:50.2227 INFO connection successful
+2020-05-27 22:12:50.9903 INFO connection successful
+2020-05-27 22:12:51.9926 INFO connection successful
+2020-05-27 22:12:53.6929 INFO connection successful
+2020-05-27 22:12:53.9483 INFO connection successful
+2020-05-27 22:12:54.9498 INFO connection successful
+2020-05-27 22:12:55.9507 INFO connection successful
+2020-05-27 22:19:50.5042 WARN System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 189

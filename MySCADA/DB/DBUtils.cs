@@ -53,5 +53,27 @@ namespace NURESCADA
                 return false;
             }
         }
+
+        public static bool CloseConnection(MetroFramework.Controls.MetroLabel lbStatus, Logger logger)
+        {
+            try
+            {
+                if(conn != null)
+                {
+                    lbStatus.Text = "Status: connection closed";
+                    lbStatus.ForeColor = Color.Yellow;
+                    conn.Close();
+                }
+             
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                lbStatus.Text = "Status: error";
+                lbStatus.ForeColor = Color.Red;
+                logger.Error("close connection: " + ex.Message);
+                return false;
+            }
+        }
     }
 }

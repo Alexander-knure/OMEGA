@@ -42,6 +42,7 @@
             this.lbTo = new MetroFramework.Controls.MetroLabel();
             this.dtFromTime = new MetroFramework.Controls.MetroDateTime();
             this.dtToTime = new MetroFramework.Controls.MetroDateTime();
+            this.lbPoint = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.MainChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,6 +147,7 @@
             this.MainChart.Size = new System.Drawing.Size(940, 473);
             this.MainChart.TabIndex = 24;
             this.MainChart.Text = "MainChart";
+            this.MainChart.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainChart_MouseMove);
             // 
             // btnBack
             // 
@@ -202,7 +204,6 @@
             this.cbTimeInterval.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.cbTimeInterval.UseSelectable = true;
             this.cbTimeInterval.SelectedIndexChanged += new System.EventHandler(this.cbTime_SelectedIndexChanged);
-            this.cbTimeInterval.Click += new System.EventHandler(this.cbTimeInterval_Click);
             // 
             // lbStatus
             // 
@@ -323,11 +324,30 @@
             this.dtToTime.Value = new System.DateTime(2020, 5, 26, 0, 0, 0, 0);
             this.dtToTime.ValueChanged += new System.EventHandler(this.dtToTime_ValueChanged);
             // 
+            // lbPoint
+            // 
+            this.lbPoint.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbPoint.AutoSize = true;
+            this.lbPoint.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbPoint.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbPoint.ForeColor = System.Drawing.Color.White;
+            this.lbPoint.Location = new System.Drawing.Point(16, 80);
+            this.lbPoint.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPoint.Name = "lbPoint";
+            this.lbPoint.Size = new System.Drawing.Size(17, 25);
+            this.lbPoint.TabIndex = 38;
+            this.lbPoint.Text = " ";
+            this.lbPoint.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbPoint.UseCustomForeColor = true;
+            // 
             // StaticForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.lbPoint);
             this.Controls.Add(this.dtToTime);
             this.Controls.Add(this.dtFromTime);
             this.Controls.Add(this.lbTo);
@@ -344,6 +364,7 @@
             this.Name = "StaticForm";
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StaticForm_FormClosed);
             this.Load += new System.EventHandler(this.StaticForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MainChart)).EndInit();
             this.ResumeLayout(false);
@@ -364,5 +385,6 @@
         private MetroFramework.Controls.MetroLabel lbTo;
         private MetroFramework.Controls.MetroDateTime dtFromTime;
         private MetroFramework.Controls.MetroDateTime dtToTime;
+        private MetroFramework.Controls.MetroLabel lbPoint;
     }
 }

@@ -4,25 +4,18 @@ using NLog;
 using NURESCADA.DB;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
 namespace NURESCADA
 {
-    public partial class StaticForm : MetroFramework.Forms.MetroForm {
+    public partial class StaticForm : MetroFramework.Forms.MetroForm
+    {
         private MainForm mf;
         private Variables variables;
         private static Logger logger = LogManager.GetCurrentClassLogger();
         private double start = 0.0d;
         private double end = 0.0d;
-        
 
         public StaticForm()
         {
@@ -38,6 +31,7 @@ namespace NURESCADA
             list.Add("hour");
             list.Add("minute");
             list.Add("second");
+
 
             foreach (var i in list)
                 cbTimeInterval.Items.Add(i);
@@ -57,10 +51,10 @@ namespace NURESCADA
             var selected = cbVariables.SelectedItem.ToString();
             if (MainChart.Series.IndexOf(selected) == -1)
             {
-                if(countSelect >= 5)
+                if (countSelect >= 5)
                 {
-                    DialogResult dr =  MetroMessageBox.Show(this, "So mush sensors, do you want clear all?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information, 100);
-                    if(dr == DialogResult.Yes)
+                    DialogResult dr = MetroMessageBox.Show(this, "So mush sensors, do you want clear all?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information, 100);
+                    if (dr == DialogResult.Yes)
                     {
                         countSelect = 0;
                         MainChart.Series.Clear();
@@ -94,15 +88,15 @@ namespace NURESCADA
                             {
                                 //bed code
 
-                                MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1).ToOADate(), reader.GetDouble(0));
+                                MainChart.Series[selected].Points.AddY(reader.GetDouble(0));
                             }
 
                         }
                     }
                 }
-                catch(Exception exc)
+                catch (Exception exc)
                 {
-                    MetroMessageBox.Show(this,exc.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
+                    MSG.Show(this, exc.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error, logger);
                 }
             }
         }
@@ -118,7 +112,7 @@ namespace NURESCADA
             MySqlCommand msc = new MySqlCommand(showQuery, DBUtils.conn);
             try
             {
-                if(DBUtils.OpenConnection(lbStatus, logger))
+                if (DBUtils.OpenConnection(lbStatus, logger))
                 {
                     cbVariables.Items.Clear();
                     variables.Clear();
@@ -130,14 +124,14 @@ namespace NURESCADA
                         desc = reader.GetString(2);
 
                         cbVariables.Items.Add(name);
-                        variables.Add(id, name, desc);
+                        variables.Add(new Variable(id, name, desc));
                     }
                 }
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 //MetroMessageBox.Show(this, "Please enable server connection", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning, 100);
-                MetroMessageBox.Show(this, exc.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
+                MSG.Show(this, exc.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error, logger);
             }
         }
 
@@ -157,41 +151,36 @@ namespace NURESCADA
                     reader = msc.ExecuteReader();
                     while (reader.Read())
                     {
-                        
+
                         //dtFrom.Items.Add(reader.GetString(0));
                     }
                 }
             }
             catch
             {
-                MetroMessageBox.Show(this, "Please enable server connection", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning, 100);
+                MSG.Show(this, "Please enable server connection", MessageBoxButtons.OK, MessageBoxIcon.Warning, logger);
             }
         }
 
         private void cbTime_SelectedIndexChanged(object sender, EventArgs e)
         {
-                var tInterval = cbTimeInterval.SelectedItem.ToString();
-                MainChart.ChartAreas[0].AxisX.Title = tInterval;
-                switch (tInterval)
-                {
-                 case "day":
-                        MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Days;
-                        break;
-                 case "hour":
-                        MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Hours;
-                        break;
-                 case "minute":
-                        MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Minutes;
-                        break;
-                 case "second":
-                        MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
-                        break;
-                }
-        }
-
-        private void cbTimeInterval_Click(object sender, EventArgs e)
-        {
-          
+            var tInterval = cbTimeInterval.SelectedItem.ToString();
+            MainChart.ChartAreas[0].AxisX.Title = tInterval;
+            switch (tInterval)
+            {
+                case "day":
+                    MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Days;
+                    break;
+                case "hour":
+                    MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Hours;
+                    break;
+                case "minute":
+                    MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Minutes;
+                    break;
+                case "second":
+                    MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
+                    break;
+            }
         }
 
         private void StaticForm_Load(object sender, EventArgs e)
@@ -199,10 +188,10 @@ namespace NURESCADA
             DBUtils.OpenConnection(lbStatus, MainForm.logger);
         }
 
-            int numberOfZoom = 0;
+        int numberOfZoom = 0;
         private void MainChart_MouseWheel(object sender, MouseEventArgs e)
         {
-            var chart = (Chart)sender;
+            var chart = MainChart;
             var xAxis = chart.ChartAreas[0].AxisX;
             var yAxis = chart.ChartAreas[0].AxisY;
             double xMin = xAxis.ScaleView.ViewMinimum;
@@ -213,48 +202,81 @@ namespace NURESCADA
             double IntervalY = chart.ChartAreas[0].AxisY.Maximum;
             try
             {
-                if (e.Delta < 0 && numberOfZoom > 0) // Scrolled down.
+                if (numberOfZoom < 5)
                 {
-                    double posXStart = (xAxis.PixelPositionToValue(e.Location.X) - IntervalX * 2 / Math.Pow(2, numberOfZoom));
-                    double posXFinish = (xAxis.PixelPositionToValue(e.Location.X) + IntervalX * 2 / Math.Pow(2, numberOfZoom));
-                    double posYStart = (yAxis.PixelPositionToValue(e.Location.Y) - IntervalY * 2 / Math.Pow(2, numberOfZoom));
-                    double posYFinish = (yAxis.PixelPositionToValue(e.Location.Y) + IntervalY * 2 / Math.Pow(2, numberOfZoom));
+                    if (e.Delta < 0 && numberOfZoom > 0) // Scrolled down.
+                    {
+                        double posXStart = Math.Round(xAxis.PixelPositionToValue(e.Location.X) - IntervalX * 2 / Math.Pow(2, numberOfZoom));
+                        double posXFinish = Math.Round(xAxis.PixelPositionToValue(e.Location.X) + IntervalX * 2 / Math.Pow(2, numberOfZoom));
+                        double posYStart = Math.Round(yAxis.PixelPositionToValue(e.Location.Y) - IntervalY * 2 / Math.Pow(2, numberOfZoom));
+                        double posYFinish = Math.Round(yAxis.PixelPositionToValue(e.Location.Y) + IntervalY * 2 / Math.Pow(2, numberOfZoom));
 
-                    if (posXStart < 0) posXStart = 0;
-                    if (posYStart < 0) posYStart = 0;
-                    if (posYFinish > yAxis.Maximum) posYFinish = yAxis.Maximum;
-                    if (posXFinish > xAxis.Maximum) posYFinish = xAxis.Maximum;
-                    xAxis.ScaleView.Zoom(posXStart, posXFinish);
-                    yAxis.ScaleView.Zoom(posYStart, posYFinish);
-                    numberOfZoom--;
-                }
-                else if (e.Delta < 0 && numberOfZoom == 0) //Last scrolled dowm
-                {
-                    yAxis.ScaleView.ZoomReset();
-                    xAxis.ScaleView.ZoomReset();
-                }
-                else if (e.Delta > 0 || numberOfZoom == 10) // Scrolled up.
-                {
+                        if (posXStart < 0) posXStart = 0;
+                        if (posYStart < 0) posYStart = 0;
+                        if (posYFinish > yAxis.Maximum) posYFinish = yAxis.Maximum;
+                        if (posXFinish > xAxis.Maximum) posYFinish = xAxis.Maximum;
+                        xAxis.ScaleView.Zoom(posXStart, posXFinish);
+                        yAxis.ScaleView.Zoom(posYStart, posYFinish);
+                        numberOfZoom--;
+                    }
+                    else if (e.Delta < 0 && numberOfZoom == 0) //Last scrolled dowm
+                    {
+                        yAxis.ScaleView.ZoomReset();
+                        xAxis.ScaleView.ZoomReset();
+                    }
+                    else if (e.Delta > 0) // Scrolled up.
+                    {
 
-                    double posXStart = (xAxis.PixelPositionToValue(e.Location.X) - IntervalX / Math.Pow(2, numberOfZoom));
-                    double posXFinish = (xAxis.PixelPositionToValue(e.Location.X) + IntervalX / Math.Pow(2, numberOfZoom));
-                    double posYStart = (yAxis.PixelPositionToValue(e.Location.Y) - IntervalY / Math.Pow(2, numberOfZoom));
-                    double posYFinish = (yAxis.PixelPositionToValue(e.Location.Y) + IntervalY / Math.Pow(2, numberOfZoom));
+                        double posXStart = Math.Round(xAxis.PixelPositionToValue(e.Location.X) - IntervalX / Math.Pow(2, numberOfZoom));
+                        double posXFinish = Math.Round(xAxis.PixelPositionToValue(e.Location.X) + IntervalX / Math.Pow(2, numberOfZoom));
+                        double posYStart = Math.Round(yAxis.PixelPositionToValue(e.Location.Y) - IntervalY / Math.Pow(2, numberOfZoom));
+                        double posYFinish = Math.Round(yAxis.PixelPositionToValue(e.Location.Y) + IntervalY / Math.Pow(2, numberOfZoom));
 
-                    xAxis.ScaleView.Zoom(posXStart, posXFinish);
-                    yAxis.ScaleView.Zoom(posYStart, posYFinish);
-                    numberOfZoom++;
+                        xAxis.ScaleView.Zoom(posXStart, (int)posXFinish);
+                        yAxis.ScaleView.Zoom(posYStart, (int)posYFinish);
+                        numberOfZoom++;
+                    }
+                    else
+                    {
+                        yAxis.ScaleView.ZoomReset();
+                        xAxis.ScaleView.ZoomReset();
+                        numberOfZoom = 0;
+                        return;
+                    }
                 }
                 else
                 {
-                    yAxis.ScaleView.ZoomReset();
-                    xAxis.ScaleView.ZoomReset();
-                    numberOfZoom = 0;
-                    return;
+                    if (e.Delta > 0)
+                    {
+                        DialogResult dr = MetroMessageBox.Show(this, "So much zoom, do you want reset scale?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information, 100);
+                        if (dr == DialogResult.Yes)
+                        {
+                            yAxis.ScaleView.ZoomReset();
+                            xAxis.ScaleView.ZoomReset();
+                            numberOfZoom = 0;
+                        }
+                        else if (dr == DialogResult.No)
+                        {
+                            double posXStart = Math.Round(xAxis.PixelPositionToValue(e.Location.X) - IntervalX * 2 / Math.Pow(2, numberOfZoom));
+                            double posXFinish = Math.Round(xAxis.PixelPositionToValue(e.Location.X) + IntervalX * 2 / Math.Pow(2, numberOfZoom));
+                            double posYStart = Math.Round(yAxis.PixelPositionToValue(e.Location.Y) - IntervalY * 2 / Math.Pow(2, numberOfZoom));
+                            double posYFinish = Math.Round(yAxis.PixelPositionToValue(e.Location.Y) + IntervalY * 2 / Math.Pow(2, numberOfZoom));
+
+                            if (posXStart < 0) posXStart = 0;
+                            if (posYStart < 0) posYStart = 0;
+                            if (posYFinish > yAxis.Maximum) posYFinish = yAxis.Maximum;
+                            if (posXFinish > xAxis.Maximum) posYFinish = xAxis.Maximum;
+                            xAxis.ScaleView.Zoom(posXStart, posXFinish);
+                            yAxis.ScaleView.Zoom(posYStart, posYFinish);
+                            numberOfZoom--;
+                        }
+                    }
+                    if (e.Delta < 0) return;
                 }
             }
-            catch {
-                MetroMessageBox.Show(this, "Error in zoom", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
+            catch
+            {
+                MSG.Show(this, "Error in zoom", MessageBoxButtons.OK, MessageBoxIcon.Error, logger);
             }
         }
 
@@ -267,12 +289,12 @@ namespace NURESCADA
             switch (e.KeyCode)
             {
                 case Keys.Up:
-                    yAxis.ScaleView.Position+=100;
+                    yAxis.ScaleView.Position += 100;
                     break;
                 case Keys.Down:
                     break;
                 case Keys.Left:
-                    MetroMessageBox.Show(this, "Do you want clear all?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information, 100);
+                    MSG.Show(this, "Do you want clear all?", MessageBoxButtons.YesNo, MessageBoxIcon.Information, logger);
                     break;
                 case Keys.Right:
                     break;
@@ -299,13 +321,38 @@ namespace NURESCADA
         {
             start = dtFromTime.Value.ToOADate();
             MainChart.ChartAreas[0].AxisX.Minimum = start;
-            
+
         }
 
         private void dtToTime_ValueChanged(object sender, EventArgs e)
         {
             end = dtToTime.Value.ToOADate();
             MainChart.ChartAreas[0].AxisX.Maximum = end;
+        }
+
+        private void MainChart_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (MainChart.Series.Count > 0)
+            {
+                lbPoint.Visible = true;
+                if (MainChart.ChartAreas[0].AxisX.PixelPositionToValue(e.Location.X) >= MainChart.ChartAreas[0].AxisX.Minimum && MainChart.ChartAreas[0].AxisX.PixelPositionToValue(e.Location.X) <= MainChart.ChartAreas[0].AxisX.Maximum &&
+                    MainChart.ChartAreas[0].AxisY.PixelPositionToValue(e.Location.Y) >= MainChart.ChartAreas[0].AxisY.Minimum && MainChart.ChartAreas[0].AxisY.PixelPositionToValue(e.Location.Y) <= MainChart.ChartAreas[0].AxisX.Maximum)
+                {
+                    lbPoint.Text = "X:" + Math.Round(MainChart.ChartAreas[0].AxisX.PixelPositionToValue(e.Location.X)).ToString();
+                    lbPoint.Text += " Y:" + Math.Round(MainChart.ChartAreas[0].AxisY.PixelPositionToValue(e.Location.Y)).ToString();
+
+                }
+            }
+            else
+            {
+                lbPoint.Visible = false;
+            }
+        }
+
+        private void StaticForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            mf.CloseConnection();
+            DBUtils.CloseConnection(lbStatus, logger);
         }
     }
 }

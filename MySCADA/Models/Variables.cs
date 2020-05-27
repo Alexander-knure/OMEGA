@@ -33,6 +33,14 @@ namespace NURESCADA.DB
         {
             this.list = new List<Variable>();
         }
+        public void Add(Variable variable)
+        {
+            list.Add(variable);
+        }
+        public void Clear()
+        {
+            list.Clear();
+        }
         public List<uint> GetID()
         {
             return list.Select(i => i.ID).ToList();
@@ -44,15 +52,6 @@ namespace NURESCADA.DB
         public List<string> GetDescrition()
         {
             return list.Select(i => i.Description).ToList();
-        }
-        public void Add(uint _id, string _name, string _description)
-        {
-            list.Add(new Variable(_id, _name, _description));
-        }
-
-        public void Clear()
-        {
-            list.Clear();
         }
     }
 }

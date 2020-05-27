@@ -65,3 +65,5 @@ C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\obj\Debug\NURESCADA.Forms.DynamicF
 C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\obj\Debug\NURESCADA.StaticForm.resources
 C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\obj\Debug\NURESCADA.Forms.MnemonicForm.resources
 C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\obj\Debug\NURESCADA.Forms.CommandForm.resources
+C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\bin\Debug\Newtonsoft.Json.dll
+C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\bin\Debug\Newtonsoft.Json.xml

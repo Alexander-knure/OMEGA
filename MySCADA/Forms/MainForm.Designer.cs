@@ -115,6 +115,7 @@
             this.btnLoad.UseCustomForeColor = true;
             this.btnLoad.UseSelectable = true;
             this.btnLoad.UseStyleColors = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // mainGrid
             // 
@@ -212,6 +213,7 @@
             this.btnSave.UseCustomBackColor = true;
             this.btnSave.UseCustomForeColor = true;
             this.btnSave.UseSelectable = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnStatic
             // 
@@ -243,7 +245,7 @@
             this.btnTimer.Size = new System.Drawing.Size(186, 29);
             this.btnTimer.Style = MetroFramework.MetroColorStyle.Red;
             this.btnTimer.TabIndex = 9;
-            this.btnTimer.Text = "Stop";
+            this.btnTimer.Text = "Play";
             this.btnTimer.UseCustomBackColor = true;
             this.btnTimer.UseCustomForeColor = true;
             this.btnTimer.UseSelectable = true;
@@ -346,6 +348,7 @@
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.metroPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mainGrid)).EndInit();
