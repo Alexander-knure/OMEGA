@@ -7,12 +7,6 @@ namespace NURESCADA.DB
 {
     public class MessageData
     {
-        private DateTime timeStamp;
-        private int groupID;
-        private int messageID;
-        private int kind;
-        private string text;
-
         public DateTime TimeStamp{ get; set; }
         public int GroupID { get; set; }
         public int MessageID { get; set; }
@@ -21,11 +15,11 @@ namespace NURESCADA.DB
 
         public MessageData(DateTime timeStamp, int groupID, int messageID, int kind, string text)
         {
-            this.timeStamp = timeStamp;
-            this.groupID = groupID;
-            this.messageID = messageID;
-            this.kind = kind;
-            this.text = text;
+            this.TimeStamp = timeStamp;
+            this.GroupID = groupID;
+            this.MessageID = messageID;
+            this.Kind = kind;
+            this.Text = text;
         }
     }
     public class Messages

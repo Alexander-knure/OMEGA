@@ -21,17 +21,26 @@ namespace NURESCADA
 
         public OpenFileDialog rdlg = new OpenFileDialog();
         public OpenFileDialog sdlg = new OpenFileDialog();
-        public Actions actions;
-        public Messages messages;
-        public Recipes recipes;
-        public Trends trends;
-        public Variables variables;
+        public List<ActionData> ActionList = new List<ActionData>();
+        public List<MessageData> MessageList = new List<MessageData>();
+        public List<Recipe> ReciepList= new List<Recipe>();
+        public List<Trend> TrendList=new List<Trend>();
+        public List<Variable> VariableList=new List<Variable>();
+        
 
         public MainForm()
         {
             InitializeComponent();
             sdlg.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
             rdlg.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
+
+            if(DBUtils.conn != null)
+            {
+                if(DBUtils.conn.State == ConnectionState.Open)
+                {
+                    lbStatus.Text = "Start timer";
+                }
+            }
         }
 
         private void mainTimer_Tick(object sender, EventArgs e)
@@ -102,34 +111,43 @@ namespace NURESCADA
                         switch(cbDataSets.SelectedItem.ToString())
                         {
                             case "actions_data":
-                                actions = new Actions();
-                                while (r.Read())                                
-                                    actions.Add(new ActionData(r.GetDateTime(0),r.GetInt32(1),r.GetString(2)));
                                 
+                                while (r.Read())
+                                {
+                                    ActionData actionData = new ActionData(r.GetDateTime(0), r.GetInt32(1), r.GetString(2));
+                                    ActionList.Add(actionData);
+                                }
                                 break;
                             case "messages_data":
-                                messages = new Messages();
-                                while (r.Read())                                
-                                    messages.Add(new MessageData(r.GetDateTime(0), r.GetInt32(1), r.GetInt32(2), r.GetInt32(3), r.GetString(4)));
-                                
+                                while (r.Read())
+                                {
+                                    MessageData messageData = new MessageData(r.GetDateTime(0), r.GetInt32(1), r.GetInt32(2), r.GetInt32(3), r.GetString(4));
+                                    MessageList.Add(messageData);
+                                }
                                 break;
                             case "recipes":
-                                recipes = new Recipes();
-                                while (r.Read())                                
-                                    recipes.Add(new Recipe(r.GetUInt32(0), r.GetString(1), r.GetDateTime(2), r.GetFloat(3), r.GetFloat(4), r.GetFloat(5)));                                
+                                while (r.Read())
+                                {
+                                    Recipe reciep = new Recipe(r.GetUInt32(0), r.GetString(1), r.GetDateTime(2), r.GetFloat(3), r.GetFloat(4), r.GetFloat(5),r.GetString(6));
+                                    ReciepList.Add(reciep);
+                                }  
                                 break;
                             case "trends_day":
                             case "trends_hour":
                             case "trends_minute":
                             case "trends_data":
-                                trends = new Trends();
-                                while (r.Read())                                
-                                    trends.Add(new Trend(r.GetUInt32(0), r.GetDateTime(1), r.GetFloat(2), r.GetInt16(3)));
+                                while (r.Read())
+                                {
+                                    Trend trend = new Trend(r.GetUInt32(0), r.GetDateTime(1), r.GetFloat(2), r.GetInt16(3));
+                                    TrendList.Add(trend);
+                                }
                                 break;
                             case "variables_data":
-                                variables = new Variables();
-                                while (r.Read())                                
-                                    variables.Add(new Variable(r.GetUInt32(0), r.GetString(1), r.GetString(2)));
+                                while (r.Read())
+                                {
+                                    Variable variable = new Variable(r.GetUInt32(0), r.GetString(1), r.GetString(2));
+                                    VariableList.Add(variable);
+                                }
                                 break;
                             default:
                                 break;
@@ -204,116 +222,115 @@ namespace NURESCADA
             DBUtils.CloseConnection(lbStatus, logger);
         }
 
-        //private void btnSave_Click(object sender, EventArgs e)
-        //{
-        //
-        //    if (sdlg.ShowDialog() == DialogResult.OK)
-        //    {
-        //        string query = "SELECT * FROM " + cbDataSets.SelectedItem.ToString();
-        //        string fileName;
-        //
-        //        MySqlCommand msc = new MySqlCommand(query, DBUtils.conn);
-        //        fileName = sdlg.FileName;
-        //
-        //        MySqlDataReader reader = msc.ExecuteReader(); ;
-        //        using (StreamWriter fs = new StreamWriter(fileName))
-        //        {
-        //            while (reader.Read())
-        //            {
-        //                switch (cbDataSets.SelectedItem.ToString())
-        //                {
-        //                    case ("actions_data"):
-        //
-        //                        fs.Write("{0} {1} {2}", "|" + reader[0], "|" + reader[1], "|" + reader[2]);
-        //                        fs.WriteLine();
-        //                        break;
-        //                    case ("messages_data"):
-        //                        fs.Write("{0} {1} {2} {3} {4}", "|" + reader[0], "|" + reader[1], "|" + reader[2], "|" + reader[3], "|" + reader[4]);
-        //                        fs.WriteLine();
-        //                        break;
-        //                    case ("recipes"):
-        //                        fs.Write("{0} {1} {2} {3} {4} {5} {6}", "|" + reader[0], "|" + reader[1], "|" + reader[2], "|" + reader[3], "|" + reader[4], "|" + reader[5], "|" + reader[6]);
-        //                        fs.WriteLine();
-        //                        break;
-        //                    case ("trends_data"):
-        //
-        //                    case ("trends_day"):
-        //
-        //                    case ("trends_hour"):
-        //
-        //                    case ("trends_minute"):
-        //                        fs.Write("{0} {1} {2} {3}", "|" + reader[0], "|" + reader[1], "|" + reader[2], "|" + reader[3]);
-        //                        fs.WriteLine();
-        //                        break;
-        //                    case ("variables_data"):
-        //                        fs.Write("{0} {1} {2}", "|" + reader[0], "|" + reader[1], "|" + reader[2] + "|");
-        //                        fs.WriteLine();
-        //                        break;
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-        //private void btnLoad_Click(object sender, EventArgs e)
-        //{
-        //    DataTable table = new DataTable();
-        //
-        //    if (rdlg.ShowDialog() == DialogResult.OK)
-        //    {
-        //        string fileName;
-        //        fileName = rdlg.FileName;
-        //        //MessageBox.Show(fileName);
-        //
-        //
-        //        string[] dataLines = File.ReadAllLines(fileName);
-        //        var data = (dataLines.Select(s => (s.Split(new[] { '|' })
-        //                   .Where((i, j) => (j != 0 && j != 1))))).ToArray();
-        //
-        //        int maxDataLengthCount = data.OrderBy(d => d.Count()).Last().Count();
-        //        DataTable dt = new DataTable();
-        //        for (int i = 0; i < maxDataLengthCount; i++)
-        //        {
-        //            DataColumn dataColumn = new DataColumn();
-        //            dt.Columns.Add(dataColumn);
-        //        }
-        //
-        //        for (int i = 0; i < data.Count(); i++)
-        //        {
-        //            DataRow newRow = dt.NewRow();
-        //            newRow.ItemArray = data[i].ToArray();
-        //            dt.Rows.Add(newRow);
-        //        }
-        //        mainGrid.DataSource = dt;
-        //    }
-        //}
-
+      
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (sdlg.ShowDialog() == DialogResult.OK)
+            string fileName;
+            try
             {
-                string fileName = sdlg.FileName;
-                using (StreamWriter fs = new StreamWriter(fileName))
+                switch (cbDataSets.SelectedItem.ToString())
                 {
-                    switch (cbDataSets.SelectedItem.ToString())
+                    case "actions_data":
+                        fileName = @"C:\Users\Vladymyr\Desktop\Practice_saves_files\actions_data_Save.txt";
+                        using (StreamWriter fs = new StreamWriter(fileName))
+                        {
+                            fs.Write(JsonConvert.SerializeObject(ActionList));
+                        }
+                        MessageBox.Show("information saved to file 'actions_data_Save'");
+                        break;
+
+
+                    case "messages_data":
+                        fileName = @"C:\Users\Vladymyr\Desktop\Practice_saves_files\messages_data_Save.txt";
+                        using (StreamWriter fs = new StreamWriter(fileName))
+                        {
+                            fs.Write(JsonConvert.SerializeObject(MessageList));
+                        }
+                        MessageBox.Show("information saved to file 'messages_data_Save'");
+                        break;
+
+
+                    case "recipes":
+                        fileName = @"C:\Users\Vladymyr\Desktop\Practice_saves_files\recipes_Save.txt";
+                        using (StreamWriter fs = new StreamWriter(fileName))
+                        {
+                            fs.Write(JsonConvert.SerializeObject(ReciepList));
+                        }
+                        MessageBox.Show("information saved to file 'recipes_Save'");
+                        break;
+
+
+                    case "trends_day":
+                    case "trends_hour":
+                    case "trends_minute":
+                    case "trends_data":
+                        fileName = @"C:\Users\Vladymyr\Desktop\Practice_saves_files\trends_data_Save.txt";
+                        using (StreamWriter fs = new StreamWriter(fileName))
+                        {
+                            fs.Write(JsonConvert.SerializeObject(TrendList));
+                        }
+                        MessageBox.Show("information saved to file 'trends_data_Save'");
+                        break;
+
+
+                    case "variables_data":
+                        fileName = @"C:\Users\Vladymyr\Desktop\Practice_saves_files\variables_data_Save.txt";
+                        using (StreamWriter fs = new StreamWriter(fileName))
+                        {
+                            fs.Write(JsonConvert.SerializeObject(VariableList));
+                        }
+                        MessageBox.Show("information saved to file 'variables_data_Save.txt'");
+                        break;
+
+
+                    default:
+                        break;
+                }
+            }
+            catch(Exception exc)
+            {
+
+            }
+        }
+       private void btnLoad_Click(object sender, EventArgs e)
+       {
+            if (rdlg.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = rdlg.FileName;
+                string str;
+                using (StreamReader sr = new StreamReader(fileName))
+                {
+                    str = sr.ReadToEnd();
+
+                    switch (fileName)
                     {
-                        case "actions_data":
-                            string data = JsonConvert.SerializeObject(actions);
-                            fs.Write(data);
+                        case @"C:\\Users\\Vladymyr\\Desktop\\Practice_saves_files\\actions_data_Save.txt":
+                            while (!sr.EndOfStream)
+                                ActionList = JsonConvert.DeserializeObject<List<ActionData>>(str);
+                            mainGrid.DataSource = ActionList;
                             break;
-                        case "messages_data":
-                            fs.Write(JsonConvert.SerializeObject(messages));
+                        case @"C:\Users\Vladymyr\Desktop\Practice_saves_files\messages_data_Save.txt":
+                            while (!sr.EndOfStream)
+                                MessageList = JsonConvert.DeserializeObject<List<MessageData>>(str);
+                            mainGrid.DataSource = MessageList;
                             break;
-                        case "recipes":
-                            fs.Write(JsonConvert.SerializeObject(recipes));
+                        case @"C:\Users\Vladymyr\Desktop\Practice_saves_files\recipes_Save.txt":
+
+                            ReciepList = JsonConvert.DeserializeObject<List<Recipe>>(str);
+                            mainGrid.DataSource = ReciepList;
                             break;
-                        case "trends_day":
-                        case "trends_hour":
-                        case "trends_minute":
-                        case "trends_data":
-                            fs.Write(JsonConvert.SerializeObject(trends));
+                        case @"C:\Users\Vladymyr\Desktop\Practice_saves_files\trends_day_Save.txt":
+                        case @"C:\Users\Vladymyr\Desktop\Practice_saves_files\trends_hour_Save.txt":
+                        case @"C:\Users\Vladymyr\Desktop\Practice_saves_files\trends_minute_Save.txt":
+                        case @"C:\Users\Vladymyr\Desktop\Practice_saves_files\trends_data_Save.txt":
+                            while (!sr.EndOfStream)
+                                TrendList = JsonConvert.DeserializeObject<List<Trend>>(str);
+                            mainGrid.DataSource = TrendList;
                             break;
-                        case "variables_data":
-                            fs.Write(JsonConvert.SerializeObject(variables));
+                        case @"C:\Users\Vladymyr\Desktop\Practice_saves_files\variables_data_Save.txt":
+                            while (!sr.EndOfStream)
+                                VariableList = JsonConvert.DeserializeObject<List<Variable>>(str);
+                            mainGrid.DataSource = VariableList;
                             break;
                         default:
                             break;
@@ -321,41 +338,5 @@ namespace NURESCADA
                 }
             }
         }
-       private void btnLoad_Click(object sender, EventArgs e)
-       {
-       //     if (rdlg.ShowDialog() == DialogResult.OK)
-       //     {
-       //         string fileName = rdlg.FileName;
-       //         using (StreamReader sr = new StreamReader(fileName))
-       //         {
-       //             switch (cbDataSets.SelectedItem.ToString())
-       //             {
-       //                 case "actions_data":
-       //                     break;
-       //                 case "messages_data":
-       //                     while (!sr.EndOfStream)
-       //                         messages = JsonConvert.DeserializeObject<Messages>(sr);
-       //                     break;
-       //                 case "recipes":
-       //                     while (!sr.EndOfStream)
-       //                         recipes = serializer.Deserialize<Recipes>(sr);
-       //                     break;
-       //                 case "trends_day":
-       //                 case "trends_hour":
-       //                 case "trends_minute":
-       //                 case "trends_data":
-       //                     while (!sr.EndOfStream)
-       //                         trends = serializer.Deserialize<Trends>(reader);
-       //                     break;
-       //                 case "variables_data":
-       //                     while (!sr.EndOfStream)
-       //                         variables = serializer.Deserialize<Variables>(reader);
-       //                     break;
-       //                 default:
-       //                     break;
-       //             }
-       //         }
-       //     }
-       }
     }
 }

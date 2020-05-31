@@ -28,13 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommandForm));
             this.lbHeader = new MetroFramework.Controls.MetroLabel();
             this.btnBack = new MetroFramework.Controls.MetroButton();
             this.tbQuery = new MetroFramework.Controls.MetroTextBox();
             this.btnQuery = new MetroFramework.Controls.MetroButton();
-            this.btnGrid = new MetroFramework.Controls.MetroButton();
             this.lbStatus = new MetroFramework.Controls.MetroLabel();
+            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
+            this.btnGrid = new MetroFramework.Controls.MetroButton();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbHeader
@@ -78,9 +83,9 @@
             // 
             // 
             this.tbQuery.CustomButton.Image = null;
-            this.tbQuery.CustomButton.Location = new System.Drawing.Point(442, 2);
+            this.tbQuery.CustomButton.Location = new System.Drawing.Point(854, 1);
             this.tbQuery.CustomButton.Name = "";
-            this.tbQuery.CustomButton.Size = new System.Drawing.Size(485, 485);
+            this.tbQuery.CustomButton.Size = new System.Drawing.Size(75, 75);
             this.tbQuery.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbQuery.CustomButton.TabIndex = 1;
             this.tbQuery.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -100,7 +105,7 @@
             this.tbQuery.SelectionLength = 0;
             this.tbQuery.SelectionStart = 0;
             this.tbQuery.ShortcutsEnabled = true;
-            this.tbQuery.Size = new System.Drawing.Size(930, 490);
+            this.tbQuery.Size = new System.Drawing.Size(930, 77);
             this.tbQuery.TabIndex = 27;
             this.tbQuery.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tbQuery.UseSelectable = true;
@@ -124,22 +129,6 @@
             this.btnQuery.UseSelectable = true;
             this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click);
             // 
-            // btnGrid
-            // 
-            this.btnGrid.BackColor = System.Drawing.Color.Transparent;
-            this.btnGrid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGrid.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnGrid.ForeColor = System.Drawing.Color.White;
-            this.btnGrid.Location = new System.Drawing.Point(602, 16);
-            this.btnGrid.Margin = new System.Windows.Forms.Padding(0);
-            this.btnGrid.Name = "btnGrid";
-            this.btnGrid.Size = new System.Drawing.Size(186, 29);
-            this.btnGrid.TabIndex = 29;
-            this.btnGrid.Text = "Show table";
-            this.btnGrid.UseCustomBackColor = true;
-            this.btnGrid.UseCustomForeColor = true;
-            this.btnGrid.UseSelectable = true;
-            // 
             // lbStatus
             // 
             this.lbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -158,11 +147,75 @@
             this.lbStatus.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.lbStatus.UseCustomForeColor = true;
             // 
+            // metroGrid1
+            // 
+            this.metroGrid1.AllowUserToResizeRows = false;
+            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.metroGrid1.EnableHeadersVisualStyles = false;
+            this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid1.Location = new System.Drawing.Point(16, 172);
+            this.metroGrid1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroGrid1.Name = "metroGrid1";
+            this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.metroGrid1.RowHeadersWidth = 51;
+            this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.metroGrid1.RowTemplate.Height = 24;
+            this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.metroGrid1.Size = new System.Drawing.Size(930, 394);
+            this.metroGrid1.TabIndex = 31;
+            // 
+            // btnGrid
+            // 
+            this.btnGrid.BackColor = System.Drawing.Color.Transparent;
+            this.btnGrid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGrid.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnGrid.ForeColor = System.Drawing.Color.White;
+            this.btnGrid.Location = new System.Drawing.Point(602, 16);
+            this.btnGrid.Margin = new System.Windows.Forms.Padding(0);
+            this.btnGrid.Name = "btnGrid";
+            this.btnGrid.Size = new System.Drawing.Size(186, 29);
+            this.btnGrid.TabIndex = 29;
+            this.btnGrid.Text = "Show tables";
+            this.btnGrid.UseCustomBackColor = true;
+            this.btnGrid.UseCustomForeColor = true;
+            this.btnGrid.UseSelectable = true;
+            this.btnGrid.Click += new System.EventHandler(this.btnGrid_Click);
+            // 
             // CommandForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.metroGrid1);
             this.Controls.Add(this.lbStatus);
             this.Controls.Add(this.btnGrid);
             this.Controls.Add(this.btnQuery);
@@ -174,7 +227,9 @@
             this.Name = "CommandForm";
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CommandForm_FormClosed);
             this.Load += new System.EventHandler(this.CommandForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,7 +241,8 @@
         private MetroFramework.Controls.MetroButton btnBack;
         public MetroFramework.Controls.MetroTextBox tbQuery;
         private MetroFramework.Controls.MetroButton btnQuery;
-        private MetroFramework.Controls.MetroButton btnGrid;
         private MetroFramework.Controls.MetroLabel lbStatus;
+        private MetroFramework.Controls.MetroGrid metroGrid1;
+        private MetroFramework.Controls.MetroButton btnGrid;
     }
 }

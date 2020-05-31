@@ -245,7 +245,7 @@
             this.btnTimer.Size = new System.Drawing.Size(186, 29);
             this.btnTimer.Style = MetroFramework.MetroColorStyle.Red;
             this.btnTimer.TabIndex = 9;
-            this.btnTimer.Text = "Play";
+            this.btnTimer.Text = "Start";
             this.btnTimer.UseCustomBackColor = true;
             this.btnTimer.UseCustomForeColor = true;
             this.btnTimer.UseSelectable = true;

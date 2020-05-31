@@ -11,7 +11,6 @@ namespace NURESCADA
 {
     static class DBUtils
     {
-
         public static MySqlConnection conn;
         public static MySqlConnection GetDBConnection()
         {

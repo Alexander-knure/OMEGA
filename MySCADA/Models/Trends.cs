@@ -9,10 +9,7 @@ namespace NURESCADA
     //auth user
     public class Trend
     {
-        private uint id { get; set; }
-        private DateTime timestamp { get; set; }
-        private float value { get; set; }
-        private short quality { get; set; }
+
 
         public uint ID { get; set; }
         public DateTime Timestamp { get; set; }
@@ -22,10 +19,10 @@ namespace NURESCADA
 
         public Trend(uint id, DateTime timestamp, float  value, short  quality)
         {
-            this.id = id;
-            this.timestamp = timestamp;
-            this.value = value;
-            this.quality = quality;
+            this.ID = id;
+            this.Timestamp = timestamp;
+            this.Value = value;
+            this.Quality = quality;
         }
     }
     public class Trends

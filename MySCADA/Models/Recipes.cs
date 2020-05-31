@@ -8,12 +8,6 @@ namespace NURESCADA.DB
 {
     public class Recipe
     {
-        private uint id;
-        private string name;
-        private DateTime timeStamp;
-        private float k1;
-        private float k2;
-        private float k3;
 
         public uint ID { get; set; }
         public string Name { get; set; }
@@ -21,16 +15,18 @@ namespace NURESCADA.DB
         public float K1 { get; set; }
         public float K2 {get; set;}
         public float K3 {get; set;}
+        public string Comment { get; set; }
 
 
-        public Recipe(uint id, string name, DateTime timeStamp, float k1, float k2,  float k3)
+        public Recipe(uint id, string name, DateTime timeStamp, float k1, float k2,  float k3,string comment)
         {
-            this.id = id;
-            this.name = name;
-            this.timeStamp = timeStamp;
-            this.k1 = k1;
-            this.k2 = k2;
-            this.k3 = k3;
+            this.ID = id;
+            this.Name = name;
+            this.TimeStamp = timeStamp;
+            this.K1 = k1;
+            this.K2 = k2;
+            this.K3 = k3;
+            this.Comment = comment;
         }
     }
     public class Recipes

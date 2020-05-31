@@ -8,19 +8,15 @@ namespace NURESCADA.Models
 {
     public class ActionData
     {
-        private DateTime timeStamp;
-        private int userID;
-        private string text;
-
         public DateTime TimeStamp { get; set; }
         public int UserID { get; set; }
         public string Text { get; set; }
 
         public ActionData(DateTime timeStamp, int userID, string text)
         {
-            this.timeStamp = timeStamp;
-            this.userID = userID;
-            this.text = text;
+            this.TimeStamp = timeStamp;
+            this.UserID = userID;
+            this.Text = text;
         }
     }
     public class Actions

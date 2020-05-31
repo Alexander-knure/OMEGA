@@ -9,19 +9,15 @@ namespace NURESCADA.DB
 {
     public class Variable
     {
-        private uint id;
-        private string name;
-        private string description;
-
         public uint ID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
 
         public Variable(uint id, string name, string description)
         {
-            this.id = id;
-            this.name = name;
-            this.description = description;
+            this.ID = id;
+            this.Name = name;
+            this.Description = description;
         }
     }
 
