@@ -11,30 +11,44 @@ namespace NURESCADA
 {
     public partial class StaticForm : MetroFramework.Forms.MetroForm
     {
+        private const short MAX = 7;
         private MainForm mf;
-        private Variables variables;
         private static Logger logger = LogManager.GetCurrentClassLogger();
         private double start = 0.0d;
         private double end = 0.0d;
+        private List<string> graphs;
         SeriesChartType chartType = SeriesChartType.FastPoint;
 
         public StaticForm()
         {
             mf = new MainForm();
-            variables = new Variables();
+            graphs = new List<string>();
+
             InitializeComponent();
             mf.OpenConnection();
             MainChart.MouseWheel += MainChart_MouseWheel;
             MainChart.KeyDown += MainChart_KeyPress;
 
-            List<String> list = new List<string>();
-            list.Add(SeriesChartType.FastLine.ToString());
-            list.Add(SeriesChartType.FastPoint.ToString());
-            list.Add(SeriesChartType.Area.ToString());
+            List<string> types = new List<string>();
+            types.Add(SeriesChartType.FastLine.ToString());
+            types.Add(SeriesChartType.FastPoint.ToString());
 
-
-            foreach (var i in list)
+            foreach (var i in types)
                 cbTypePoints.Items.Add(i);
+            cbTypePoints.SelectedIndex = 0;
+            List<string> formats = new List<string>();
+            formats.Add("Date");
+            formats.Add("Year");
+            formats.Add("Month");
+            formats.Add("Day");
+            formats.Add("Hour");
+            formats.Add("Minute");
+            formats.Add("Second");
+
+            foreach (var i in formats)
+                cbTimeFormat.Items.Add(i);
+
+            cbTimeFormat.SelectedIndex = 0;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -44,74 +58,88 @@ namespace NURESCADA
             Hide();
         }
 
-        ushort countSelect = 0;
-        private void cbVariables_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void BuildingChart(string selected, string timeFormat)
         {
             MySqlDataReader reader;
-            var selected = cbVariables.SelectedItem.ToString();
-            if (MainChart.Series.IndexOf(selected) == -1)
+
+
+            if (graphs.Count >= MAX)
             {
-                if (countSelect >= 5)
+                DialogResult dr = MetroMessageBox.Show(this, "So mush sensors, do you want clear all?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information, 100);
+                if (dr == DialogResult.Yes)
                 {
-                    DialogResult dr = MetroMessageBox.Show(this, "So mush sensors, do you want clear all?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information, 100);
-                    if (dr == DialogResult.Yes)
-                    {
-                        countSelect = 0;
-                        MainChart.Series.Clear();
-                    }
-                    else if (dr == DialogResult.No)
-                    {
-                        return;
-                    }
+                    graphs.Clear();
+                    MainChart.Series.Clear();
                 }
-
-                string query = "SELECT value, timeStamp FROM `variables_data` INNER JOIN `trends_data` ON variables_data.ID = trends_data.ID WHERE variables_data.Name = \"" + selected + "\" AND value > 0;";
-                MySqlCommand msc = new MySqlCommand(query, DBUtils.conn);
-                try
+                else if (dr == DialogResult.No)
                 {
-                    if (DBUtils.OpenConnection(lbStatus, logger))
-                    {
-                        countSelect++;
-                        MainChart.Series.Add(selected);
-                        MainChart.Series[selected].BorderWidth = 3;
-                        MainChart.Series[selected].LegendText = selected;
-                        MainChart.Series[selected].ChartType = chartType;
-
-
-                        ////////////////
-                        MainChart.ChartAreas[0].CursorX.IsUserEnabled = true;
-                        MainChart.ChartAreas[0].CursorX.IsUserSelectionEnabled = true;
-                        MainChart.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
-                        MainChart.ChartAreas[0].AxisX.ScrollBar.IsPositionedInside = true;
-
-                        MainChart.ChartAreas[0].CursorY.IsUserEnabled = true;
-                        MainChart.ChartAreas[0].CursorY.IsUserSelectionEnabled = true;
-                        MainChart.ChartAreas[0].AxisY.ScaleView.Zoomable = true;
-                        MainChart.ChartAreas[0].AxisY.ScrollBar.IsPositionedInside = true;
-                        ////////////////
-                        //MainChart.ChartAreas[0]
-
-                        cbVariables.Items.Clear();
-                        variables.Clear();
-                        reader = msc.ExecuteReader();
-                        while (reader.Read())
-                        {
-                            if (reader.GetDouble(0) != null)
-                            {
-                               // MainChart.Series[selected].Points.AddY(reader.GetDouble(0));
-                               MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1).Date, reader.GetDouble(0));
-                              //  MainChart.Series[selected].Points.AddY(reader.GetDouble(0));
-                                //MainChart.Series[selected].i
-                            }
-
-                        }
-                    }
-                }
-                catch (Exception exc)
-                {
-                    MSG.Show(this, exc.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error, logger);
+                    return;
                 }
             }
+
+            string query = "SELECT value, timeStamp FROM `variables_data` INNER JOIN `trends_data` ON variables_data.ID = trends_data.ID WHERE variables_data.Name = \"" + selected + "\" AND value > 0;";
+            MySqlCommand msc = new MySqlCommand(query, DBUtils.conn);
+            try
+            {
+                MainChart.Series.Add(selected);
+                MainChart.Series[selected].BorderWidth = 3;
+                MainChart.Series[selected].LegendText = selected;
+                MainChart.Series[selected].ChartType = chartType;
+
+                MainChart.ChartAreas[0].CursorX.IsUserEnabled = true;
+                MainChart.ChartAreas[0].CursorX.IsUserSelectionEnabled = true;
+                MainChart.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
+                MainChart.ChartAreas[0].AxisX.ScrollBar.IsPositionedInside = true;
+
+                MainChart.ChartAreas[0].CursorY.IsUserEnabled = true;
+                MainChart.ChartAreas[0].CursorY.IsUserSelectionEnabled = true;
+                MainChart.ChartAreas[0].AxisY.ScaleView.Zoomable = true;
+                MainChart.ChartAreas[0].AxisY.ScrollBar.IsPositionedInside = true;
+
+                cbVariables.Items.Clear();
+                reader = msc.ExecuteReader();
+                while (reader.Read())
+                {
+                    switch (timeFormat)
+                    {
+                        //YOU MUST TO CHANGE SECONDS IN TOTAL_SECONDS -> EACH CASE
+                        case "Year":
+                            MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1).Year, reader.GetDouble(0));
+                            break;
+                        case "Month":
+                            MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1).Month, reader.GetDouble(0));
+                            break;
+                        case "Day":
+                            MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1).Day, reader.GetDouble(0));
+                            break;
+                        case "Hour":
+                            MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1).Hour, reader.GetDouble(0));
+                            break;
+                        case "Minute":
+                            MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1).Minute, reader.GetDouble(0));
+                            break;
+                        case "Second":
+                            MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1).Second, reader.GetDouble(0));
+                            break;
+                        case "Date":
+                            MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1).Date, reader.GetDouble(0));
+                            break;
+                        default: break;
+                    }
+                }
+                reader.Close();
+            }
+            catch (Exception exc)
+            {
+                MSG.Show(this, exc.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error, logger);
+            }
+        }
+
+        private void cbVariables_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            graphs.Add(cbVariables.SelectedItem.ToString());
+            BuildingChart(cbVariables.SelectedItem.ToString(), cbTimeFormat.SelectedItem.ToString());
         }
 
         private void cbVariables_Click(object sender, EventArgs e)
@@ -128,7 +156,6 @@ namespace NURESCADA
                 if (DBUtils.OpenConnection(lbStatus, logger))
                 {
                     cbVariables.Items.Clear();
-                    variables.Clear();
                     reader = msc.ExecuteReader();
                     while (reader.Read())
                     {
@@ -137,8 +164,8 @@ namespace NURESCADA
                         desc = reader.GetString(2);
 
                         cbVariables.Items.Add(name);
-                        variables.Add(new Variable(id, name, desc));
                     }
+                    reader.Close();
                 }
             }
             catch (Exception exc)
@@ -151,8 +178,7 @@ namespace NURESCADA
         private void cbTimeFrom_Click(object sender, EventArgs e)
         {
             //SELECT `Timestamp` FROM `trends_data` WHERE 1
-            MySqlDataReader reader;
-            string showQuery = "Timestamp` FROM `trends_data` WHERE 1";
+            string showQuery = "SELECT Timestamp` FROM `trends_data` WHERE 1";
 
             MySqlCommand msc = new MySqlCommand(showQuery, DBUtils.conn);
             try
@@ -160,13 +186,6 @@ namespace NURESCADA
                 if (DBUtils.OpenConnection(lbStatus, logger))
                 {
                     cbVariables.Items.Clear();
-                    variables.Clear();
-                    reader = msc.ExecuteReader();
-                    while (reader.Read())
-                    {
-
-                        //dtFrom.Items.Add(reader.GetString(0));
-                    }
                 }
             }
             catch
@@ -177,10 +196,6 @@ namespace NURESCADA
 
         private void cbTypePoints_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //list.Add(SeriesChartType.FastLine.ToString());
-            //list.Add(SeriesChartType.FastPoint.ToString());
-            //list.Add(SeriesChartType.Area.ToString());
-            //list.Add(SeriesChartType.Bubble.ToString());
 
             switch (cbTypePoints.SelectedItem.ToString())
             {
@@ -190,36 +205,15 @@ namespace NURESCADA
                 case "FastPoint":
                     chartType = SeriesChartType.FastPoint;
                     break;
-                case "Area":
-                    chartType = SeriesChartType.Area;
-                    break;
                 default:
                     break;
             }
 
-            for(int i = 0; i < MainChart.Series.Count; i++)
+            for (int i = 0; i < MainChart.Series.Count; i++)
             {
                 MainChart.Series[i].ChartType = chartType;
 
             }
-
-            //var tInterval = cbTypePoints.SelectedItem.ToString();
-            //MainChart.ChartAreas[0].AxisX.Title = tInterval;
-            //switch (tInterval)
-            //{
-            //    case "day":
-            //        MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Days;
-            //        break;
-            //    case "hour":
-            //        MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Hours;
-            //        break;
-            //    case "minute":
-            //        MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Minutes;
-            //        break;
-            //    case "second":
-            //        MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
-            //        break;
-            //}
         }
 
         private void StaticForm_Load(object sender, EventArgs e)
@@ -349,6 +343,7 @@ namespace NURESCADA
             if (dr == DialogResult.Yes)
             {
                 MainChart.Series.Clear();
+                graphs.Clear();
             }
             else if (dr == DialogResult.No)
             {
@@ -389,7 +384,7 @@ namespace NURESCADA
                     lbPoint.Visible = false;
                 }
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 MSG.Show(this, exc.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error, logger);
             }
@@ -399,6 +394,17 @@ namespace NURESCADA
         {
             mf.CloseConnection();
             DBUtils.CloseConnection(lbStatus, logger);
+        }
+
+        private void cbTimeFormat_ValueChanged(object sender, EventArgs e)
+        {
+            if (graphs.Count > 0)
+            {
+                MainChart.ChartAreas[0].AxisX.Title = cbTimeFormat.SelectedItem.ToString();
+                MainChart.Series.Clear();
+                foreach(var i in graphs)
+                    BuildingChart(i, cbTimeFormat.SelectedItem.ToString());
+            }
         }
     }
 }

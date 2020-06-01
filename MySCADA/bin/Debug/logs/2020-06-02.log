@@ -1,0 +1,709 @@
+2020-06-02 00:00:07.1942 INFO connection successful
+2020-06-02 00:00:07.3628 INFO connection successful
+2020-06-02 00:00:10.3365 INFO connection successful
+2020-06-02 00:00:12.4747 INFO connection successful
+2020-06-02 00:00:42.7103 INFO connection successful
+2020-06-02 00:00:42.8140 INFO connection successful
+2020-06-02 00:00:45.7733 INFO connection successful
+2020-06-02 00:00:46.3832 INFO connection successful
+2020-06-02 00:00:56.8129 INFO connection successful
+2020-06-02 00:00:58.1709 INFO connection successful
+2020-06-02 00:00:59.0265 INFO connection successful
+2020-06-02 00:07:10.2177 INFO connection successful
+2020-06-02 00:07:10.3135 INFO connection successful
+2020-06-02 00:07:11.7364 INFO connection successful
+2020-06-02 00:08:26.1806 INFO connection successful
+2020-06-02 00:08:26.2983 INFO connection successful
+2020-06-02 00:08:27.5684 INFO connection successful
+2020-06-02 00:08:34.3487 INFO connection successful
+2020-06-02 00:08:34.4228 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.StaticForm.cbVariables_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 170
+2020-06-02 00:08:36.8630 INFO connection successful
+2020-06-02 00:08:40.0519 INFO connection successful
+2020-06-02 00:08:40.0839 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.StaticForm.cbVariables_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 170
+2020-06-02 00:08:44.0338 INFO connection successful
+2020-06-02 00:08:55.9735 INFO connection successful
+2020-06-02 00:08:56.0024 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.StaticForm.cbVariables_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 170
+2020-06-02 00:08:58.1259 INFO connection successful
+2020-06-02 00:09:30.3916 ERROR System.ArgumentException: Значение аргумента расположения должно быть в диапазоне от 0 до 100.
+Имя параметра: position
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(Double position, Boolean validateInput)
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(Double position)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 392
+2020-06-02 00:10:07.1691 INFO connection successful
+2020-06-02 00:10:07.3047 INFO connection successful
+2020-06-02 00:10:08.1860 INFO connection successful
+2020-06-02 00:10:12.6305 INFO connection successful
+2020-06-02 00:10:12.7053 ERROR MySql.Data.MySqlClient.MySqlException (0x80004005): There is already an open DataReader associated with this Connection which must be closed first.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.StaticForm.cbVariables_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 169
+2020-06-02 00:10:14.7216 INFO connection successful
+2020-06-02 00:10:24.7818 INFO connection successful
+2020-06-02 00:10:24.8127 ERROR MySql.Data.MySqlClient.MySqlException (0x80004005): There is already an open DataReader associated with this Connection which must be closed first.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.StaticForm.cbVariables_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 169
+2020-06-02 00:12:01.7531 INFO connection successful
+2020-06-02 00:12:01.8908 INFO connection successful
+2020-06-02 00:12:02.8301 INFO connection successful
+2020-06-02 00:12:04.5179 INFO connection successful
+2020-06-02 00:12:05.6761 INFO connection successful
+2020-06-02 00:12:06.0539 ERROR System.ArgumentException: Элемент диаграммы с именем "vrSinusoid" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 89
+2020-06-02 00:12:11.6481 INFO connection successful
+2020-06-02 00:12:12.8482 INFO connection successful
+2020-06-02 00:12:13.9211 INFO connection successful
+2020-06-02 00:12:15.3300 INFO connection successful
+2020-06-02 00:12:17.7403 INFO connection successful
+2020-06-02 00:12:19.8575 INFO connection successful
+2020-06-02 00:12:21.7051 INFO connection successful
+2020-06-02 00:12:23.5483 INFO connection successful
+2020-06-02 00:12:24.5137 INFO connection successful
+2020-06-02 00:12:25.8482 INFO connection successful
+2020-06-02 00:12:33.3794 INFO connection successful
+2020-06-02 00:13:10.6604 INFO connection successful
+2020-06-02 00:13:10.7636 INFO connection successful
+2020-06-02 00:13:13.8912 INFO connection successful
+2020-06-02 00:13:15.3301 INFO connection successful
+2020-06-02 00:13:29.2555 INFO connection successful
+2020-06-02 00:14:29.9312 INFO connection successful
+2020-06-02 00:16:33.7824 INFO connection successful
+2020-06-02 00:16:33.9121 INFO connection successful
+2020-06-02 00:17:03.3265 INFO connection successful
+2020-06-02 00:17:03.4607 INFO connection successful
+2020-06-02 00:17:20.9493 INFO connection successful
+2020-06-02 00:17:21.0530 INFO connection successful
+2020-06-02 00:17:24.6485 INFO connection successful
+2020-06-02 00:17:25.4176 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.BuildingChart(String selected) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 95
+2020-06-02 00:17:27.3785 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:17:28.8876 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:17:29.1877 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:17:29.4431 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:03.4321 INFO connection successful
+2020-06-02 00:18:03.5329 INFO connection successful
+2020-06-02 00:18:46.8287 INFO connection successful
+2020-06-02 00:18:46.9698 INFO connection successful
+2020-06-02 00:18:51.5033 INFO connection successful
+2020-06-02 00:18:51.9987 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.BuildingChart(String selected) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 95
+2020-06-02 00:18:54.0915 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:55.1744 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:55.5794 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:56.1055 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:56.2251 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:56.3434 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:56.4601 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:56.5926 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:56.7340 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:56.8766 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:57.0268 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:57.1874 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:57.3294 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:57.4775 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:57.6367 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:57.8030 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:57.9705 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:58.1465 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:59.0639 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:59.5992 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:59.6855 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:59.7733 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:59.8622 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:18:59.9510 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:00.0577 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:00.1556 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:00.2573 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:00.3620 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:00.4766 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:00.6073 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:00.7375 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:00.8757 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:01.0073 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:01.1655 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:01.3157 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:01.4775 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:01.6600 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:01.8275 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:02.0042 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:02.5089 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:02.9831 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:03.5209 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:03.7305 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:03.9573 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:04.1764 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:04.4027 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:04.6311 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:04.8897 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:05.1317 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:05.3765 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:05.6324 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:05.8873 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:19:16.8138 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:20:30.8508 INFO connection successful
+2020-06-02 00:20:30.9526 INFO connection successful
+2020-06-02 00:21:28.5084 INFO connection successful
+2020-06-02 00:21:33.8169 INFO connection successful
+2020-06-02 00:21:35.5054 INFO connection successful
+2020-06-02 00:21:39.8660 INFO connection successful
+2020-06-02 00:21:50.4403 INFO connection successful
+2020-06-02 00:21:54.7141 ERROR System.ArgumentException: Значение аргумента расположения должно быть в диапазоне от 0 до 100.
+Имя параметра: position
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(Double position, Boolean validateInput)
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(Double position)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 390
+2020-06-02 00:23:34.8340 INFO connection successful
+2020-06-02 00:23:34.9407 INFO connection successful
+2020-06-02 00:23:37.1751 INFO connection successful
+2020-06-02 00:26:08.6626 INFO connection successful
+2020-06-02 00:26:08.7848 INFO connection successful
+2020-06-02 00:26:15.5527 INFO connection successful
+2020-06-02 00:26:17.6633 ERROR System.ArgumentException: Элемент диаграммы с именем "vrSaw" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 90
+2020-06-02 00:26:46.6438 INFO connection successful
+2020-06-02 00:26:46.7505 INFO connection successful
+2020-06-02 00:26:48.0549 INFO connection successful
+2020-06-02 00:26:49.7172 ERROR System.ArgumentException: Элемент диаграммы с именем "vrTrapezoidal" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 90
+2020-06-02 00:27:58.5844 INFO connection successful
+2020-06-02 00:27:58.6832 INFO connection successful
+2020-06-02 00:28:01.3009 INFO connection successful
+2020-06-02 00:28:02.9329 ERROR System.ArgumentException: Элемент диаграммы с именем "vrStepped" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 90
+2020-06-02 00:28:42.0384 INFO connection successful
+2020-06-02 00:28:42.1620 INFO connection successful
+2020-06-02 00:28:52.3352 INFO connection successful
+2020-06-02 00:30:53.4167 INFO connection successful
+2020-06-02 00:30:53.5444 INFO connection successful
+2020-06-02 00:31:05.5828 INFO connection successful
+2020-06-02 00:31:07.5189 ERROR System.ArgumentException: Элемент диаграммы с именем "vrTriangle" не удается найти в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.get_Item(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 91
+2020-06-02 00:31:10.9618 INFO connection successful
+2020-06-02 00:31:11.4602 ERROR System.ArgumentException: Элемент диаграммы с именем "vrTrapezoidal" не удается найти в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.get_Item(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 91
+2020-06-02 00:31:15.6126 INFO connection successful
+2020-06-02 00:31:15.9713 ERROR System.ArgumentException: Элемент диаграммы с именем "vrTrapezoidal" не удается найти в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.get_Item(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 91
+2020-06-02 00:31:18.5179 INFO connection successful
+2020-06-02 00:31:18.9366 ERROR System.ArgumentException: Элемент диаграммы с именем "vrVisScale" не удается найти в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.get_Item(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 91
+2020-06-02 00:32:24.7882 INFO connection successful
+2020-06-02 00:32:24.9099 INFO connection successful
+2020-06-02 00:32:25.8010 INFO connection successful
+2020-06-02 00:32:29.1146 INFO connection successful
+2020-06-02 00:35:21.1282 INFO connection successful
+2020-06-02 00:35:21.2674 INFO connection successful
+2020-06-02 00:35:23.9756 INFO connection successful
+2020-06-02 00:35:28.1196 ERROR System.ArgumentException: Точки данных ряда не поддерживают значения типа System.DayOfWeek, допускается использование значений только следующих типов: Double, Decimal, Single, int, long, uint, ulong, String, DateTime, short, ushort.
+   в System.Windows.Forms.DataVisualization.Charting.Series.CheckSupportedTypes(Type type)
+   в System.Windows.Forms.DataVisualization.Charting.DataPoint.SetValueXY(Object xValue, Object[] yValue)
+   в System.Windows.Forms.DataVisualization.Charting.DataPointCollection.AddXY(Object xValue, Object[] yValue)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 121
+2020-06-02 00:35:30.8361 ERROR MySql.Data.MySqlClient.MySqlException (0x80004005): There is already an open DataReader associated with this Connection which must be closed first.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 107
+2020-06-02 00:35:35.9914 INFO connection successful
+2020-06-02 00:35:36.0213 ERROR MySql.Data.MySqlClient.MySqlException (0x80004005): There is already an open DataReader associated with this Connection which must be closed first.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.StaticForm.cbVariables_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 171
+2020-06-02 00:37:02.8500 INFO connection successful
+2020-06-02 00:37:02.9597 INFO connection successful
+2020-06-02 00:37:04.2353 INFO connection successful
+2020-06-02 00:39:14.5836 INFO connection successful
+2020-06-02 00:39:14.7272 INFO connection successful
+2020-06-02 00:39:15.8562 INFO connection successful
+2020-06-02 00:42:09.6612 INFO connection successful
+2020-06-02 00:42:09.7789 INFO connection successful
+2020-06-02 00:42:10.8492 INFO connection successful
+2020-06-02 00:42:51.7098 INFO connection successful
+2020-06-02 00:43:35.0232 INFO connection successful
+2020-06-02 00:44:16.3923 INFO connection successful
+2020-06-02 00:44:16.5210 INFO connection successful
+2020-06-02 00:44:17.7966 INFO connection successful
+2020-06-02 00:45:48.0274 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 00:45:50.5738 INFO connection successful
+2020-06-02 00:45:50.6575 INFO connection successful
+2020-06-02 00:45:51.7715 INFO connection successful
+2020-06-02 00:51:04.1317 INFO connection successful
+2020-06-02 00:51:04.2394 INFO connection successful
+2020-06-02 00:51:05.1280 INFO connection successful
+2020-06-02 00:51:10.4894 INFO connection successful
+2020-06-02 00:51:12.6607 INFO connection successful
+2020-06-02 00:51:14.3939 INFO connection successful
+2020-06-02 00:51:15.4686 INFO connection successful
+2020-06-02 00:51:16.5352 INFO connection successful
+2020-06-02 00:51:17.9564 INFO connection successful
+2020-06-02 00:52:22.2269 INFO connection successful
+2020-06-02 00:52:22.3455 INFO connection successful
+2020-06-02 00:52:24.6013 INFO connection successful
+2020-06-02 00:53:48.7094 ERROR System.ArgumentException: Точки данных ряда не поддерживают значения типа System.DayOfWeek, допускается использование значений только следующих типов: Double, Decimal, Single, int, long, uint, ulong, String, DateTime, short, ushort.
+   в System.Windows.Forms.DataVisualization.Charting.Series.CheckSupportedTypes(Type type)
+   в System.Windows.Forms.DataVisualization.Charting.DataPoint.SetValueXY(Object xValue, Object[] yValue)
+   в System.Windows.Forms.DataVisualization.Charting.DataPointCollection.AddXY(Object xValue, Object[] yValue)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 115
+2020-06-02 00:54:11.4777 INFO connection successful
+2020-06-02 00:54:11.5904 INFO connection successful
+2020-06-02 00:54:13.3216 INFO connection successful
+2020-06-02 00:54:14.6912 INFO connection successful
+2020-06-02 00:54:16.4248 INFO connection successful
+2020-06-02 00:54:19.1899 INFO connection successful
+2020-06-02 00:54:20.8411 INFO connection successful
+2020-06-02 00:54:22.2936 INFO connection successful
+2020-06-02 00:54:22.7241 ERROR System.ArgumentException: Элемент диаграммы с именем "vrRepTemp" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 85
+2020-06-02 00:54:25.8017 INFO connection successful
+2020-06-02 00:54:28.7346 INFO connection successful
+2020-06-02 00:54:31.3966 INFO connection successful
+2020-06-02 00:54:32.1150 INFO connection successful
+2020-06-02 00:54:33.5513 INFO connection successful
+2020-06-02 00:54:35.0364 INFO connection successful
+2020-06-02 00:54:36.7986 INFO connection successful
+2020-06-02 00:54:38.6909 INFO connection successful
+2020-06-02 00:54:39.2543 ERROR System.ArgumentException: Элемент диаграммы с именем "vrTrapezoidal" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 85
+2020-06-02 00:54:41.5694 INFO connection successful
+2020-06-02 00:54:48.1921 ERROR System.ArgumentException: Значение аргумента расположения должно быть в диапазоне от 0 до 100.
+Имя параметра: position
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(Double position, Boolean validateInput)
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(Double position)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 374
+2020-06-02 00:54:55.7499 ERROR System.ArgumentException: Значение аргумента расположения должно быть в диапазоне от 0 до 100.
+Имя параметра: position
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(Double position, Boolean validateInput)
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(Double position)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 374
+2020-06-02 00:55:02.9297 ERROR System.ArgumentException: Значение аргумента расположения должно быть в диапазоне от 0 до 100.
+Имя параметра: position
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(Double position, Boolean validateInput)
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(Double position)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 374
+2020-06-02 00:55:06.1642 ERROR System.ArgumentException: Элемент диаграммы с именем "vrTrapezoidal" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 85
+2020-06-02 00:55:09.0841 ERROR System.ArgumentException: Элемент диаграммы с именем "vrTrapezoidal" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 85
+2020-06-02 00:55:11.7017 ERROR System.ArgumentException: Элемент диаграммы с именем "vrTrapezoidal" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 85
+2020-06-02 00:55:13.8451 ERROR System.ArgumentException: Элемент диаграммы с именем "vrTrapezoidal" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 85
+2020-06-02 00:55:17.9150 ERROR System.ArgumentException: Элемент диаграммы с именем "vrTrapezoidal" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 85
+2020-06-02 00:55:20.5413 ERROR System.ArgumentException: Элемент диаграммы с именем "vrTrapezoidal" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 85
+2020-06-02 00:55:22.1975 ERROR System.ArgumentException: Элемент диаграммы с именем "vrTrapezoidal" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 85
+2020-06-02 00:55:24.4257 INFO connection successful
+2020-06-02 00:55:29.9259 INFO connection successful
+2020-06-02 00:55:36.1146 INFO connection successful
+2020-06-02 00:55:37.3470 INFO connection successful
+2020-06-02 00:55:37.8705 ERROR System.ArgumentException: Элемент диаграммы с именем "vrSinusoid" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 85
+2020-06-02 00:55:45.1166 INFO connection successful
+2020-06-02 00:55:46.4411 INFO connection successful
+2020-06-02 00:55:47.5974 ERROR System.ArgumentException: Элемент диаграммы с именем "vrStepped" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 85
+2020-06-02 00:55:49.4911 INFO connection successful
+2020-06-02 00:55:51.5684 INFO connection successful
+2020-06-02 00:55:54.9608 INFO connection successful
+2020-06-02 00:55:59.0378 INFO connection successful
+2020-06-02 00:56:00.5344 INFO connection successful
+2020-06-02 00:56:02.0490 INFO connection successful
+2020-06-02 00:56:04.2200 INFO connection successful
+2020-06-02 00:56:04.9235 ERROR System.ArgumentException: Элемент диаграммы с именем "vrSetPos" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 85
+2020-06-02 00:58:22.0700 INFO connection successful
+2020-06-02 00:58:22.1887 INFO connection successful
+2020-06-02 00:58:25.5534 INFO connection successful
+2020-06-02 00:59:26.1550 INFO connection successful
+2020-06-02 00:59:26.2707 INFO connection successful
+2020-06-02 00:59:27.5024 INFO connection successful
+2020-06-02 00:59:37.2081 INFO connection successful
+2020-06-02 00:59:47.5835 INFO connection successful

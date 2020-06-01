@@ -310,7 +310,7 @@ namespace NURESCADA
             }
             catch(Exception exc)
             {
-
+                MSG.Show(this, exc.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error, logger);
             }
         }
        private void btnLoad_Click(object sender, EventArgs e)

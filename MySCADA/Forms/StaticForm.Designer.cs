@@ -43,6 +43,7 @@
             this.dtFromTime = new MetroFramework.Controls.MetroDateTime();
             this.dtToTime = new MetroFramework.Controls.MetroDateTime();
             this.lbPoint = new MetroFramework.Controls.MetroLabel();
+            this.cbTimeFormat = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.MainChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -176,11 +177,11 @@
             this.cbVariables.ForeColor = System.Drawing.Color.White;
             this.cbVariables.FormattingEnabled = true;
             this.cbVariables.ItemHeight = 23;
-            this.cbVariables.Location = new System.Drawing.Point(482, 16);
-            this.cbVariables.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.cbVariables.Location = new System.Drawing.Point(488, 16);
+            this.cbVariables.Margin = new System.Windows.Forms.Padding(0);
             this.cbVariables.Name = "cbVariables";
-            this.cbVariables.PromptText = "Choose variable";
-            this.cbVariables.Size = new System.Drawing.Size(186, 29);
+            this.cbVariables.PromptText = "Variable";
+            this.cbVariables.Size = new System.Drawing.Size(135, 29);
             this.cbVariables.Style = MetroFramework.MetroColorStyle.Black;
             this.cbVariables.TabIndex = 26;
             this.cbVariables.Tag = "";
@@ -196,11 +197,11 @@
             this.cbTypePoints.ForeColor = System.Drawing.Color.White;
             this.cbTypePoints.FormattingEnabled = true;
             this.cbTypePoints.ItemHeight = 23;
-            this.cbTypePoints.Location = new System.Drawing.Point(707, 16);
-            this.cbTypePoints.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.cbTypePoints.Location = new System.Drawing.Point(623, 16);
+            this.cbTypePoints.Margin = new System.Windows.Forms.Padding(0);
             this.cbTypePoints.Name = "cbTypePoints";
-            this.cbTypePoints.PromptText = "Choose type";
-            this.cbTypePoints.Size = new System.Drawing.Size(186, 29);
+            this.cbTypePoints.PromptText = "Type";
+            this.cbTypePoints.Size = new System.Drawing.Size(135, 29);
             this.cbTypePoints.Style = MetroFramework.MetroColorStyle.Black;
             this.cbTypePoints.TabIndex = 31;
             this.cbTypePoints.Tag = "";
@@ -252,8 +253,8 @@
             this.lbFrom.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lbFrom.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lbFrom.ForeColor = System.Drawing.Color.White;
-            this.lbFrom.Location = new System.Drawing.Point(426, 48);
-            this.lbFrom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbFrom.Location = new System.Drawing.Point(434, 48);
+            this.lbFrom.Margin = new System.Windows.Forms.Padding(0);
             this.lbFrom.Name = "lbFrom";
             this.lbFrom.Size = new System.Drawing.Size(51, 25);
             this.lbFrom.TabIndex = 34;
@@ -270,7 +271,7 @@
             this.lbTo.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lbTo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lbTo.ForeColor = System.Drawing.Color.White;
-            this.lbTo.Location = new System.Drawing.Point(673, 48);
+            this.lbTo.Location = new System.Drawing.Point(679, 48);
             this.lbTo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTo.Name = "lbTo";
             this.lbTo.Size = new System.Drawing.Size(29, 25);
@@ -291,7 +292,7 @@
             this.dtFromTime.CustomFormat = "hh:mm:ss   dd/MM/yyyy";
             this.dtFromTime.FontWeight = MetroFramework.MetroDateTimeWeight.Bold;
             this.dtFromTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFromTime.Location = new System.Drawing.Point(482, 48);
+            this.dtFromTime.Location = new System.Drawing.Point(488, 48);
             this.dtFromTime.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.dtFromTime.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtFromTime.MinimumSize = new System.Drawing.Size(0, 29);
@@ -324,7 +325,7 @@
             this.dtToTime.Style = MetroFramework.MetroColorStyle.Red;
             this.dtToTime.TabIndex = 37;
             this.dtToTime.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.dtToTime.Value = new System.DateTime(2020, 5, 26, 0, 0, 0, 0);
+            this.dtToTime.Value = new System.DateTime(2020, 6, 2, 0, 0, 0, 0);
             this.dtToTime.ValueChanged += new System.EventHandler(this.dtToTime_ValueChanged);
             // 
             // lbPoint
@@ -345,11 +346,31 @@
             this.lbPoint.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.lbPoint.UseCustomForeColor = true;
             // 
+            // cbTimeFormat
+            // 
+            this.cbTimeFormat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbTimeFormat.FontWeight = MetroFramework.MetroComboBoxWeight.Bold;
+            this.cbTimeFormat.ForeColor = System.Drawing.Color.White;
+            this.cbTimeFormat.FormattingEnabled = true;
+            this.cbTimeFormat.ItemHeight = 23;
+            this.cbTimeFormat.Location = new System.Drawing.Point(758, 16);
+            this.cbTimeFormat.Margin = new System.Windows.Forms.Padding(0);
+            this.cbTimeFormat.Name = "cbTimeFormat";
+            this.cbTimeFormat.PromptText = "Time";
+            this.cbTimeFormat.Size = new System.Drawing.Size(135, 29);
+            this.cbTimeFormat.Style = MetroFramework.MetroColorStyle.Black;
+            this.cbTimeFormat.TabIndex = 39;
+            this.cbTimeFormat.Tag = "";
+            this.cbTimeFormat.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cbTimeFormat.UseSelectable = true;
+            this.cbTimeFormat.SelectedValueChanged += new System.EventHandler(this.cbTimeFormat_ValueChanged);
+            // 
             // StaticForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.cbTimeFormat);
             this.Controls.Add(this.lbPoint);
             this.Controls.Add(this.dtToTime);
             this.Controls.Add(this.dtFromTime);
@@ -389,5 +410,6 @@
         private MetroFramework.Controls.MetroDateTime dtFromTime;
         private MetroFramework.Controls.MetroDateTime dtToTime;
         private MetroFramework.Controls.MetroLabel lbPoint;
+        private MetroFramework.Controls.MetroComboBox cbTimeFormat;
     }
 }

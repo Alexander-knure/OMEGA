@@ -2972,3 +2972,140 @@
 2020-06-01 20:21:35.3709 INFO connection successful
 2020-06-01 20:21:36.2027 INFO connection successful
 2020-06-01 20:21:41.6865 INFO connection successful
+2020-06-01 23:35:01.8260 INFO connection successful
+2020-06-01 23:35:01.9326 INFO connection successful
+2020-06-01 23:35:03.3053 INFO connection successful
+2020-06-01 23:35:07.8488 INFO connection successful
+2020-06-01 23:35:10.4207 INFO connection successful
+2020-06-01 23:37:14.1975 INFO connection successful
+2020-06-01 23:37:14.3041 INFO connection successful
+2020-06-01 23:37:15.4533 INFO connection successful
+2020-06-01 23:37:16.0906 INFO connection successful
+2020-06-01 23:37:17.8418 INFO connection successful
+2020-06-01 23:37:19.7225 INFO connection successful
+2020-06-01 23:37:20.3374 INFO connection successful
+2020-06-01 23:37:25.6720 INFO connection successful
+2020-06-01 23:37:37.3924 INFO connection successful
+2020-06-01 23:38:36.1745 INFO connection successful
+2020-06-01 23:38:36.6430 INFO connection successful
+2020-06-01 23:38:38.2190 INFO connection successful
+2020-06-01 23:40:30.7812 INFO connection successful
+2020-06-01 23:40:30.8939 INFO connection successful
+2020-06-01 23:40:32.3386 INFO connection successful
+2020-06-01 23:40:33.0356 INFO connection successful
+2020-06-01 23:40:34.5135 INFO connection successful
+2020-06-01 23:40:35.1184 INFO connection successful
+2020-06-01 23:40:38.8747 INFO connection successful
+2020-06-01 23:40:41.1420 INFO connection successful
+2020-06-01 23:40:47.2647 ERROR System.ArgumentException: «начение аргумента расположени€ должно быть в диапазоне от 0 до 100.
+»м€ параметра: position
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(Double position, Boolean validateInput)
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(Double position)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 394
+2020-06-01 23:40:53.0221 ERROR System.ArgumentException: «начение аргумента расположени€ должно быть в диапазоне от 0 до 100.
+»м€ параметра: position
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(Double position, Boolean validateInput)
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(Double position)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 394
+2020-06-01 23:40:54.4061 ERROR System.ArgumentException: «начение аргумента расположени€ должно быть в диапазоне от 0 до 100.
+»м€ параметра: position
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(Double position, Boolean validateInput)
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(Double position)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 394
+2020-06-01 23:40:56.5373 ERROR System.ArgumentException: «начение аргумента расположени€ должно быть в диапазоне от 0 до 100.
+»м€ параметра: position
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(Double position, Boolean validateInput)
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(Double position)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 394
+2020-06-01 23:41:00.0336 ERROR System.ArgumentException: «начение аргумента расположени€ должно быть в диапазоне от 0 до 100.
+»м€ параметра: position
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(Double position, Boolean validateInput)
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(Double position)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 394
+2020-06-01 23:41:04.3763 INFO connection successful
+2020-06-01 23:41:08.1361 INFO connection successful
+2020-06-01 23:41:09.6292 INFO connection successful
+2020-06-01 23:41:45.1897 INFO connection successful
+2020-06-01 23:41:46.0435 INFO connection successful
+2020-06-01 23:41:58.9814 INFO connection successful
+2020-06-01 23:42:01.3054 INFO connection successful
+2020-06-01 23:42:04.1612 INFO connection successful
+2020-06-01 23:42:05.2179 INFO connection successful
+2020-06-01 23:42:07.6983 INFO connection successful
+2020-06-01 23:42:08.3795 INFO connection successful
+2020-06-01 23:42:12.5313 INFO connection successful
+2020-06-01 23:42:14.3837 INFO connection successful
+2020-06-01 23:44:26.6332 INFO connection successful
+2020-06-01 23:44:26.7642 INFO connection successful
+2020-06-01 23:44:31.5053 INFO connection successful
+2020-06-01 23:44:32.7611 INFO connection successful
+2020-06-01 23:44:48.3125 INFO connection successful
+2020-06-01 23:44:50.0804 INFO connection successful
+2020-06-01 23:45:47.9293 INFO connection successful
+2020-06-01 23:45:48.0734 INFO connection successful
+2020-06-01 23:45:51.9775 INFO connection successful
+2020-06-01 23:45:52.6156 INFO connection successful
+2020-06-01 23:46:33.5938 INFO connection successful
+2020-06-01 23:46:35.1340 INFO connection successful
+2020-06-01 23:46:46.5718 INFO connection successful
+2020-06-01 23:46:47.9573 INFO connection successful
+2020-06-01 23:46:55.0459 INFO connection successful
+2020-06-01 23:46:56.3188 INFO connection successful
+2020-06-01 23:47:29.8287 INFO connection successful
+2020-06-01 23:47:33.3736 INFO connection successful
+2020-06-01 23:48:35.1193 INFO connection successful
+2020-06-01 23:48:35.2399 INFO connection successful
+2020-06-01 23:48:38.3634 INFO connection successful
+2020-06-01 23:48:39.9422 INFO connection successful
+2020-06-01 23:50:51.7609 INFO connection successful
+2020-06-01 23:52:32.8178 INFO connection successful
+2020-06-01 23:52:58.7076 INFO connection successful
+2020-06-01 23:53:40.7201 INFO connection successful
+2020-06-01 23:53:54.6808 INFO connection successful
+2020-06-01 23:54:27.3900 INFO connection successful
+2020-06-01 23:54:56.4324 INFO connection successful
+2020-06-01 23:55:24.6774 INFO connection successful
+2020-06-01 23:55:35.7522 INFO connection successful
+2020-06-01 23:55:35.8928 INFO connection successful
+2020-06-01 23:55:42.2081 INFO connection successful
+2020-06-01 23:55:46.8444 INFO connection successful
+2020-06-01 23:55:49.5455 INFO connection successful
+2020-06-01 23:56:25.4126 ERROR System.ArgumentException: «начение аргумента расположени€ должно быть в диапазоне от 0 до 100.
+»м€ параметра: position
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(Double position, Boolean validateInput)
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(Double position)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 399
+2020-06-01 23:56:34.7075 INFO connection successful
+2020-06-01 23:56:37.1909 INFO connection successful
+2020-06-01 23:56:52.5458 INFO connection successful
+2020-06-01 23:56:54.1037 INFO connection successful
+2020-06-01 23:56:55.3562 INFO connection successful
+2020-06-01 23:56:55.4228 ERROR System.ArgumentException: “очки данных р€да не поддерживают значени€ типа System.DayOfWeek, допускаетс€ использование значений только следующих типов: Double, Decimal, Single, int, long, uint, ulong, String, DateTime, short, ushort.
+   в System.Windows.Forms.DataVisualization.Charting.Series.CheckSupportedTypes(Type type)
+   в System.Windows.Forms.DataVisualization.Charting.DataPoint.SetValueXY(Object xValue, Object[] yValue)
+   в System.Windows.Forms.DataVisualization.Charting.DataPointCollection.AddXY(Object xValue, Object[] yValue)
+   в NURESCADA.StaticForm.BuildingChart(String selected) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 124
+2020-06-01 23:56:57.9832 INFO connection successful
+2020-06-01 23:56:58.6692 INFO connection successful
+2020-06-01 23:56:58.7231 ERROR System.ArgumentException: “очки данных р€да не поддерживают значени€ типа System.DayOfWeek, допускаетс€ использование значений только следующих типов: Double, Decimal, Single, int, long, uint, ulong, String, DateTime, short, ushort.
+   в System.Windows.Forms.DataVisualization.Charting.Series.CheckSupportedTypes(Type type)
+   в System.Windows.Forms.DataVisualization.Charting.DataPoint.SetValueXY(Object xValue, Object[] yValue)
+   в System.Windows.Forms.DataVisualization.Charting.DataPointCollection.AddXY(Object xValue, Object[] yValue)
+   в NURESCADA.StaticForm.BuildingChart(String selected) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 124
+2020-06-01 23:57:06.3442 INFO connection successful
+2020-06-01 23:57:06.9108 INFO connection successful
+2020-06-01 23:57:21.7732 INFO connection successful
+2020-06-01 23:57:26.0704 INFO connection successful
+2020-06-01 23:57:34.1439 INFO connection successful
+2020-06-01 23:57:37.4465 INFO connection successful
+2020-06-01 23:58:36.9373 INFO connection successful
+2020-06-01 23:58:37.0849 INFO connection successful
+2020-06-01 23:58:41.2415 INFO connection successful
+2020-06-01 23:58:45.4772 INFO connection successful
+2020-06-01 23:59:38.6979 INFO connection successful
+2020-06-01 23:59:38.7652 INFO Test
+2020-06-01 23:59:41.0074 INFO connection successful
+2020-06-01 23:59:45.5664 INFO Test
+2020-06-01 23:59:51.5380 INFO connection successful
+2020-06-01 23:59:52.1237 INFO connection successful
+2020-06-01 23:59:53.9262 INFO Test

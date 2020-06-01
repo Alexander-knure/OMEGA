@@ -351,11 +351,11 @@ namespace NURESCADA.Forms
                         reader = msc.ExecuteReader();
                         while (reader.Read())
                         {
-                            if (reader.GetDouble(0) != null && countSelect <= 100)
+                            if (countSelect <= 100)
                             {
                                 MainChart.Series[selected].Points.AddY(reader.GetDouble(0));
                             }
-                            else if(reader.GetDouble(0) != null && countSelect >100)
+                            else if( countSelect >100)
                             {
                                 MainChart.Series[selected].Points.RemoveAt(0);
                             }
