@@ -99,7 +99,7 @@ namespace NURESCADA
                             if (reader.GetDouble(0) != null)
                             {
                                // MainChart.Series[selected].Points.AddY(reader.GetDouble(0));
-                               MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1).TimeOfDay.TotalSeconds, reader.GetDouble(0));
+                               MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1).Date, reader.GetDouble(0));
                               //  MainChart.Series[selected].Points.AddY(reader.GetDouble(0));
                                 //MainChart.Series[selected].i
                             }
