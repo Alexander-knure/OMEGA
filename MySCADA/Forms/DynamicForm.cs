@@ -250,7 +250,6 @@ namespace NURESCADA.Forms
                 default:
                     break;
             }
-
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -290,7 +289,6 @@ namespace NURESCADA.Forms
                 {
                     lbPoint.Text = "X:" + Math.Round(MainChart.ChartAreas[0].AxisX.PixelPositionToValue(e.Location.X)).ToString();
                     lbPoint.Text += " Y:" + Math.Round(MainChart.ChartAreas[0].AxisY.PixelPositionToValue(e.Location.Y)).ToString();
-
                 }
             }
             else
@@ -333,25 +331,37 @@ namespace NURESCADA.Forms
                 {
                     if (DBUtils.OpenConnection(lbStatus, logger))
                     {
-                        countSelect++;
                         MainChart.Series.Add(selected);
                         MainChart.Series[selected].BorderWidth = 3;
                         MainChart.Series[selected].LegendText = selected;
                         MainChart.Series[selected].ChartType = SeriesChartType.FastLine;
+
+                        MainChart.ChartAreas[0].CursorX.IsUserEnabled = true;
+                        MainChart.ChartAreas[0].CursorX.IsUserSelectionEnabled = true;
+                        MainChart.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
+                        MainChart.ChartAreas[0].AxisX.ScrollBar.IsPositionedInside = true;
+
+                        MainChart.ChartAreas[0].CursorY.IsUserEnabled = true;
+                        MainChart.ChartAreas[0].CursorY.IsUserSelectionEnabled = true;
+                        MainChart.ChartAreas[0].AxisY.ScaleView.Zoomable = true;
+                        MainChart.ChartAreas[0].AxisY.ScrollBar.IsPositionedInside = true;
 
                         cbVariables.Items.Clear();
                         variables.Clear();
                         reader = msc.ExecuteReader();
                         while (reader.Read())
                         {
-                            if (reader.GetDouble(0) != null)
+                            if (reader.GetDouble(0) != null && countSelect <= 100)
                             {
-                                //bed code
-
                                 MainChart.Series[selected].Points.AddY(reader.GetDouble(0));
+                            }
+                            else if(reader.GetDouble(0) != null && countSelect >100)
+                            {
+                                MainChart.Series[selected].Points.RemoveAt(0);
                             }
 
                         }
+                        countSelect++;
                     }
                 }
                 catch (Exception exc)

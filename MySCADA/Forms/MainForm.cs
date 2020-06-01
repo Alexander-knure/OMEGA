@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 using NURESCADA.Forms;
 using NURESCADA.DB;
 using NURESCADA.Models;
+using Ubiety.Dns.Core.Common;
 
 namespace NURESCADA
 {
@@ -34,7 +34,7 @@ namespace NURESCADA
             sdlg.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
             rdlg.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
 
-            if(DBUtils.conn != null)
+            if (DBUtils.conn != null)
             {
                 if(DBUtils.conn.State == ConnectionState.Open)
                 {
@@ -46,6 +46,7 @@ namespace NURESCADA
         private void mainTimer_Tick(object sender, EventArgs e)
         {
             OpenConnection();
+            ShowTable(true);
         }
 
         public void OpenConnection()
@@ -91,74 +92,91 @@ namespace NURESCADA
             }
         }
 
+        private void ShowRows(string query)
+        {
+            using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, DBUtils.conn))
+            {
+                try
+                {
+                     MySqlDataReader r;
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+                    mainGrid.DataSource = ds.Tables[0];
+                    r = adapter.SelectCommand.ExecuteReader();
+                    switch (cbDataSets.SelectedItem.ToString())
+                    {
+                        case "actions_data":
+
+                            while (r.Read())
+                            {
+                                ActionData actionData = new ActionData(r.GetDateTime(0), r.GetInt32(1), r.GetString(2));
+                                ActionList.Add(actionData);
+                            }
+                            break;
+                        case "messages_data":
+                            while (r.Read())
+                            {
+                                MessageData messageData = new MessageData(r.GetDateTime(0), r.GetInt32(1), r.GetInt32(2), r.GetInt32(3), r.GetString(4));
+                                MessageList.Add(messageData);
+                            }
+                            break;
+                        case "recipes":
+                            while (r.Read())
+                            {
+                                Recipe reciep = new Recipe(r.GetUInt32(0), r.GetString(1), r.GetDateTime(2), r.GetFloat(3), r.GetFloat(4), r.GetFloat(5), r.GetString(6));
+                                ReciepList.Add(reciep);
+                            }
+                            break;
+                        case "trends_day":
+                        case "trends_hour":
+                        case "trends_minute":
+                        case "trends_data":
+                            while (r.Read())
+                            {
+                                Trend trend = new Trend(r.GetUInt32(0), r.GetDateTime(1), r.GetFloat(2), r.GetInt16(3));
+                                TrendList.Add(trend);
+                            }
+                            break;
+                        case "variables_data":
+                            while (r.Read())
+                            {
+                                Variable variable = new Variable(r.GetUInt32(0), r.GetString(1), r.GetString(2));
+                                VariableList.Add(variable);
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                    r.Close();
+                }
+                catch (Exception exc)
+                {
+                    MSG.Show(this, exc.ToString(), exc.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error, logger);
+                }
+            }
+        }
+        private void ShowTable(bool isTimer)
+        {
+            string query;
+            if (DBUtils.conn.State == ConnectionState.Open)
+            {
+                if (isTimer && cbDataSets.SelectedItem != null)
+                {
+                    query = cbDataSets.SelectedItem.ToString().Contains("trends") ? "SELECT * FROM (SELECT * FROM " + cbDataSets.SelectedItem.ToString() + " ORDER BY timestamp DESC LIMIT 100) AS T ORDER BY timestamp ASC" : "SELECT * FROM " + cbDataSets.SelectedItem.ToString();
+                    ShowRows(query);
+                }
+                else if(cbDataSets.SelectedItem != null)
+                {
+                    query = "SELECT * FROM " + cbDataSets.SelectedItem.ToString();
+                    ShowRows(query);
+                }
+            }
+        }
 
         private void cbDataSets_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (DBUtils.conn.State == ConnectionState.Open)
-            {
-                MySqlDataReader r;
-
-                string query = "SELECT * FROM " + cbDataSets.SelectedItem.ToString();
-
-                using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, DBUtils.conn))
-                {
-                    try
-                    {
-                        DataSet ds = new DataSet();
-                        adapter.Fill(ds);
-                        mainGrid.DataSource = ds.Tables[0];
-                        r = adapter.SelectCommand.ExecuteReader();
-                        switch(cbDataSets.SelectedItem.ToString())
-                        {
-                            case "actions_data":
-                                
-                                while (r.Read())
-                                {
-                                    ActionData actionData = new ActionData(r.GetDateTime(0), r.GetInt32(1), r.GetString(2));
-                                    ActionList.Add(actionData);
-                                }
-                                break;
-                            case "messages_data":
-                                while (r.Read())
-                                {
-                                    MessageData messageData = new MessageData(r.GetDateTime(0), r.GetInt32(1), r.GetInt32(2), r.GetInt32(3), r.GetString(4));
-                                    MessageList.Add(messageData);
-                                }
-                                break;
-                            case "recipes":
-                                while (r.Read())
-                                {
-                                    Recipe reciep = new Recipe(r.GetUInt32(0), r.GetString(1), r.GetDateTime(2), r.GetFloat(3), r.GetFloat(4), r.GetFloat(5),r.GetString(6));
-                                    ReciepList.Add(reciep);
-                                }  
-                                break;
-                            case "trends_day":
-                            case "trends_hour":
-                            case "trends_minute":
-                            case "trends_data":
-                                while (r.Read())
-                                {
-                                    Trend trend = new Trend(r.GetUInt32(0), r.GetDateTime(1), r.GetFloat(2), r.GetInt16(3));
-                                    TrendList.Add(trend);
-                                }
-                                break;
-                            case "variables_data":
-                                while (r.Read())
-                                {
-                                    Variable variable = new Variable(r.GetUInt32(0), r.GetString(1), r.GetString(2));
-                                    VariableList.Add(variable);
-                                }
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                    catch(Exception exc)
-                    {
-                        MSG.Show(this, exc.ToString(), exc.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error, logger);
-                    }
-                }
-            }
+            mainTimer.Enabled = true;
+            ShowTable(false) ;
         }
 
         private void btnStatic_Click(object sender, EventArgs e)
@@ -210,15 +228,18 @@ namespace NURESCADA
                     cbDataSets.Items.Add(reader.GetString(0));
                     TableNames.Add(reader.GetString(0));
                 }
+                reader.Close();
             }
             catch (Exception exc)
             {
-                MSG.Show(this, "Please enable server connection", exc.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Warning, logger);
+                MSG.Show(this, exc.ToString(), exc.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error, logger);
+                //MSG.Show(this, "Please enable server connection", exc.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Warning, logger);
             }
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            mainTimer.Stop();
             DBUtils.CloseConnection(lbStatus, logger);
         }
 
@@ -231,7 +252,7 @@ namespace NURESCADA
                 switch (cbDataSets.SelectedItem.ToString())
                 {
                     case "actions_data":
-                        fileName = @"C:\Users\Vladymyr\Desktop\Practice_saves_files\actions_data_Save.txt";
+                        fileName = @"C:\Users\alex2\Desktop\Practice_saves_files\actions_data_Save.txt";
                         using (StreamWriter fs = new StreamWriter(fileName))
                         {
                             fs.Write(JsonConvert.SerializeObject(ActionList));
@@ -241,7 +262,7 @@ namespace NURESCADA
 
 
                     case "messages_data":
-                        fileName = @"C:\Users\Vladymyr\Desktop\Practice_saves_files\messages_data_Save.txt";
+                        fileName = @"C:\Users\alex2\Desktop\Practice_saves_files\messages_data_Save.txt";
                         using (StreamWriter fs = new StreamWriter(fileName))
                         {
                             fs.Write(JsonConvert.SerializeObject(MessageList));
@@ -251,7 +272,7 @@ namespace NURESCADA
 
 
                     case "recipes":
-                        fileName = @"C:\Users\Vladymyr\Desktop\Practice_saves_files\recipes_Save.txt";
+                        fileName = @"C:\Users\alex2\Desktop\Practice_saves_files\recipes_Save.txt";
                         using (StreamWriter fs = new StreamWriter(fileName))
                         {
                             fs.Write(JsonConvert.SerializeObject(ReciepList));
@@ -264,7 +285,7 @@ namespace NURESCADA
                     case "trends_hour":
                     case "trends_minute":
                     case "trends_data":
-                        fileName = @"C:\Users\Vladymyr\Desktop\Practice_saves_files\trends_data_Save.txt";
+                        fileName = @"C:\Users\alex2\Desktop\Practice_saves_files\trends_data_Save.txt";
                         using (StreamWriter fs = new StreamWriter(fileName))
                         {
                             fs.Write(JsonConvert.SerializeObject(TrendList));
@@ -274,7 +295,7 @@ namespace NURESCADA
 
 
                     case "variables_data":
-                        fileName = @"C:\Users\Vladymyr\Desktop\Practice_saves_files\variables_data_Save.txt";
+                        fileName = @"C:\Users\alex2\Desktop\Practice_saves_files\variables_data_Save.txt";
                         using (StreamWriter fs = new StreamWriter(fileName))
                         {
                             fs.Write(JsonConvert.SerializeObject(VariableList));
@@ -304,30 +325,30 @@ namespace NURESCADA
 
                     switch (fileName)
                     {
-                        case @"C:\\Users\\Vladymyr\\Desktop\\Practice_saves_files\\actions_data_Save.txt":
+                        case @"C:\\Users\\alex2\\Desktop\\Practice_saves_files\\actions_data_Save.txt":
                             while (!sr.EndOfStream)
                                 ActionList = JsonConvert.DeserializeObject<List<ActionData>>(str);
                             mainGrid.DataSource = ActionList;
                             break;
-                        case @"C:\Users\Vladymyr\Desktop\Practice_saves_files\messages_data_Save.txt":
+                        case @"C:\Users\alex2\Desktop\Practice_saves_files\messages_data_Save.txt":
                             while (!sr.EndOfStream)
                                 MessageList = JsonConvert.DeserializeObject<List<MessageData>>(str);
                             mainGrid.DataSource = MessageList;
                             break;
-                        case @"C:\Users\Vladymyr\Desktop\Practice_saves_files\recipes_Save.txt":
+                        case @"C:\Users\alex2\Desktop\Practice_saves_files\recipes_Save.txt":
 
                             ReciepList = JsonConvert.DeserializeObject<List<Recipe>>(str);
                             mainGrid.DataSource = ReciepList;
                             break;
-                        case @"C:\Users\Vladymyr\Desktop\Practice_saves_files\trends_day_Save.txt":
-                        case @"C:\Users\Vladymyr\Desktop\Practice_saves_files\trends_hour_Save.txt":
-                        case @"C:\Users\Vladymyr\Desktop\Practice_saves_files\trends_minute_Save.txt":
-                        case @"C:\Users\Vladymyr\Desktop\Practice_saves_files\trends_data_Save.txt":
+                        case @"C:\Users\alex2\Desktop\Practice_saves_files\trends_day_Save.txt":
+                        case @"C:\Users\alex2\Desktop\Practice_saves_files\trends_hour_Save.txt":
+                        case @"C:\Users\alex2\Desktop\Practice_saves_files\trends_minute_Save.txt":
+                        case @"C:\Users\alex2\Desktop\Practice_saves_files\trends_data_Save.txt":
                             while (!sr.EndOfStream)
                                 TrendList = JsonConvert.DeserializeObject<List<Trend>>(str);
                             mainGrid.DataSource = TrendList;
                             break;
-                        case @"C:\Users\Vladymyr\Desktop\Practice_saves_files\variables_data_Save.txt":
+                        case @"C:\Users\alex2\Desktop\Practice_saves_files\variables_data_Save.txt":
                             while (!sr.EndOfStream)
                                 VariableList = JsonConvert.DeserializeObject<List<Variable>>(str);
                             mainGrid.DataSource = VariableList;

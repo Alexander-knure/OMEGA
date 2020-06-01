@@ -16,6 +16,7 @@ namespace NURESCADA
         private static Logger logger = LogManager.GetCurrentClassLogger();
         private double start = 0.0d;
         private double end = 0.0d;
+        SeriesChartType chartType = SeriesChartType.FastPoint;
 
         public StaticForm()
         {
@@ -27,14 +28,13 @@ namespace NURESCADA
             MainChart.KeyDown += MainChart_KeyPress;
 
             List<String> list = new List<string>();
-            list.Add("day");
-            list.Add("hour");
-            list.Add("minute");
-            list.Add("second");
+            list.Add(SeriesChartType.FastLine.ToString());
+            list.Add(SeriesChartType.FastPoint.ToString());
+            list.Add(SeriesChartType.Area.ToString());
 
 
             foreach (var i in list)
-                cbTimeInterval.Items.Add(i);
+                cbTypePoints.Items.Add(i);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -64,10 +64,8 @@ namespace NURESCADA
                         return;
                     }
                 }
-                //
-                //Add where -/- and timefrom = timestamp_min to max in other method!
-                //
-                string query = "SELECT VALUE, TimeStamp FROM `variables_data` INNER JOIN `trends_data` ON variables_data.ID = trends_data.ID WHERE variables_data.Name = \"" + selected + "\";";
+
+                string query = "SELECT value, timeStamp FROM `variables_data` INNER JOIN `trends_data` ON variables_data.ID = trends_data.ID WHERE variables_data.Name = \"" + selected + "\" AND value > 0;";
                 MySqlCommand msc = new MySqlCommand(query, DBUtils.conn);
                 try
                 {
@@ -77,7 +75,21 @@ namespace NURESCADA
                         MainChart.Series.Add(selected);
                         MainChart.Series[selected].BorderWidth = 3;
                         MainChart.Series[selected].LegendText = selected;
-                        MainChart.Series[selected].ChartType = SeriesChartType.FastLine;
+                        MainChart.Series[selected].ChartType = chartType;
+
+
+                        ////////////////
+                        MainChart.ChartAreas[0].CursorX.IsUserEnabled = true;
+                        MainChart.ChartAreas[0].CursorX.IsUserSelectionEnabled = true;
+                        MainChart.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
+                        MainChart.ChartAreas[0].AxisX.ScrollBar.IsPositionedInside = true;
+
+                        MainChart.ChartAreas[0].CursorY.IsUserEnabled = true;
+                        MainChart.ChartAreas[0].CursorY.IsUserSelectionEnabled = true;
+                        MainChart.ChartAreas[0].AxisY.ScaleView.Zoomable = true;
+                        MainChart.ChartAreas[0].AxisY.ScrollBar.IsPositionedInside = true;
+                        ////////////////
+                        //MainChart.ChartAreas[0]
 
                         cbVariables.Items.Clear();
                         variables.Clear();
@@ -86,9 +98,10 @@ namespace NURESCADA
                         {
                             if (reader.GetDouble(0) != null)
                             {
-                                //bed code
-
-                                MainChart.Series[selected].Points.AddY(reader.GetDouble(0));
+                               // MainChart.Series[selected].Points.AddY(reader.GetDouble(0));
+                               MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1).TimeOfDay.TotalSeconds, reader.GetDouble(0));
+                              //  MainChart.Series[selected].Points.AddY(reader.GetDouble(0));
+                                //MainChart.Series[selected].i
                             }
 
                         }
@@ -162,25 +175,51 @@ namespace NURESCADA
             }
         }
 
-        private void cbTime_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbTypePoints_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var tInterval = cbTimeInterval.SelectedItem.ToString();
-            MainChart.ChartAreas[0].AxisX.Title = tInterval;
-            switch (tInterval)
+            //list.Add(SeriesChartType.FastLine.ToString());
+            //list.Add(SeriesChartType.FastPoint.ToString());
+            //list.Add(SeriesChartType.Area.ToString());
+            //list.Add(SeriesChartType.Bubble.ToString());
+
+            switch (cbTypePoints.SelectedItem.ToString())
             {
-                case "day":
-                    MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Days;
+                case "FastLine":
+                    chartType = SeriesChartType.FastLine;
                     break;
-                case "hour":
-                    MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Hours;
+                case "FastPoint":
+                    chartType = SeriesChartType.FastPoint;
                     break;
-                case "minute":
-                    MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Minutes;
+                case "Area":
+                    chartType = SeriesChartType.Area;
                     break;
-                case "second":
-                    MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
+                default:
                     break;
             }
+
+            for(int i = 0; i < MainChart.Series.Count; i++)
+            {
+                MainChart.Series[i].ChartType = chartType;
+
+            }
+
+            //var tInterval = cbTypePoints.SelectedItem.ToString();
+            //MainChart.ChartAreas[0].AxisX.Title = tInterval;
+            //switch (tInterval)
+            //{
+            //    case "day":
+            //        MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Days;
+            //        break;
+            //    case "hour":
+            //        MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Hours;
+            //        break;
+            //    case "minute":
+            //        MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Minutes;
+            //        break;
+            //    case "second":
+            //        MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
+            //        break;
+            //}
         }
 
         private void StaticForm_Load(object sender, EventArgs e)
@@ -332,20 +371,27 @@ namespace NURESCADA
 
         private void MainChart_MouseMove(object sender, MouseEventArgs e)
         {
-            if (MainChart.Series.Count > 0)
+            try
             {
-                lbPoint.Visible = true;
-                if (MainChart.ChartAreas[0].AxisX.PixelPositionToValue(e.Location.X) >= MainChart.ChartAreas[0].AxisX.Minimum && MainChart.ChartAreas[0].AxisX.PixelPositionToValue(e.Location.X) <= MainChart.ChartAreas[0].AxisX.Maximum &&
-                    MainChart.ChartAreas[0].AxisY.PixelPositionToValue(e.Location.Y) >= MainChart.ChartAreas[0].AxisY.Minimum && MainChart.ChartAreas[0].AxisY.PixelPositionToValue(e.Location.Y) <= MainChart.ChartAreas[0].AxisX.Maximum)
+                if (MainChart.Series.Count > 0)
                 {
-                    lbPoint.Text = "X:" + Math.Round(MainChart.ChartAreas[0].AxisX.PixelPositionToValue(e.Location.X)).ToString();
-                    lbPoint.Text += " Y:" + Math.Round(MainChart.ChartAreas[0].AxisY.PixelPositionToValue(e.Location.Y)).ToString();
+                    lbPoint.Visible = true;
+                    if (MainChart.ChartAreas[0].AxisX.PixelPositionToValue(e.Location.X) >= MainChart.ChartAreas[0].AxisX.Minimum && MainChart.ChartAreas[0].AxisX.PixelPositionToValue(e.Location.X) <= MainChart.ChartAreas[0].AxisX.Maximum &&
+                        MainChart.ChartAreas[0].AxisY.PixelPositionToValue(e.Location.Y) >= MainChart.ChartAreas[0].AxisY.Minimum && MainChart.ChartAreas[0].AxisY.PixelPositionToValue(e.Location.Y) <= MainChart.ChartAreas[0].AxisX.Maximum)
+                    {
+                        lbPoint.Text = "X:" + Math.Round(MainChart.ChartAreas[0].AxisX.PixelPositionToValue(e.Location.X)).ToString();
+                        lbPoint.Text += " Y:" + Math.Round(MainChart.ChartAreas[0].AxisY.PixelPositionToValue(e.Location.Y)).ToString();
 
+                    }
+                }
+                else
+                {
+                    lbPoint.Visible = false;
                 }
             }
-            else
+            catch(Exception exc)
             {
-                lbPoint.Visible = false;
+                MSG.Show(this, exc.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error, logger);
             }
         }
 

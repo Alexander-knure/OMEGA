@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DynamicForm));
             this.lbPoint = new MetroFramework.Controls.MetroLabel();
             this.dtToTime = new MetroFramework.Controls.MetroDateTime();
@@ -88,6 +88,7 @@
             this.dtToTime.TabIndex = 49;
             this.dtToTime.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.dtToTime.Value = new System.DateTime(2020, 5, 26, 0, 0, 0, 0);
+            this.dtToTime.ValueChanged += new System.EventHandler(this.dtToTime_ValueChanged);
             // 
             // dtFromTime
             // 
@@ -111,6 +112,7 @@
             this.dtFromTime.TabIndex = 48;
             this.dtFromTime.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.dtFromTime.Value = new System.DateTime(2020, 5, 18, 0, 0, 0, 0);
+            this.dtFromTime.ValueChanged += new System.EventHandler(this.dtFromTime_ValueChanged);
             // 
             // lbTo
             // 
@@ -250,61 +252,60 @@
             this.MainChart.BorderSkin.BackSecondaryColor = System.Drawing.Color.Transparent;
             this.MainChart.BorderSkin.BorderColor = System.Drawing.Color.Transparent;
             this.MainChart.BorderSkin.PageColor = System.Drawing.Color.Transparent;
-            chartArea3.Area3DStyle.Inclination = 10;
-            chartArea3.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
-            chartArea3.Area3DStyle.PointDepth = 40;
-            chartArea3.Area3DStyle.Rotation = 10;
-            chartArea3.Area3DStyle.WallWidth = 5;
-            chartArea3.AxisX.IsLabelAutoFit = false;
-            chartArea3.AxisX.LabelStyle.Angle = 1;
-            chartArea3.AxisX.LabelStyle.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea3.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea3.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisX.MajorGrid.LineWidth = 0;
-            chartArea3.AxisX.Title = "X";
-            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea3.AxisX.TitleForeColor = System.Drawing.Color.White;
-            chartArea3.AxisX2.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea3.AxisX2.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisX2.TitleForeColor = System.Drawing.Color.White;
-            chartArea3.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea3.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisY.ScaleBreakStyle.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisY.TitleForeColor = System.Drawing.Color.White;
-            chartArea3.AxisY2.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea3.AxisY2.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisY2.TitleForeColor = System.Drawing.Color.White;
-            chartArea3.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.BackImageTransparentColor = System.Drawing.Color.Transparent;
-            chartArea3.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea3.BorderColor = System.Drawing.Color.White;
-            chartArea3.InnerPlotPosition.Auto = false;
-            chartArea3.InnerPlotPosition.Height = 90F;
-            chartArea3.InnerPlotPosition.Width = 90F;
-            chartArea3.InnerPlotPosition.X = 10F;
-            chartArea3.InnerPlotPosition.Y = 4.49097F;
-            chartArea3.Name = "ChartArea1";
-            chartArea3.ShadowColor = System.Drawing.Color.DarkGray;
-            this.MainChart.ChartAreas.Add(chartArea3);
+            chartArea1.Area3DStyle.Inclination = 10;
+            chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea1.Area3DStyle.PointDepth = 40;
+            chartArea1.Area3DStyle.Rotation = 10;
+            chartArea1.Area3DStyle.WallWidth = 5;
+            chartArea1.AxisX.IsLabelAutoFit = false;
+            chartArea1.AxisX.LabelStyle.Angle = 1;
+            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MajorGrid.LineWidth = 0;
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Consolas", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX2.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX2.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX2.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.ScaleBreakStyle.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY2.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY2.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY2.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            chartArea1.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea1.BorderColor = System.Drawing.Color.White;
+            chartArea1.InnerPlotPosition.Auto = false;
+            chartArea1.InnerPlotPosition.Height = 90F;
+            chartArea1.InnerPlotPosition.Width = 90F;
+            chartArea1.InnerPlotPosition.X = 10F;
+            chartArea1.InnerPlotPosition.Y = 4.49097F;
+            chartArea1.Name = "ChartArea1";
+            chartArea1.ShadowColor = System.Drawing.Color.DarkGray;
+            this.MainChart.ChartAreas.Add(chartArea1);
             this.MainChart.Cursor = System.Windows.Forms.Cursors.Cross;
-            legend3.Alignment = System.Drawing.StringAlignment.Center;
-            legend3.BackColor = System.Drawing.Color.Transparent;
-            legend3.BorderWidth = 5;
-            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend3.Font = new System.Drawing.Font("Consolas", 12F);
-            legend3.ForeColor = System.Drawing.Color.White;
-            legend3.HeaderSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
-            legend3.HeaderSeparatorColor = System.Drawing.Color.White;
-            legend3.IsTextAutoFit = false;
-            legend3.ItemColumnSeparatorColor = System.Drawing.Color.White;
-            legend3.MaximumAutoSize = 10F;
-            legend3.Name = "Legend1";
-            legend3.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            legend3.TitleForeColor = System.Drawing.Color.White;
-            legend3.TitleSeparatorColor = System.Drawing.Color.White;
-            this.MainChart.Legends.Add(legend3);
+            legend1.Alignment = System.Drawing.StringAlignment.Center;
+            legend1.BackColor = System.Drawing.Color.Transparent;
+            legend1.BorderWidth = 5;
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend1.Font = new System.Drawing.Font("Consolas", 12F);
+            legend1.ForeColor = System.Drawing.Color.White;
+            legend1.HeaderSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
+            legend1.HeaderSeparatorColor = System.Drawing.Color.White;
+            legend1.IsTextAutoFit = false;
+            legend1.ItemColumnSeparatorColor = System.Drawing.Color.White;
+            legend1.MaximumAutoSize = 10F;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            legend1.TitleForeColor = System.Drawing.Color.White;
+            legend1.TitleSeparatorColor = System.Drawing.Color.White;
+            this.MainChart.Legends.Add(legend1);
             this.MainChart.Location = new System.Drawing.Point(0, 122);
             this.MainChart.Margin = new System.Windows.Forms.Padding(0);
             this.MainChart.Name = "MainChart";
@@ -323,6 +324,7 @@
             this.MainChart.Size = new System.Drawing.Size(940, 473);
             this.MainChart.TabIndex = 40;
             this.MainChart.Text = "MainChart";
+            this.MainChart.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainChart_MouseMove);
             // 
             // lbHeader
             // 

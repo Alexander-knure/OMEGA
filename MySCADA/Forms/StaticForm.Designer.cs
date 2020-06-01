@@ -35,7 +35,7 @@
             this.MainChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnBack = new MetroFramework.Controls.MetroButton();
             this.cbVariables = new MetroFramework.Controls.MetroComboBox();
-            this.cbTimeInterval = new MetroFramework.Controls.MetroComboBox();
+            this.cbTypePoints = new MetroFramework.Controls.MetroComboBox();
             this.lbStatus = new MetroFramework.Controls.MetroLabel();
             this.btnClear = new MetroFramework.Controls.MetroButton();
             this.lbFrom = new MetroFramework.Controls.MetroLabel();
@@ -66,6 +66,9 @@
             // 
             // MainChart
             // 
+            this.MainChart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MainChart.BackColor = System.Drawing.Color.Transparent;
             this.MainChart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.MainChart.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Top;
@@ -117,7 +120,7 @@
             legend1.BackColor = System.Drawing.Color.Transparent;
             legend1.BorderWidth = 5;
             legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend1.Font = new System.Drawing.Font("Consolas", 12F);
+            legend1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             legend1.ForeColor = System.Drawing.Color.White;
             legend1.HeaderSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
             legend1.HeaderSeparatorColor = System.Drawing.Color.White;
@@ -129,7 +132,7 @@
             legend1.TitleForeColor = System.Drawing.Color.White;
             legend1.TitleSeparatorColor = System.Drawing.Color.White;
             this.MainChart.Legends.Add(legend1);
-            this.MainChart.Location = new System.Drawing.Point(0, 122);
+            this.MainChart.Location = new System.Drawing.Point(0, 120);
             this.MainChart.Margin = new System.Windows.Forms.Padding(0);
             this.MainChart.Name = "MainChart";
             this.MainChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -144,7 +147,7 @@
         System.Drawing.Color.Silver,
         System.Drawing.Color.IndianRed,
         System.Drawing.Color.Green};
-            this.MainChart.Size = new System.Drawing.Size(940, 473);
+            this.MainChart.Size = new System.Drawing.Size(950, 470);
             this.MainChart.TabIndex = 24;
             this.MainChart.Text = "MainChart";
             this.MainChart.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainChart_MouseMove);
@@ -186,24 +189,24 @@
             this.cbVariables.SelectedIndexChanged += new System.EventHandler(this.cbVariables_SelectedIndexChanged);
             this.cbVariables.Click += new System.EventHandler(this.cbVariables_Click);
             // 
-            // cbTimeInterval
+            // cbTypePoints
             // 
-            this.cbTimeInterval.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbTimeInterval.FontWeight = MetroFramework.MetroComboBoxWeight.Bold;
-            this.cbTimeInterval.ForeColor = System.Drawing.Color.White;
-            this.cbTimeInterval.FormattingEnabled = true;
-            this.cbTimeInterval.ItemHeight = 23;
-            this.cbTimeInterval.Location = new System.Drawing.Point(707, 16);
-            this.cbTimeInterval.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.cbTimeInterval.Name = "cbTimeInterval";
-            this.cbTimeInterval.PromptText = "Choose time";
-            this.cbTimeInterval.Size = new System.Drawing.Size(186, 29);
-            this.cbTimeInterval.Style = MetroFramework.MetroColorStyle.Black;
-            this.cbTimeInterval.TabIndex = 31;
-            this.cbTimeInterval.Tag = "";
-            this.cbTimeInterval.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.cbTimeInterval.UseSelectable = true;
-            this.cbTimeInterval.SelectedIndexChanged += new System.EventHandler(this.cbTime_SelectedIndexChanged);
+            this.cbTypePoints.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbTypePoints.FontWeight = MetroFramework.MetroComboBoxWeight.Bold;
+            this.cbTypePoints.ForeColor = System.Drawing.Color.White;
+            this.cbTypePoints.FormattingEnabled = true;
+            this.cbTypePoints.ItemHeight = 23;
+            this.cbTypePoints.Location = new System.Drawing.Point(707, 16);
+            this.cbTypePoints.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.cbTypePoints.Name = "cbTypePoints";
+            this.cbTypePoints.PromptText = "Choose type";
+            this.cbTypePoints.Size = new System.Drawing.Size(186, 29);
+            this.cbTypePoints.Style = MetroFramework.MetroColorStyle.Black;
+            this.cbTypePoints.TabIndex = 31;
+            this.cbTypePoints.Tag = "";
+            this.cbTypePoints.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cbTypePoints.UseSelectable = true;
+            this.cbTypePoints.SelectedIndexChanged += new System.EventHandler(this.cbTypePoints_SelectedIndexChanged);
             // 
             // lbStatus
             // 
@@ -354,7 +357,7 @@
             this.Controls.Add(this.lbFrom);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.lbStatus);
-            this.Controls.Add(this.cbTimeInterval);
+            this.Controls.Add(this.cbTypePoints);
             this.Controls.Add(this.cbVariables);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.MainChart);
@@ -378,7 +381,7 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart MainChart;
         private MetroFramework.Controls.MetroButton btnBack;
         private MetroFramework.Controls.MetroComboBox cbVariables;
-        private MetroFramework.Controls.MetroComboBox cbTimeInterval;
+        private MetroFramework.Controls.MetroComboBox cbTypePoints;
         private MetroFramework.Controls.MetroLabel lbStatus;
         private MetroFramework.Controls.MetroButton btnClear;
         private MetroFramework.Controls.MetroLabel lbFrom;
