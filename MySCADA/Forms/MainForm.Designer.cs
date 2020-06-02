@@ -36,12 +36,12 @@
             this.lbStatus = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.btnLoad = new MetroFramework.Controls.MetroButton();
-            this.mainGrid = new MetroFramework.Controls.MetroGrid();
-            this.btnMnemonic = new MetroFramework.Controls.MetroButton();
-            this.btnDynamic = new MetroFramework.Controls.MetroButton();
-            this.btnSave = new MetroFramework.Controls.MetroButton();
-            this.btnStatic = new MetroFramework.Controls.MetroButton();
             this.btnTimer = new MetroFramework.Controls.MetroButton();
+            this.mainGrid = new MetroFramework.Controls.MetroGrid();
+            this.btnDynamic = new MetroFramework.Controls.MetroButton();
+            this.btnStatic = new MetroFramework.Controls.MetroButton();
+            this.btnSave = new MetroFramework.Controls.MetroButton();
+            this.btnMnemonic = new MetroFramework.Controls.MetroButton();
             this.btnCommands = new MetroFramework.Controls.MetroButton();
             this.trendsminuteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.simplescadaDataSet = new NURESCADA.simplescadaDataSet();
@@ -80,11 +80,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.metroPanel1.BackColor = System.Drawing.Color.Black;
             this.metroPanel1.Controls.Add(this.btnLoad);
+            this.metroPanel1.Controls.Add(this.btnTimer);
             this.metroPanel1.Controls.Add(this.mainGrid);
-            this.metroPanel1.Controls.Add(this.btnMnemonic);
             this.metroPanel1.Controls.Add(this.btnDynamic);
-            this.metroPanel1.Controls.Add(this.btnSave);
             this.metroPanel1.Controls.Add(this.btnStatic);
+            this.metroPanel1.Controls.Add(this.btnSave);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 6;
@@ -116,6 +116,25 @@
             this.btnLoad.UseSelectable = true;
             this.btnLoad.UseStyleColors = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // btnTimer
+            // 
+            this.btnTimer.BackColor = System.Drawing.Color.Navy;
+            this.btnTimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTimer.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnTimer.ForeColor = System.Drawing.Color.White;
+            this.btnTimer.Location = new System.Drawing.Point(0, 9);
+            this.btnTimer.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTimer.Name = "btnTimer";
+            this.btnTimer.Size = new System.Drawing.Size(186, 29);
+            this.btnTimer.Style = MetroFramework.MetroColorStyle.Red;
+            this.btnTimer.TabIndex = 9;
+            this.btnTimer.Text = "Start";
+            this.btnTimer.UseCustomBackColor = true;
+            this.btnTimer.UseCustomForeColor = true;
+            this.btnTimer.UseSelectable = true;
+            this.btnTimer.UseStyleColors = true;
+            this.btnTimer.Click += new System.EventHandler(this.btnTimer_Click);
             // 
             // mainGrid
             // 
@@ -164,31 +183,13 @@
             this.mainGrid.UseCustomBackColor = true;
             this.mainGrid.UseCustomForeColor = true;
             // 
-            // btnMnemonic
-            // 
-            this.btnMnemonic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(81)))), ((int)(((byte)(255)))));
-            this.btnMnemonic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMnemonic.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnMnemonic.ForeColor = System.Drawing.Color.White;
-            this.btnMnemonic.Location = new System.Drawing.Point(372, 9);
-            this.btnMnemonic.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMnemonic.Name = "btnMnemonic";
-            this.btnMnemonic.Size = new System.Drawing.Size(186, 29);
-            this.btnMnemonic.Style = MetroFramework.MetroColorStyle.Red;
-            this.btnMnemonic.TabIndex = 6;
-            this.btnMnemonic.Text = "Mnemonic schema";
-            this.btnMnemonic.UseCustomBackColor = true;
-            this.btnMnemonic.UseCustomForeColor = true;
-            this.btnMnemonic.UseSelectable = true;
-            this.btnMnemonic.Click += new System.EventHandler(this.btnMnemonic_Click);
-            // 
             // btnDynamic
             // 
             this.btnDynamic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(81)))), ((int)(((byte)(255)))));
             this.btnDynamic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDynamic.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.btnDynamic.ForeColor = System.Drawing.Color.White;
-            this.btnDynamic.Location = new System.Drawing.Point(186, 9);
+            this.btnDynamic.Location = new System.Drawing.Point(372, 9);
             this.btnDynamic.Margin = new System.Windows.Forms.Padding(0);
             this.btnDynamic.Name = "btnDynamic";
             this.btnDynamic.Size = new System.Drawing.Size(186, 29);
@@ -199,6 +200,24 @@
             this.btnDynamic.UseCustomForeColor = true;
             this.btnDynamic.UseSelectable = true;
             this.btnDynamic.Click += new System.EventHandler(this.btnDynamic_Click);
+            // 
+            // btnStatic
+            // 
+            this.btnStatic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(81)))), ((int)(((byte)(255)))));
+            this.btnStatic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnStatic.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnStatic.ForeColor = System.Drawing.Color.White;
+            this.btnStatic.Location = new System.Drawing.Point(186, 9);
+            this.btnStatic.Margin = new System.Windows.Forms.Padding(0);
+            this.btnStatic.Name = "btnStatic";
+            this.btnStatic.Size = new System.Drawing.Size(186, 29);
+            this.btnStatic.Style = MetroFramework.MetroColorStyle.Red;
+            this.btnStatic.TabIndex = 3;
+            this.btnStatic.Text = "Static graph";
+            this.btnStatic.UseCustomBackColor = true;
+            this.btnStatic.UseCustomForeColor = true;
+            this.btnStatic.UseSelectable = true;
+            this.btnStatic.Click += new System.EventHandler(this.btnStatic_Click);
             // 
             // btnSave
             // 
@@ -218,42 +237,24 @@
             this.btnSave.UseSelectable = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnStatic
+            // btnMnemonic
             // 
-            this.btnStatic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(81)))), ((int)(((byte)(255)))));
-            this.btnStatic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnStatic.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnStatic.ForeColor = System.Drawing.Color.White;
-            this.btnStatic.Location = new System.Drawing.Point(0, 9);
-            this.btnStatic.Margin = new System.Windows.Forms.Padding(0);
-            this.btnStatic.Name = "btnStatic";
-            this.btnStatic.Size = new System.Drawing.Size(186, 29);
-            this.btnStatic.Style = MetroFramework.MetroColorStyle.Red;
-            this.btnStatic.TabIndex = 3;
-            this.btnStatic.Text = "Static graph";
-            this.btnStatic.UseCustomBackColor = true;
-            this.btnStatic.UseCustomForeColor = true;
-            this.btnStatic.UseSelectable = true;
-            this.btnStatic.Click += new System.EventHandler(this.btnStatic_Click);
-            // 
-            // btnTimer
-            // 
-            this.btnTimer.BackColor = System.Drawing.Color.Navy;
-            this.btnTimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTimer.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnTimer.ForeColor = System.Drawing.Color.White;
-            this.btnTimer.Location = new System.Drawing.Point(576, 44);
-            this.btnTimer.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTimer.Name = "btnTimer";
-            this.btnTimer.Size = new System.Drawing.Size(186, 29);
-            this.btnTimer.Style = MetroFramework.MetroColorStyle.Red;
-            this.btnTimer.TabIndex = 9;
-            this.btnTimer.Text = "Start";
-            this.btnTimer.UseCustomBackColor = true;
-            this.btnTimer.UseCustomForeColor = true;
-            this.btnTimer.UseSelectable = true;
-            this.btnTimer.UseStyleColors = true;
-            this.btnTimer.Click += new System.EventHandler(this.btnTimer_Click);
+            this.btnMnemonic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(81)))), ((int)(((byte)(255)))));
+            this.btnMnemonic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMnemonic.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnMnemonic.ForeColor = System.Drawing.Color.White;
+            this.btnMnemonic.Location = new System.Drawing.Point(390, 44);
+            this.btnMnemonic.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMnemonic.Name = "btnMnemonic";
+            this.btnMnemonic.Size = new System.Drawing.Size(186, 29);
+            this.btnMnemonic.Style = MetroFramework.MetroColorStyle.Red;
+            this.btnMnemonic.TabIndex = 6;
+            this.btnMnemonic.Text = "Mnemonic schema";
+            this.btnMnemonic.UseCustomBackColor = true;
+            this.btnMnemonic.UseCustomForeColor = true;
+            this.btnMnemonic.UseSelectable = true;
+            this.btnMnemonic.Visible = false;
+            this.btnMnemonic.Click += new System.EventHandler(this.btnMnemonic_Click);
             // 
             // btnCommands
             // 
@@ -300,9 +301,9 @@
             this.lbHeader.Location = new System.Drawing.Point(16, 16);
             this.lbHeader.Margin = new System.Windows.Forms.Padding(0);
             this.lbHeader.Name = "lbHeader";
-            this.lbHeader.Size = new System.Drawing.Size(126, 25);
+            this.lbHeader.Size = new System.Drawing.Size(145, 25);
             this.lbHeader.TabIndex = 10;
-            this.lbHeader.Text = "NURE SCADA";
+            this.lbHeader.Text = "SCADA VIEWER";
             this.lbHeader.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.lbHeader.UseCustomForeColor = true;
             // 
@@ -312,7 +313,7 @@
             this.cbDataSets.ForeColor = System.Drawing.Color.White;
             this.cbDataSets.FormattingEnabled = true;
             this.cbDataSets.ItemHeight = 23;
-            this.cbDataSets.Location = new System.Drawing.Point(388, 44);
+            this.cbDataSets.Location = new System.Drawing.Point(574, 44);
             this.cbDataSets.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cbDataSets.Name = "cbDataSets";
             this.cbDataSets.PromptText = "Choose table";
@@ -337,7 +338,7 @@
             this.Controls.Add(this.cbDataSets);
             this.Controls.Add(this.lbHeader);
             this.Controls.Add(this.btnCommands);
-            this.Controls.Add(this.btnTimer);
+            this.Controls.Add(this.btnMnemonic);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.lbStatus);
             this.ForeColor = System.Drawing.Color.Black;

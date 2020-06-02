@@ -22,37 +22,4 @@ namespace NURESCADA.DB
             this.Text = text;
         }
     }
-    public class Messages
-    {
-        public List<MessageData> list { get; set; }
-
-        public Messages()
-        {
-            this.list = new List<MessageData>();
-        }
-        public void Add(MessageData md)
-        {
-            list.Add(md);
-        }
-        public List<DateTime> GetTimeStamp()
-        {
-            return list.Select(i => i.TimeStamp).ToList();
-        }
-        public List<int> GetGroupID()
-        {
-            return list.Select(i => i.GroupID).ToList();
-        }
-        public List<int> GetMessageID()
-        {
-            return list.Select(i => i.MessageID).ToList();
-        }
-        public List<int> GetKind()
-        {
-            return list.Select(i => i.Kind).ToList();
-        }
-        public List<string> GetText()
-        {
-            return list.Select(i => i.Text).ToList();
-        }
-    }
 }

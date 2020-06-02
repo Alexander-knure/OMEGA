@@ -10,7 +10,6 @@ using Newtonsoft.Json;
 using NURESCADA.Forms;
 using NURESCADA.DB;
 using NURESCADA.Models;
-using Ubiety.Dns.Core.Common;
 
 namespace NURESCADA
 {
@@ -230,10 +229,14 @@ namespace NURESCADA
                 }
                 reader.Close();
             }
+            catch (InvalidOperationException exc)
+            {
+                MSG.Show(this, "Please enable server connection", exc.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Warning, logger);
+
+            }
             catch (Exception exc)
             {
                 MSG.Show(this, exc.ToString(), exc.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error, logger);
-                //MSG.Show(this, "Please enable server connection", exc.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Warning, logger);
             }
         }
 
@@ -247,7 +250,7 @@ namespace NURESCADA
         private void btnSave_Click(object sender, EventArgs e)
         {
             string fileName;
-            try
+            if (cbDataSets.SelectedItem != null)
             {
                 switch (cbDataSets.SelectedItem.ToString())
                 {
@@ -308,9 +311,9 @@ namespace NURESCADA
                         break;
                 }
             }
-            catch(Exception exc)
+            else
             {
-                MSG.Show(this, exc.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error, logger);
+                MSG.Show(this, "Please, choose table", MessageBoxButtons.OK, MessageBoxIcon.Warning, logger);
             }
         }
        private void btnLoad_Click(object sender, EventArgs e)

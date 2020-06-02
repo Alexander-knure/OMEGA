@@ -19,29 +19,4 @@ namespace NURESCADA.Models
             this.Text = text;
         }
     }
-    public class Actions
-    {
-        public List<ActionData> list;
-
-        public Actions()
-        {
-            list = new List<ActionData>();
-        }
-        public void Add(ActionData ad)
-        {
-            list.Add(ad);
-        }
-        public List<DateTime> GetTimestamp()
-        {
-            return list.Select(i => i.TimeStamp).ToList();
-        }
-        public List<int> GetUserID()
-        {
-            return list.Select(i => i.UserID).ToList();
-        }
-        public List<string> GetText()
-        {
-            return list.Select(i => i.Text).ToList();
-        }
-    }
 }
