@@ -707,3 +707,1449 @@
 2020-06-02 00:59:27.5024 INFO connection successful
 2020-06-02 00:59:37.2081 INFO connection successful
 2020-06-02 00:59:47.5835 INFO connection successful
+2020-06-02 14:21:07.5319 INFO connection successful
+2020-06-02 14:21:07.6456 INFO connection successful
+2020-06-02 14:21:08.5203 INFO connection successful
+2020-06-02 14:21:29.9113 ERROR System.ArgumentException: Значение аргумента расположения должно быть в диапазоне от 0 до 100.
+Имя параметра: position
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(Double position, Boolean validateInput)
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(Double position)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 374
+2020-06-02 14:22:20.7915 INFO connection successful
+2020-06-02 14:24:35.1172 INFO connection successful
+2020-06-02 14:24:35.2399 INFO connection successful
+2020-06-02 14:24:36.6124 INFO connection successful
+2020-06-02 14:25:08.0830 ERROR System.ArgumentException: Значение аргумента расположения должно быть в диапазоне от 0 до 100.
+Имя параметра: position
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(Double position, Boolean validateInput)
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(Double position)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 374
+2020-06-02 14:25:26.3377 ERROR System.ArgumentException: Значение аргумента расположения должно быть в диапазоне от 0 до 100.
+Имя параметра: position
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(Double position, Boolean validateInput)
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(Double position)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 374
+2020-06-02 14:30:11.3769 INFO connection successful
+2020-06-02 14:30:11.5224 INFO connection successful
+2020-06-02 14:30:20.8069 INFO connection successful
+2020-06-02 14:38:32.2143 INFO connection successful
+2020-06-02 14:38:32.3946 INFO connection successful
+2020-06-02 14:38:33.7410 INFO connection successful
+2020-06-02 14:46:18.5705 INFO connection successful
+2020-06-02 14:46:18.7391 INFO connection successful
+2020-06-02 14:46:20.6579 INFO connection successful
+2020-06-02 14:46:22.7377 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:50.5442 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:51.9637 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:52.3769 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:52.7584 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:53.2528 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:53.4112 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:53.5207 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:53.6383 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:53.7744 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:53.8781 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:54.0188 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:54.1283 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:54.2401 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:54.3478 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:54.4525 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:54.5508 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:54.6796 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:54.7913 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:54.9020 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:55.0187 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:55.1466 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:55.2804 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:55.3908 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:55.5161 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:55.6374 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:55.7480 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:55.8888 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:56.0114 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:56.1394 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:56.2468 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:56.3817 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:56.5015 INFO 27.05.2020 0:00:00
+2020-06-02 14:46:56.5902 INFO 27.05.2020 0:00:00
+2020-06-02 14:47:26.9142 INFO connection successful
+2020-06-02 14:47:27.1361 INFO connection successful
+2020-06-02 14:47:36.3825 INFO connection successful
+2020-06-02 14:47:39.6026 INFO 2020
+2020-06-02 14:47:47.3664 INFO 2020
+2020-06-02 14:47:47.8352 INFO 2020
+2020-06-02 14:47:47.9746 INFO 2020
+2020-06-02 14:47:48.0761 INFO 2020
+2020-06-02 14:47:48.1782 INFO 2020
+2020-06-02 14:47:48.3053 INFO 2020
+2020-06-02 14:47:48.3922 INFO 2020
+2020-06-02 14:47:48.5049 INFO 2020
+2020-06-02 14:47:48.6049 INFO 2020
+2020-06-02 14:47:48.7222 INFO 2020
+2020-06-02 14:47:48.8239 INFO 2020
+2020-06-02 14:47:48.9353 INFO 2020
+2020-06-02 14:47:49.0350 INFO 2020
+2020-06-02 14:47:49.1547 INFO 2020
+2020-06-02 14:47:49.2494 INFO 2020
+2020-06-02 14:47:49.3777 INFO 2020
+2020-06-02 14:47:49.5024 INFO 2020
+2020-06-02 14:47:49.6087 INFO 2020
+2020-06-02 14:47:49.7351 INFO 2020
+2020-06-02 14:47:49.8531 INFO 2020
+2020-06-02 14:47:49.9829 INFO 2020
+2020-06-02 14:47:50.0707 INFO 2020
+2020-06-02 14:47:50.2068 INFO 2020
+2020-06-02 14:47:50.3156 INFO 2020
+2020-06-02 14:47:50.4389 INFO 2020
+2020-06-02 14:47:50.5486 INFO 2020
+2020-06-02 14:47:50.6553 INFO 2020
+2020-06-02 14:47:50.7959 INFO 2020
+2020-06-02 14:47:50.8892 INFO 2020
+2020-06-02 14:47:51.0194 INFO 2020
+2020-06-02 14:47:51.1341 INFO 2020
+2020-06-02 14:47:51.2508 INFO 2020
+2020-06-02 14:47:51.3804 INFO 2020
+2020-06-02 14:47:51.5001 INFO 2020
+2020-06-02 14:47:51.6218 INFO 2020
+2020-06-02 14:47:51.7478 INFO 2020
+2020-06-02 14:47:51.8828 INFO 2020
+2020-06-02 14:47:51.9926 INFO 2020
+2020-06-02 14:47:52.1138 INFO 2020
+2020-06-02 14:47:52.2194 INFO 2020
+2020-06-02 14:47:52.3358 INFO 2020
+2020-06-02 14:47:52.4240 INFO 2020
+2020-06-02 14:47:52.5363 INFO 2020
+2020-06-02 14:47:52.6649 INFO 2020
+2020-06-02 14:47:52.7668 INFO 2020
+2020-06-02 14:47:52.8905 INFO 2020
+2020-06-02 14:47:52.9912 INFO 2020
+2020-06-02 14:47:53.1215 INFO 2020
+2020-06-02 14:47:53.2390 INFO 2020
+2020-06-02 14:47:53.3802 INFO 2020
+2020-06-02 14:47:53.4776 INFO 2020
+2020-06-02 14:47:53.6375 INFO 2020
+2020-06-02 14:47:53.7322 INFO 2020
+2020-06-02 14:47:53.8489 INFO 2020
+2020-06-02 14:47:53.9589 INFO 2020
+2020-06-02 14:47:54.0734 INFO 2020
+2020-06-02 14:47:54.2027 INFO 2020
+2020-06-02 14:47:54.3081 INFO 2020
+2020-06-02 14:47:54.4405 INFO 2020
+2020-06-02 14:47:54.5562 INFO 2020
+2020-06-02 14:47:54.6739 INFO 2020
+2020-06-02 14:47:54.7697 INFO 2020
+2020-06-02 14:47:54.9378 INFO 2020
+2020-06-02 14:47:55.0236 INFO 2020
+2020-06-02 14:47:55.1223 INFO 2020
+2020-06-02 14:47:55.2682 INFO 2020
+2020-06-02 14:47:55.3772 INFO 2020
+2020-06-02 14:47:55.5158 INFO 2020
+2020-06-02 14:47:55.6161 INFO 2020
+2020-06-02 14:47:55.7248 INFO 2020
+2020-06-02 14:47:55.8734 INFO 2020
+2020-06-02 14:47:56.0091 INFO 2020
+2020-06-02 14:47:56.1366 INFO 2020
+2020-06-02 14:47:56.2589 INFO 2020
+2020-06-02 14:47:56.3516 INFO 2020
+2020-06-02 14:47:56.4549 INFO 2020
+2020-06-02 14:47:56.5727 INFO 2020
+2020-06-02 14:47:56.6934 INFO 2020
+2020-06-02 14:47:56.8520 INFO 2020
+2020-06-02 14:47:56.9407 INFO 2020
+2020-06-02 14:47:57.0893 INFO 2020
+2020-06-02 14:47:57.1772 INFO 2020
+2020-06-02 14:47:57.3170 INFO 2020
+2020-06-02 14:47:57.4386 INFO 2020
+2020-06-02 14:47:57.5773 INFO 2020
+2020-06-02 14:47:57.6820 INFO 2020
+2020-06-02 14:47:57.8176 INFO 2020
+2020-06-02 14:47:57.9308 INFO 2020
+2020-06-02 14:47:58.0724 INFO 2020
+2020-06-02 14:47:58.1958 INFO 2020
+2020-06-02 14:47:58.3097 INFO 2020
+2020-06-02 14:47:58.4190 INFO 2020
+2020-06-02 14:47:58.5388 INFO 2020
+2020-06-02 14:47:58.6421 INFO 2020
+2020-06-02 14:47:58.7533 INFO 2020
+2020-06-02 14:47:58.8407 INFO 2020
+2020-06-02 14:47:58.9739 INFO 2020
+2020-06-02 14:47:59.0834 INFO 2020
+2020-06-02 14:47:59.2215 INFO 2020
+2020-06-02 14:47:59.3403 INFO 2020
+2020-06-02 14:47:59.4364 INFO 2020
+2020-06-02 14:47:59.5592 INFO 2020
+2020-06-02 14:47:59.6742 INFO 2020
+2020-06-02 14:47:59.7822 INFO 2020
+2020-06-02 14:47:59.9040 INFO 2020
+2020-06-02 14:48:00.0222 INFO 2020
+2020-06-02 14:48:00.1560 INFO 2020
+2020-06-02 14:48:00.2886 INFO 2020
+2020-06-02 14:48:00.4128 INFO 2020
+2020-06-02 14:48:00.5558 INFO 2020
+2020-06-02 14:48:00.6682 INFO 2020
+2020-06-02 14:48:00.7829 INFO 2020
+2020-06-02 14:48:00.8918 INFO 2020
+2020-06-02 14:48:01.0085 INFO 2020
+2020-06-02 14:48:01.1162 INFO 2020
+2020-06-02 14:48:01.2839 INFO 2020
+2020-06-02 14:48:01.3875 INFO 2020
+2020-06-02 14:48:01.5063 INFO 2020
+2020-06-02 14:48:01.6340 INFO 2020
+2020-06-02 14:48:01.7220 INFO 2020
+2020-06-02 14:48:01.8535 INFO 2020
+2020-06-02 14:48:01.9561 INFO 2020
+2020-06-02 14:48:02.0858 INFO 2020
+2020-06-02 14:48:02.2184 INFO 2020
+2020-06-02 14:48:02.3491 INFO 2020
+2020-06-02 14:48:02.4735 INFO 2020
+2020-06-02 14:48:02.5830 INFO 2020
+2020-06-02 14:48:02.7055 INFO 2020
+2020-06-02 14:48:02.8394 INFO 2020
+2020-06-02 14:48:02.9576 INFO 2020
+2020-06-02 14:48:03.0913 INFO 2020
+2020-06-02 14:48:12.8727 INFO connection successful
+2020-06-02 14:48:13.0787 INFO connection successful
+2020-06-02 14:48:14.4983 INFO connection successful
+2020-06-02 14:48:17.6337 INFO connection successful
+2020-06-02 14:48:19.3618 INFO 5
+2020-06-02 14:48:21.8139 INFO 5
+2020-06-02 14:48:22.3059 INFO 5
+2020-06-02 14:48:22.4355 INFO 5
+2020-06-02 14:48:22.5386 INFO 5
+2020-06-02 14:48:22.6439 INFO 5
+2020-06-02 14:48:22.7590 INFO 5
+2020-06-02 14:48:22.9099 INFO 5
+2020-06-02 14:48:23.0057 INFO 5
+2020-06-02 14:48:23.1234 INFO 5
+2020-06-02 14:48:23.2221 INFO 5
+2020-06-02 14:48:23.3228 INFO 5
+2020-06-02 14:48:23.4274 INFO 5
+2020-06-02 14:48:23.5381 INFO 5
+2020-06-02 14:48:23.6562 INFO 5
+2020-06-02 14:48:23.7556 INFO 5
+2020-06-02 14:48:23.8738 INFO 5
+2020-06-02 14:48:23.9686 INFO 5
+2020-06-02 14:48:24.0643 INFO 5
+2020-06-02 14:48:24.1862 INFO 5
+2020-06-02 14:48:24.3171 INFO 5
+2020-06-02 14:48:24.4416 INFO 5
+2020-06-02 14:48:24.5411 INFO 5
+2020-06-02 14:48:24.6414 INFO 5
+2020-06-02 14:48:24.7525 INFO 5
+2020-06-02 14:48:24.8645 INFO 5
+2020-06-02 14:48:24.9522 INFO 5
+2020-06-02 14:48:25.0620 INFO 5
+2020-06-02 14:48:25.1757 INFO 5
+2020-06-02 14:48:25.2804 INFO 5
+2020-06-02 14:48:25.3811 INFO 5
+2020-06-02 14:48:25.4945 INFO 5
+2020-06-02 14:48:25.6112 INFO 5
+2020-06-02 14:48:25.7283 INFO 5
+2020-06-02 14:48:25.8400 INFO 5
+2020-06-02 14:48:25.9337 INFO 5
+2020-06-02 14:48:26.0345 INFO 5
+2020-06-02 14:48:36.8262 INFO connection successful
+2020-06-02 14:48:36.9745 INFO connection successful
+2020-06-02 14:48:43.1872 INFO connection successful
+2020-06-02 14:48:45.7325 INFO 14,5168536111111
+2020-06-02 15:00:02.2450 INFO connection successful
+2020-06-02 15:00:02.4492 INFO connection successful
+2020-06-02 15:00:03.8669 INFO connection successful
+2020-06-02 15:00:09.3905 INFO connection successful
+2020-06-02 15:00:11.8309 INFO 14,5168536111111
+2020-06-02 15:01:04.2193 INFO connection successful
+2020-06-02 15:01:04.3829 INFO connection successful
+2020-06-02 15:01:08.5482 INFO connection successful
+2020-06-02 15:01:11.5055 INFO 22,7101121666667
+2020-06-02 15:02:02.9363 INFO connection successful
+2020-06-02 15:02:03.1372 INFO connection successful
+2020-06-02 15:02:06.4753 INFO connection successful
+2020-06-02 15:02:08.7026 INFO 8,71011216666667
+2020-06-02 15:02:16.1953 INFO 8,71027733333333
+2020-06-02 15:02:39.8435 INFO connection successful
+2020-06-02 15:02:40.0120 INFO connection successful
+2020-06-02 15:02:41.1436 INFO connection successful
+2020-06-02 15:02:44.4618 INFO connection successful
+2020-06-02 15:02:46.8833 INFO 14,5168536111111
+2020-06-02 15:02:52.0386 INFO 14,5171288888889
+2020-06-02 15:03:41.4755 INFO connection successful
+2020-06-02 15:03:41.6682 INFO connection successful
+2020-06-02 15:03:45.2947 INFO connection successful
+2020-06-02 15:03:48.2762 INFO 14,5168536111111
+2020-06-02 15:05:43.9638 INFO connection successful
+2020-06-02 15:05:44.1604 INFO connection successful
+2020-06-02 15:05:45.0534 INFO connection successful
+2020-06-02 15:05:48.8263 INFO connection successful
+2020-06-02 15:06:40.8595 INFO connection successful
+2020-06-02 15:06:41.0480 INFO connection successful
+2020-06-02 15:06:43.9507 INFO connection successful
+2020-06-02 15:08:04.5563 INFO connection successful
+2020-06-02 15:08:04.7233 INFO connection successful
+2020-06-02 15:08:05.8542 INFO connection successful
+2020-06-02 15:08:09.4390 INFO connection successful
+2020-06-02 15:08:52.4811 INFO connection successful
+2020-06-02 15:08:52.6736 INFO connection successful
+2020-06-02 15:08:53.8299 INFO connection successful
+2020-06-02 15:08:56.9072 INFO connection successful
+2020-06-02 15:11:06.2492 INFO connection successful
+2020-06-02 15:11:06.4591 INFO connection successful
+2020-06-02 15:11:09.5276 INFO connection successful
+2020-06-02 15:11:21.1742 INFO 31
+2020-06-02 15:12:41.0709 INFO connection successful
+2020-06-02 15:12:41.2454 INFO connection successful
+2020-06-02 15:12:45.0137 INFO connection successful
+2020-06-02 15:14:22.8762 INFO connection successful
+2020-06-02 15:14:23.0431 INFO connection successful
+2020-06-02 15:14:26.0149 INFO connection successful
+2020-06-02 15:15:42.5996 INFO connection successful
+2020-06-02 15:15:42.7892 INFO connection successful
+2020-06-02 15:15:46.8204 INFO connection successful
+2020-06-02 15:30:54.4761 INFO connection successful
+2020-06-02 15:30:54.6596 INFO connection successful
+2020-06-02 15:30:57.9599 INFO connection successful
+2020-06-02 15:31:00.2439 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 85
+2020-06-02 15:31:06.6089 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 85
+2020-06-02 15:31:10.2326 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 85
+2020-06-02 15:31:13.1376 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 85
+2020-06-02 15:31:56.5394 INFO connection successful
+2020-06-02 15:31:56.6890 INFO connection successful
+2020-06-02 15:31:58.2398 INFO connection successful
+2020-06-02 15:32:02.7951 ERROR System.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 85
+2020-06-02 15:32:26.8154 INFO connection successful
+2020-06-02 15:32:26.9626 INFO connection successful
+2020-06-02 15:32:28.6722 INFO connection successful
+2020-06-02 15:32:30.6509 INFO connection successful
+2020-06-02 15:32:32.5469 INFO connection successful
+2020-06-02 15:32:33.3829 ERROR System.ArgumentException: Элемент диаграммы с именем "vrSaw" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 89
+2020-06-02 15:32:36.0063 INFO connection successful
+2020-06-02 15:32:38.4880 INFO connection successful
+2020-06-02 15:32:42.2797 ERROR System.ArgumentException: Элемент диаграммы с именем "vrSaw" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 89
+2020-06-02 15:32:51.1513 INFO connection successful
+2020-06-02 15:36:20.7427 INFO connection successful
+2020-06-02 15:36:20.9545 INFO connection successful
+2020-06-02 15:36:22.0661 INFO connection successful
+2020-06-02 15:37:12.3521 INFO connection successful
+2020-06-02 15:37:12.5385 INFO connection successful
+2020-06-02 15:37:15.2502 INFO connection successful
+2020-06-02 15:37:55.6166 INFO connection successful
+2020-06-02 15:37:55.7831 INFO connection successful
+2020-06-02 15:37:56.6740 INFO connection successful
+2020-06-02 15:38:01.7642 INFO connection successful
+2020-06-02 15:40:44.8760 INFO connection successful
+2020-06-02 15:40:45.0864 INFO connection successful
+2020-06-02 15:40:46.4718 INFO connection successful
+2020-06-02 15:40:48.5052 INFO connection successful
+2020-06-02 15:40:50.1528 INFO connection successful
+2020-06-02 15:41:59.0759 INFO connection successful
+2020-06-02 15:41:59.2574 INFO connection successful
+2020-06-02 15:42:02.3207 INFO connection successful
+2020-06-02 15:42:04.7967 INFO connection successful
+2020-06-02 15:42:07.7749 INFO connection successful
+2020-06-02 15:44:13.3074 ERROR System.ArgumentException: Значение аргумента расположения должно быть в диапазоне от 0 до 100.
+Имя параметра: position
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(Double position, Boolean validateInput)
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(Double position)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 395
+2020-06-02 15:44:34.1181 INFO connection successful
+2020-06-02 15:44:34.5432 ERROR System.ArgumentException: Элемент диаграммы с именем "vrSinusoid" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 89
+2020-06-02 15:44:36.3809 INFO connection successful
+2020-06-02 15:44:36.7104 ERROR System.ArgumentException: Элемент диаграммы с именем "vrSinusoid" уже существует в "SeriesCollection".
+   в System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1.InsertItem(Int32 index, T item)
+   в System.Collections.ObjectModel.Collection`1.Add(T item)
+   в System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(String name)
+   в NURESCADA.StaticForm.BuildingChart(String selected, String timeFormat) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 89
+2020-06-02 15:44:40.2967 INFO connection successful
+2020-06-02 15:44:48.1442 INFO connection successful
+2020-06-02 15:45:54.4447 INFO connection successful
+2020-06-02 15:54:35.1594 INFO connection successful
+2020-06-02 15:54:35.2673 INFO connection successful
+2020-06-02 15:54:36.7201 INFO connection successful
+2020-06-02 15:55:43.2311 INFO connection successful
+2020-06-02 15:55:43.3458 INFO connection successful
+2020-06-02 15:55:44.9069 INFO connection successful
+2020-06-02 15:56:05.1752 INFO connection successful
+2020-06-02 15:57:14.6955 INFO connection successful
+2020-06-02 15:57:14.8212 INFO connection successful
+2020-06-02 15:57:17.4779 INFO connection successful
+2020-06-02 15:57:43.3990 INFO connection successful
+2020-06-02 15:57:43.5187 INFO connection successful
+2020-06-02 15:57:44.7889 INFO connection successful
+2020-06-02 15:57:57.7969 ERROR System.ArgumentException: Значение аргумента расположения должно быть в диапазоне от 0 до 100.
+Имя параметра: position
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(Double position, Boolean validateInput)
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(Double position)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 389
+2020-06-02 15:59:40.2134 INFO connection successful
+2020-06-02 15:59:40.3181 INFO connection successful
+2020-06-02 15:59:41.6856 INFO connection successful
+2020-06-02 16:08:59.9540 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:09:02.9762 INFO connection successful
+2020-06-02 16:09:03.9896 INFO connection successful
+2020-06-02 16:09:04.7207 INFO connection successful
+2020-06-02 16:09:05.7047 INFO connection successful
+2020-06-02 16:09:06.7056 INFO connection successful
+2020-06-02 16:09:07.7236 INFO connection successful
+2020-06-02 16:09:11.6410 INFO connection successful
+2020-06-02 16:09:11.8175 INFO connection successful
+2020-06-02 16:09:12.7087 INFO connection successful
+2020-06-02 16:09:13.7048 INFO connection successful
+2020-06-02 16:09:14.7057 INFO connection successful
+2020-06-02 16:09:15.7057 INFO connection successful
+2020-06-02 16:09:16.7247 INFO connection successful
+2020-06-02 16:09:17.7177 INFO connection successful
+2020-06-02 16:09:18.7181 INFO connection successful
+2020-06-02 16:09:19.7086 INFO connection successful
+2020-06-02 16:09:20.7049 INFO connection successful
+2020-06-02 16:09:21.7069 INFO connection successful
+2020-06-02 16:09:22.7085 INFO connection successful
+2020-06-02 16:09:23.7074 INFO connection successful
+2020-06-02 16:09:24.7065 INFO connection successful
+2020-06-02 16:09:25.7193 INFO connection successful
+2020-06-02 16:09:26.7069 INFO connection successful
+2020-06-02 16:09:27.7053 INFO connection successful
+2020-06-02 16:09:28.7036 INFO connection successful
+2020-06-02 16:09:29.7063 INFO connection successful
+2020-06-02 16:09:30.7048 INFO connection successful
+2020-06-02 16:09:31.7094 INFO connection successful
+2020-06-02 16:09:32.7163 INFO connection successful
+2020-06-02 16:09:33.7092 INFO connection successful
+2020-06-02 16:09:34.7062 INFO connection successful
+2020-06-02 16:09:35.7081 INFO connection successful
+2020-06-02 16:09:36.7097 INFO connection successful
+2020-06-02 16:09:37.7049 INFO connection successful
+2020-06-02 16:09:38.7066 INFO connection successful
+2020-06-02 16:09:39.7075 INFO connection successful
+2020-06-02 16:09:40.7045 INFO connection successful
+2020-06-02 16:09:41.7074 INFO connection successful
+2020-06-02 16:09:42.7045 INFO connection successful
+2020-06-02 16:09:43.7059 INFO connection successful
+2020-06-02 16:09:44.7192 INFO connection successful
+2020-06-02 16:09:45.7411 INFO connection successful
+2020-06-02 16:09:46.7074 INFO connection successful
+2020-06-02 16:09:47.7039 INFO connection successful
+2020-06-02 16:09:48.7074 INFO connection successful
+2020-06-02 16:09:49.7037 INFO connection successful
+2020-06-02 16:09:50.7028 INFO connection successful
+2020-06-02 16:09:51.7065 INFO connection successful
+2020-06-02 16:09:52.7089 INFO connection successful
+2020-06-02 16:09:53.7069 INFO connection successful
+2020-06-02 16:09:54.7085 INFO connection successful
+2020-06-02 16:09:55.7034 INFO connection successful
+2020-06-02 16:09:56.7061 INFO connection successful
+2020-06-02 16:09:57.7061 INFO connection successful
+2020-06-02 16:09:58.7064 INFO connection successful
+2020-06-02 16:09:59.7030 INFO connection successful
+2020-06-02 16:10:00.7385 INFO connection successful
+2020-06-02 16:10:01.7080 INFO connection successful
+2020-06-02 16:10:02.7038 INFO connection successful
+2020-06-02 16:10:03.7062 INFO connection successful
+2020-06-02 16:10:04.7082 INFO connection successful
+2020-06-02 16:10:05.7104 INFO connection successful
+2020-06-02 16:10:06.7076 INFO connection successful
+2020-06-02 16:10:07.7055 INFO connection successful
+2020-06-02 16:10:08.7089 INFO connection successful
+2020-06-02 16:10:09.7074 INFO connection successful
+2020-06-02 16:10:10.7056 INFO connection successful
+2020-06-02 16:10:11.7051 INFO connection successful
+2020-06-02 16:10:12.7101 INFO connection successful
+2020-06-02 16:10:13.7058 INFO connection successful
+2020-06-02 16:10:14.7350 INFO connection successful
+2020-06-02 16:10:15.7063 INFO connection successful
+2020-06-02 16:10:16.7083 INFO connection successful
+2020-06-02 16:10:17.7071 INFO connection successful
+2020-06-02 16:10:18.7026 INFO connection successful
+2020-06-02 16:10:19.7082 INFO connection successful
+2020-06-02 16:10:20.7070 INFO connection successful
+2020-06-02 16:10:21.7058 INFO connection successful
+2020-06-02 16:10:22.7047 INFO connection successful
+2020-06-02 16:10:23.7056 INFO connection successful
+2020-06-02 16:10:24.7118 INFO connection successful
+2020-06-02 16:10:25.7054 INFO connection successful
+2020-06-02 16:10:26.7120 INFO connection successful
+2020-06-02 16:10:27.7060 INFO connection successful
+2020-06-02 16:10:28.7092 INFO connection successful
+2020-06-02 16:10:29.7045 INFO connection successful
+2020-06-02 16:10:30.7030 INFO connection successful
+2020-06-02 16:10:31.7032 INFO connection successful
+2020-06-02 16:10:32.7069 INFO connection successful
+2020-06-02 16:10:33.7039 INFO connection successful
+2020-06-02 16:10:34.7053 INFO connection successful
+2020-06-02 16:10:35.7037 INFO connection successful
+2020-06-02 16:10:36.7057 INFO connection successful
+2020-06-02 16:13:59.3390 INFO connection successful
+2020-06-02 16:14:00.0386 INFO connection successful
+2020-06-02 16:14:01.0205 INFO connection successful
+2020-06-02 16:14:02.0344 INFO connection successful
+2020-06-02 16:14:03.0377 INFO connection successful
+2020-06-02 16:14:04.0306 INFO connection successful
+2020-06-02 16:14:05.0191 INFO connection successful
+2020-06-02 16:14:06.0216 INFO connection successful
+2020-06-02 16:14:07.0160 INFO connection successful
+2020-06-02 16:15:45.4839 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:15:51.4777 INFO connection successful
+2020-06-02 16:15:52.2430 INFO connection successful
+2020-06-02 16:15:56.2512 INFO connection successful
+2020-06-02 16:15:57.2352 INFO connection successful
+2020-06-02 16:15:58.2339 INFO connection successful
+2020-06-02 16:15:59.3671 INFO connection successful
+2020-06-02 16:16:00.2256 INFO connection successful
+2020-06-02 16:16:01.2347 INFO connection successful
+2020-06-02 16:16:02.2321 INFO connection successful
+2020-06-02 16:16:16.1055 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:16:19.9180 INFO connection successful
+2020-06-02 16:16:20.6617 INFO connection successful
+2020-06-02 16:16:21.6467 INFO connection successful
+2020-06-02 16:16:22.6628 INFO connection successful
+2020-06-02 16:16:23.6449 INFO connection successful
+2020-06-02 16:16:24.6816 INFO connection successful
+2020-06-02 16:16:25.6618 INFO connection successful
+2020-06-02 16:16:26.6637 INFO connection successful
+2020-06-02 16:16:27.6436 INFO connection successful
+2020-06-02 16:16:28.6479 INFO connection successful
+2020-06-02 16:16:29.6470 INFO connection successful
+2020-06-02 16:16:30.6607 INFO connection successful
+2020-06-02 16:16:31.6686 INFO connection successful
+2020-06-02 16:16:32.6490 INFO connection successful
+2020-06-02 16:16:56.2612 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:16:59.9947 INFO connection successful
+2020-06-02 16:17:00.7363 INFO connection successful
+2020-06-02 16:17:01.7205 INFO connection successful
+2020-06-02 16:17:02.8662 INFO connection successful
+2020-06-02 16:17:03.7332 INFO connection successful
+2020-06-02 16:17:04.7314 INFO connection successful
+2020-06-02 16:17:05.7371 INFO connection successful
+2020-06-02 16:17:06.7230 INFO connection successful
+2020-06-02 16:17:07.7212 INFO connection successful
+2020-06-02 16:17:08.7195 INFO connection successful
+2020-06-02 16:17:09.7202 INFO connection successful
+2020-06-02 16:17:10.7194 INFO connection successful
+2020-06-02 16:17:11.7216 INFO connection successful
+2020-06-02 16:17:12.7216 INFO connection successful
+2020-06-02 16:17:13.7198 INFO connection successful
+2020-06-02 16:17:14.7237 INFO connection successful
+2020-06-02 16:17:15.7194 INFO connection successful
+2020-06-02 16:17:16.7230 INFO connection successful
+2020-06-02 16:17:17.7185 INFO connection successful
+2020-06-02 16:17:18.7234 INFO connection successful
+2020-06-02 16:17:19.7187 INFO connection successful
+2020-06-02 16:17:20.7222 INFO connection successful
+2020-06-02 16:17:21.7232 INFO connection successful
+2020-06-02 16:17:22.7237 INFO connection successful
+2020-06-02 16:17:23.7222 INFO connection successful
+2020-06-02 16:17:24.7376 INFO connection successful
+2020-06-02 16:17:25.8206 INFO connection successful
+2020-06-02 16:17:26.7982 INFO connection successful
+2020-06-02 16:17:27.7206 INFO connection successful
+2020-06-02 16:17:28.7213 INFO connection successful
+2020-06-02 16:17:29.7248 INFO connection successful
+2020-06-02 16:17:30.7254 INFO connection successful
+2020-06-02 16:17:31.7196 INFO connection successful
+2020-06-02 16:17:32.7230 INFO connection successful
+2020-06-02 16:17:33.7422 INFO connection successful
+2020-06-02 16:17:34.7240 INFO connection successful
+2020-06-02 16:17:35.7184 INFO connection successful
+2020-06-02 16:17:36.7209 INFO connection successful
+2020-06-02 16:17:37.7193 INFO connection successful
+2020-06-02 16:17:38.7224 INFO connection successful
+2020-06-02 16:17:39.7233 INFO connection successful
+2020-06-02 16:17:40.7235 INFO connection successful
+2020-06-02 16:17:41.7224 INFO connection successful
+2020-06-02 16:17:42.7228 INFO connection successful
+2020-06-02 16:17:43.7218 INFO connection successful
+2020-06-02 16:17:44.7217 INFO connection successful
+2020-06-02 16:17:45.7232 INFO connection successful
+2020-06-02 16:17:46.7244 INFO connection successful
+2020-06-02 16:17:47.7225 INFO connection successful
+2020-06-02 16:17:48.7222 INFO connection successful
+2020-06-02 16:17:49.7234 INFO connection successful
+2020-06-02 16:17:50.7213 INFO connection successful
+2020-06-02 16:17:51.7188 INFO connection successful
+2020-06-02 16:17:52.7367 INFO connection successful
+2020-06-02 16:17:53.7294 INFO connection successful
+2020-06-02 16:17:54.7205 INFO connection successful
+2020-06-02 16:17:55.7201 INFO connection successful
+2020-06-02 16:17:56.7174 INFO connection successful
+2020-06-02 16:17:57.7214 INFO connection successful
+2020-06-02 16:17:58.7344 INFO connection successful
+2020-06-02 16:17:59.7205 INFO connection successful
+2020-06-02 16:18:00.7213 INFO connection successful
+2020-06-02 16:18:01.7217 INFO connection successful
+2020-06-02 16:18:02.7267 INFO connection successful
+2020-06-02 16:18:03.7180 INFO connection successful
+2020-06-02 16:18:04.7259 INFO connection successful
+2020-06-02 16:18:05.7188 INFO connection successful
+2020-06-02 16:18:06.7224 INFO connection successful
+2020-06-02 16:18:07.7241 INFO connection successful
+2020-06-02 16:18:08.7214 INFO connection successful
+2020-06-02 16:18:09.7175 INFO connection successful
+2020-06-02 16:18:10.7336 INFO connection successful
+2020-06-02 16:18:11.7374 INFO connection successful
+2020-06-02 16:18:12.7190 INFO connection successful
+2020-06-02 16:18:13.7166 INFO connection successful
+2020-06-02 16:18:14.7260 INFO connection successful
+2020-06-02 16:18:15.7219 INFO connection successful
+2020-06-02 16:18:16.7204 INFO connection successful
+2020-06-02 16:18:17.7218 INFO connection successful
+2020-06-02 16:18:18.7214 INFO connection successful
+2020-06-02 16:18:19.7311 INFO connection successful
+2020-06-02 16:18:20.7332 INFO connection successful
+2020-06-02 16:18:21.7380 INFO connection successful
+2020-06-02 16:18:22.7180 INFO connection successful
+2020-06-02 16:18:23.7179 INFO connection successful
+2020-06-02 16:18:24.7232 INFO connection successful
+2020-06-02 16:18:25.7185 INFO connection successful
+2020-06-02 16:18:26.7203 INFO connection successful
+2020-06-02 16:18:27.7172 INFO connection successful
+2020-06-02 16:18:28.7224 INFO connection successful
+2020-06-02 16:18:29.7184 INFO connection successful
+2020-06-02 16:18:30.7196 INFO connection successful
+2020-06-02 16:18:31.7311 INFO connection successful
+2020-06-02 16:18:32.7219 INFO connection successful
+2020-06-02 16:19:48.1447 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:19:51.1566 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:19:51.6974 INFO connection successful
+2020-06-02 16:19:52.4884 INFO connection successful
+2020-06-02 16:19:53.4767 INFO connection successful
+2020-06-02 16:19:54.4574 INFO connection successful
+2020-06-02 16:19:55.4551 INFO connection successful
+2020-06-02 16:19:56.4526 INFO connection successful
+2020-06-02 16:19:57.4654 INFO connection successful
+2020-06-02 16:19:58.4653 INFO connection successful
+2020-06-02 16:19:59.4525 INFO connection successful
+2020-06-02 16:20:00.4548 INFO connection successful
+2020-06-02 16:20:01.4735 INFO connection successful
+2020-06-02 16:20:02.4634 INFO connection successful
+2020-06-02 16:20:24.5129 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:22:20.4798 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:22:22.8788 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:22:23.2770 INFO connection successful
+2020-06-02 16:22:24.0920 INFO connection successful
+2020-06-02 16:22:25.0719 INFO connection successful
+2020-06-02 16:22:26.0356 INFO connection successful
+2020-06-02 16:22:27.0459 INFO connection successful
+2020-06-02 16:22:28.0303 INFO connection successful
+2020-06-02 16:22:29.0303 INFO connection successful
+2020-06-02 16:22:30.0503 INFO connection successful
+2020-06-02 16:22:31.0459 INFO connection successful
+2020-06-02 16:22:32.0472 INFO connection successful
+2020-06-02 16:22:33.0457 INFO connection successful
+2020-06-02 16:22:34.0317 INFO connection successful
+2020-06-02 16:22:35.0352 INFO connection successful
+2020-06-02 16:22:36.0307 INFO connection successful
+2020-06-02 16:22:37.0670 INFO connection successful
+2020-06-02 16:22:38.0334 INFO connection successful
+2020-06-02 16:22:39.0338 INFO connection successful
+2020-06-02 16:22:40.0301 INFO connection successful
+2020-06-02 16:23:43.3473 INFO connection successful
+2020-06-02 16:23:44.0968 INFO connection successful
+2020-06-02 16:23:45.0811 INFO connection successful
+2020-06-02 16:23:46.0878 INFO connection successful
+2020-06-02 16:23:47.0888 INFO connection successful
+2020-06-02 16:23:48.0967 INFO connection successful
+2020-06-02 16:23:49.0798 INFO connection successful
+2020-06-02 16:23:50.0803 INFO connection successful
+2020-06-02 16:23:51.0773 INFO connection successful
+2020-06-02 16:23:52.0806 INFO connection successful
+2020-06-02 16:23:53.0798 INFO connection successful
+2020-06-02 16:23:54.0774 INFO connection successful
+2020-06-02 16:23:55.0923 INFO connection successful
+2020-06-02 16:23:56.0911 INFO connection successful
+2020-06-02 16:23:57.0926 INFO connection successful
+2020-06-02 16:23:58.1590 INFO connection successful
+2020-06-02 16:23:59.0830 INFO connection successful
+2020-06-02 16:24:00.0805 INFO connection successful
+2020-06-02 16:24:01.0799 INFO connection successful
+2020-06-02 16:24:02.0831 INFO connection successful
+2020-06-02 16:24:03.0830 INFO connection successful
+2020-06-02 16:24:04.0821 INFO connection successful
+2020-06-02 16:24:05.0796 INFO connection successful
+2020-06-02 16:24:06.1774 INFO connection successful
+2020-06-02 16:24:07.0771 INFO connection successful
+2020-06-02 16:24:08.0807 INFO connection successful
+2020-06-02 16:24:21.9130 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:24:24.5535 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:24:54.3424 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:24:58.2653 INFO connection successful
+2020-06-02 16:24:59.3513 INFO connection successful
+2020-06-02 16:25:00.2661 INFO connection successful
+2020-06-02 16:25:01.2794 INFO connection successful
+2020-06-02 16:25:02.2744 INFO connection successful
+2020-06-02 16:25:03.2829 INFO connection successful
+2020-06-02 16:25:04.2778 INFO connection successful
+2020-06-02 16:25:05.2796 INFO connection successful
+2020-06-02 16:25:06.2673 INFO connection successful
+2020-06-02 16:25:07.2646 INFO connection successful
+2020-06-02 16:25:08.2705 INFO connection successful
+2020-06-02 16:25:09.2665 INFO connection successful
+2020-06-02 16:25:10.2967 INFO connection successful
+2020-06-02 16:25:11.2665 INFO connection successful
+2020-06-02 16:25:12.2670 INFO connection successful
+2020-06-02 16:25:13.2672 INFO connection successful
+2020-06-02 16:25:14.2647 INFO connection successful
+2020-06-02 16:25:15.2676 INFO connection successful
+2020-06-02 16:25:16.2675 INFO connection successful
+2020-06-02 16:25:17.2876 INFO connection successful
+2020-06-02 16:25:18.2825 INFO connection successful
+2020-06-02 16:25:19.2675 INFO connection successful
+2020-06-02 16:25:20.2671 INFO connection successful
+2020-06-02 16:25:21.4068 INFO connection successful
+2020-06-02 16:25:22.4313 INFO connection successful
+2020-06-02 16:25:23.2652 INFO connection successful
+2020-06-02 16:25:24.2647 INFO connection successful
+2020-06-02 16:25:25.2997 INFO connection successful
+2020-06-02 16:25:26.2686 INFO connection successful
+2020-06-02 16:25:27.2664 INFO connection successful
+2020-06-02 16:25:28.2661 INFO connection successful
+2020-06-02 16:25:29.2687 INFO connection successful
+2020-06-02 16:26:26.1792 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:26:29.8859 INFO connection successful
+2020-06-02 16:26:30.9228 INFO connection successful
+2020-06-02 16:26:31.6711 INFO connection successful
+2020-06-02 16:26:32.6570 INFO connection successful
+2020-06-02 16:26:33.6732 INFO connection successful
+2020-06-02 16:26:34.6715 INFO connection successful
+2020-06-02 16:26:35.6701 INFO connection successful
+2020-06-02 16:26:36.6579 INFO connection successful
+2020-06-02 16:26:37.6598 INFO connection successful
+2020-06-02 16:26:38.6613 INFO connection successful
+2020-06-02 16:26:39.6582 INFO connection successful
+2020-06-02 16:26:40.6600 INFO connection successful
+2020-06-02 16:26:41.6554 INFO connection successful
+2020-06-02 16:26:42.6583 INFO connection successful
+2020-06-02 16:26:43.6602 INFO connection successful
+2020-06-02 16:26:44.6666 INFO connection successful
+2020-06-02 16:26:45.7121 INFO connection successful
+2020-06-02 16:26:46.6562 INFO connection successful
+2020-06-02 16:26:47.6570 INFO connection successful
+2020-06-02 16:26:48.6723 INFO connection successful
+2020-06-02 16:26:49.6720 INFO connection successful
+2020-06-02 16:26:50.6679 INFO connection successful
+2020-06-02 16:26:51.6587 INFO connection successful
+2020-06-02 16:26:52.6555 INFO connection successful
+2020-06-02 16:26:53.6554 INFO connection successful
+2020-06-02 16:26:54.6588 INFO connection successful
+2020-06-02 16:26:55.6548 INFO connection successful
+2020-06-02 16:26:56.6552 INFO connection successful
+2020-06-02 16:26:57.6589 INFO connection successful
+2020-06-02 16:26:58.6541 INFO connection successful
+2020-06-02 16:26:59.6582 INFO connection successful
+2020-06-02 16:27:00.6595 INFO connection successful
+2020-06-02 16:27:01.6578 INFO connection successful
+2020-06-02 16:27:02.6565 INFO connection successful
+2020-06-02 16:27:03.6678 INFO connection successful
+2020-06-02 16:27:04.6585 INFO connection successful
+2020-06-02 16:27:05.6702 INFO connection successful
+2020-06-02 16:27:06.6589 INFO connection successful
+2020-06-02 16:27:07.6584 INFO connection successful
+2020-06-02 16:27:08.6566 INFO connection successful
+2020-06-02 16:27:09.6624 INFO connection successful
+2020-06-02 16:27:10.6590 INFO connection successful
+2020-06-02 16:27:11.6587 INFO connection successful
+2020-06-02 16:27:12.6736 INFO connection successful
+2020-06-02 16:27:13.6590 INFO connection successful
+2020-06-02 16:27:14.6542 INFO connection successful
+2020-06-02 16:27:15.6594 INFO connection successful
+2020-06-02 16:27:16.6562 INFO connection successful
+2020-06-02 16:27:17.6582 INFO connection successful
+2020-06-02 16:27:19.3344 INFO connection successful
+2020-06-02 16:27:19.6595 INFO connection successful
+2020-06-02 16:27:20.6564 INFO connection successful
+2020-06-02 16:27:21.6623 INFO connection successful
+2020-06-02 16:27:22.6573 INFO connection successful
+2020-06-02 16:27:23.7316 INFO connection successful
+2020-06-02 16:27:24.6620 INFO connection successful
+2020-06-02 16:27:25.6558 INFO connection successful
+2020-06-02 16:27:26.6590 INFO connection successful
+2020-06-02 16:27:27.6635 INFO connection successful
+2020-06-02 16:27:28.6605 INFO connection successful
+2020-06-02 16:27:29.6571 INFO connection successful
+2020-06-02 16:27:30.6594 INFO connection successful
+2020-06-02 16:27:31.6638 INFO connection successful
+2020-06-02 16:27:32.6593 INFO connection successful
+2020-06-02 16:27:33.6830 INFO connection successful
+2020-06-02 16:27:34.6576 INFO connection successful
+2020-06-02 16:27:35.6586 INFO connection successful
+2020-06-02 16:27:36.7060 INFO connection successful
+2020-06-02 16:27:37.6586 INFO connection successful
+2020-06-02 16:27:38.6579 INFO connection successful
+2020-06-02 16:27:39.6998 INFO connection successful
+2020-06-02 16:27:40.6586 INFO connection successful
+2020-06-02 16:27:41.6571 INFO connection successful
+2020-06-02 16:27:42.6574 INFO connection successful
+2020-06-02 16:27:43.6548 INFO connection successful
+2020-06-02 16:27:44.6628 INFO connection successful
+2020-06-02 16:27:45.6605 INFO connection successful
+2020-06-02 16:27:46.6549 INFO connection successful
+2020-06-02 16:27:47.6601 INFO connection successful
+2020-06-02 16:27:48.6583 INFO connection successful
+2020-06-02 16:29:16.1825 INFO connection successful
+2020-06-02 16:29:20.3423 INFO connection successful
+2020-06-02 16:29:21.3432 INFO connection successful
+2020-06-02 16:29:22.3487 INFO connection successful
+2020-06-02 16:29:23.3317 INFO connection successful
+2020-06-02 16:29:24.3314 INFO connection successful
+2020-06-02 16:29:42.0331 INFO connection successful
+2020-06-02 16:29:48.5845 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:29:51.8610 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   в MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:29:51.9298 INFO connection successful
+2020-06-02 16:29:52.9139 INFO connection successful
+2020-06-02 16:29:54.1602 INFO connection successful
+2020-06-02 16:29:54.8940 INFO connection successful
+2020-06-02 16:29:55.9840 INFO connection successful
+2020-06-02 16:29:56.9031 INFO connection successful
+2020-06-02 16:29:57.8919 INFO connection successful
+2020-06-02 16:29:58.8901 INFO connection successful
+2020-06-02 16:29:59.8983 INFO connection successful
+2020-06-02 16:30:00.9882 INFO connection successful
+2020-06-02 16:30:01.9014 INFO connection successful
+2020-06-02 16:30:02.8919 INFO connection successful
+2020-06-02 16:30:03.8931 INFO connection successful
+2020-06-02 16:35:24.2284 INFO connection successful
+2020-06-02 16:35:25.0080 INFO connection successful
+2020-06-02 16:35:25.9846 INFO connection successful
+2020-06-02 16:35:27.1348 INFO connection successful
+2020-06-02 16:35:27.9846 INFO connection successful
+2020-06-02 16:35:28.9839 INFO connection successful
+2020-06-02 16:35:29.9935 INFO connection successful
+2020-06-02 16:35:31.0329 INFO connection successful
+2020-06-02 16:35:31.9858 INFO connection successful
+2020-06-02 16:35:32.9889 INFO connection successful
+2020-06-02 16:35:33.9857 INFO connection successful
+2020-06-02 16:35:35.0001 INFO connection successful
+2020-06-02 16:35:35.9990 INFO connection successful
+2020-06-02 16:35:36.9870 INFO connection successful
+2020-06-02 16:35:37.9862 INFO connection successful
+2020-06-02 16:35:38.9884 INFO connection successful
+2020-06-02 16:35:39.9880 INFO connection successful
+2020-06-02 16:35:41.0011 INFO connection successful
+2020-06-02 16:35:41.9955 INFO connection successful
+2020-06-02 16:35:42.9881 INFO connection successful
+2020-06-02 16:35:43.9857 INFO connection successful
+2020-06-02 16:35:44.9876 INFO connection successful
+2020-06-02 16:35:45.9905 INFO connection successful
+2020-06-02 16:35:46.9872 INFO connection successful
+2020-06-02 16:35:47.9938 INFO connection successful
+2020-06-02 16:35:48.9866 INFO connection successful
+2020-06-02 16:35:49.9867 INFO connection successful
+2020-06-02 16:35:50.9845 INFO connection successful
+2020-06-02 16:35:51.9850 INFO connection successful
+2020-06-02 16:35:52.9856 INFO connection successful
+2020-06-02 16:35:53.9848 INFO connection successful
+2020-06-02 16:35:54.9904 INFO connection successful
+2020-06-02 16:35:55.9822 INFO connection successful
+2020-06-02 16:35:56.9959 INFO connection successful
+2020-06-02 16:35:57.9958 INFO connection successful
+2020-06-02 16:35:58.9878 INFO connection successful
+2020-06-02 16:36:23.5981 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:36:26.9582 INFO connection successful
+2020-06-02 16:36:27.7529 INFO connection successful
+2020-06-02 16:36:28.7389 INFO connection successful
+2020-06-02 16:36:29.7568 INFO connection successful
+2020-06-02 16:36:30.7521 INFO connection successful
+2020-06-02 16:36:31.7380 INFO connection successful
+2020-06-02 16:36:32.7357 INFO connection successful
+2020-06-02 16:36:33.7348 INFO connection successful
+2020-06-02 16:36:34.7485 INFO connection successful
+2020-06-02 16:36:35.7478 INFO connection successful
+2020-06-02 16:36:36.7351 INFO connection successful
+2020-06-02 16:36:37.7403 INFO connection successful
+2020-06-02 16:36:38.7409 INFO connection successful
+2020-06-02 16:37:00.4584 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:37:03.8503 INFO connection successful
+2020-06-02 16:37:04.6431 INFO connection successful
+2020-06-02 16:37:05.6262 INFO connection successful
+2020-06-02 16:37:06.6562 INFO connection successful
+2020-06-02 16:37:07.6348 INFO connection successful
+2020-06-02 16:37:08.6282 INFO connection successful
+2020-06-02 16:37:09.6249 INFO connection successful
+2020-06-02 16:37:10.6278 INFO connection successful
+2020-06-02 16:37:11.6261 INFO connection successful
+2020-06-02 16:37:12.6278 INFO connection successful
+2020-06-02 16:37:13.6341 INFO connection successful
+2020-06-02 16:37:14.6386 INFO connection successful
+2020-06-02 16:37:15.6271 INFO connection successful
+2020-06-02 16:37:16.6272 INFO connection successful
+2020-06-02 16:37:17.6318 INFO connection successful
+2020-06-02 16:37:18.6264 INFO connection successful
+2020-06-02 16:37:19.6259 INFO connection successful
+2020-06-02 16:37:38.3447 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:37:41.5302 INFO connection successful
+2020-06-02 16:37:42.3069 INFO connection successful
+2020-06-02 16:37:43.3101 INFO connection successful
+2020-06-02 16:37:44.3015 INFO connection successful
+2020-06-02 16:37:45.2985 INFO connection successful
+2020-06-02 16:37:46.3133 INFO connection successful
+2020-06-02 16:37:47.3137 INFO connection successful
+2020-06-02 16:37:48.3013 INFO connection successful
+2020-06-02 16:37:49.3016 INFO connection successful
+2020-06-02 16:37:50.3013 INFO connection successful
+2020-06-02 16:37:51.2978 INFO connection successful
+2020-06-02 16:37:52.3087 INFO connection successful
+2020-06-02 16:37:53.2956 INFO connection successful
+2020-06-02 16:37:54.3239 INFO connection successful
+2020-06-02 16:37:55.2986 INFO connection successful
+2020-06-02 16:37:56.2954 INFO connection successful
+2020-06-02 16:37:57.2983 INFO connection successful
+2020-06-02 16:37:58.3005 INFO connection successful
+2020-06-02 16:37:59.3100 INFO connection successful
+2020-06-02 16:38:00.2973 INFO connection successful
+2020-06-02 16:38:01.2972 INFO connection successful
+2020-06-02 16:38:02.2987 INFO connection successful
+2020-06-02 16:38:03.2981 INFO connection successful
+2020-06-02 16:38:04.4922 INFO connection successful
+2020-06-02 16:38:05.3005 INFO connection successful
+2020-06-02 16:38:06.3174 INFO connection successful
+2020-06-02 16:38:07.2971 INFO connection successful
+2020-06-02 16:38:08.2975 INFO connection successful
+2020-06-02 16:38:44.8786 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:38:47.8810 INFO connection successful
+2020-06-02 16:38:48.6748 INFO connection successful
+2020-06-02 16:38:49.6548 INFO connection successful
+2020-06-02 16:38:50.7267 INFO connection successful
+2020-06-02 16:38:51.6741 INFO connection successful
+2020-06-02 16:38:52.6672 INFO connection successful
+2020-06-02 16:38:53.6729 INFO connection successful
+2020-06-02 16:38:54.6584 INFO connection successful
+2020-06-02 16:38:55.7169 INFO connection successful
+2020-06-02 16:38:56.6590 INFO connection successful
+2020-06-02 16:38:57.6677 INFO connection successful
+2020-06-02 16:38:58.6577 INFO connection successful
+2020-06-02 16:38:59.6623 INFO connection successful
+2020-06-02 16:39:00.6591 INFO connection successful
+2020-06-02 16:39:01.6561 INFO connection successful
+2020-06-02 16:39:02.6703 INFO connection successful
+2020-06-02 16:39:03.6564 INFO connection successful
+2020-06-02 16:39:04.6600 INFO connection successful
+2020-06-02 16:39:05.6570 INFO connection successful
+2020-06-02 16:39:06.6597 INFO connection successful
+2020-06-02 16:39:07.6566 INFO connection successful
+2020-06-02 16:39:21.5675 INFO connection successful
+2020-06-02 16:39:22.3232 INFO connection successful
+2020-06-02 16:39:23.3181 INFO connection successful
+2020-06-02 16:39:24.3236 INFO connection successful
+2020-06-02 16:39:25.3349 INFO connection successful
+2020-06-02 16:39:26.3344 INFO connection successful
+2020-06-02 16:39:27.3140 INFO connection successful
+2020-06-02 16:39:28.3121 INFO connection successful
+2020-06-02 16:39:29.3144 INFO connection successful
+2020-06-02 16:39:30.3150 INFO connection successful
+2020-06-02 16:39:31.3261 INFO connection successful
+2020-06-02 16:39:32.3267 INFO connection successful
+2020-06-02 16:39:33.3168 INFO connection successful
+2020-06-02 16:39:34.3141 INFO connection successful
+2020-06-02 16:39:35.3124 INFO connection successful
+2020-06-02 16:39:36.3155 INFO connection successful
+2020-06-02 16:39:37.3110 INFO connection successful
+2020-06-02 16:39:38.3291 INFO connection successful
+2020-06-02 16:39:39.3169 INFO connection successful
+2020-06-02 16:39:39.8449 INFO connection successful
+2020-06-02 16:39:39.9088 INFO connection successful
+2020-06-02 16:39:40.3164 INFO connection successful
+2020-06-02 16:39:41.3111 INFO connection successful
+2020-06-02 16:39:42.3268 INFO connection successful
+2020-06-02 16:39:43.3361 INFO connection successful
+2020-06-02 16:39:44.2493 INFO connection successful
+2020-06-02 16:39:44.3141 INFO connection successful
+2020-06-02 16:39:45.3388 INFO connection successful
+2020-06-02 16:39:45.3567 INFO connection successful
+2020-06-02 16:39:46.2516 INFO connection successful
+2020-06-02 16:39:46.3164 INFO connection successful
+2020-06-02 16:39:47.2510 INFO connection successful
+2020-06-02 16:39:47.3128 INFO connection successful
+2020-06-02 16:39:48.2549 INFO connection successful
+2020-06-02 16:39:48.3157 INFO connection successful
+2020-06-02 16:39:49.2541 INFO connection successful
+2020-06-02 16:39:49.3125 INFO connection successful
+2020-06-02 16:39:50.2544 INFO connection successful
+2020-06-02 16:39:50.3142 INFO connection successful
+2020-06-02 16:39:51.2521 INFO connection successful
+2020-06-02 16:39:51.3109 INFO connection successful
+2020-06-02 16:39:52.2493 INFO connection successful
+2020-06-02 16:39:52.3181 INFO connection successful
+2020-06-02 16:39:53.2559 INFO connection successful
+2020-06-02 16:39:53.3138 INFO connection successful
+2020-06-02 16:39:54.2655 INFO connection successful
+2020-06-02 16:39:54.3133 INFO connection successful
+2020-06-02 16:39:55.2721 INFO connection successful
+2020-06-02 16:39:55.3161 INFO connection successful
+2020-06-02 16:39:56.2523 INFO connection successful
+2020-06-02 16:39:56.3161 INFO connection successful
+2020-06-02 16:39:57.2545 INFO connection successful
+2020-06-02 16:39:57.3123 INFO connection successful
+2020-06-02 16:39:58.3122 INFO connection successful
+2020-06-02 16:39:59.3102 INFO connection successful
+2020-06-02 16:40:00.3119 INFO connection successful
+2020-06-02 16:40:01.3254 INFO connection successful
+2020-06-02 16:40:02.3133 INFO connection successful
+2020-06-02 16:40:03.3145 INFO connection successful
+2020-06-02 16:40:03.7037 INFO connection successful
+2020-06-02 16:40:04.3127 INFO connection successful
+2020-06-02 16:40:04.7203 INFO connection successful
+2020-06-02 16:40:05.3145 INFO connection successful
+2020-06-02 16:40:05.7029 INFO connection successful
+2020-06-02 16:40:06.3127 INFO connection successful
+2020-06-02 16:40:06.7060 INFO connection successful
+2020-06-02 16:40:07.3119 INFO connection successful
+2020-06-02 16:40:07.7028 INFO connection successful
+2020-06-02 16:40:08.3169 INFO connection successful
+2020-06-02 16:40:08.7062 INFO connection successful
+2020-06-02 16:40:09.3425 INFO connection successful
+2020-06-02 16:40:09.7057 INFO connection successful
+2020-06-02 16:40:10.3265 INFO connection successful
+2020-06-02 16:40:10.7197 INFO connection successful
+2020-06-02 16:40:11.3178 INFO connection successful
+2020-06-02 16:40:11.7027 INFO connection successful
+2020-06-02 16:40:12.3139 INFO connection successful
+2020-06-02 16:40:12.7022 INFO connection successful
+2020-06-02 16:40:13.3151 INFO connection successful
+2020-06-02 16:40:13.8147 INFO connection successful
+2020-06-02 16:40:14.3317 INFO connection successful
+2020-06-02 16:40:14.7030 INFO connection successful
+2020-06-02 16:40:15.3122 INFO connection successful
+2020-06-02 16:40:15.7046 INFO connection successful
+2020-06-02 16:40:16.3104 INFO connection successful
+2020-06-02 16:40:16.7050 INFO connection successful
+2020-06-02 16:40:17.3123 INFO connection successful
+2020-06-02 16:40:17.7058 INFO connection successful
+2020-06-02 16:40:18.3140 INFO connection successful
+2020-06-02 16:40:19.3249 INFO connection successful
+2020-06-02 16:40:20.3276 INFO connection successful
+2020-06-02 16:40:21.3247 INFO connection successful
+2020-06-02 16:40:22.3135 INFO connection successful
+2020-06-02 16:40:23.3132 INFO connection successful
+2020-06-02 16:40:24.3153 INFO connection successful
+2020-06-02 16:40:25.3116 INFO connection successful
+2020-06-02 16:40:26.3139 INFO connection successful
+2020-06-02 16:40:27.3291 INFO connection successful
+2020-06-02 16:40:28.3351 INFO connection successful
+2020-06-02 16:40:29.3242 INFO connection successful
+2020-06-02 16:40:30.3122 INFO connection successful
+2020-06-02 16:40:31.3127 INFO connection successful
+2020-06-02 16:40:32.3110 INFO connection successful
+2020-06-02 16:40:33.3121 INFO connection successful
+2020-06-02 16:40:34.3135 INFO connection successful
+2020-06-02 16:40:35.3128 INFO connection successful
+2020-06-02 16:40:36.3128 INFO connection successful
+2020-06-02 16:40:37.3125 INFO connection successful
+2020-06-02 16:40:38.3281 INFO connection successful
+2020-06-02 16:40:39.3233 INFO connection successful
+2020-06-02 16:40:40.3129 INFO connection successful
+2020-06-02 16:40:41.3152 INFO connection successful
+2020-06-02 16:40:42.3108 INFO connection successful
+2020-06-02 16:40:43.3144 INFO connection successful
+2020-06-02 16:40:44.3125 INFO connection successful
+2020-06-02 16:40:45.3113 INFO connection successful
+2020-06-02 16:40:46.3132 INFO connection successful
+2020-06-02 16:40:47.3129 INFO connection successful
+2020-06-02 16:40:48.3138 INFO connection successful
+2020-06-02 16:40:49.3142 INFO connection successful
+2020-06-02 16:40:50.3233 INFO connection successful
+2020-06-02 16:40:51.3142 INFO connection successful
+2020-06-02 16:40:52.3148 INFO connection successful
+2020-06-02 16:40:53.3126 INFO connection successful
+2020-06-02 16:40:54.3140 INFO connection successful
+2020-06-02 16:40:55.3140 INFO connection successful
+2020-06-02 16:40:56.3136 INFO connection successful
+2020-06-02 16:40:57.3118 INFO connection successful
+2020-06-02 16:40:58.3150 INFO connection successful
+2020-06-02 16:40:59.3111 INFO connection successful
+2020-06-02 16:41:00.3134 INFO connection successful
+2020-06-02 16:41:01.3144 INFO connection successful
+2020-06-02 16:41:02.3195 INFO connection successful
+2020-06-02 16:41:03.3194 INFO connection successful
+2020-06-02 16:41:04.3169 INFO connection successful
+2020-06-02 16:41:05.3174 INFO connection successful
+2020-06-02 16:41:06.3150 INFO connection successful
+2020-06-02 16:41:07.3136 INFO connection successful
+2020-06-02 16:41:08.3140 INFO connection successful
+2020-06-02 16:41:09.3146 INFO connection successful
+2020-06-02 16:41:10.3111 INFO connection successful
+2020-06-02 16:41:11.3121 INFO connection successful
+2020-06-02 16:41:12.3168 INFO connection successful
+2020-06-02 16:41:13.3150 INFO connection successful
+2020-06-02 16:41:14.3122 INFO connection successful
+2020-06-02 16:41:15.3152 INFO connection successful
+2020-06-02 16:41:16.3139 INFO connection successful
+2020-06-02 16:41:17.3127 INFO connection successful
+2020-06-02 16:41:18.3141 INFO connection successful
+2020-06-02 16:41:19.3101 INFO connection successful
+2020-06-02 16:41:20.3131 INFO connection successful
+2020-06-02 16:41:21.3218 INFO connection successful
+2020-06-02 16:41:22.3135 INFO connection successful
+2020-06-02 16:41:23.3135 INFO connection successful
+2020-06-02 16:41:24.3177 INFO connection successful
+2020-06-02 16:41:25.3110 INFO connection successful
+2020-06-02 16:41:26.3172 INFO connection successful
+2020-06-02 16:41:27.3111 INFO connection successful
+2020-06-02 16:41:28.3137 INFO connection successful
+2020-06-02 16:41:29.3145 INFO connection successful
+2020-06-02 16:41:30.3137 INFO connection successful
+2020-06-02 16:41:31.3121 INFO connection successful
+2020-06-02 16:41:32.3148 INFO connection successful
+2020-06-02 16:41:33.3134 INFO connection successful
+2020-06-02 16:41:34.3131 INFO connection successful
+2020-06-02 16:41:35.3110 INFO connection successful
+2020-06-02 16:41:36.3120 INFO connection successful
+2020-06-02 16:41:37.3116 INFO connection successful
+2020-06-02 16:41:38.3129 INFO connection successful
+2020-06-02 16:41:39.3155 INFO connection successful
+2020-06-02 16:41:40.3169 INFO connection successful
+2020-06-02 16:41:41.3114 INFO connection successful
+2020-06-02 16:41:42.3157 INFO connection successful
+2020-06-02 16:41:43.3147 INFO connection successful
+2020-06-02 16:41:44.3134 INFO connection successful
+2020-06-02 16:41:45.3103 INFO connection successful
+2020-06-02 16:41:46.3159 INFO connection successful
+2020-06-02 16:41:47.3130 INFO connection successful
+2020-06-02 16:41:48.3173 INFO connection successful
+2020-06-02 16:41:49.3169 INFO connection successful
+2020-06-02 16:41:50.3112 INFO connection successful
+2020-06-02 16:41:51.3125 INFO connection successful
+2020-06-02 16:41:52.3109 INFO connection successful
+2020-06-02 16:41:53.3146 INFO connection successful
+2020-06-02 16:41:54.3110 INFO connection successful
+2020-06-02 16:41:55.3118 INFO connection successful
+2020-06-02 16:41:56.3166 INFO connection successful
+2020-06-02 16:41:57.3150 INFO connection successful
+2020-06-02 16:41:58.3151 INFO connection successful
+2020-06-02 16:41:59.3122 INFO connection successful
+2020-06-02 16:42:00.3211 INFO connection successful
+2020-06-02 16:42:01.3155 INFO connection successful
+2020-06-02 16:42:02.3140 INFO connection successful
+2020-06-02 16:42:03.3154 INFO connection successful
+2020-06-02 16:42:04.3123 INFO connection successful
+2020-06-02 16:42:05.3149 INFO connection successful
+2020-06-02 16:42:06.3159 INFO connection successful
+2020-06-02 16:42:07.3119 INFO connection successful
+2020-06-02 16:42:08.3121 INFO connection successful
+2020-06-02 16:42:09.3162 INFO connection successful
+2020-06-02 16:42:10.3130 INFO connection successful
+2020-06-02 16:42:11.3136 INFO connection successful
+2020-06-02 16:42:12.3134 INFO connection successful
+2020-06-02 16:42:13.3127 INFO connection successful
+2020-06-02 16:42:14.3169 INFO connection successful
+2020-06-02 16:42:15.3171 INFO connection successful
+2020-06-02 16:42:16.3130 INFO connection successful
+2020-06-02 16:42:17.3130 INFO connection successful
+2020-06-02 16:42:18.3129 INFO connection successful
+2020-06-02 16:42:19.3147 INFO connection successful
+2020-06-02 16:42:20.3156 INFO connection successful
+2020-06-02 16:42:21.3130 INFO connection successful
+2020-06-02 16:42:22.3147 INFO connection successful
+2020-06-02 16:42:23.3119 INFO connection successful
+2020-06-02 16:42:24.3162 INFO connection successful
+2020-06-02 16:42:25.3119 INFO connection successful
+2020-06-02 16:42:26.3145 INFO connection successful
+2020-06-02 16:42:27.3153 INFO connection successful
+2020-06-02 16:42:28.3125 INFO connection successful
+2020-06-02 16:42:29.3113 INFO connection successful
+2020-06-02 16:42:30.3124 INFO connection successful
+2020-06-02 16:42:31.3113 INFO connection successful
+2020-06-02 16:42:32.3112 INFO connection successful
+2020-06-02 16:42:33.3161 INFO connection successful
+2020-06-02 16:42:34.3109 INFO connection successful
+2020-06-02 16:42:35.3121 INFO connection successful
+2020-06-02 16:42:36.3141 INFO connection successful
+2020-06-02 16:42:37.3122 INFO connection successful
+2020-06-02 16:42:38.3158 INFO connection successful
+2020-06-02 16:42:39.3148 INFO connection successful
+2020-06-02 16:42:40.3112 INFO connection successful
+2020-06-02 16:42:41.3130 INFO connection successful
+2020-06-02 16:42:42.3151 INFO connection successful
+2020-06-02 16:42:43.3123 INFO connection successful
+2020-06-02 16:42:44.3117 INFO connection successful
+2020-06-02 16:42:45.3150 INFO connection successful
+2020-06-02 16:42:46.3123 INFO connection successful
+2020-06-02 16:42:47.3103 INFO connection successful
+2020-06-02 16:42:48.3121 INFO connection successful
+2020-06-02 16:42:49.3159 INFO connection successful
+2020-06-02 16:42:50.3125 INFO connection successful
+2020-06-02 16:42:51.3140 INFO connection successful
+2020-06-02 16:42:52.3150 INFO connection successful
+2020-06-02 16:42:53.3204 INFO connection successful
+2020-06-02 16:42:54.3121 INFO connection successful
+2020-06-02 16:42:55.3142 INFO connection successful
+2020-06-02 16:42:56.3124 INFO connection successful
+2020-06-02 16:42:57.3152 INFO connection successful
+2020-06-02 16:42:58.3130 INFO connection successful
+2020-06-02 16:42:59.3144 INFO connection successful
+2020-06-02 16:43:00.3111 INFO connection successful
+2020-06-02 16:43:01.3117 INFO connection successful
+2020-06-02 16:43:02.3148 INFO connection successful
+2020-06-02 16:43:03.3120 INFO connection successful
+2020-06-02 16:43:04.3152 INFO connection successful
+2020-06-02 16:43:05.3104 INFO connection successful
+2020-06-02 16:43:06.3127 INFO connection successful
+2020-06-02 16:43:07.3146 INFO connection successful
+2020-06-02 16:43:08.3139 INFO connection successful
+2020-06-02 16:43:09.3130 INFO connection successful
+2020-06-02 16:43:10.3135 INFO connection successful
+2020-06-02 16:43:11.3167 INFO connection successful
+2020-06-02 16:43:12.3113 INFO connection successful
+2020-06-02 16:43:13.3147 INFO connection successful
+2020-06-02 16:43:14.3137 INFO connection successful
+2020-06-02 16:43:15.3100 INFO connection successful
+2020-06-02 16:43:16.3127 INFO connection successful
+2020-06-02 16:43:17.3127 INFO connection successful
+2020-06-02 16:43:18.3160 INFO connection successful
+2020-06-02 16:43:19.3139 INFO connection successful
+2020-06-02 16:43:20.3122 INFO connection successful
+2020-06-02 16:43:21.3152 INFO connection successful
+2020-06-02 16:43:22.3138 INFO connection successful
+2020-06-02 16:43:23.3128 INFO connection successful
+2020-06-02 16:43:24.3177 INFO connection successful
+2020-06-02 16:43:25.3147 INFO connection successful
+2020-06-02 16:43:26.3148 INFO connection successful
+2020-06-02 16:43:27.3116 INFO connection successful
+2020-06-02 16:43:28.3138 INFO connection successful
+2020-06-02 16:43:29.3103 INFO connection successful
+2020-06-02 16:43:30.3114 INFO connection successful
+2020-06-02 16:43:31.3133 INFO connection successful
+2020-06-02 16:43:32.3116 INFO connection successful
+2020-06-02 16:43:33.3148 INFO connection successful
+2020-06-02 16:43:34.3155 INFO connection successful
+2020-06-02 16:43:35.3123 INFO connection successful
+2020-06-02 16:43:36.3130 INFO connection successful
+2020-06-02 16:43:37.3121 INFO connection successful
+2020-06-02 16:43:38.3139 INFO connection successful
+2020-06-02 16:43:39.3165 INFO connection successful
+2020-06-02 16:43:40.3136 INFO connection successful
+2020-06-02 16:43:41.3142 INFO connection successful
+2020-06-02 16:43:42.3184 INFO connection successful
+2020-06-02 16:43:43.3145 INFO connection successful
+2020-06-02 16:43:44.3143 INFO connection successful
+2020-06-02 16:43:45.3138 INFO connection successful
+2020-06-02 16:43:46.3113 INFO connection successful
+2020-06-02 16:43:47.3132 INFO connection successful
+2020-06-02 16:43:48.3140 INFO connection successful
+2020-06-02 16:43:49.3146 INFO connection successful
+2020-06-02 16:43:50.3136 INFO connection successful
+2020-06-02 16:43:51.3153 INFO connection successful
+2020-06-02 16:43:52.3135 INFO connection successful
+2020-06-02 16:43:53.3142 INFO connection successful
+2020-06-02 16:43:54.3152 INFO connection successful
+2020-06-02 16:43:55.3128 INFO connection successful
+2020-06-02 16:43:56.3114 INFO connection successful
+2020-06-02 16:43:57.3132 INFO connection successful
+2020-06-02 16:43:58.3124 INFO connection successful
+2020-06-02 16:43:59.3170 INFO connection successful
+2020-06-02 16:44:00.3150 INFO connection successful
+2020-06-02 16:44:06.7900 ERROR System.InvalidOperationException: Connection must be valid and open.
+   в MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   в MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   в MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   в NURESCADA.MainForm.cbDataSets_Click(Object sender, EventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\MainForm.cs:строка 225
+2020-06-02 16:44:10.1274 INFO connection successful
+2020-06-02 16:44:10.9037 INFO connection successful
+2020-06-02 16:44:11.8922 INFO connection successful
+2020-06-02 16:44:12.9019 INFO connection successful
+2020-06-02 16:44:13.8991 INFO connection successful
+2020-06-02 16:44:14.8942 INFO connection successful
+2020-06-02 16:44:15.8911 INFO connection successful
+2020-06-02 16:44:16.8920 INFO connection successful
+2020-06-02 16:44:17.9002 INFO connection successful
+2020-06-02 16:44:18.8991 INFO connection successful
+2020-06-02 16:44:19.8927 INFO connection successful
+2020-06-02 16:44:20.8942 INFO connection successful
+2020-06-02 16:44:21.8931 INFO connection successful
+2020-06-02 16:44:22.8920 INFO connection successful
+2020-06-02 16:44:23.9017 INFO connection successful
+2020-06-02 16:44:24.8993 INFO connection successful
+2020-06-02 16:44:25.9236 INFO connection successful
+2020-06-02 16:44:26.8907 INFO connection successful
+2020-06-02 16:44:27.9315 INFO connection successful
+2020-06-02 16:44:28.8904 INFO connection successful
+2020-06-02 16:44:29.9242 INFO connection successful
+2020-06-02 16:44:30.8939 INFO connection successful
+2020-06-02 16:44:31.8939 INFO connection successful
+2020-06-02 16:44:32.8900 INFO connection successful
+2020-06-02 16:44:33.8906 INFO connection successful
+2020-06-02 16:44:34.9061 INFO connection successful
+2020-06-02 16:44:35.9046 INFO connection successful
+2020-06-02 16:44:36.8899 INFO connection successful
+2020-06-02 16:44:37.8936 INFO connection successful
+2020-06-02 16:44:38.8924 INFO connection successful
+2020-06-02 16:44:40.0161 INFO connection successful
+2020-06-02 16:44:40.9036 INFO connection successful
+2020-06-02 16:44:41.8930 INFO connection successful
+2020-06-02 16:44:42.8939 INFO connection successful
+2020-06-02 16:44:43.8931 INFO connection successful
+2020-06-02 16:44:44.8942 INFO connection successful
+2020-06-02 16:44:45.8960 INFO connection successful
+2020-06-02 16:44:46.8920 INFO connection successful
+2020-06-02 16:44:47.8921 INFO connection successful
+2020-06-02 16:44:48.8928 INFO connection successful
+2020-06-02 16:44:49.8913 INFO connection successful
+2020-06-02 16:44:50.8965 INFO connection successful
+2020-06-02 16:44:51.9727 INFO connection successful
+2020-06-02 16:44:52.8889 INFO connection successful
+2020-06-02 16:44:53.8923 INFO connection successful
+2020-06-02 16:44:54.8915 INFO connection successful
+2020-06-02 16:44:55.8922 INFO connection successful
+2020-06-02 16:44:56.8921 INFO connection successful
+2020-06-02 16:44:57.8940 INFO connection successful
+2020-06-02 16:44:58.8908 INFO connection successful
+2020-06-02 16:44:59.8894 INFO connection successful
+2020-06-02 16:45:00.8958 INFO connection successful
+2020-06-02 16:45:01.8922 INFO connection successful
+2020-06-02 16:45:02.8921 INFO connection successful
+2020-06-02 16:45:03.8928 INFO connection successful
+2020-06-02 16:45:04.8922 INFO connection successful
+2020-06-02 17:28:19.0349 INFO connection successful
+2020-06-02 17:28:21.3297 INFO connection successful
+2020-06-02 17:28:21.4319 INFO connection successful
+2020-06-02 17:28:22.3657 INFO connection successful
+2020-06-02 17:28:39.1014 INFO connection successful
+2020-06-02 17:28:49.2677 ERROR System.ArgumentException: Значение аргумента расположения должно быть в диапазоне от 0 до 100.
+Имя параметра: position
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PositionToValue(Double position, Boolean validateInput)
+   в System.Windows.Forms.DataVisualization.Charting.Axis.PixelPositionToValue(Double position)
+   в NURESCADA.StaticForm.MainChart_MouseMove(Object sender, MouseEventArgs e) в C:\Users\alex2\Documents\GitHub\OMEGA\MySCADA\Forms\StaticForm.cs:строка 389
+2020-06-02 17:29:28.6736 INFO connection successful
+2020-06-02 17:29:28.7415 INFO connection successful
+2020-06-02 17:29:30.1800 INFO connection successful
+2020-06-02 17:30:32.9027 INFO connection successful
+2020-06-02 17:31:36.6148 INFO connection successful
