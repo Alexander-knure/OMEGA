@@ -12,7 +12,8 @@ namespace NURESCADA.Forms
     public partial class DynamicForm : MetroFramework.Forms.MetroForm
     {
         private MainForm mf;
-        private Variables variables;
+        private DateTime startTime;
+        private List<Variable> variables;
         private static Logger logger = LogManager.GetCurrentClassLogger();
         private double start = 0.0d;
         private double end = 0.0d;
@@ -20,7 +21,7 @@ namespace NURESCADA.Forms
         public DynamicForm()
         {
             mf = new MainForm();
-            variables = new Variables();
+            variables = new List<Variable>();
             InitializeComponent();
             mf.OpenConnection();
             MainChart.MouseWheel += MainChart_MouseWheel;
@@ -46,6 +47,7 @@ namespace NURESCADA.Forms
         ushort countSelect = 0;
         private void cbVariables_SelectedIndexChanged(object sender, EventArgs e)
         {
+            startTime = DateTime.Now;
             selected = cbVariables.SelectedItem.ToString();
             dTimer.Enabled = true;
         }
@@ -325,7 +327,8 @@ namespace NURESCADA.Forms
                 //
                 //Add where -/- and timefrom = timestamp_min to max in other method!
                 //
-                string query = "SELECT VALUE, TimeStamp FROM `variables_data` INNER JOIN `trends_data` ON variables_data.ID = trends_data.ID WHERE variables_data.Name = \"" + selected + "\";";
+                //SELECT Value, TimeStamp FROM `variables_data` INNER JOIN `trends_data` ON variables_data.ID = trends_data.ID WHERE variables_data.Name = "vrSinusoid" AND TimeStamp > TIMESTAMP("2020-06-01", "12:10:11") AND TimeStamp<TIMESTAMP("2020-06-02", "12:10:11") ORDER BY `TimeStamp` ASC
+                string query = "SELECT VALUE, TimeStamp FROM `variables_data` INNER JOIN `trends_data` ON variables_data.ID = trends_data.ID WHERE variables_data.Name = \"" + selected + " AND TimeStamp > " + DateTime.Now  + "\";";
                 MySqlCommand msc = new MySqlCommand(query, DBUtils.conn);
                 try
                 {

@@ -44,6 +44,7 @@ namespace NURESCADA
             formats.Add("Hour");
             formats.Add("Minute");
             formats.Add("Second");
+            formats.Add("Iterations");
 
             foreach (var i in formats)
                 cbTimeFormat.Items.Add(i);
@@ -103,42 +104,52 @@ namespace NURESCADA
 
                 cbVariables.Items.Clear();
                 reader = msc.ExecuteReader();
-                    MainChart.Series[0].XValueType = ChartValueType.DateTime;
                 while (reader.Read())
                 {
                     switch (timeFormat)
                     {
                         //YOU MUST TO CHANGE SECONDS IN TOTAL_SECONDS -> EACH CASE
                         case "Year":
+                            MainChart.Series[0].XValueType = ChartValueType.DateTime;
                             MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Years;
                             MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1), reader.GetDouble(0));
                             break;
                         case "Month":
+                            MainChart.Series[0].XValueType = ChartValueType.DateTime;
                             MainChart.ChartAreas[0].AxisX.LabelStyle.Format = "yyyy MM";
                             MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Months;
                             MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1), reader.GetDouble(0));
                             break;
                         case "Day":
+                            MainChart.Series[0].XValueType = ChartValueType.DateTime;
                             MainChart.ChartAreas[0].AxisX.LabelStyle.Format = "dd MMMM";
                             MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1), reader.GetDouble(0));
                             break;
                         case "Hour":
-                            MainChart.ChartAreas[0].AxisX.LabelStyle.Format = "dd hh";
+                            MainChart.Series[0].XValueType = ChartValueType.Time;
+                            MainChart.ChartAreas[0].AxisX.LabelStyle.Format = "hh:mm";
                             //double hour = (int)reader.GetDateTime(1).TimeOfDay.TotalHours;
                             //hour += Math.Round((reader.GetDateTime(1).TimeOfDay.TotalHours * 100) % 100 * 0.6) * 0.01;
 
                             MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1), reader.GetDouble(0));
                             break;
                         case "Minute":
+                            MainChart.Series[0].XValueType = ChartValueType.Time;
                             MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1).TimeOfDay.TotalMinutes, reader.GetDouble(0));
                             break;
                         case "Second":
+                            MainChart.Series[0].XValueType = ChartValueType.Time;
                             MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1).TimeOfDay.TotalSeconds, reader.GetDouble(0));
                             break;
                         case "Date":
+                            MainChart.Series[0].XValueType = ChartValueType.DateTime;
                             MainChart.ChartAreas[0].AxisX.LabelStyle.Format = "dd MMMM";
                             MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Auto;
                             MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1).Date, reader.GetDouble(0));
+                            break;
+                        case "Iterations":
+                            MainChart.Series[0].XValueType = ChartValueType.Int32;
+                            MainChart.Series[selected].Points.AddY(reader.GetDouble(0));
                             break;
                         default: break;
                     }

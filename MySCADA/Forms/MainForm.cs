@@ -22,10 +22,9 @@ namespace NURESCADA
         public OpenFileDialog sdlg = new OpenFileDialog();
         public List<ActionData> ActionList = new List<ActionData>();
         public List<MessageData> MessageList = new List<MessageData>();
-        public List<Recipe> ReciepList= new List<Recipe>();
-        public List<Trend> TrendList=new List<Trend>();
-        public List<Variable> VariableList=new List<Variable>();
-        
+        public List<Recipe> ReciepList = new List<Recipe>();
+        public List<Trend> TrendList = new List<Trend>();
+        public List<Variable> VariableList = new List<Variable>();
 
         public MainForm()
         {
@@ -33,13 +32,8 @@ namespace NURESCADA
             sdlg.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
             rdlg.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
 
-            if (DBUtils.conn != null)
-            {
-                if(DBUtils.conn.State == ConnectionState.Open)
-                {
-                    lbStatus.Text = "Start timer";
-                }
-            }
+            if (DBUtils.conn != null && DBUtils.conn.State == ConnectionState.Open)
+                lbStatus.Text = "Start timer";
         }
 
         private void mainTimer_Tick(object sender, EventArgs e)
@@ -90,14 +84,13 @@ namespace NURESCADA
                 btnTimer.Text = "Stop";
             }
         }
-
         private void ShowRows(string query)
         {
             using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, DBUtils.conn))
             {
                 try
                 {
-                     MySqlDataReader r;
+                    MySqlDataReader r;
                     DataSet ds = new DataSet();
                     adapter.Fill(ds);
                     mainGrid.DataSource = ds.Tables[0];
@@ -105,7 +98,6 @@ namespace NURESCADA
                     switch (cbDataSets.SelectedItem.ToString())
                     {
                         case "actions_data":
-
                             while (r.Read())
                             {
                                 ActionData actionData = new ActionData(r.GetDateTime(0), r.GetInt32(1), r.GetString(2));
@@ -164,41 +156,36 @@ namespace NURESCADA
                     query = cbDataSets.SelectedItem.ToString().Contains("trends") ? "SELECT * FROM (SELECT * FROM " + cbDataSets.SelectedItem.ToString() + " ORDER BY timestamp DESC LIMIT 100) AS T ORDER BY timestamp ASC" : "SELECT * FROM " + cbDataSets.SelectedItem.ToString();
                     ShowRows(query);
                 }
-                else if(cbDataSets.SelectedItem != null)
+                else if (cbDataSets.SelectedItem != null)
                 {
                     query = "SELECT * FROM " + cbDataSets.SelectedItem.ToString();
                     ShowRows(query);
                 }
             }
         }
-
         private void cbDataSets_SelectedIndexChanged(object sender, EventArgs e)
         {
             mainTimer.Enabled = true;
-            ShowTable(false) ;
+            ShowTable(false);
         }
-
         private void btnStatic_Click(object sender, EventArgs e)
         {
             StaticForm sf = new StaticForm();
             sf.Show();
             Hide();
         }
-
         private void btnDynamic_Click(object sender, EventArgs e)
         {
             DynamicForm df = new DynamicForm();
             df.Show();
             Hide();
         }
-
         private void btnMnemonic_Click(object sender, EventArgs e)
         {
             MnemonicForm mf = new MnemonicForm();
             mf.Show();
             Hide();
         }
-
         private void btnCommands_Click(object sender, EventArgs e)
         {
             CommandForm cf = new CommandForm();
@@ -239,14 +226,11 @@ namespace NURESCADA
                 MSG.Show(this, exc.ToString(), exc.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error, logger);
             }
         }
-
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             mainTimer.Stop();
             DBUtils.CloseConnection(lbStatus, logger);
         }
-
-      
         private void btnSave_Click(object sender, EventArgs e)
         {
             string fileName;
@@ -262,8 +246,6 @@ namespace NURESCADA
                         }
                         MessageBox.Show("information saved to file 'actions_data_Save'");
                         break;
-
-
                     case "messages_data":
                         fileName = @"C:\Users\alex2\Desktop\Practice_saves_files\messages_data_Save.txt";
                         using (StreamWriter fs = new StreamWriter(fileName))
@@ -272,8 +254,6 @@ namespace NURESCADA
                         }
                         MessageBox.Show("information saved to file 'messages_data_Save'");
                         break;
-
-
                     case "recipes":
                         fileName = @"C:\Users\alex2\Desktop\Practice_saves_files\recipes_Save.txt";
                         using (StreamWriter fs = new StreamWriter(fileName))
@@ -282,8 +262,6 @@ namespace NURESCADA
                         }
                         MessageBox.Show("information saved to file 'recipes_Save'");
                         break;
-
-
                     case "trends_day":
                     case "trends_hour":
                     case "trends_minute":
@@ -296,7 +274,6 @@ namespace NURESCADA
                         MessageBox.Show("information saved to file 'trends_data_Save'");
                         break;
 
-
                     case "variables_data":
                         fileName = @"C:\Users\alex2\Desktop\Practice_saves_files\variables_data_Save.txt";
                         using (StreamWriter fs = new StreamWriter(fileName))
@@ -305,19 +282,15 @@ namespace NURESCADA
                         }
                         MessageBox.Show("information saved to file 'variables_data_Save.txt'");
                         break;
-
-
                     default:
                         break;
                 }
             }
             else
-            {
                 MSG.Show(this, "Please, choose table", MessageBoxButtons.OK, MessageBoxIcon.Warning, logger);
-            }
         }
-       private void btnLoad_Click(object sender, EventArgs e)
-       {
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
             if (rdlg.ShowDialog() == DialogResult.OK)
             {
                 string fileName = rdlg.FileName;
@@ -325,7 +298,6 @@ namespace NURESCADA
                 using (StreamReader sr = new StreamReader(fileName))
                 {
                     str = sr.ReadToEnd();
-
                     switch (fileName)
                     {
                         case @"C:\\Users\\alex2\\Desktop\\Practice_saves_files\\actions_data_Save.txt":
@@ -339,7 +311,6 @@ namespace NURESCADA
                             mainGrid.DataSource = MessageList;
                             break;
                         case @"C:\Users\alex2\Desktop\Practice_saves_files\recipes_Save.txt":
-
                             ReciepList = JsonConvert.DeserializeObject<List<Recipe>>(str);
                             mainGrid.DataSource = ReciepList;
                             break;
