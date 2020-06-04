@@ -73,14 +73,12 @@ namespace NURESCADA
             if (mainTimer.Enabled)
             {
                 mainTimer.Enabled = false;
-                btnTimer.Text = String.Empty;
                 btnTimer.Text = "Play";
                 CloseConnection();
             }
             else
             {
                 mainTimer.Enabled = true;
-                btnTimer.Text = String.Empty;
                 btnTimer.Text = "Stop";
             }
         }
@@ -195,7 +193,6 @@ namespace NURESCADA
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sCADADataSet.trends_minute". При необходимости она может быть перемещена или удалена.
         }
 
         private void cbDataSets_Click(object sender, EventArgs e)

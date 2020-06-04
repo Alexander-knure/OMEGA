@@ -38,13 +38,15 @@
             this.lbTo = new MetroFramework.Controls.MetroLabel();
             this.lbFrom = new MetroFramework.Controls.MetroLabel();
             this.btnClear = new MetroFramework.Controls.MetroButton();
-            this.lbStatus = new MetroFramework.Controls.MetroLabel();
-            this.cbTimeInterval = new MetroFramework.Controls.MetroComboBox();
             this.cbVariables = new MetroFramework.Controls.MetroComboBox();
             this.btnBack = new MetroFramework.Controls.MetroButton();
             this.MainChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lbHeader = new MetroFramework.Controls.MetroLabel();
             this.dTimer = new System.Windows.Forms.Timer(this.components);
+            this.lbTimer = new MetroFramework.Controls.MetroLabel();
+            this.btTimer = new MetroFramework.Controls.MetroButton();
+            this.cbTypePoints = new MetroFramework.Controls.MetroComboBox();
+            this.lbStatus = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.MainChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,7 +89,8 @@
             this.dtToTime.Style = MetroFramework.MetroColorStyle.Red;
             this.dtToTime.TabIndex = 49;
             this.dtToTime.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.dtToTime.Value = new System.DateTime(2020, 5, 26, 0, 0, 0, 0);
+            this.dtToTime.Value = new System.DateTime(2020, 6, 3, 0, 0, 0, 0);
+            this.dtToTime.Visible = false;
             this.dtToTime.ValueChanged += new System.EventHandler(this.dtToTime_ValueChanged);
             // 
             // dtFromTime
@@ -112,6 +115,7 @@
             this.dtFromTime.TabIndex = 48;
             this.dtFromTime.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.dtFromTime.Value = new System.DateTime(2020, 5, 18, 0, 0, 0, 0);
+            this.dtFromTime.Visible = false;
             this.dtFromTime.ValueChanged += new System.EventHandler(this.dtFromTime_ValueChanged);
             // 
             // lbTo
@@ -131,6 +135,7 @@
             this.lbTo.Text = "to";
             this.lbTo.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.lbTo.UseCustomForeColor = true;
+            this.lbTo.Visible = false;
             // 
             // lbFrom
             // 
@@ -149,6 +154,7 @@
             this.lbFrom.Text = "from";
             this.lbFrom.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.lbFrom.UseCustomForeColor = true;
+            this.lbFrom.Visible = false;
             // 
             // btnClear
             // 
@@ -166,44 +172,6 @@
             this.btnClear.UseCustomForeColor = true;
             this.btnClear.UseSelectable = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // lbStatus
-            // 
-            this.lbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbStatus.AutoSize = true;
-            this.lbStatus.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbStatus.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lbStatus.ForeColor = System.Drawing.Color.White;
-            this.lbStatus.Location = new System.Drawing.Point(16, 48);
-            this.lbStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(132, 25);
-            this.lbStatus.TabIndex = 44;
-            this.lbStatus.Text = "Status: unknow";
-            this.lbStatus.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbStatus.UseCustomForeColor = true;
-            // 
-            // cbTimeInterval
-            // 
-            this.cbTimeInterval.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbTimeInterval.FontWeight = MetroFramework.MetroComboBoxWeight.Bold;
-            this.cbTimeInterval.ForeColor = System.Drawing.Color.White;
-            this.cbTimeInterval.FormattingEnabled = true;
-            this.cbTimeInterval.ItemHeight = 23;
-            this.cbTimeInterval.Location = new System.Drawing.Point(716, 16);
-            this.cbTimeInterval.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.cbTimeInterval.Name = "cbTimeInterval";
-            this.cbTimeInterval.PromptText = "Choose time";
-            this.cbTimeInterval.Size = new System.Drawing.Size(186, 29);
-            this.cbTimeInterval.Style = MetroFramework.MetroColorStyle.Black;
-            this.cbTimeInterval.TabIndex = 43;
-            this.cbTimeInterval.Tag = "";
-            this.cbTimeInterval.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.cbTimeInterval.UseSelectable = true;
-            this.cbTimeInterval.SelectedIndexChanged += new System.EventHandler(this.cbTime_SelectedIndexChanged);
-            this.cbTimeInterval.Click += new System.EventHandler(this.cbTimeFrom_Click);
             // 
             // cbVariables
             // 
@@ -324,7 +292,6 @@
             this.MainChart.Size = new System.Drawing.Size(940, 473);
             this.MainChart.TabIndex = 40;
             this.MainChart.Text = "MainChart";
-            this.MainChart.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainChart_MouseMove);
             // 
             // lbHeader
             // 
@@ -349,19 +316,93 @@
             this.dTimer.Interval = 1000;
             this.dTimer.Tick += new System.EventHandler(this.dTimer_Tick);
             // 
+            // lbTimer
+            // 
+            this.lbTimer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbTimer.AutoSize = true;
+            this.lbTimer.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbTimer.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbTimer.ForeColor = System.Drawing.Color.White;
+            this.lbTimer.Location = new System.Drawing.Point(643, 85);
+            this.lbTimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTimer.Name = "lbTimer";
+            this.lbTimer.Size = new System.Drawing.Size(103, 25);
+            this.lbTimer.TabIndex = 51;
+            this.lbTimer.Text = "Time: 00:00";
+            this.lbTimer.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbTimer.UseCustomForeColor = true;
+            // 
+            // btTimer
+            // 
+            this.btTimer.BackColor = System.Drawing.Color.Transparent;
+            this.btTimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btTimer.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btTimer.ForeColor = System.Drawing.Color.White;
+            this.btTimer.Location = new System.Drawing.Point(230, 81);
+            this.btTimer.Margin = new System.Windows.Forms.Padding(0);
+            this.btTimer.Name = "btTimer";
+            this.btTimer.Size = new System.Drawing.Size(186, 29);
+            this.btTimer.TabIndex = 52;
+            this.btTimer.Text = "Start";
+            this.btTimer.UseCustomBackColor = true;
+            this.btTimer.UseCustomForeColor = true;
+            this.btTimer.UseSelectable = true;
+            this.btTimer.Click += new System.EventHandler(this.btTimer_Click);
+            // 
+            // cbTypePoints
+            // 
+            this.cbTypePoints.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbTypePoints.FontWeight = MetroFramework.MetroComboBoxWeight.Bold;
+            this.cbTypePoints.ForeColor = System.Drawing.Color.White;
+            this.cbTypePoints.FormattingEnabled = true;
+            this.cbTypePoints.ItemHeight = 23;
+            this.cbTypePoints.Location = new System.Drawing.Point(716, 16);
+            this.cbTypePoints.Margin = new System.Windows.Forms.Padding(0);
+            this.cbTypePoints.Name = "cbTypePoints";
+            this.cbTypePoints.PromptText = "Choose type";
+            this.cbTypePoints.Size = new System.Drawing.Size(186, 29);
+            this.cbTypePoints.Style = MetroFramework.MetroColorStyle.Black;
+            this.cbTypePoints.TabIndex = 53;
+            this.cbTypePoints.Tag = "";
+            this.cbTypePoints.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cbTypePoints.UseSelectable = true;
+            this.cbTypePoints.SelectedIndexChanged += new System.EventHandler(this.cbTypePoints_SelectedIndexChanged);
+            // 
+            // lbStatus
+            // 
+            this.lbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbStatus.AutoSize = true;
+            this.lbStatus.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbStatus.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbStatus.ForeColor = System.Drawing.Color.White;
+            this.lbStatus.Location = new System.Drawing.Point(16, 48);
+            this.lbStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbStatus.Name = "lbStatus";
+            this.lbStatus.Size = new System.Drawing.Size(132, 25);
+            this.lbStatus.TabIndex = 54;
+            this.lbStatus.Text = "Status: unknow";
+            this.lbStatus.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbStatus.UseCustomForeColor = true;
+            // 
             // DynamicForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.lbStatus);
+            this.Controls.Add(this.cbTypePoints);
+            this.Controls.Add(this.btTimer);
+            this.Controls.Add(this.lbTimer);
             this.Controls.Add(this.lbPoint);
             this.Controls.Add(this.dtToTime);
             this.Controls.Add(this.dtFromTime);
             this.Controls.Add(this.lbTo);
             this.Controls.Add(this.lbFrom);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.lbStatus);
-            this.Controls.Add(this.cbTimeInterval);
             this.Controls.Add(this.cbVariables);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.MainChart);
@@ -371,6 +412,7 @@
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DynamicForm_FormClosed);
+            this.Load += new System.EventHandler(this.DynamicForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MainChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -385,12 +427,14 @@
         private MetroFramework.Controls.MetroLabel lbTo;
         private MetroFramework.Controls.MetroLabel lbFrom;
         private MetroFramework.Controls.MetroButton btnClear;
-        private MetroFramework.Controls.MetroLabel lbStatus;
-        private MetroFramework.Controls.MetroComboBox cbTimeInterval;
         private MetroFramework.Controls.MetroComboBox cbVariables;
         private MetroFramework.Controls.MetroButton btnBack;
         private System.Windows.Forms.DataVisualization.Charting.Chart MainChart;
         private MetroFramework.Controls.MetroLabel lbHeader;
-        private System.Windows.Forms.Timer dTimer;
+        private MetroFramework.Controls.MetroLabel lbTimer;
+        public System.Windows.Forms.Timer dTimer;
+        private MetroFramework.Controls.MetroButton btTimer;
+        private MetroFramework.Controls.MetroComboBox cbTypePoints;
+        private MetroFramework.Controls.MetroLabel lbStatus;
     }
 }

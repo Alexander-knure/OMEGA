@@ -134,6 +134,8 @@ namespace NURESCADA
                             MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1), reader.GetDouble(0));
                             break;
                         case "Minute":
+                            MainChart.ChartAreas[0].AxisX.Minimum = DateTime.Now.AddDays(-8).Minute;
+                            //MainChart.ChartAreas[0].AxisX.Maximum = DateTime.Now.Minute;
                             MainChart.Series[0].XValueType = ChartValueType.Time;
                             MainChart.Series[selected].Points.AddXY(reader.GetDateTime(1).TimeOfDay.TotalMinutes, reader.GetDouble(0));
                             break;

@@ -324,7 +324,7 @@
             this.dtToTime.Style = MetroFramework.MetroColorStyle.Red;
             this.dtToTime.TabIndex = 37;
             this.dtToTime.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.dtToTime.Value = new System.DateTime(2020, 6, 2, 0, 0, 0, 0);
+            this.dtToTime.Value = new System.DateTime(2020, 6, 3, 0, 0, 0, 0);
             this.dtToTime.ValueChanged += new System.EventHandler(this.dtToTime_ValueChanged);
             // 
             // lbPoint
@@ -386,6 +386,7 @@
             this.MaximizeBox = false;
             this.Name = "StaticForm";
             this.Style = MetroFramework.MetroColorStyle.Black;
+            this.Text = "  ";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StaticForm_FormClosed);
             this.Load += new System.EventHandler(this.StaticForm_Load);
